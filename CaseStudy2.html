@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U-NEXT University Platform · Theechaya S.</title>
+<meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<meta property="og:title" content="U-NEXT University Platform · Theechaya S.">
+<meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232457E6'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='%23fff'%3ET.%3C/text%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&amp;family=Outfit:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2457E6}
+a{color:#CC4116}a:hover{color:#A33410}
+button{font-family:inherit}
+.grid-bg{background-color:#2457E6;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(115deg,rgba(255,255,255,0) 55%,rgba(255,255,255,.08) 70%,rgba(255,255,255,0) 85%);background-size:64px 64px,64px 64px,100% 100%}
+.sec{background:#F7F9FD;border-radius:28px;padding:clamp(24px,5vw,56px) clamp(16px,4vw,56px);display:flex;flex-direction:column;gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:translate .3s ease,box-shadow .3s ease}
+.card:hover{translate:0 -6px;box-shadow:0 16px 30px rgba(28,36,64,.14)}
+.kicker{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#2457E6}
+.h2{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:clamp(26px,3.2vw,38px);line-height:1.3;color:#1C2440}
+.lbl{margin:0;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.body{margin:0;font-size:15px;line-height:1.75;color:#36405E}
+.scroll{overflow-x:auto;background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+.tbl th{text-align:left;font-weight:600;color:#5A6380;padding:12px;border-bottom:2px solid #D3DDEE;vertical-align:top}
+.tbl td{padding:12px;border-bottom:1px solid #DCE4F2;color:#1C2440;vertical-align:top;line-height:1.6}
+.tbl tbody tr{transition:background .2s}
+.tbl tbody tr:hover{background:#FFE3D6}
+.bar{transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.tog{cursor:pointer;transition:background .2s,color .2s}
+.stepbox{transition:translate .3s}
+.stepbox:hover{translate:0 -4px}
+.back svg{transition:translate .25s}
+.back:hover svg{translate:-6px 0}
+.next svg{transition:translate .25s}
+.next:hover svg{translate:8px 0}
+@keyframes fadein{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes rise{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+.fade{animation:fadein .4s ease both}
+@supports (animation-timeline: view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+html{scroll-behavior:smooth}
+section,header{scroll-margin-top:96px}
+.progress{position:fixed;top:0;left:0;right:0;height:4px;background:#DFFF1A;transform-origin:0 50%;scale:0 1;z-index:50}
+@keyframes grow{to{scale:1 1}}
+@supports (animation-timeline: scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+.topbar{position:sticky;top:12px;z-index:20;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:16px;padding:6px;box-shadow:0 6px 20px rgba(28,36,64,.12)}
+.toc{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.toc a{flex:0 0 auto;text-decoration:none;color:#36405E;font-size:13px;padding:10px 12px;border-radius:999px;min-height:40px;box-sizing:border-box;display:inline-flex;align-items:center;transition:background .2s,color .2s}
+.toc a:hover{background:#E3EBFF;color:#2457E6}
+.backbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:#1C2440;color:#F7F9FD;border-radius:12px;padding:10px 14px;min-height:44px;box-sizing:border-box;font-size:13px;font-weight:600}
+.backbtn:hover{color:#F7F9FD;background:#36405E}
+.tldr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;text-decoration:none;border-radius:28px;padding:clamp(24px,4vw,44px);transition:translate .3s,box-shadow .3s}
+.nextcard:hover{translate:0 -6px;box-shadow:0 20px 40px rgba(28,36,64,.2)}
+.nextcard .arrow{transition:translate .3s}
+.nextcard:hover .arrow{translate:10px 0}
+.krow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px;font-family:'IBM Plex Sans Thai',sans-serif}
+.b-ux{background:#E3EBFF;color:#26327F}
+.b-po{background:#FFE3D6;color:#A33410}
+@media (max-width:720px){.tldr{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+/* polish v2 */
+body{counter-reset:csec}
+section.sec{position:relative;overflow:hidden;background:#EAF0FF;counter-increment:csec;box-shadow:0 20px 50px rgba(10,20,70,.18)}
+section.sec::after{content:counter(csec, decimal-leading-zero);position:absolute;top:-14px;right:22px;font-family:Outfit,sans-serif;font-size:clamp(90px,14vw,160px);font-weight:600;line-height:1;letter-spacing:-.04em;color:rgba(36,87,230,.1);pointer-events:none}
+section.sec > *{position:relative;z-index:1}
+header.sec{box-shadow:0 20px 50px rgba(10,20,70,.18)}
+.kicker{display:inline-block;background:#1C2440;color:#DFFF1A !important;padding:7px 14px;border-radius:999px}
+.h2{width:fit-content;max-width:100%;background:linear-gradient(#DFFF1A,#DFFF1A) no-repeat 0 92%/100% .28em}
+.card{border:0 !important;border-top:4px solid #2457E6 !important;box-shadow:0 8px 22px rgba(28,36,64,.08);outline:2px solid transparent;outline-offset:4px;transition:translate .3s ease,box-shadow .3s ease,rotate .3s ease,outline-color .2s !important}
+.card:nth-child(3n+2){border-top-color:#FF7A4D !important}
+.card:nth-child(3n){border-top-color:#1C2440 !important}
+.card:hover{translate:0 -6px;rotate:-.6deg;box-shadow:0 18px 34px rgba(28,36,64,.18);outline-color:#DFFF1A}
+.todo{animation:pulseb 2.4s ease-in-out infinite}
+@keyframes pulseb{50%{border-color:#2457E6;background:#E8F0FF}}
+@keyframes popc{from{opacity:0;translate:0 40px;scale:.95}}
+@keyframes hl2{from{background-size:0 .28em}to{background-size:100% .28em}}
+@supports (animation-timeline: view()){
+.card{animation:popc linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+.card:nth-child(2){animation-range:entry 6% entry 46%}
+.card:nth-child(3){animation-range:entry 12% entry 52%}
+.card:nth-child(4){animation-range:entry 18% entry 58%}
+.h2{animation:hl2 linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+}
+@media (prefers-reduced-motion:reduce){.card,.h2,.todo{animation:none !important}}
+/* tilt v1 */
+.card,.g3 > div,.g4 > div{position:relative;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out,translate .3s ease,box-shadow .3s ease,outline-color .2s !important}
+.card::after,.g3 > div::after,.g4 > div::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.5),rgba(255,255,255,0) 60%);opacity:var(--go,0);transition:opacity .25s}
+.card:hover,.g3 > div:hover,.g4 > div:hover{rotate:none;translate:0 -6px;box-shadow:0 18px 34px rgba(28,36,64,.2);outline:2px solid #DFFF1A;outline-offset:4px}
+.card .lbl{transition:letter-spacing .3s ease,color .3s}
+.card:hover .lbl{letter-spacing:.2em}
+section.sec::after{transition:translate .6s ease,color .6s}
+section.sec:hover::after{translate:-14px 8px;color:rgba(36,87,230,.18)}
+section.sec:hover .kicker{animation:wig2 .6s ease}
+@keyframes wig2{30%{rotate:-4deg}60%{rotate:3deg}}
+.krow .badge{transition:translate .2s}
+section.sec:hover .krow .badge{translate:0 -3px}
+@media (prefers-reduced-motion:reduce){section.sec:hover .kicker{animation:none}}
+/* utcc v1 */
+.todo{border:2px dashed #A9C4FF;background:#F3F7FF;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.todo p{margin:0;font-size:14px;line-height:1.7;color:#4A5370}
+.todo .tt{font-weight:600;color:#26327F}
+.stage{background:radial-gradient(110% 90% at 50% 115%, #34449A 0%, #1C2440 65%);border-radius:20px;padding:clamp(24px,5vw,56px) clamp(16px,6vw,80px) 0;display:flex;justify-content:center;overflow:hidden}
+.laptop{width:100%;max-width:820px;transition:translate .5s ease}
+.stage:hover .laptop{translate:0 -8px}
+.lscreen{background:#0B0F1E;border-radius:18px 18px 0 0;padding:14px 14px 10px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.5)}
+.lscreen img{display:block;width:100%;height:auto;border-radius:4px;background:#FFFFFF}
+.lbase{height:18px;margin:0 -7%;background:linear-gradient(#E3E8F2,#AEB7CC);border-radius:0 0 18px 18px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:st}
+.steps > div{background:#FFFFFF;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px;box-shadow:0 6px 16px rgba(28,36,64,.06)}
+.steps .n{font-family:Outfit,sans-serif;font-weight:600;font-size:22px;color:#CC4116}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border-radius:16px;padding:16px;border:2px solid #DCE4F2;transition:border-color .2s,translate .25s,box-shadow .25s}
+.opt:hover{translate:0 -4px;box-shadow:0 12px 24px rgba(28,36,64,.12)}
+.opt:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.opt[aria-pressed="true"]{border-color:#2457E6;box-shadow:0 0 0 4px rgba(36,87,230,.15)}
+.opt .price{font-family:Outfit,sans-serif;font-weight:600;font-size:24px;color:#26327F}
+.receipt{background:#1C2440;color:#F7F9FD;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.receipt .row{display:flex;justify-content:space-between;gap:12px;font-size:15px;color:#C9D1E6}
+.receipt .tot{border-top:1px dashed rgba(255,255,255,.3);padding-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.team{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.team span{background:#FFFFFF;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 6px 16px rgba(28,36,64,.08);transition:translate .25s}
+.team span:hover{translate:0 -4px}
+.team .me{background:#DFFF1A;color:#1C2440}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* process v1 */
+.ptabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.ptab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;border:2px solid transparent;transition:translate .25s,background .2s,border-color .2s,box-shadow .25s}
+.ptab:hover{translate:0 -4px;box-shadow:0 10px 20px rgba(28,36,64,.12)}
+.ptab:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ptab[aria-selected="true"]{background:#2457E6;color:#FFFFFF;box-shadow:0 10px 24px rgba(36,87,230,.35)}
+.ptab .pn{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116}
+.ptab[aria-selected="true"] .pn{color:#DFFF1A}
+.ptab .pt{font-size:13px;font-weight:600;line-height:1.35}
+.ppanel{background:#FFFFFF;border-radius:20px;padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;box-shadow:0 10px 26px rgba(28,36,64,.08)}
+.ppanel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.ppanel li{display:flex;gap:10px;font-size:15px;line-height:1.6;color:#36405E}
+.ppanel li::before{content:'';flex:0 0 8px;height:8px;margin-top:9px;border-radius:50%;background:#FF7A4D}
+.pchip{display:inline-block;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;margin:0 6px 8px 0}
+.pc-d{background:#E3EBFF;color:#26327F}
+.pc-p{background:#FFE3D6;color:#A33410}
+.pnav{all:unset;cursor:pointer;box-sizing:border-box;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;background:#1C2440;color:#FFFFFF;transition:background .2s}
+.pnav:hover{background:#36405E}
+.pnav:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.pnav[aria-disabled="true"]{opacity:.35;cursor:default}
+.pvis{grid-column:1/-1;display:flex;flex-direction:column;gap:12px;border-top:1.5px dashed #D3DDEE;padding-top:20px}
+.pvtag{align-self:flex-start;background:#FFF4C2;color:#6B5A00;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.pvscroll{overflow-x:auto;background:#F7F9FD;border-radius:14px;padding:12px}
+.wfgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wf{background:#FFFFFF;border:1.5px solid #D3DDEE;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;aspect-ratio:1400/1079;box-sizing:border-box}
+.wf .bx{background:#EEF1F7;border-radius:6px}
+.wf .ln{height:7px;background:#DCE1EB;border-radius:4px}
+.shot{position:relative;border-radius:12px;overflow:hidden;border:1.5px solid #D3DDEE}
+.shot img{display:block;width:100%;height:auto}
+.pin{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#CC4116;color:#FFFFFF;font-family:Outfit,sans-serif;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(204,65,22,.25);animation:pinp 2s ease-in-out infinite}
+@keyframes pinp{50%{box-shadow:0 0 0 8px rgba(204,65,22,.08)}}
+.rl{position:absolute;border:1.5px dashed #CC4116;border-radius:6px;pointer-events:none}
+.legend{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.legend li{font-size:13px;line-height:1.55;color:#36405E;display:flex;gap:8px}
+.legend li::before{display:none}
+.legend b{flex:0 0 22px;height:22px;border-radius:50%;background:#CC4116;color:#FFF;font-family:Outfit,sans-serif;font-size:12px;display:flex;align-items:center;justify-content:center}
+@media (max-width:720px){.wfgrid,.legend{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.pin{animation:none}}
+@media (max-width:900px){.ptabs{grid-template-columns:repeat(3,minmax(0,1fr))}.ppanel{grid-template-columns:minmax(0,1fr)}}
+/* po view v1 */
+.mosc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mcol{border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mcol h3{margin:0;font-family:Outfit,'IBM Plex Sans Thai',sans-serif;font-size:18px;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.mcol h3 small{font-family:'IBM Plex Sans Thai',sans-serif;font-size:12px;font-weight:500;opacity:.8}
+.sticky{background:#FFFFFF;border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;color:#1C2440;box-shadow:0 4px 10px rgba(28,36,64,.08);transition:translate .2s,rotate .2s,box-shadow .2s}
+.sticky:hover{translate:0 -3px;rotate:-1.2deg;box-shadow:0 10px 18px rgba(28,36,64,.16)}
+.funnel{display:flex;flex-direction:column;gap:10px}
+.frow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:12px;align-items:center;font-size:14px}
+.ftrack{background:#DCE4F2;border-radius:8px;height:30px;overflow:hidden}
+.ffill{height:100%;border-radius:8px;background:linear-gradient(90deg,#2457E6,#5B83F0);display:flex;align-items:center;padding-left:10px;box-sizing:border-box;color:#FFF;font-size:12px;font-weight:600;transform-origin:0 50%}
+@keyframes fgrow{from{scale:0 1}}
+@supports (animation-timeline: view()){.ffill{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.dec{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:stretch}
+.dec .vs{align-self:center;font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#5A6380}
+/* po view v2 */
+.life{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.life a{display:flex;flex-direction:column;gap:2px;text-decoration:none;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;box-sizing:border-box;color:#1C2440;box-shadow:0 6px 14px rgba(28,36,64,.07);transition:translate .25s,background .2s,color .2s}
+.life a:hover{translate:0 -4px;background:#1C2440;color:#FFFFFF}
+.life a:hover .ln2{color:#DFFF1A}
+.life .ln2{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116;transition:color .2s}
+.life .lt{font-size:13px;font-weight:600;line-height:1.35}
+.life .le{font-size:11px;color:#5A6380;letter-spacing:.04em}
+.life a:hover .le{color:#C9D1E6}
+.phead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;scroll-margin-top:110px}
+.phead .pnum{width:38px;height:38px;border-radius:12px;background:#1C2440;color:#DFFF1A;font-family:Outfit,sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center}
+.phead h3{margin:0;font-size:clamp(19px,2.2vw,23px);font-weight:600;color:#1C2440}
+.own{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px}
+.own-me{background:#DFFF1A;color:#1C2440}
+.own-co{background:#FFFFFF;color:#36405E;border:1.5px solid #C3D0EA}
+.subl{margin:6px 0 0;font-size:13px;font-weight:600;color:#5A6380}
+.shmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.shcol{background:#FFFFFF;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 20px rgba(28,36,64,.07)}
+.shrow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:10px;align-items:start;padding:10px;border-radius:12px;background:#F3F6FC;transition:background .2s,translate .2s}
+.shrow:hover{background:#E3EBFF;translate:4px 0}
+.shrow b{font-size:14px}
+.shrow span{font-size:13px;line-height:1.55;color:#36405E}
+.lv{display:inline-block;margin-top:4px;font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px}
+.lv-h{background:#FFE3D6;color:#A33410}.lv-m{background:#E3EBFF;color:#26327F}
+.gantt{background:#FFFFFF;border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(28,36,64,.07);overflow-x:auto}
+.gg{display:grid;grid-template-columns:150px repeat(8,minmax(56px,1fr));gap:6px 4px;min-width:720px;align-items:center}
+.gg .gh{font-family:Outfit,sans-serif;font-size:12px;font-weight:600;color:#5A6380;text-align:center}
+.gg .gl{grid-column:1;font-size:13px;font-weight:600}
+.gbar{height:24px;border-radius:7px;transform-origin:0 50%;font-size:11px;font-weight:600;display:flex;align-items:center;padding-left:8px;white-space:nowrap;overflow:hidden}
+@supports (animation-timeline: view()){.gbar{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.gms{justify-self:center;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:#A33410;text-align:center;line-height:1.3}
+.gms i{width:14px;height:14px;background:#CC4116;rotate:45deg;border-radius:2px}
+.crflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.crflow > div{background:#FFFFFF;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5;color:#36405E;position:relative;box-shadow:0 6px 14px rgba(28,36,64,.06)}
+.crflow b{font-family:Outfit,sans-serif;color:#CC4116;font-size:16px}
+.chk{display:flex;flex-direction:column;gap:8px}
+.ck{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border-radius:14px;padding:12px 14px;min-height:44px;font-size:14px;line-height:1.55;color:#1C2440;box-shadow:0 4px 12px rgba(28,36,64,.06);transition:background .2s,translate .2s}
+.ck:hover{translate:4px 0}
+.ck:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ck .bx2{flex:0 0 22px;height:22px;border-radius:7px;border:2px solid #9AA6BF;display:flex;align-items:center;justify-content:center;color:#1C2440;font-size:14px;font-weight:700;transition:background .2s,border-color .2s}
+.ck[aria-pressed="true"]{background:#F4FFC2}
+.ck[aria-pressed="true"] .bx2{background:#DFFF1A;border-color:#1C2440}
+.ck small{display:block;color:#5A6380;font-size:12px}
+.prog{height:8px;border-radius:4px;background:#DCE4F2;overflow:hidden}
+.prog > div{height:100%;background:#2457E6;border-radius:4px;transition:width .4s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:900px){.life{grid-template-columns:repeat(3,minmax(0,1fr))}.crflow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.shmap{grid-template-columns:minmax(0,1fr)}.shrow{grid-template-columns:minmax(0,1fr)}.crflow{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.mosc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.mosc,.dec{grid-template-columns:minmax(0,1fr)}.dec .vs{justify-self:center}.frow{grid-template-columns:minmax(0,1fr)}}
+/* responsive v2 */
+@media (max-width:720px){.gantt::before,.pvscroll::before{content:'เลื่อนซ้าย–ขวาเพื่อดูทั้งหมด →';display:block;position:sticky;left:0;font-size:12px;font-weight:600;color:#5A6380;margin-bottom:10px}}
+@media (max-width:520px){section.sec::after{font-size:72px;top:-4px;right:14px}.sec{border-radius:22px}.receipt .tot span:last-child{font-size:26px !important}}
+@media (min-width:1600px){.grid-bg > div{max-width:1180px !important}}
+/* tldr v1 */
+.tldr2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tldr2 > div{background:#FFFFFF;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 16px rgba(28,36,64,.07)}
+.tldr2 > div:last-child{background:#1C2440}
+.tldr2 b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.tldr2 > div:last-child b{color:#DFFF1A}
+.tldr2 p{margin:0;font-size:15px;line-height:1.65;color:#1C2440}
+.tldr2 > div:last-child p{color:#FFFFFF}
+@media (max-width:720px){.tldr2{grid-template-columns:minmax(0,1fr)}}
+/* interaction system v1 — one hover language for the whole site */
+:root{--ix-ease:cubic-bezier(.2,.8,.2,1);--ix-ring:#DFFF1A;--ix-shadow:0 18px 36px rgba(10,20,70,.18);--ix-tint:#EEF3FF}
+/* 1 · Cards: lift + shadow + lime ring */
+.pcard,.pf,.lift,.jobcard,.stepbtn,.card,.g3 > div,.g4 > div,.opt,.ptab,.nextcard,.ppanel,.tldr2 > div,.mcol,.shcol,.gantt,.receipt,.shot{transition:translate .3s var(--ix-ease),box-shadow .3s var(--ix-ease),outline-color .2s,background .2s,transform .15s ease-out !important;outline:2px solid transparent;outline-offset:3px}
+.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.stepbtn:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:0 -6px !important;rotate:none !important;scale:none !important;box-shadow:var(--ix-shadow) !important;outline-color:var(--ix-ring) !important}
+.pcard:active,.pf:active,.stepbtn:active,.opt:active,.ptab:active,.nextcard:active,.jobcard:active{scale:.985 !important}
+/* 2 · Chips & pills: small lift + lime tint */
+.cl,.pill,.tool,.cert,.tag,.chip,.pfl a,.dbtn,.team span,.sticky,.badge,.pchip,.life a,.toc a{transition:translate .2s var(--ix-ease),background .2s,color .2s,box-shadow .2s,border-color .2s !important}
+.pill:hover,.tool:hover,.cert:hover,.chip:hover,.pfl a:hover,.dbtn:hover,.team span:hover,.sticky:hover,.life a:hover{translate:0 -3px !important;rotate:none !important;scale:none !important;box-shadow:0 8px 16px rgba(10,20,70,.14) !important}
+.cl:hover{translate:0 -3px !important}
+.pill:hover,.tag:hover,.chip:hover,.team span:hover,.sticky:hover,.pchip:hover{background:var(--ix-ring) !important;color:#1C2440 !important}
+.tool:hover img,.cert:hover .logo{rotate:none !important;scale:1.08 !important}
+/* 3 · Buttons: lift + press */
+.btn,.navcta,.backbtn,.pnav,.pmore,footer a,footer button,.totop{transition:translate .2s var(--ix-ease),box-shadow .2s,background .2s,color .2s,scale .1s !important}
+.btn:hover,.navcta:hover,.backbtn:hover,.pnav:hover,footer a:hover,footer button:hover,.totop:hover{translate:0 -2px !important;box-shadow:0 10px 20px rgba(10,20,70,.2) !important}
+.btn:active,.navcta:active,.backbtn:active,.pnav:active,footer a:active,footer button:active,.dbtn:active,.ck:active{scale:.97 !important}
+/* 4 · Rows inside a group: tint only, no lift */
+.stats2 .st:hover,.jobbtn:hover,.shrow:hover,.ck:hover,.navlink:hover,.toc a:hover{translate:none !important;background:var(--ix-tint) !important}
+/* Focus: same lime ring for keyboard users */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ix-ring) !important;outline-offset:3px !important}
+@media (hover:none){.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:none !important;outline-color:transparent !important}}
+@media (prefers-reduced-motion:reduce){*{translate:none !important}}
+</style>
+
+</head>
+<body>
+<template id="tpl">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#sx">3 มหาวิทยาลัย</a><a href="#ds">Design system</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+<!-- HERO -->
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · EdTech · 2022</p><span class="badge b-ux">งาน UX/UI</span><span class="badge b-po">ทำงานแบบ Agile</span><span class="badge" style="background: #DFFF1A; color: #1C2440">✓ ใช้งานจริงแล้ว</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">U-NEXT · ระบบมหาวิทยาลัย</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">Product ระบบมหาวิทยาลัยของ U-NEXT ในเครือ <span style="display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; font-weight: 600; color: #1C2440"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 26px; height: 26px; border-radius: 50%; box-shadow: 0 0 0 1px #DCE4F2">G-ABLE Group</span> เริ่มจากระบบรับสมัครและ Back Office ของมหาวิทยาลัยหอการค้าไทย (UTCC) ซึ่งเป็นโปรเจกต์แรกของฉันที่ G-ABLE แล้วขยายไปขายให้มหาวิทยาลัยเกษตรศาสตร์ (KU) และ NIDA พร้อมระบบตัดเกรดและ Student Portal ฉันเป็น UX/UI Designer คนเดียวในทีมทุกช่วง</p>
+<a class="btn" href="https://admissions.utcc.ac.th/" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; background: #2457E6; color: #FFFFFF; text-decoration: none; border-radius: 12px; padding: 12px 18px; min-height: 44px; box-sizing: border-box; font-size: 15px; font-weight: 600">ดูระบบรับสมัคร UTCC ที่ใช้งานจริง <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg" alt="หน้าเลือกรูปแบบการชำระเงินของระบบรับสมัคร UTCC: แถบ 4 ขั้นตอนด้านบน และการ์ด 4 รูปแบบการชำระเงินพร้อมยอดรวม"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX/UI Designer<br>(คนเดียวในทีม)</p></div>
+<div class="card"><p class="lbl">บริษัท</p><p class="body" style="display: flex; align-items: center; gap: 10px"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 36px; height: 36px; border-radius: 50%; flex: 0 0 auto; box-shadow: 0 0 0 1px #DCE4F2">U-NEXT · G-ABLE Group</p></div>
+<div class="card"><p class="lbl">ลูกค้า</p><p class="body">UTCC · KU · NIDA</p></div>
+<div class="card"><p class="lbl">ทีมที่ทำงานร่วม</p><p class="body">PM · BA · SA · Dev</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>มหาวิทยาลัยต้องการระบบสมัครเรียน ชำระเงิน และดูแลนักศึกษา ที่ใช้งานง่ายทั้งฝั่งผู้สมัครและเจ้าหน้าที่</p></div><div><b>สิ่งที่ฉันทำ</b><p>Designer คนเดียวในทีม ออกแบบระบบรับสมัครและ Back Office ให้ UTCC แล้วต่อยอดเป็น product ที่ปรับให้ KU และ NIDA</p></div><div><b>ผลลัพธ์</b><p>Product เดียวใช้กับ 3 มหาวิทยาลัย ขยายจากระบบรับสมัครไปสู่ระบบตัดเกรดของอาจารย์และ Student Portal</p></div></div></div>
+</header>
+
+<!-- 1 -->
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · ระบบนี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">สมัครเรียนและชำระเงินได้จบในที่เดียว</h2>
+<p class="body">ระบบมี 2 ฝั่ง ฝั่งผู้สมัครใช้กรอกใบสมัครและชำระเงินออนไลน์ ส่วนฝั่งเจ้าหน้าที่ใช้ Back Office ตรวจใบสมัครและการชำระเงิน การชำระเงินแบ่งเป็น 4 ขั้นตอนที่เห็นได้จากแถบด้านบนของหน้าจอ</p>
+<div class="steps">
+<div><span class="n">01</span><span class="body" style="font-size: 14px; font-weight: 600">เลือกรูปแบบการชำระเงิน</span></div>
+<div><span class="n">02</span><span class="body" style="font-size: 14px; font-weight: 600">เลือกช่องทางการชำระเงิน</span></div>
+<div><span class="n">03</span><span class="body" style="font-size: 14px; font-weight: 600">สรุปยอดการชำระเงิน</span></div>
+<div><span class="n">04</span><span class="body" style="font-size: 14px; font-weight: 600">ผลการชำระเงิน</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองกดเลือกรูปแบบการชำระเงิน</p>
+<div class="g4" role="group" aria-label="รูปแบบการชำระเงิน">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="4">
+<button type="button" class="opt" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">{{o.name}}</span>
+<span class="price">{{o.short}}</span>
+</button>
+</sc-for>
+</div>
+<div class="receipt fade">
+<p class="lbl" style="color: #DFFF1A">{{sel.name}}</p>
+<sc-for list="{{sel.rows}}" as="r" hint-placeholder-count="3">
+<div class="row" style="color: {{r.color}}"><span>{{r.k}}</span><span>{{r.v}}</span></div>
+</sc-for>
+<div class="tot"><span style="font-size: 14px; color: #C9D1E6">{{sel.totLabel}}</span><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 32px; color: #FFFFFF">{{sel.total}} <span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 16px">{{sel.unit}}</span></span></div>
+<sc-if value="{{sel.hasNote}}" hint-placeholder-val="true"><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #FF8A5C">{{sel.note}}</p></sc-if>
+</div>
+<p class="lbl" style="margin-top: 12px">อีกฝั่งของระบบ · Back Office สำหรับเจ้าหน้าที่</p>
+<p class="body">เมื่อผู้สมัครส่งใบสมัครเข้ามา เจ้าหน้าที่รับสมัครใช้ Back Office ตรวจและจัดการต่อ ฉันออกแบบทั้งสองฝั่งให้ข้อมูลและสถานะตรงกัน</p>
+<div class="g4">
+<div class="card"><p class="lbl">รายการผู้สมัคร</p><p class="body" style="font-size: 14px">ค้นหาและกรองผู้สมัครตามคณะ สาขา รอบสมัคร และสถานะ</p></div>
+<div class="card"><p class="lbl">ตรวจใบสมัคร</p><p class="body" style="font-size: 14px">ดูข้อมูลและเอกสารที่อัปโหลด อนุมัติหรือขอเอกสารเพิ่ม</p></div>
+<div class="card"><p class="lbl">ตรวจการชำระเงิน</p><p class="body" style="font-size: 14px">ดูรูปแบบที่ผู้สมัครเลือก ยอดที่จ่าย และสถานะของแต่ละงวด</p></div>
+<div class="card"><p class="lbl">ตรวจสอบทุน</p><p class="body" style="font-size: 14px">รับเรื่องผู้ขอทุนที่จ่ายเฉพาะค่าสมัคร แล้วอัปเดตผลกลับไปให้ผู้สมัคร</p></div>
+</div>
+</section>
+
+<!-- expand -->
+<section id="sx" class="sec reveal">
+<div class="krow"><p class="kicker">จาก 1 มหาวิทยาลัย สู่ product</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ระบบเดียว ขายให้ 3 มหาวิทยาลัย</h2>
+<p class="body">ระบบที่ออกแบบให้ UTCC กลายเป็นฐานของ product ที่ U-NEXT นำไปเสนอให้มหาวิทยาลัยอื่น แต่ละรอบไม่ได้ออกแบบใหม่ทั้งหมด แต่ต่อยอด pattern เดิมและเพิ่มเฉพาะส่วนที่ลูกค้าต้องการ</p>
+<div class="g3">
+<div class="card"><p class="lbl">1 · UTCC</p><p class="body" style="font-weight: 600">ระบบรับสมัคร + Back Office</p><p class="body" style="font-size: 14px">สมัครเรียน ชำระเงิน 4 รูปแบบ และหน้าจอเจ้าหน้าที่ตรวจใบสมัครและการชำระเงิน · วาง pattern และ component ชุดแรก</p></div>
+<div class="card"><p class="lbl">2 · KU</p><p class="body" style="font-weight: 600">+ ระบบตัดเกรด + Student Portal</p><p class="body" style="font-size: 14px">ใช้ระบบรับสมัครเดิม แล้วเพิ่มระบบให้อาจารย์กรอกคะแนนและตัดเกรด และ portal ให้นักศึกษาดูผลการเรียน</p></div>
+<div class="card"><p class="lbl">3 · NIDA</p><p class="body" style="font-weight: 600">ปรับให้ระดับบัณฑิตศึกษา</p><p class="body" style="font-size: 14px">ใช้ product ชุดเดียวกับ KU แล้วปรับตามเงื่อนไขของสถาบันที่ผู้เรียนส่วนใหญ่เป็นคนทำงาน</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">มุมมอง Product</p><p class="body" style="color: #FFFFFF; font-weight: 600">ออกแบบให้ “ใช้ซ้ำได้” ตั้งแต่ลูกค้ารายแรก ทำให้ U-NEXT ขายระบบเดิมให้ลูกค้าใหม่ได้เร็ว และดูแลระบบชุดเดียวแทนหลายเวอร์ชัน</p></div>
+</section>
+
+<!-- design system -->
+<section id="ds" class="sec reveal">
+<div class="krow"><p class="kicker">Design system ของ product</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span><span class="own own-me">ทำเอง</span></div>
+<h2 class="h2">Design system เดียว เปลี่ยนธีมได้ตามมหาวิทยาลัย</h2>
+<p class="body">เพื่อให้ U-NEXT นำ product ไปขายมหาวิทยาลัยใหม่ได้เร็ว ฉันวาง design system ที่แยก “หน้าตา” ออกจาก “โครงสร้าง” เปลี่ยนสี โลโก้ และฟอนต์ตามแบรนด์ของแต่ละสถาบันได้ โดยไม่ต้องออกแบบหน้าจอใหม่</p>
+<div class="g4">
+<div class="card"><p class="lbl">1 · Foundation</p><p class="body" style="font-size: 14px">สี ตัวอักษร ระยะห่าง มุมโค้ง เงา</p></div><div class="card"><p class="lbl">2 · Semantic token</p><p class="body" style="font-size: 14px">primary · accent · success · warning · surface</p></div><div class="card"><p class="lbl">3 · Component</p><p class="body" style="font-size: 14px">ปุ่ม ฟอร์ม ตาราง การ์ด แถบขั้นตอน ป้ายสถานะ</p></div><div class="card"><p class="lbl">4 · Theme ต่อมหาวิทยาลัย</p><p class="body" style="font-size: 14px">สลับชุด token เดียว ได้สี โลโก้ และฟอนต์ของสถาบันนั้น</p></div>
+</div>
+<p class="lbl" style="margin-top: 8px">Component เดียวกัน 3 ธีม · สีเป็นตัวอย่างประกอบ</p>
+<div class="g3">
+<div class="card" style="padding: 0; overflow: hidden; gap: 0">
+<div style="background: #123C8C; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px"><span style="background: #FFFFFF; border-radius: 8px; padding: 3px 6px; display: inline-flex"><img src="assets/bfd600a88bafa1e879a1be23771f4e22.png" alt="UTCC" style="height: 20px; width: auto"></span><b style="font-size: 14px">ระบบรับสมัคร</b></div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 8px; border-radius: 4px; background: #EEF1F7"><div style="width: 50%; height: 100%; background: #123C8C; border-radius: 4px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5A6380">ขั้นที่ 2 / 4 · ข้อมูลผู้สมัคร</p>
+<div style="border: 1px solid #DCE4F2; border-radius: 8px; padding: 9px 12px; font-size: 13px; color: #9AA6BF">ชื่อ-นามสกุล</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="background: #D7262E; color: #FFFFFF; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">ปริญญาตรี</span><span style="background: #E3F5E9; color: #1E7A43; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">✓ ชำระแล้ว</span></div>
+<span style="background: #123C8C; color: #FFFFFF; border-radius: 10px; padding: 10px; text-align: center; font-weight: 600; font-size: 14px">ถัดไป</span>
+</div>
+</div><div class="card" style="padding: 0; overflow: hidden; gap: 0">
+<div style="background: #00694B; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px"><span style="background: #FFFFFF; border-radius: 8px; padding: 3px 6px; display: inline-flex"><img src="assets/e4f0942e302f661835dca28c4f8c0027.png" alt="KU" style="height: 20px; width: auto"></span><b style="font-size: 14px">ระบบรับสมัคร</b></div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 8px; border-radius: 4px; background: #EEF1F7"><div style="width: 50%; height: 100%; background: #00694B; border-radius: 4px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5A6380">ขั้นที่ 2 / 4 · ข้อมูลผู้สมัคร</p>
+<div style="border: 1px solid #DCE4F2; border-radius: 8px; padding: 9px 12px; font-size: 13px; color: #9AA6BF">ชื่อ-นามสกุล</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="background: #8DC63F; color: #1C2440; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">ปริญญาตรี</span><span style="background: #E3F5E9; color: #1E7A43; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">✓ ชำระแล้ว</span></div>
+<span style="background: #00694B; color: #FFFFFF; border-radius: 10px; padding: 10px; text-align: center; font-weight: 600; font-size: 14px">ถัดไป</span>
+</div>
+</div><div class="card" style="padding: 0; overflow: hidden; gap: 0">
+<div style="background: #7A1F2B; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px"><span style="background: #FFFFFF; border-radius: 8px; padding: 3px 6px; display: inline-flex"><img src="assets/2944a329b86aa42897717e43d0c37cc7.png" alt="NIDA" style="height: 20px; width: auto"></span><b style="font-size: 14px">ระบบรับสมัคร</b></div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 8px; border-radius: 4px; background: #EEF1F7"><div style="width: 50%; height: 100%; background: #7A1F2B; border-radius: 4px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5A6380">ขั้นที่ 2 / 4 · ข้อมูลผู้สมัคร</p>
+<div style="border: 1px solid #DCE4F2; border-radius: 8px; padding: 9px 12px; font-size: 13px; color: #9AA6BF">ชื่อ-นามสกุล</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="background: #C9A13B; color: #1C2440; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">ปริญญาตรี</span><span style="background: #E3F5E9; color: #1E7A43; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">✓ ชำระแล้ว</span></div>
+<span style="background: #7A1F2B; color: #FFFFFF; border-radius: 10px; padding: 10px; text-align: center; font-weight: 600; font-size: 14px">ถัดไป</span>
+</div>
+</div>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">ลูกค้าใหม่ = ธีมใหม่</p><p class="body" style="font-size: 14px">เพิ่มมหาวิทยาลัยใหม่ด้วยการตั้งค่า theme ไม่ต้องเริ่มออกแบบจากศูนย์</p></div>
+<div class="card"><p class="lbl">ความหมายไม่เปลี่ยน</p><p class="body" style="font-size: 14px">สีสถานะ เช่น ชำระแล้ว หรือมีข้อผิดพลาด คงที่ทุกธีม ผู้ใช้ไม่สับสน</p></div>
+<div class="card"><p class="lbl">ดูแลชุดเดียว</p><p class="body" style="font-size: 14px">Dev ใช้ component ชุดเดียวทุกสถาบัน แก้ครั้งเดียวได้ทุกที่</p></div>
+</div>
+</section>
+
+<!-- 2 -->
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">Designer คนเดียว ในทีม Agile</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>PM</span><span>BA</span><span class="me">UX/UI Designer · ฉัน</span><span>SA</span><span>Dev</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">คนเดียวในทีม</p><p class="body" style="font-size: 14px">ดูแลงาน UX/UI ของระบบรับสมัครทั้งหมด จึงต้องตัดสินใจเรื่องการออกแบบเองและอธิบายเหตุผลให้ทีมเข้าใจ</p></div>
+<div class="card"><p class="lbl">ทำงานกับทุกบทบาท</p><p class="body" style="font-size: 14px">ทำงานร่วมกับ PM, BA, SA และ Dev ตั้งแต่รับ requirement จนถึงส่งต่องานออกแบบให้พัฒนา</p></div>
+<div class="card"><p class="lbl">Agile</p><p class="body" style="font-size: 14px">ทำงานเป็นรอบ sprint ส่งงานออกแบบทีละส่วน และปรับตาม feedback ของทีมและลูกค้า</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงานในแต่ละ sprint (2 สัปดาห์)</p><p class="body" style="color: #FFFFFF; font-weight: 600">Sprint planning → ออกแบบล่วงหน้า 1 sprint → daily stand-up → ส่งต่องานให้ Dev ผ่าน Figma → design QA → sprint review / demo กับลูกค้า</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">ทีม 7 คน</p><p class="body" style="font-size: 14px">PM 1 · BA 1 · SA 1 · Dev 3 และ UX/UI Designer 1 คนคือฉัน</p></div>
+<div class="card"><p class="lbl">ส่งต่องานให้ Dev</p><p class="body" style="font-size: 14px">ส่ง prototype ใน Figma พร้อม note ระบุ state ต่าง ๆ เช่น error, loading และกรณีชำระเงินไม่สำเร็จ ให้ Dev ไม่ต้องเดาเอง</p></div>
+<div class="card"><p class="lbl">ทำงานกับ BA และ SA</p><p class="body" style="font-size: 14px">รีวิว flow กับ BA ให้ตรงเงื่อนไขค่าเทอมและทุน และเช็กกับ SA ว่า payment gateway รองรับการแบ่งจ่ายได้จริงก่อนออกแบบต่อ</p></div>
+</div>
+</section>
+
+<!-- 3 -->
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สมัครเสร็จแล้ว แต่ยังไม่รู้ว่าต้องจ่ายเท่าไร</h2>
+<p class="body">ขั้นตอนเดิมแยกการสมัครกับการชำระเงินออกจากกัน ผู้สมัครต้องดูค่าใช้จ่ายจากประกาศ ไปชำระเงินเอง แล้วส่งหลักฐานกลับมา เมื่อมีทั้งแบบจ่ายเต็ม แบ่งจ่าย จ่ายทั้งปี และกรณีขอทุน ผู้สมัครและผู้ปกครองจึงสับสน และถามเจ้าหน้าที่ซ้ำ ๆ ในช่วงเปิดรับสมัคร</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“ผู้สมัครและผู้ปกครองต้องการรู้ว่าแต่ละทางเลือกต้องจ่ายเท่าไร และจ่ายให้จบได้ในครั้งเดียว แต่ข้อมูลค่าใช้จ่ายกระจายอยู่หลายที่ จึงเลือกไม่ถูกและต้องโทรถาม”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">นักเรียน ม.6</p><p class="body" style="font-size: 14px">กรอกใบสมัครเองผ่านมือถือหรือคอมพิวเตอร์ อยากสมัครให้จบเร็ว</p></div>
+<div class="card"><p class="lbl">ผู้ปกครอง</p><p class="body" style="font-size: 14px">เป็นคนตัดสินใจและจ่ายเงิน ต้องการเห็นยอดรวมและส่วนลดชัด ๆ ก่อนจ่าย</p></div>
+<div class="card"><p class="lbl">เจ้าหน้าที่รับสมัคร</p><p class="body" style="font-size: 14px">ต้องการลดคำถามซ้ำ และตรวจสอบสถานะการชำระเงินได้ง่าย</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">สมัครและชำระเงินได้จบออนไลน์ในระบบเดียว · ผู้สมัครเลือกรูปแบบการชำระเงินได้เองโดยไม่ต้องถาม · รองรับกรณีขอทุนการศึกษา</p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body" style="font-size: 14px">ประมาณ 4 เดือน ทำงานเป็น sprint ละ 2 สัปดาห์ ให้ทันเปิดรับสมัครปีการศึกษา 2565</p></div>
+</div>
+</section>
+
+<!-- po view -->
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">มองทั้งวงจรของโปรดักต์ ไม่ใช่แค่หน้าจอ</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็น UX/UI Designer แต่ได้ทำงานใกล้ชิดกับ PM และเห็นงานครบทุกช่วง ตั้งแต่เก็บ requirement จนระบบเปิดใช้จริง ส่วนนี้จึงแยกให้ชัดว่าเรื่องไหนฉัน <span class="own own-me">ทำเอง</span> และเรื่องไหนฉัน <span class="own own-co">มีส่วนร่วม</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และต้องดูแลแต่ละคนอย่างไร</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">งานที่บริษัททำให้ลูกค้าภายนอกมีผู้มีส่วนได้เสีย 2 ฝั่ง การรู้ว่าใครตัดสินใจเรื่องอะไรช่วยให้ถามถูกคนตั้งแต่แรก</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ฝั่งมหาวิทยาลัย (ลูกค้า)</p>
+<div class="shrow"><div><b>ฝ่ายรับสมัคร</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>เจ้าของเรื่อง ตัดสินใจ scope และตรวจรับงาน · เข้า sprint review ทุก 2 สัปดาห์</span></div>
+<div class="shrow"><div><b>ฝ่ายการเงิน</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>อนุมัติยอดค่าเทอม ส่วนลด และเงื่อนไขการแบ่งจ่าย</span></div>
+<div class="shrow"><div><b>IT มหาวิทยาลัย</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>ดูแลระบบเดิมและข้อมูลนักศึกษาที่ต้องเชื่อมต่อ</span></div>
+<div class="shrow"><div><b>ผู้สมัคร · ผู้ปกครอง</b><br><span class="lv lv-m">ผู้ใช้งานจริง</span></div><span>ไม่ได้อยู่ในห้องประชุม จึงต้องมีคนพูดแทน ซึ่งเป็นหน้าที่ของ designer</span></div>
+</div>
+<div class="shcol"><p class="lbl">ฝั่ง U-NEXT (ทีมพัฒนา)</p>
+<div class="shrow"><div><b>PM</b></div><span>วางแผน ดูไทม์ไลน์ และเป็นตัวกลางสื่อสารกับลูกค้า</span></div>
+<div class="shrow"><div><b>BA · SA</b></div><span>แปลงความต้องการเป็น requirement และออกแบบระบบหลังบ้าน</span></div>
+<div class="shrow"><div><b>Dev</b></div><span>พัฒนาและประเมินขนาดงานในแต่ละ sprint</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX/UI</b></div><span>ทำให้ทุกฝ่ายเห็นภาพเดียวกันผ่าน flow และ prototype ก่อนลงมือพัฒนา</span></div>
+</div></div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ผู้สมัครไม่หลุดกลางทาง</p><p class="body" style="font-size: 14px">ทุกคนที่สมัครแล้วไม่จ่ายเงิน คือผู้สมัครที่มหาวิทยาลัยเสียไป หน้าชำระเงินจึงเป็นจุดที่สำคัญที่สุดของระบบ</p></div>
+<div class="card"><p class="lbl">ได้รับเงินเร็วขึ้น</p><p class="body" style="font-size: 14px">ส่วนลด 2,000 บาทเมื่อจ่ายทั้งปี และการแบ่งจ่าย 3 งวด ช่วยให้ผู้ปกครองเลือกตามงบ แทนการเลื่อนจ่ายออกไป</p></div>
+<div class="card"><p class="lbl">ลดงานเจ้าหน้าที่</p><p class="body" style="font-size: 14px">ถ้าผู้สมัครเข้าใจค่าใช้จ่ายเองได้ คำถามซ้ำและการตรวจหลักฐานการโอนด้วยมือก็ลดลง</p></div>
+</div>
+
+<p class="subl">ตัวชี้วัดที่เสนอให้ทีมติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">ตั้ง funnel ไว้ดูว่าผู้สมัครหลุดที่ขั้นไหน เพื่อใช้ปรับปรุงรอบรับสมัครถัดไป <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่างของ funnel ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>เริ่มกรอกใบสมัคร</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>ส่งใบสมัครครบ</span><div class="ftrack"><div class="ffill" style="width: 78%">78%</div></div></div>
+<div class="frow"><span>เลือกรูปแบบชำระเงิน</span><div class="ftrack"><div class="ffill" style="width: 70%">70%</div></div></div>
+<div class="frow"><span>ชำระเงินสำเร็จ</span><div class="ftrack"><div class="ffill" style="width: 64%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">64%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> อัตราชำระเงินไม่สำเร็จแยกตามช่องทาง · สัดส่วนผู้เลือกแต่ละรูปแบบ · จำนวนคำถามเรื่องค่าใช้จ่ายถึงเจ้าหน้าที่</p>
+</div>
+
+
+<div class="phead" id="po3"><span class="pnum">03</span><h3>วางแผนให้ทันวันเปิดรับสมัคร</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="subl">ไทม์ไลน์ 8 sprint (ประมาณ 4 เดือน) </p>
+<div class="gantt"><div class="gg">
+<span></span><span class="gh">S1</span><span class="gh">S2</span><span class="gh">S3</span><span class="gh">S4</span><span class="gh">S5</span><span class="gh">S6</span><span class="gh">S7</span><span class="gh">S8</span>
+<span class="gl">Discovery &amp; requirement</span><div class="gbar" style="grid-column: 2 / span 2; background: #A9C4FF; color: #1C2440">workshop · flow</div>
+<span class="gl">ออกแบบ UX/UI</span><div class="gbar" style="grid-column: 2 / span 6; background: #2457E6; color: #FFFFFF">ออกแบบล่วงหน้า 1 sprint</div>
+<span class="gl">พัฒนาระบบ</span><div class="gbar" style="grid-column: 3 / span 6; background: #1C2440; color: #FFFFFF">Dev · ทีละ feature</div>
+<span class="gl">UAT กับลูกค้า</span><div class="gbar" style="grid-column: 8 / span 1; background: #FF7A4D; color: #1C2440">UAT</div>
+<span class="gl">ตรวจรับ &amp; เปิดใช้</span><div class="gbar" style="grid-column: 9 / span 1; background: #DFFF1A; color: #1C2440">Go-live</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 3"><i></i>อนุมัติ flow</span><span class="gms" style="grid-column: 5"><i></i>Change request</span><span class="gms" style="grid-column: 8"><i></i>ตรวจรับงาน</span><span class="gms" style="grid-column: 9"><i></i>เปิดรับสมัคร</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมีวันเปิดรับ</small></h3><div class="sticky">กรอกใบสมัครและอัปโหลดเอกสาร</div><div class="sticky">ชำระเงิน 4 รูปแบบ</div><div class="sticky">แจ้งผลการชำระเงิน</div><div class="sticky">Back Office ตรวจใบสมัครและการชำระเงิน</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">หน้าดูสถานะการสมัคร</div><div class="sticky">บันทึกใบสมัครไว้ทำต่อ</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">ภาษาอังกฤษและจีน สำหรับนักศึกษาต่างชาติ</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">ตรวจสอบทุนอัตโนมัติในระบบ</div><div class="sticky">Dashboard สถิติผู้สมัคร</div></div>
+</div>
+
+<p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">Payment gateway</p><p class="body" style="font-size: 14px">ไม่แน่ใจว่ารองรับการแบ่งจ่ายไหม จึงเช็กกับ SA ตั้งแต่ wireframe ก่อนลงรายละเอียด UI</p></div>
+<div class="card"><p class="lbl">ค่าเทอมเปลี่ยนทุกปี</p><p class="body" style="font-size: 14px">เสนอให้ยอดเงิน ส่วนลด และจำนวนงวดดึงจากระบบหลังบ้าน ไม่ฝังไว้ในหน้าจอ ปีหน้าไม่ต้องแก้ code</p></div>
+<div class="card"><p class="lbl">กำหนดเปิดรับสมัคร</p><p class="body" style="font-size: 14px">ส่งงานออกแบบล่วงหน้า 1 sprint และเรียงงานตาม MoSCoW ให้ส่วน Must เสร็จก่อนเสมอ</p></div>
+</div>
+
+
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างพัฒนา: ตัดสินใจและรับมือการเปลี่ยนแปลง</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="subl">User story ที่เขียนร่วมกับ BA </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่างที่เขียนร่วมกับ BA</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>ผู้ปกครอง</b> ฉันต้องการ <b>เห็นยอดที่ต้องจ่ายของแต่ละรูปแบบก่อนกดชำระ</b> เพื่อ <b>เลือกแบบที่เหมาะกับงบของครอบครัว</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> ผู้สมัครส่งใบสมัครครบแล้ว <b style="color: #DFFF1A">When</b> เข้าหน้าเลือกรูปแบบ <b style="color: #DFFF1A">Then</b> เห็นการ์ดครบ 4 แบบ แต่ละแบบแสดงรายการค่าใช้จ่าย ส่วนลด และยอดที่ต้องจ่ายวันนี้</p></div>
+<p class="subl">Trade-off: กรณีขอทุนการศึกษา <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">ตรวจสิทธิ์ทุนและคำนวณยอดใหม่ในขั้นตอนชำระเงิน</p><p class="body" style="font-size: 14px">ผู้ใช้ได้ประสบการณ์ที่ครบที่สุด แต่ต้องเชื่อมข้อมูลทุนหลายระบบ เสี่ยงไม่ทันเปิดรับสมัคร</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">จ่ายค่าสมัคร 500 บาทก่อน แล้วให้เจ้าหน้าที่ตรวจทุนใน Back Office</p><p class="body" style="font-size: 14px">ใช้ flow เดิมที่มีอยู่ ส่งมอบทันกำหนด และยังบอกผู้สมัครชัดเจนด้วยหมายเหตุบนการ์ด ส่วนการตรวจอัตโนมัติเก็บไว้เฟสถัดไป</p></div>
+</div>
+
+<p class="subl">Change request กลางโปรเจกต์ </p>
+<div class="crflow">
+<div><b>1</b>ฝ่ายการเงินขอเพิ่ม “ส่วนลดเมื่อจ่ายทั้งปี” ช่วง sprint 4</div>
+<div><b>2</b>ประเมินผลกระทบกับ BA และ SA: หน้าจอ ระบบคำนวณ และการทดสอบ</div>
+<div><b>3</b>การ์ดออกแบบให้มีบรรทัดส่วนลดได้อยู่แล้ว งานฝั่ง UI จึงเพิ่มไม่มาก</div>
+<div><b>4</b>PM เสนอลูกค้า: รับเข้า sprint โดยเลื่อน “บันทึกใบสมัครไว้ทำต่อ” ไปหลังเปิดใช้</div>
+<div style="background: #F4FFC2"><b>5</b>ลูกค้าอนุมัติ วันเปิดรับสมัครไม่เลื่อน</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบและเปิดใช้</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ก่อนเปิดรับสมัครจริง ทีมใช้ checklist ร่วมกับลูกค้าเพื่อตัดสินใจว่าพร้อมเปิดหรือไม่ (go / no-go)</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Go-live checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">{{ckDone}} / {{ckTotal}}</span></div>
+<div class="prog" aria-hidden="true"><div style="width: {{ckPct}}"></div></div>
+<div class="chk"><sc-for list="{{cks}}" as="c" hint-placeholder-count="6"><button type="button" class="ck" aria-pressed="{{c.on}}" onClick="{{c.toggle}}"><span class="bx2" aria-hidden="true">{{c.mark}}</span><span>{{c.t}}<small>{{c.d}}</small></span></button></sc-for></div>
+<sc-if value="{{ckAll}}" hint-placeholder-val="{{false}}"><p style="margin: 0; font-weight: 600; color: #26327F">พร้อมเปิดรับสมัคร 🎉</p></sc-if>
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลังเปิดใช้: ฟัง วัด และวางเฟสถัดไป</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">Hypercare 2 สัปดาห์แรก</p><p class="body" style="font-size: 14px">ทีมเฝ้าระบบช่วงเปิดรับสมัคร ดูอัตราชำระเงินไม่สำเร็จ และปัญหาที่เจ้าหน้าที่แจ้งเข้ามาทุกวัน</p></div>
+<div class="card"><p class="lbl">Feedback → backlog</p><p class="body" style="font-size: 14px">เจ้าหน้าที่แจ้งว่าผู้ขอทุนบางคนไม่เห็นหมายเหตุบนการ์ด ฉันจึงเสนอปรับให้เด่นขึ้น และเพิ่มคำถามยืนยันก่อนจ่าย เข้า backlog รอบถัดไป</p></div>
+<div class="card"><p class="lbl">Retrospective</p><p class="body" style="font-size: 14px">ทีมตกลงกันว่าโปรเจกต์ถัดไป designer จะคุยกับ SA ตั้งแต่ sprint แรก เพื่อเจอข้อจำกัดของระบบเร็วขึ้น</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">ตรวจสอบทุนอัตโนมัติ · บันทึกใบสมัครไว้ทำต่อ · dashboard สถิติผู้สมัครใน Back Office · ภาษาอังกฤษและจีน</p></div>
+</section>
+
+<!-- process -->
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">การออกแบบ UI จริง ๆ เป็นแค่ 1 ใน 6 ช่วงของงาน ที่เหลือคือการทำความเข้าใจโจทย์ ตัดสินใจร่วมกับทีม และดูแลจนระบบใช้งานได้จริง กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+<sc-for list="{{phases}}" as="ph" hint-placeholder-count="6">
+<button type="button" class="ptab" role="tab" aria-selected="{{ph.sel}}" onClick="{{ph.pick}}"><span class="pn">{{ph.num}}</span><span class="pt">{{ph.name}}</span></button>
+</sc-for>
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">{{cur.num}} · {{cur.name}}</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">{{cur.goal}}</p>
+<ul><sc-for list="{{cur.acts}}" as="a" hint-placeholder-count="4"><li>{{a}}</li></sc-for></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">{{cur.with}}</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><sc-for list="{{cur.outs}}" as="o" hint-placeholder-count="3"><span class="pchip pc-d">{{o}}</span></sc-for></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><sc-for list="{{cur.po}}" as="o" hint-placeholder-count="2"><span class="pchip pc-p">{{o}}</span></sc-for></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" onClick="{{prev}}" aria-disabled="{{noPrev}}">← ก่อนหน้า</button><button type="button" class="pnav" onClick="{{next}}" aria-disabled="{{noNext}}">ถัดไป →</button></div>
+</div>
+<sc-if value="{{cur.isFlow}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">User flow · การสมัครและชำระเงิน</p><div class="pvscroll"><svg viewBox="0 0 1220 290" width="100%" style="min-width:820px;display:block;font-family:'IBM Plex Sans Thai',sans-serif" role="img" aria-label="User flow การสมัครและชำระเงิน แยกกรณีขอทุนและกรณีชำระเงินไม่สำเร็จ"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5A6380"/></marker></defs><rect x="10" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="70.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">เข้าสู่ระบบ</text><path d="M130 63H158" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="160" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="220.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">กรอกใบสมัคร</text><path d="M280 63H308" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="310" y="40" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="375.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">อัปโหลดเอกสาร</text><path d="M440 63H476" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><path d="M540 19L602 63L540 107L478 63Z" fill="#FFE3D6" stroke="#CC4116" stroke-width="1.6"/><text x="540" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="#A33410">ขอทุน?</text><path d="M540 107V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><text x="548" y="150" font-size="12" font-weight="600" fill="#CC4116">ใช่</text><rect x="470" y="180" width="140" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="540.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">จ่ายค่าสมัคร 500</text><path d="M610 203H638" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="640" y="180" width="150" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="715.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">รอตรวจสอบทุน</text><path d="M602 63H636" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><text x="608" y="54" font-size="12" font-weight="600" fill="#CC4116">ไม่</text><rect x="640" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="700.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">เลือกรูปแบบ</text><path d="M760 63H788" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="790" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="850.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">เลือกช่องทาง</text><path d="M910 63H938" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="940" y="40" width="110" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="995.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">สรุปยอด</text><path d="M1050 63H1082" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><path d="M1146 19L1208 63L1146 107L1084 63Z" fill="#FFE3D6" stroke="#CC4116" stroke-width="1.6"/><text x="1146" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="#A33410">สำเร็จ?</text><path d="M1146 107V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><text x="1154" y="150" font-size="12" font-weight="600" fill="#CC4116">ใช่</text><rect x="1080" y="180" width="130" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="1145.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">ผลการชำระเงิน</text><path d="M1100 96L1000 178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><text x="1020" y="130" font-size="12" font-weight="600" fill="#CC4116">ไม่</text><rect x="830" y="180" width="160" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="910.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">แจ้งเหตุผล + ลองใหม่</text><path d="M880 180V88" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah)"/><rect x="640" y="252" width="16" height="12" rx="3" fill="#E3EBFF" stroke="#2457E6"/><text x="664" y="263" font-size="12" fill="#36405E">4 ขั้นตอนชำระเงินที่ผู้ใช้เห็นบน stepper</text></svg></div></div></sc-if><sc-if value="{{cur.isWire}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">จาก wireframe สู่ UI</p><div class="wfgrid"><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl" style="color:#5A6380">Wireframe</p><div class="wf"><div class="ln" style="width:18%;height:12px"></div><div style="display:flex;gap:6px;justify-content:center"><div class="bx" style="width:20%;height:16px;background:#C4CCDB"></div><div class="bx" style="width:20%;height:16px"></div><div class="bx" style="width:20%;height:16px"></div><div class="bx" style="width:20%;height:16px"></div></div><div style="display:flex;gap:6px;flex:1"><div style="flex:1;border:1.5px solid #D3DDEE;border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:5px"><div class="bx" style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#B9C3D6;font-size:16px">✕</div><div class="ln" style="width:85%"></div><div class="ln" style="width:60%"></div><div class="ln" style="width:70%;margin-top:auto"></div><div style="height:14px;width:55%;background:#9AA6BF;border-radius:4px"></div><div style="height:12px;width:50%;border-radius:6px;background:#C4CCDB"></div></div><div style="flex:1;border:1.5px solid #D3DDEE;border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:5px"><div class="bx" style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#B9C3D6;font-size:16px">✕</div><div class="ln" style="width:85%"></div><div class="ln" style="width:60%"></div><div class="ln" style="width:70%;margin-top:auto"></div><div style="height:14px;width:55%;background:#9AA6BF;border-radius:4px"></div><div style="height:12px;width:50%;border-radius:6px;background:#C4CCDB"></div></div><div style="flex:1;border:1.5px solid #D3DDEE;border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:5px"><div class="bx" style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#B9C3D6;font-size:16px">✕</div><div class="ln" style="width:85%"></div><div class="ln" style="width:60%"></div><div class="ln" style="width:70%;margin-top:auto"></div><div style="height:14px;width:55%;background:#9AA6BF;border-radius:4px"></div><div style="height:12px;width:50%;border-radius:6px;background:#C4CCDB"></div></div><div style="flex:1;border:1.5px solid #D3DDEE;border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:5px"><div class="bx" style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#B9C3D6;font-size:16px">✕</div><div class="ln" style="width:85%"></div><div class="ln" style="width:60%"></div><div class="ln" style="width:70%;margin-top:auto"></div><div style="height:14px;width:55%;background:#9AA6BF;border-radius:4px"></div><div style="height:12px;width:50%;border-radius:6px;background:#C4CCDB"></div></div></div></div></div><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl">UI จริง</p><div class="shot"><img src="assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg" alt="หน้าเลือกรูปแบบการชำระเงินเวอร์ชันจริง"></div></div></div><p class="body" style="font-size:14px">ล็อกโครงให้ทุกการ์ดมีลำดับเดียวกัน ทั้งภาพ ชื่อ รายการค่าใช้จ่าย ยอดรวม และปุ่ม ตั้งแต่ขั้น wireframe ผู้ใช้จึงเทียบตัวเลือกได้ทันที</p></div></sc-if><sc-if value="{{cur.isSpec}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">Note สำหรับ Dev ใน Figma</p><div class="shot"><img src="assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg" alt="หน้าจอพร้อมจุดอธิบายสำหรับ Dev"><span class="rl" style="left:12%;top:14%;width:77%;height:8%"></span><span class="rl" style="left:26.6%;top:27%;width:23%;height:55%"></span><span class="rl" style="left:52.5%;top:64.5%;width:19.5%;height:5.5%"></span><span class="pin" style="left:12%;top:14%">1</span><span class="pin" style="left:27%;top:27%">2</span><span class="pin" style="left:72%;top:64.5%">3</span><span class="pin" style="left:87%;top:62%">4</span><span class="pin" style="left:14%;top:78.3%">5</span></div><ul class="legend"><li><b>1</b><span>Stepper มี 3 state: ทำแล้ว · กำลังทำ (ส้ม) · ยังไม่ถึง</span></li><li><b>2</b><span>การ์ดที่ถูกเลือกต้องมีขอบเน้น และกดได้ทั้งการ์ด ไม่ใช่แค่ปุ่ม</span></li><li><b>3</b><span>ยอดงวดคำนวณจากระบบ แสดง “งวดที่ 1” เสมอในหน้านี้</span></li><li><b>4</b><span>ส่วนลดใช้สีแดงและเครื่องหมายลบ ยอดรวมต้องหักแล้ว</span></li><li><b>5</b><span>ปุ่มมี state ปกติ · hover · loading · กดไม่ได้</span></li><li><b>!</b><span>ถ้าชำระไม่สำเร็จ แสดงเหตุผลและปุ่มลองใหม่ ไม่ต้องกรอกข้อมูลซ้ำ</span></li></ul></div></sc-if>
+</div>
+</section>
+
+<!-- 4 -->
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ทำให้เรื่องเงินอ่านง่ายและตัดสินใจได้เร็ว</h2>
+<div class="g2">
+<div class="card"><p class="lbl">บอกว่าอยู่ขั้นไหน</p><p class="body" style="font-size: 14px">แถบ 4 ขั้นตอนด้านบน ไฮไลต์ขั้นปัจจุบันด้วยสีส้ม ผู้สมัครรู้ว่าเหลืออีกกี่ขั้นก่อนจ่ายเสร็จ</p></div>
+<div class="card"><p class="lbl">เทียบตัวเลือกได้ในหน้าเดียว</p><p class="body" style="font-size: 14px">ทั้ง 4 รูปแบบใช้การ์ดโครงเดียวกัน แจกแจงค่าใช้จ่ายทีละรายการ และแสดงยอดที่ต้องจ่ายเป็นตัวเลขใหญ่ที่จุดเดียวกัน</p></div>
+<div class="card"><p class="lbl">ทำให้การแบ่งจ่ายชัดเจน</p><p class="body" style="font-size: 14px">แบบแบ่งงวดบอกจำนวนงวดและยอดต่องวด และแยกกล่อง “งวดที่ 1” ให้รู้ว่าวันนี้ต้องจ่ายเท่าไร</p></div>
+<div class="card"><p class="lbl">ชี้สิ่งที่ต้องระวัง</p><p class="body" style="font-size: 14px">ส่วนลดเมื่อจ่ายทั้งปีและหมายเหตุสำหรับผู้ขอทุนใช้สีแดง ให้ผู้สมัครเห็นก่อนเลือกผิดรูปแบบ</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">ใบสมัคร</p><p class="body" style="font-size: 14px">แบ่งฟอร์มยาวเป็นหลายส่วน ทั้งข้อมูลส่วนตัว ประวัติการศึกษา และเลือกคณะ/สาขา พร้อมบันทึกไว้ทำต่อภายหลังได้</p></div>
+<div class="card"><p class="lbl">อัปโหลดเอกสาร</p><p class="body" style="font-size: 14px">บอกชัดว่าต้องใช้เอกสารอะไร รองรับไฟล์ชนิดไหน และแสดงตัวอย่างไฟล์ที่อัปโหลดแล้ว</p></div>
+<div class="card"><p class="lbl">สถานะการสมัคร</p><p class="body" style="font-size: 14px">ผู้สมัครกลับมาดูได้ว่าใบสมัครและการชำระเงินอยู่ขั้นไหน โดยไม่ต้องโทรถามเจ้าหน้าที่</p></div>
+<div class="card"><p class="lbl">Back Office เจ้าหน้าที่</p><p class="body" style="font-size: 14px">รายการผู้สมัครพร้อมตัวกรองและสถานะ หน้าตรวจใบสมัคร เอกสาร และการชำระเงิน สถานะที่เจ้าหน้าที่อัปเดตแสดงให้ผู้สมัครเห็นทันที</p></div>
+</div>
+</section>
+
+<!-- 5 -->
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากโปรเจกต์แรกที่ G-ABLE</h2>
+<div class="g3">
+<div class="card"><p class="lbl">ส่งมอบทันกำหนด</p><p class="body" style="font-size: 14px">ระบบเปิดใช้ทันรอบรับสมัครปีการศึกษา 2565</p></div>
+<div class="card"><p class="lbl">จบในระบบเดียว</p><p class="body" style="font-size: 14px">ผู้สมัครกรอกใบสมัคร เลือกรูปแบบ และชำระเงินได้ครบออนไลน์ ไม่ต้องส่งหลักฐานแยก</p></div>
+<div class="card"><p class="lbl">ใช้ต่อได้</p><p class="body" style="font-size: 14px">รูปแบบการ์ดและ stepper กลายเป็นแนวทางให้หน้าอื่นของระบบใช้ต่อ</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">คุยกับ SA ให้เร็ว</p><p class="body" style="font-size: 14px">การแบ่งจ่ายขึ้นกับว่า payment gateway รองรับอะไร การเช็กข้อจำกัดทางเทคนิคตั้งแต่ wireframe ช่วยให้ไม่ต้องออกแบบใหม่ทีหลัง</p></div>
+<div class="card"><p class="body" style="font-weight: 600">Designer คนเดียวต้องสื่อสารให้ชัด</p><p class="body" style="font-size: 14px">ไม่มีใครช่วยรีวิวงานด้าน design ฉันจึงเขียนเหตุผลและ state ต่าง ๆ ไว้ใน Figma ให้ทั้งทีมเข้าใจตรงกัน</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy3.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 5 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">AIS · PCI Web Portal</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+</div>
+</div>
+</template>
+<div id="root"></div>
+<script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":10900}}'>
+class Component extends DCLogic {
+componentDidMount() {
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+var last = null;
+var sel = '.card, .g3 > div, .g4 > div';
+function reset(el) { if (!el) { return; } el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); el.style.setProperty('--go', '0'); }
+this._pm = function (e) {
+var el = e.target && e.target.closest ? e.target.closest(sel) : null;
+if (el !== last) { reset(last); last = el; }
+if (!el || e.pointerType === 'touch') { return; }
+var r = el.getBoundingClientRect();
+var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+el.style.setProperty('--rx', ((0.5 - y) * 8).toFixed(2) + 'deg');
+el.style.setProperty('--ry', ((x - 0.5) * 10).toFixed(2) + 'deg');
+el.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
+el.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
+el.style.setProperty('--go', '1');
+};
+this._pl = function () { reset(last); last = null; };
+document.addEventListener('pointermove', this._pm);
+document.documentElement.addEventListener('pointerleave', this._pl);
+}
+componentWillUnmount() {
+if (this._pm) { document.removeEventListener('pointermove', this._pm); }
+if (this._pl) { document.documentElement.removeEventListener('pointerleave', this._pl); }
+}
+renderVals() {
+var self = this;
+var s = this.state || {};
+var cur = typeof s.opt === 'number' ? s.opt : 2;
+var data = [
+{ name: 'ชำระค่าสมัครอย่างเดียว', short: '500', total: '500.00', totLabel: 'ยอดที่ต้องชำระ', rows: [{ k: 'ค่าธรรมเนียมการสมัคร', v: '500 บาท' }], note: '**กรณีประสงค์รับทุนการศึกษา ให้ชำระค่าสมัครอย่างเดียวก่อน เพื่อรอเจ้าหน้าที่ตรวจสอบทุนในขั้นตอนถัดไป' },
+{ name: 'ค่าสมัคร + ค่าเทอม (เต็มจำนวน)', short: '19,400', total: '19,400.00', totLabel: 'ยอดที่ต้องชำระ', rows: [{ k: 'ค่าธรรมเนียมการสมัคร', v: '500 บาท' }, { k: 'ค่าเทอมเต็มจำนวน', v: '18,900 บาท' }] },
+{ name: 'ค่าสมัคร + ค่าเทอม (แบ่งจ่าย)', short: '6,300', total: '6,300.00', totLabel: 'ชำระงวดที่ 1', rows: [{ k: 'ค่าธรรมเนียมการสมัคร', v: '500 บาท' }, { k: 'ค่าเทอมเต็มจำนวน', v: '18,900 บาท' }, { k: 'แบ่งชำระได้ 3 งวด', v: 'งวดละ 6,300 บาท' }] },
+{ name: 'ค่าสมัคร + ค่าเทอม (ตลอดปีการศึกษา)', short: '55,200', total: '55,200.00', totLabel: 'ยอดที่ต้องชำระ', rows: [{ k: 'ค่าธรรมเนียมการสมัคร', v: '500 บาท' }, { k: 'ค่าเทอมทั้งปี 2565', v: '56,700 บาท' }, { k: 'ส่วนลด', v: '−2,000 บาท', color: '#FF8A5C' }] }
+];
+var opts = data.map(function (d, i) {
+return { name: d.name, short: d.short, pressed: i === cur ? 'true' : 'false', pick: function () { self.setState({ opt: i }); } };
+});
+var d = data[cur];
+var rows = d.rows.map(function (r) { return { k: r.k, v: r.v, color: r.color || '#C9D1E6' }; });
+var P = [
+{ name: 'ทำความเข้าใจโจทย์', goal: 'เข้าใจว่ามหาวิทยาลัยต้องการอะไร และผู้สมัครติดตรงไหน ก่อนเริ่มวาดอะไรเลย', acts: ['เข้า workshop เก็บ requirement กับ BA และฝ่ายรับสมัครของมหาวิทยาลัย', 'ไล่ดูขั้นตอนการสมัครและชำระเงินแบบเดิมทีละขั้น จดจุดที่ทำให้สับสน', 'ขอคำถามที่ผู้สมัครถามเจ้าหน้าที่บ่อย มาจัดกลุ่มหาปัญหาหลัก', 'ดูระบบรับสมัครของมหาวิทยาลัยอื่นเพื่อเทียบรูปแบบ'], with: 'BA · PM · เจ้าหน้าที่รับสมัคร', outs: ['สรุป pain point', 'รายการคำถามที่พบบ่อย'], po: ['Stakeholder management', 'Customer insight'] },
+{ name: 'กำหนดปัญหาและเป้าหมาย', goal: 'ตกลงกับทีมให้ชัดว่ากำลังแก้ปัญหาอะไร และวัดอย่างไรว่าสำเร็จ', acts: ['สรุปกลุ่มผู้ใช้ 3 กลุ่ม: นักเรียน ม.6, ผู้ปกครอง และเจ้าหน้าที่', 'วาด user journey ตั้งแต่เข้าเว็บจนชำระเงินเสร็จ', 'เขียน problem statement และเป้าหมายร่วมกับ PM', 'จัดลำดับว่าหน้าไหนต้องเสร็จก่อนเปิดรับสมัคร'], with: 'PM · BA', outs: ['User journey', 'Problem statement'], po: ['Prioritization', 'Goal setting'] },
+{ name: 'วาง flow และโครงหน้า', goal: 'ออกแบบเส้นทางของผู้ใช้ และเช็กกับทีมเทคนิคว่าทำได้จริง', acts: ['วาด user flow ทั้งการสมัครและการชำระเงิน รวมกรณีขอทุนและจ่ายไม่สำเร็จ', 'จัดโครงสร้างข้อมูล (IA) ว่าอะไรต้องอยู่หน้าไหน', 'ทำ wireframe แล้วรีวิวกับ BA ให้ตรงเงื่อนไขค่าเทอม', 'เช็กกับ SA ว่า payment gateway รองรับการแบ่งจ่ายได้แค่ไหน'], with: 'BA · SA', outs: ['User flow', 'Wireframe'], po: ['Business flow', 'ประเมินข้อจำกัดเทคนิค'] },
+{ name: 'ออกแบบ UI และ prototype', goal: 'เปลี่ยนโครงให้เป็นหน้าจอที่อ่านง่าย ใช้ได้ทั้งมือถือและคอมพิวเตอร์', acts: ['ออกแบบ UI ตาม CI ของมหาวิทยาลัย', 'ทำ component ที่ใช้ซ้ำ เช่น การ์ดตัวเลือก, stepper และปุ่ม', 'ทำ prototype ใน Figma ให้คลิกตาม flow ได้จริง', 'นำเสนองานใน sprint review และปรับตาม feedback ลูกค้า'], with: 'PM · ลูกค้า', outs: ['UI ทุกหน้า', 'Prototype', 'Component'], po: ['Presentation', 'จัดการ feedback'] },
+{ name: 'ทดสอบและปรับปรุง', goal: 'ตรวจว่าคนที่ไม่เคยเห็นงานใช้ได้จริง ก่อนส่งให้ Dev', acts: ['ให้คนในทีมที่ไม่เคยเห็นงานลองทำ task เช่น “เลือกแบบแบ่งจ่ายแล้วชำระงวดแรก”', 'จดจุดที่ลังเลหรือกดผิด แล้วปรับ wording และลำดับข้อมูล', 'เช็กการแสดงผลบนมือถือ เพราะผู้สมัครส่วนใหญ่ใช้มือถือ'], with: 'คนในทีม · PM', outs: ['ผลทดสอบ', 'UI ฉบับปรับปรุง'], po: ['Validation', 'ตัดสินใจจากข้อมูล'] },
+{ name: 'ส่งต่อและดูแลจนขึ้นระบบ', goal: 'ทำให้สิ่งที่ Dev สร้างตรงกับที่ออกแบบ และพร้อมใช้งานจริง', acts: ['เขียน note ใน Figma ระบุทุก state เช่น error, loading และจ่ายไม่สำเร็จ', 'ตอบคำถาม Dev ระหว่าง sprint และปรับงานเมื่อติดข้อจำกัด', 'ทำ design QA เทียบหน้าจอจริงกับ design ก่อน release', 'ช่วยทีมตรวจหน้าจอระหว่าง UAT กับลูกค้า'], with: 'Dev · SA · ลูกค้า', outs: ['Design spec', 'รายการ design QA'], po: ['UAT', 'Acceptance criteria', 'Release'] }
+];
+var CK = [
+{ t: 'UAT ร่วมกับฝ่ายรับสมัครครบทุกกรณี', d: 'ชำระเงิน 4 รูปแบบ × ทุกช่องทาง รวมกรณีจ่ายไม่สำเร็จ' },
+{ t: 'แก้ bug ระดับร้ายแรงครบ', d: 'ส่วนที่เหลือจัดลำดับเข้า backlog ร่วมกับลูกค้า' },
+{ t: 'ฝ่ายการเงินยืนยันยอดค่าเทอมและส่วนลด', d: 'ตัวเลขบนหน้าจอตรงกับประกาศของมหาวิทยาลัย' },
+{ t: 'ทดลองชำระเงินจริงในระบบ production', d: 'ยอดเล็ก ๆ เพื่อเช็กว่าเงินเข้าและสถานะอัปเดต' },
+{ t: 'ลูกค้าเซ็นตรวจรับงาน (sign-off)', d: 'ฝ่ายรับสมัครยืนยันว่าระบบตรงตาม scope' },
+{ t: 'เตรียมเจ้าหน้าที่และช่องทางช่วยเหลือ', d: 'คู่มือ FAQ เรื่องค่าใช้จ่าย และทีมเฝ้าระบบช่วงเปิดรับสมัคร' }
+];
+var ck = Array.isArray(s.ck) ? s.ck : [true, true, true, false, false, false];
+var cks = CK.map(function (c, i) { return { t: c.t, d: c.d, on: ck[i] ? 'true' : 'false', mark: ck[i] ? '✓' : '', toggle: function () { var n = ck.slice(); n[i] = !n[i]; self.setState({ ck: n }); } }; });
+var ckDone = ck.filter(Boolean).length;
+var pi = typeof s.ph === 'number' ? s.ph : 0;
+var phases = P.map(function (x, i) { return { num: '0' + (i + 1), name: x.name, sel: i === pi ? 'true' : 'false', pick: function () { self.setState({ ph: i }); } }; });
+var cp = Object.assign({ num: '0' + (pi + 1), isFlow: pi === 2, isWire: pi === 3, isSpec: pi === 5 }, P[pi]);
+return {
+phases: phases, cur: cp,
+cks: cks, ckDone: ckDone, ckTotal: CK.length, ckPct: Math.round(ckDone / CK.length * 100) + '%', ckAll: ckDone === CK.length,
+noPrev: pi === 0 ? 'true' : 'false', noNext: pi === P.length - 1 ? 'true' : 'false',
+prev: function () { if (pi > 0) { self.setState({ ph: pi - 1 }); } },
+next: function () { if (pi < P.length - 1) { self.setState({ ph: pi + 1 }); } },
+opts: opts,
+sel: { name: d.name, unit: d.unit || 'บาท', rows: rows, total: d.total, totLabel: d.totLabel, hasNote: !!d.note, note: d.note || '' }
+};
+}
+}
+</script>
+<script src="dc.js"></script>
+</body>
+</html>

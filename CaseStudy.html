@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meow Finance · Theechaya S.</title>
+<meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<meta property="og:title" content="Meow Finance · Theechaya S.">
+<meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232457E6'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='%23fff'%3ET.%3C/text%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&amp;family=Outfit:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2457E6}
+a{color:#CC4116}a:hover{color:#A33410}
+button{font-family:inherit}
+.grid-bg{background-color:#2457E6;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(115deg,rgba(255,255,255,0) 55%,rgba(255,255,255,.08) 70%,rgba(255,255,255,0) 85%);background-size:64px 64px,64px 64px,100% 100%}
+.sec{background:#F7F9FD;border-radius:28px;padding:clamp(24px,5vw,56px) clamp(16px,4vw,56px);display:flex;flex-direction:column;gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:translate .3s ease,box-shadow .3s ease}
+.card:hover{translate:0 -6px;box-shadow:0 16px 30px rgba(28,36,64,.14)}
+.kicker{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#2457E6}
+.h2{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:clamp(26px,3.2vw,38px);line-height:1.3;color:#1C2440}
+.lbl{margin:0;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.body{margin:0;font-size:15px;line-height:1.75;color:#36405E}
+.scroll{overflow-x:auto;background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+.tbl th{text-align:left;font-weight:600;color:#5A6380;padding:12px;border-bottom:2px solid #D3DDEE;vertical-align:top}
+.tbl td{padding:12px;border-bottom:1px solid #DCE4F2;color:#1C2440;vertical-align:top;line-height:1.6}
+.tbl tbody tr{transition:background .2s}
+.tbl tbody tr:hover{background:#FFE3D6}
+.bar{transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.tog{cursor:pointer;transition:background .2s,color .2s}
+.stepbox{transition:translate .3s}
+.stepbox:hover{translate:0 -4px}
+.back svg{transition:translate .25s}
+.back:hover svg{translate:-6px 0}
+.next svg{transition:translate .25s}
+.next:hover svg{translate:8px 0}
+@keyframes fadein{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes rise{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+.fade{animation:fadein .4s ease both}
+@supports (animation-timeline: view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+html{scroll-behavior:smooth}
+section,header{scroll-margin-top:96px}
+.progress{position:fixed;top:0;left:0;right:0;height:4px;background:#DFFF1A;transform-origin:0 50%;scale:0 1;z-index:50}
+@keyframes grow{to{scale:1 1}}
+@supports (animation-timeline: scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+.topbar{position:sticky;top:12px;z-index:20;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:16px;padding:6px;box-shadow:0 6px 20px rgba(28,36,64,.12)}
+.toc{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.toc a{flex:0 0 auto;text-decoration:none;color:#36405E;font-size:13px;padding:10px 12px;border-radius:999px;min-height:40px;box-sizing:border-box;display:inline-flex;align-items:center;transition:background .2s,color .2s}
+.toc a:hover{background:#E3EBFF;color:#2457E6}
+.backbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:#1C2440;color:#F7F9FD;border-radius:12px;padding:10px 14px;min-height:44px;box-sizing:border-box;font-size:13px;font-weight:600}
+.backbtn:hover{color:#F7F9FD;background:#36405E}
+.tldr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;text-decoration:none;border-radius:28px;padding:clamp(24px,4vw,44px);transition:translate .3s,box-shadow .3s}
+.nextcard:hover{translate:0 -6px;box-shadow:0 20px 40px rgba(28,36,64,.2)}
+.nextcard .arrow{transition:translate .3s}
+.nextcard:hover .arrow{translate:10px 0}
+.krow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px;font-family:'IBM Plex Sans Thai',sans-serif}
+.b-ux{background:#E3EBFF;color:#26327F}
+.b-po{background:#FFE3D6;color:#A33410}
+@media (max-width:720px){.tldr{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+/* polish v2 */
+body{counter-reset:csec}
+section.sec{position:relative;overflow:hidden;background:#EAF0FF;counter-increment:csec;box-shadow:0 20px 50px rgba(10,20,70,.18)}
+section.sec::after{content:counter(csec, decimal-leading-zero);position:absolute;top:-14px;right:22px;font-family:Outfit,sans-serif;font-size:clamp(90px,14vw,160px);font-weight:600;line-height:1;letter-spacing:-.04em;color:rgba(36,87,230,.1);pointer-events:none}
+section.sec > *{position:relative;z-index:1}
+header.sec{box-shadow:0 20px 50px rgba(10,20,70,.18)}
+.kicker{display:inline-block;background:#1C2440;color:#DFFF1A !important;padding:7px 14px;border-radius:999px}
+.h2{width:fit-content;max-width:100%;background:linear-gradient(#DFFF1A,#DFFF1A) no-repeat 0 92%/100% .28em}
+.card{border:0 !important;border-top:4px solid #2457E6 !important;box-shadow:0 8px 22px rgba(28,36,64,.08);outline:2px solid transparent;outline-offset:4px;transition:translate .3s ease,box-shadow .3s ease,rotate .3s ease,outline-color .2s !important}
+.card:nth-child(3n+2){border-top-color:#FF7A4D !important}
+.card:nth-child(3n){border-top-color:#1C2440 !important}
+.card:hover{translate:0 -6px;rotate:-.6deg;box-shadow:0 18px 34px rgba(28,36,64,.18);outline-color:#DFFF1A}
+.todo{animation:pulseb 2.4s ease-in-out infinite}
+@keyframes pulseb{50%{border-color:#2457E6;background:#E8F0FF}}
+@keyframes popc{from{opacity:0;translate:0 40px;scale:.95}}
+@keyframes hl2{from{background-size:0 .28em}to{background-size:100% .28em}}
+@supports (animation-timeline: view()){
+.card{animation:popc linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+.card:nth-child(2){animation-range:entry 6% entry 46%}
+.card:nth-child(3){animation-range:entry 12% entry 52%}
+.card:nth-child(4){animation-range:entry 18% entry 58%}
+.h2{animation:hl2 linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+}
+@media (prefers-reduced-motion:reduce){.card,.h2,.todo{animation:none !important}}
+/* tilt v1 */
+.card,.g3 > div,.g4 > div{position:relative;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out,translate .3s ease,box-shadow .3s ease,outline-color .2s !important}
+.card::after,.g3 > div::after,.g4 > div::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.5),rgba(255,255,255,0) 60%);opacity:var(--go,0);transition:opacity .25s}
+.card:hover,.g3 > div:hover,.g4 > div:hover{rotate:none;translate:0 -6px;box-shadow:0 18px 34px rgba(28,36,64,.2);outline:2px solid #DFFF1A;outline-offset:4px}
+.card .lbl{transition:letter-spacing .3s ease,color .3s}
+.card:hover .lbl{letter-spacing:.2em}
+section.sec::after{transition:translate .6s ease,color .6s}
+section.sec:hover::after{translate:-14px 8px;color:rgba(36,87,230,.18)}
+section.sec:hover .kicker{animation:wig2 .6s ease}
+@keyframes wig2{30%{rotate:-4deg}60%{rotate:3deg}}
+.krow .badge{transition:translate .2s}
+section.sec:hover .krow .badge{translate:0 -3px}
+@media (prefers-reduced-motion:reduce){section.sec:hover .kicker{animation:none}}
+/* utcc v1 */
+.todo{border:2px dashed #A9C4FF;background:#F3F7FF;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.todo p{margin:0;font-size:14px;line-height:1.7;color:#4A5370}
+.todo .tt{font-weight:600;color:#26327F}
+.stage{background:radial-gradient(110% 90% at 50% 115%, #34449A 0%, #1C2440 65%);border-radius:20px;padding:clamp(24px,5vw,56px) clamp(16px,6vw,80px) 0;display:flex;justify-content:center;overflow:hidden}
+.laptop{width:100%;max-width:820px;transition:translate .5s ease}
+.stage:hover .laptop{translate:0 -8px}
+.lscreen{background:#0B0F1E;border-radius:18px 18px 0 0;padding:14px 14px 10px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.5)}
+.lscreen img{display:block;width:100%;height:auto;border-radius:4px;background:#FFFFFF}
+.lbase{height:18px;margin:0 -7%;background:linear-gradient(#E3E8F2,#AEB7CC);border-radius:0 0 18px 18px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:st}
+.steps > div{background:#FFFFFF;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px;box-shadow:0 6px 16px rgba(28,36,64,.06)}
+.steps .n{font-family:Outfit,sans-serif;font-weight:600;font-size:22px;color:#CC4116}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border-radius:16px;padding:16px;border:2px solid #DCE4F2;transition:border-color .2s,translate .25s,box-shadow .25s}
+.opt:hover{translate:0 -4px;box-shadow:0 12px 24px rgba(28,36,64,.12)}
+.opt:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.opt[aria-pressed="true"]{border-color:#2457E6;box-shadow:0 0 0 4px rgba(36,87,230,.15)}
+.opt .price{font-family:Outfit,sans-serif;font-weight:600;font-size:24px;color:#26327F}
+.receipt{background:#1C2440;color:#F7F9FD;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.receipt .row{display:flex;justify-content:space-between;gap:12px;font-size:15px;color:#C9D1E6}
+.receipt .tot{border-top:1px dashed rgba(255,255,255,.3);padding-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.team{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.team span{background:#FFFFFF;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 6px 16px rgba(28,36,64,.08);transition:translate .25s}
+.team span:hover{translate:0 -4px}
+.team .me{background:#DFFF1A;color:#1C2440}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* process v1 */
+.ptabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.ptab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;border:2px solid transparent;transition:translate .25s,background .2s,border-color .2s,box-shadow .25s}
+.ptab:hover{translate:0 -4px;box-shadow:0 10px 20px rgba(28,36,64,.12)}
+.ptab:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ptab[aria-selected="true"]{background:#2457E6;color:#FFFFFF;box-shadow:0 10px 24px rgba(36,87,230,.35)}
+.ptab .pn{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116}
+.ptab[aria-selected="true"] .pn{color:#DFFF1A}
+.ptab .pt{font-size:13px;font-weight:600;line-height:1.35}
+.ppanel{background:#FFFFFF;border-radius:20px;padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;box-shadow:0 10px 26px rgba(28,36,64,.08)}
+.ppanel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.ppanel li{display:flex;gap:10px;font-size:15px;line-height:1.6;color:#36405E}
+.ppanel li::before{content:'';flex:0 0 8px;height:8px;margin-top:9px;border-radius:50%;background:#FF7A4D}
+.pchip{display:inline-block;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;margin:0 6px 8px 0}
+.pc-d{background:#E3EBFF;color:#26327F}
+.pc-p{background:#FFE3D6;color:#A33410}
+.pnav{all:unset;cursor:pointer;box-sizing:border-box;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;background:#1C2440;color:#FFFFFF;transition:background .2s}
+.pnav:hover{background:#36405E}
+.pnav:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.pnav[aria-disabled="true"]{opacity:.35;cursor:default}
+.pvis{grid-column:1/-1;display:flex;flex-direction:column;gap:12px;border-top:1.5px dashed #D3DDEE;padding-top:20px}
+.pvtag{align-self:flex-start;background:#FFF4C2;color:#6B5A00;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.pvscroll{overflow-x:auto;background:#F7F9FD;border-radius:14px;padding:12px}
+.wfgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wf{background:#FFFFFF;border:1.5px solid #D3DDEE;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;aspect-ratio:1400/1079;box-sizing:border-box}
+.wf .bx{background:#EEF1F7;border-radius:6px}
+.wf .ln{height:7px;background:#DCE1EB;border-radius:4px}
+.shot{position:relative;border-radius:12px;overflow:hidden;border:1.5px solid #D3DDEE}
+.shot img{display:block;width:100%;height:auto}
+.pin{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#CC4116;color:#FFFFFF;font-family:Outfit,sans-serif;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(204,65,22,.25);animation:pinp 2s ease-in-out infinite}
+@keyframes pinp{50%{box-shadow:0 0 0 8px rgba(204,65,22,.08)}}
+.rl{position:absolute;border:1.5px dashed #CC4116;border-radius:6px;pointer-events:none}
+.legend{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.legend li{font-size:13px;line-height:1.55;color:#36405E;display:flex;gap:8px}
+.legend li::before{display:none}
+.legend b{flex:0 0 22px;height:22px;border-radius:50%;background:#CC4116;color:#FFF;font-family:Outfit,sans-serif;font-size:12px;display:flex;align-items:center;justify-content:center}
+@media (max-width:720px){.wfgrid,.legend{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.pin{animation:none}}
+@media (max-width:900px){.ptabs{grid-template-columns:repeat(3,minmax(0,1fr))}.ppanel{grid-template-columns:minmax(0,1fr)}}
+/* po view v1 */
+.mosc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mcol{border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mcol h3{margin:0;font-family:Outfit,'IBM Plex Sans Thai',sans-serif;font-size:18px;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.mcol h3 small{font-family:'IBM Plex Sans Thai',sans-serif;font-size:12px;font-weight:500;opacity:.8}
+.sticky{background:#FFFFFF;border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;color:#1C2440;box-shadow:0 4px 10px rgba(28,36,64,.08);transition:translate .2s,rotate .2s,box-shadow .2s}
+.sticky:hover{translate:0 -3px;rotate:-1.2deg;box-shadow:0 10px 18px rgba(28,36,64,.16)}
+.funnel{display:flex;flex-direction:column;gap:10px}
+.frow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:12px;align-items:center;font-size:14px}
+.ftrack{background:#DCE4F2;border-radius:8px;height:30px;overflow:hidden}
+.ffill{height:100%;border-radius:8px;background:linear-gradient(90deg,#2457E6,#5B83F0);display:flex;align-items:center;padding-left:10px;box-sizing:border-box;color:#FFF;font-size:12px;font-weight:600;transform-origin:0 50%}
+@keyframes fgrow{from{scale:0 1}}
+@supports (animation-timeline: view()){.ffill{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.dec{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:stretch}
+.dec .vs{align-self:center;font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#5A6380}
+/* po view v2 */
+.life{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.life a{display:flex;flex-direction:column;gap:2px;text-decoration:none;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;box-sizing:border-box;color:#1C2440;box-shadow:0 6px 14px rgba(28,36,64,.07);transition:translate .25s,background .2s,color .2s}
+.life a:hover{translate:0 -4px;background:#1C2440;color:#FFFFFF}
+.life a:hover .ln2{color:#DFFF1A}
+.life .ln2{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116;transition:color .2s}
+.life .lt{font-size:13px;font-weight:600;line-height:1.35}
+.life .le{font-size:11px;color:#5A6380;letter-spacing:.04em}
+.life a:hover .le{color:#C9D1E6}
+.phead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;scroll-margin-top:110px}
+.phead .pnum{width:38px;height:38px;border-radius:12px;background:#1C2440;color:#DFFF1A;font-family:Outfit,sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center}
+.phead h3{margin:0;font-size:clamp(19px,2.2vw,23px);font-weight:600;color:#1C2440}
+.own{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px}
+.own-me{background:#DFFF1A;color:#1C2440}
+.own-co{background:#FFFFFF;color:#36405E;border:1.5px solid #C3D0EA}
+.subl{margin:6px 0 0;font-size:13px;font-weight:600;color:#5A6380}
+.shmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.shcol{background:#FFFFFF;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 20px rgba(28,36,64,.07)}
+.shrow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:10px;align-items:start;padding:10px;border-radius:12px;background:#F3F6FC;transition:background .2s,translate .2s}
+.shrow:hover{background:#E3EBFF;translate:4px 0}
+.shrow b{font-size:14px}
+.shrow span{font-size:13px;line-height:1.55;color:#36405E}
+.lv{display:inline-block;margin-top:4px;font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px}
+.lv-h{background:#FFE3D6;color:#A33410}.lv-m{background:#E3EBFF;color:#26327F}
+.gantt{background:#FFFFFF;border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(28,36,64,.07);overflow-x:auto}
+.gg{display:grid;grid-template-columns:150px repeat(8,minmax(56px,1fr));gap:6px 4px;min-width:720px;align-items:center}
+.gg .gh{font-family:Outfit,sans-serif;font-size:12px;font-weight:600;color:#5A6380;text-align:center}
+.gg .gl{grid-column:1;font-size:13px;font-weight:600}
+.gbar{height:24px;border-radius:7px;transform-origin:0 50%;font-size:11px;font-weight:600;display:flex;align-items:center;padding-left:8px;white-space:nowrap;overflow:hidden}
+@supports (animation-timeline: view()){.gbar{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.gms{justify-self:center;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:#A33410;text-align:center;line-height:1.3}
+.gms i{width:14px;height:14px;background:#CC4116;rotate:45deg;border-radius:2px}
+.crflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.crflow > div{background:#FFFFFF;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5;color:#36405E;position:relative;box-shadow:0 6px 14px rgba(28,36,64,.06)}
+.crflow b{font-family:Outfit,sans-serif;color:#CC4116;font-size:16px}
+.chk{display:flex;flex-direction:column;gap:8px}
+.ck{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border-radius:14px;padding:12px 14px;min-height:44px;font-size:14px;line-height:1.55;color:#1C2440;box-shadow:0 4px 12px rgba(28,36,64,.06);transition:background .2s,translate .2s}
+.ck:hover{translate:4px 0}
+.ck:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ck .bx2{flex:0 0 22px;height:22px;border-radius:7px;border:2px solid #9AA6BF;display:flex;align-items:center;justify-content:center;color:#1C2440;font-size:14px;font-weight:700;transition:background .2s,border-color .2s}
+.ck[aria-pressed="true"]{background:#F4FFC2}
+.ck[aria-pressed="true"] .bx2{background:#DFFF1A;border-color:#1C2440}
+.ck small{display:block;color:#5A6380;font-size:12px}
+.prog{height:8px;border-radius:4px;background:#DCE4F2;overflow:hidden}
+.prog > div{height:100%;background:#2457E6;border-radius:4px;transition:width .4s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:900px){.life{grid-template-columns:repeat(3,minmax(0,1fr))}.crflow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.shmap{grid-template-columns:minmax(0,1fr)}.shrow{grid-template-columns:minmax(0,1fr)}.crflow{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.mosc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.mosc,.dec{grid-template-columns:minmax(0,1fr)}.dec .vs{justify-self:center}.frow{grid-template-columns:minmax(0,1fr)}}
+/* responsive v2 */
+@media (max-width:720px){.gantt::before,.pvscroll::before{content:'เลื่อนซ้าย–ขวาเพื่อดูทั้งหมด →';display:block;position:sticky;left:0;font-size:12px;font-weight:600;color:#5A6380;margin-bottom:10px}}
+@media (max-width:520px){section.sec::after{font-size:72px;top:-4px;right:14px}.sec{border-radius:22px}.receipt .tot span:last-child{font-size:26px !important}}
+@media (min-width:1600px){.grid-bg > div{max-width:1180px !important}}
+/* tldr v1 */
+.tldr2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tldr2 > div{background:#FFFFFF;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 16px rgba(28,36,64,.07)}
+.tldr2 > div:last-child{background:#1C2440}
+.tldr2 b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.tldr2 > div:last-child b{color:#DFFF1A}
+.tldr2 p{margin:0;font-size:15px;line-height:1.65;color:#1C2440}
+.tldr2 > div:last-child p{color:#FFFFFF}
+@media (max-width:720px){.tldr2{grid-template-columns:minmax(0,1fr)}}
+/* interaction system v1 — one hover language for the whole site */
+:root{--ix-ease:cubic-bezier(.2,.8,.2,1);--ix-ring:#DFFF1A;--ix-shadow:0 18px 36px rgba(10,20,70,.18);--ix-tint:#EEF3FF}
+/* 1 · Cards: lift + shadow + lime ring */
+.pcard,.pf,.lift,.jobcard,.stepbtn,.card,.g3 > div,.g4 > div,.opt,.ptab,.nextcard,.ppanel,.tldr2 > div,.mcol,.shcol,.gantt,.receipt,.shot{transition:translate .3s var(--ix-ease),box-shadow .3s var(--ix-ease),outline-color .2s,background .2s,transform .15s ease-out !important;outline:2px solid transparent;outline-offset:3px}
+.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.stepbtn:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:0 -6px !important;rotate:none !important;scale:none !important;box-shadow:var(--ix-shadow) !important;outline-color:var(--ix-ring) !important}
+.pcard:active,.pf:active,.stepbtn:active,.opt:active,.ptab:active,.nextcard:active,.jobcard:active{scale:.985 !important}
+/* 2 · Chips & pills: small lift + lime tint */
+.cl,.pill,.tool,.cert,.tag,.chip,.pfl a,.dbtn,.team span,.sticky,.badge,.pchip,.life a,.toc a{transition:translate .2s var(--ix-ease),background .2s,color .2s,box-shadow .2s,border-color .2s !important}
+.pill:hover,.tool:hover,.cert:hover,.chip:hover,.pfl a:hover,.dbtn:hover,.team span:hover,.sticky:hover,.life a:hover{translate:0 -3px !important;rotate:none !important;scale:none !important;box-shadow:0 8px 16px rgba(10,20,70,.14) !important}
+.cl:hover{translate:0 -3px !important}
+.pill:hover,.tag:hover,.chip:hover,.team span:hover,.sticky:hover,.pchip:hover{background:var(--ix-ring) !important;color:#1C2440 !important}
+.tool:hover img,.cert:hover .logo{rotate:none !important;scale:1.08 !important}
+/* 3 · Buttons: lift + press */
+.btn,.navcta,.backbtn,.pnav,.pmore,footer a,footer button,.totop{transition:translate .2s var(--ix-ease),box-shadow .2s,background .2s,color .2s,scale .1s !important}
+.btn:hover,.navcta:hover,.backbtn:hover,.pnav:hover,footer a:hover,footer button:hover,.totop:hover{translate:0 -2px !important;box-shadow:0 10px 20px rgba(10,20,70,.2) !important}
+.btn:active,.navcta:active,.backbtn:active,.pnav:active,footer a:active,footer button:active,.dbtn:active,.ck:active{scale:.97 !important}
+/* 4 · Rows inside a group: tint only, no lift */
+.stats2 .st:hover,.jobbtn:hover,.shrow:hover,.ck:hover,.navlink:hover,.toc a:hover{translate:none !important;background:var(--ix-tint) !important}
+/* Focus: same lime ring for keyboard users */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ix-ring) !important;outline-offset:3px !important}
+@media (hover:none){.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:none !important;outline-color:transparent !important}}
+@media (prefers-reduced-motion:reduce){*{translate:none !important}}
+</style>
+
+</head>
+<body>
+<template id="tpl">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+<!-- HERO -->
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · DeFi / Web3 · 2021 – 2022</p><span class="badge b-ux">งาน UX</span><span class="badge b-po">Product Owner</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">Meow Finance</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">แพลตฟอร์ม DeFi (การเงินแบบกระจายศูนย์) ที่ฉันดูแลทั้งงานออกแบบประสบการณ์และงาน Product Owner ระหว่างทำงานที่ <span style="display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; font-weight: 600; color: #1C2440"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 26px; height: 26px; border-radius: 50%">Testament Technology</span></p>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/8f3aa77874f48c86b735bf2e831f686e.png" alt="หน้า Farm ของ Meow Finance: รายการ pool พร้อม APY, ที่มาของผลตอบแทน และปุ่มปรับ leverage"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX + Product Owner</p></div>
+<div class="card"><p class="lbl">บริษัท</p><p class="body"><span style="display: flex; align-items: center; gap: 10px"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 36px; height: 36px; border-radius: 50%; flex: 0 0 auto">Testament Technology</span></p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body">ม.ค. 2021 – ก.พ. 2022</p></div>
+<div class="card"><p class="lbl">ทีมที่ทำงานร่วม</p><p class="body">Frontend · Smart contract · Marketing · Community</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>แพลตฟอร์ม DeFi ที่ผลตอบแทนสูงแต่ใช้ยากและเสี่ยง ผู้ใช้ไม่รู้ว่าผลตอบแทนมาจากไหน</p></div><div><b>สิ่งที่ฉันทำ</b><p>เป็นทั้ง UX และ Product Owner วาง roadmap จัดลำดับ backlog เขียน requirement และออกแบบให้เห็นที่มาของ APR และความเสี่ยง</p></div><div><b>ผลลัพธ์</b><p>ปล่อยครบ 4 ฟีเจอร์หลัก (Lend, Farm, Stake, mMEOW) ภายใน 14 เดือน ทุก release ผ่าน UAT บน testnet</p></div></div></div>
+</header>
+
+<!-- 1 -->
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · โปรดักต์นี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">“Make your yield easier, make your yield safu”</h2>
+<p class="body">Meow Finance เป็นแพลตฟอร์ม DeFi บน Fantom Chain สำหรับเทรด long/short ด้วย leveraged yield farming และ lending โดยใช้แบรนด์แมวที่เป็นมิตร ทำให้เรื่องซับซ้อนดูเข้าถึงง่ายขึ้น มี 4 เมนูหลัก</p>
+<div class="steps">
+<div><span class="n">Farm</span><span class="body" style="font-size: 14px; font-weight: 600">เลือก pool และปรับ leverage</span></div>
+<div><span class="n">Lend</span><span class="body" style="font-size: 14px; font-weight: 600">ฝากเหรียญรับดอกเบี้ย</span></div>
+<div><span class="n">Stake</span><span class="body" style="font-size: 14px; font-weight: 600">stake เหรียญรับรางวัล</span></div>
+<div><span class="n">mMEOW</span><span class="body" style="font-size: 14px; font-weight: 600">vault เพิ่มจำนวน MEOW</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองปรับ leverage ดูว่า APR เปลี่ยนอย่างไร (ตัวเลขสมมุติเพื่ออธิบาย)</p>
+<div class="g4" role="group" aria-label="ระดับ leverage">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="4">
+<button type="button" class="opt" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">{{o.name}}</span>
+<span class="price">{{o.short}}</span>
+</button>
+</sc-for>
+</div>
+<div class="receipt fade">
+<p class="lbl" style="color: #DFFF1A">{{sel.name}}</p>
+<sc-for list="{{sel.rows}}" as="r" hint-placeholder-count="3">
+<div class="row" style="color: {{r.color}}"><span>{{r.k}}</span><span>{{r.v}}</span></div>
+</sc-for>
+<div class="tot"><span style="font-size: 14px; color: #C9D1E6">{{sel.totLabel}}</span><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 32px; color: #FFFFFF">{{sel.total}} <span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 16px">{{sel.unit}}</span></span></div>
+<sc-if value="{{sel.hasNote}}" hint-placeholder-val="true"><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #FF8A5C">{{sel.note}}</p></sc-if>
+</div>
+</section>
+
+<!-- 2 -->
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ทีมเล็ก ที่ฉันต้องเป็นทั้ง designer และ PO</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>Founder</span><span>Frontend Dev</span><span class="me">UX + PO · ฉัน</span><span>Smart contract Dev</span><span>Marketing · Community</span></div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงานในแต่ละ sprint (2 สัปดาห์)</p><p class="body" style="color: #FFFFFF; font-weight: 600">Sprint planning → ออกแบบ → พัฒนา → UAT บน testnet → audit / ตรวจความปลอดภัย → ขึ้น mainnet → ฟัง feedback จากคอมมิวนิตี้</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">ทีมประมาณ 8 คน</p><p class="body" style="font-size: 14px">Founder 1 · Frontend Dev 2 · Smart contract Dev 2 · Marketing / Community 2 และฉันที่ดูแลทั้ง UX และ Product Owner</p></div>
+<div class="card"><p class="lbl">สองหมวกในคนเดียว</p><p class="body" style="font-size: 14px">ออกแบบหน้าจอเอง และเป็นคนเขียน requirement จัดลำดับ backlog และตัดสินใจว่าอะไรขึ้นระบบเมื่อไร</p></div>
+<div class="card"><p class="lbl">คอมมิวนิตี้คือผู้ใช้</p><p class="body" style="font-size: 14px">ผู้ใช้คุยกับทีมตรงผ่าน Telegram และ Twitter ทุก release จึงได้ feedback กลับมาเร็วมาก</p></div>
+</div>
+</section>
+
+<!-- 3 -->
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">DeFi ให้ผลตอบแทนสูง แต่ใช้ยากและเสี่ยง</h2>
+<p class="body">การทำ leveraged yield farming ปกติต้องทำหลายขั้นตอนข้ามหลาย protocol ทั้งแลกเหรียญ เพิ่มสภาพคล่อง ยืมเงิน และ stake ผู้ใช้ไม่รู้ว่าผลตอบแทนมาจากไหน และมองไม่เห็นความเสี่ยงที่จะถูก liquidate จนเกิดขึ้นจริง</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“นักลงทุนต้องการเพิ่มผลตอบแทนด้วย leverage ในไม่กี่คลิก แต่ไม่เข้าใจว่าผลตอบแทนมาจากไหนและเสี่ยงแค่ไหน จึงไม่กล้าใช้ หรือใช้แล้วเสียเงินโดยไม่รู้ตัว”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">Yield farmer</p><p class="body" style="font-size: 14px">นักลงทุนคริปโตที่มีประสบการณ์ ต้องการผลตอบแทนสูงสุดและเทียบ pool ได้เร็ว</p></div>
+<div class="card"><p class="lbl">Lender</p><p class="body" style="font-size: 14px">ผู้ถือเหรียญที่อยากได้ดอกเบี้ยแบบไม่ซับซ้อน และไม่อยากรับความเสี่ยงสูง</p></div>
+<div class="card"><p class="lbl">ผู้ถือ MEOW</p><p class="body" style="font-size: 14px">คอมมิวนิตี้ที่ถือเหรียญของแพลตฟอร์ม ต้องการ stake และติดตาม roadmap</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">เปิด position ที่ใช้ leverage ได้ในหน้าเดียว · ผู้ใช้เห็นที่มาของผลตอบแทนและความเสี่ยงก่อนยืนยัน · เพิ่มมูลค่าเงินที่ฝากในระบบ (TVL)</p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body" style="font-size: 14px">14 เดือน ทยอยปล่อยฟีเจอร์ Lend, Farm, Stake และ mMEOW vault ทีละเฟส</p></div>
+</div>
+</section>
+
+<!-- po view -->
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">ดูแลโปรดักต์ทั้งวงจร ตั้งแต่ roadmap จนถึงหลัง release</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็นทั้ง UX และ Product Owner จึงรับผิดชอบเกือบทุกช่วงเอง ส่วนไหนที่ทีมอื่นเป็นเจ้าของหลักจะติดป้าย <span class="own own-co">มีส่วนร่วม</span> ส่วนที่ฉันดูแลเองติดป้าย <span class="own own-me">ทำเอง</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และต้องดูแลแต่ละคนอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<p class="body" style="font-size: 14px">โปรดักต์ DeFi มีผู้เกี่ยวข้องทั้งในทีมและในคอมมิวนิตี้ ซึ่งคาดหวังต่างกันมาก</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ภายในบริษัท</p>
+<div class="shrow"><div><b>Founder</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>กำหนดทิศทางและ tokenomics อนุมัติ roadmap</span></div>
+<div class="shrow"><div><b>Smart contract Dev</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>กำหนดว่าอะไรทำได้จริงบนเชน และความปลอดภัยของเงินผู้ใช้</span></div>
+<div class="shrow"><div><b>Frontend Dev</b><br><span class="lv lv-m">ทำงานทุกวัน</span></div><span>นำ design และ requirement ไปพัฒนา</span></div>
+<div class="shrow"><div><b>Marketing · Community</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>สื่อสาร release และส่ง feedback จากผู้ใช้กลับมา</span></div>
+</div>
+<div class="shcol"><p class="lbl">ภายนอก</p>
+<div class="shrow"><div><b>ผู้ใช้ในคอมมิวนิตี้</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>คุยตรงผ่าน Telegram และ Twitter คาดหวังผลตอบแทนและความปลอดภัย</span></div>
+<div class="shrow"><div><b>Auditor</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>ตรวจ smart contract ก่อนเปิดฟีเจอร์ใหม่</span></div>
+<div class="shrow"><div><b>DEX พาร์ตเนอร์บน Fantom</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>แหล่งสภาพคล่องของแต่ละ pool เช่น SpookySwap</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX + PO</b></div><span>รวมทุกเสียงมาเป็น roadmap และ backlog เดียว</span></div>
+</div>
+</div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">TVL คือรายได้</p><p class="body" style="font-size: 14px">ยิ่งมีเงินฝากในระบบมาก protocol ยิ่งมีรายได้จากค่าธรรมเนียมและดอกเบี้ย</p></div>
+<div class="card"><p class="lbl">ความเชื่อใจคือทุกอย่าง</p><p class="body" style="font-size: 14px">ในโลก DeFi ผู้ใช้ย้ายเงินออกได้ในคลิกเดียว ถ้าไม่เข้าใจหรือไม่มั่นใจก็จะไม่อยู่</p></div>
+<div class="card"><p class="lbl">เปิดประตูให้มือใหม่</p><p class="body" style="font-size: 14px">ถ้าทำให้ leverage เข้าใจง่าย ก็ขยายฐานผู้ใช้ออกจากกลุ่มนักลงทุนสายลึกได้</p></div>
+</div><p class="subl">ตัวชี้วัดที่ตั้งไว้ติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">ตั้ง funnel ดูว่าผู้ใช้หลุดที่ขั้นไหนของการเปิด position <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่าง ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>เชื่อม wallet</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>เลือก pool</span><div class="ftrack"><div class="ffill" style="width: 72%">72%</div></div></div>
+<div class="frow"><span>ตั้ง leverage</span><div class="ftrack"><div class="ffill" style="width: 55%">55%</div></div></div>
+<div class="frow"><span>เปิด position สำเร็จ</span><div class="ftrack"><div class="ffill" style="width: 41%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">41%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> TVL รายสัปดาห์ · อัตราธุรกรรมที่ล้มเหลว · จำนวน position ที่ถูก liquidate · คำถามซ้ำในคอมมิวนิตี้</p>
+</div>
+<div class="phead" id="po3"><span class="pnum">03</span><h3>วาง roadmap และจัดลำดับ</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">Roadmap 14 เดือน (แบ่งช่วงละ 2 เดือน) </p>
+<div class="gantt"><div class="gg" style="grid-template-columns: 150px repeat(7, minmax(56px, 1fr))">
+<span></span><span class="gh">ม.ค.</span><span class="gh">มี.ค.</span><span class="gh">พ.ค.</span><span class="gh">ก.ค.</span><span class="gh">ก.ย.</span><span class="gh">พ.ย.</span><span class="gh">ม.ค.</span>
+<span class="gl">Research &amp; roadmap</span><div class="gbar" style="grid-column: 2 / span 1; background: #A9C4FF; color: #1C2440">research</div>
+<span class="gl">Lend + Farm (v1)</span><div class="gbar" style="grid-column: 2 / span 3; background: #2457E6; color: #FFFFFF">leverage สูงสุด 3x</div>
+<span class="gl">Stake</span><div class="gbar" style="grid-column: 4 / span 2; background: #1C2440; color: #FFFFFF">MEOW staking</div>
+<span class="gl">mMEOW vault</span><div class="gbar" style="grid-column: 6 / span 2; background: #FF7A4D; color: #1C2440">auto-compound</div>
+<span class="gl">ปรับตาม feedback</span><div class="gbar" style="grid-column: 4 / span 5; background: #DFFF1A; color: #1C2440">ทุก sprint</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 3"><i></i>Mainnet v1</span><span class="gms" style="grid-column: 5"><i></i>เปิด Stake</span><span class="gms" style="grid-column: 6"><i></i>Change request</span><span class="gms" style="grid-column: 7"><i></i>เปิด mMEOW</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมี</small></h3><div class="sticky">Lend และ Farm</div><div class="sticky">แสดง APR แยก 4 ส่วน</div><div class="sticky">คำเตือนก่อนถูก liquidate</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">หน้า My Positions</div><div class="sticky">Stake MEOW</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">mMEOW vault</div><div class="sticky">ธีมสีกลางคืน</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">รองรับหลายเชน</div><div class="sticky">leverage เกิน 3x</div></div>
+</div><p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">Smart contract bug</p><p class="body" style="font-size: 14px">ทุกฟีเจอร์ต้องผ่าน UAT บน testnet และ audit ก่อนขึ้น mainnet ไม่มีข้อยกเว้น</p></div>
+<div class="card"><p class="lbl">ราคาเหรียญผันผวน</p><p class="body" style="font-size: 14px">จำกัด leverage สูงสุด 3x และแสดงระดับหนี้ (debt ratio) พร้อมคำเตือนก่อนถูก liquidate</p></div>
+<div class="card"><p class="lbl">ผู้ใช้ส่งธุรกรรมผิด</p><p class="body" style="font-size: 14px">มีหน้าสรุป position ก่อนยืนยันใน wallet และบอกสถานะทุกขั้นระหว่างรอบล็อกเชน</p></div>
+</div>
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างพัฒนา: ตัดสินใจและรับมือการเปลี่ยนแปลง</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">User story ที่ฉันเขียนให้ทีม </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่าง</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>นักลงทุน</b> ฉันต้องการ <b>เห็นว่า APR มาจากอะไรบ้างก่อนเปิด position</b> เพื่อ <b>ประเมินผลตอบแทนเทียบกับความเสี่ยงได้เอง</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> ผู้ใช้เลือก pool แล้ว <b style="color: #DFFF1A">When</b> ปรับ leverage <b style="color: #DFFF1A">Then</b> ระบบแสดง Yield Farming, Trading Fees, MEOW Rewards และ Borrowing Interest แยกกัน พร้อม APR รวมใหม่ทันที</p></div><p class="subl">Trade-off: ควรให้ leverage สูงสุดเท่าไร <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">เปิด leverage สูงถึง 6x เหมือนคู่แข่ง</p><p class="body" style="font-size: 14px">ดึงนักลงทุนสายเสี่ยงได้เร็วและ TVL โตเร็ว แต่ผู้ใช้ถูก liquidate ง่ายเมื่อตลาดผันผวน และเสียความเชื่อใจในระยะยาว</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">จำกัดที่ 3x ในช่วงแรก พร้อมคำเตือนที่ชัด</p><p class="body" style="font-size: 14px">ตรงกับคำโปรย “make your yield safu” ลดความเสี่ยงของผู้ใช้ใหม่ และค่อยขยายเพดานเมื่อระบบและสภาพคล่องพร้อม</p></div>
+</div><p class="subl">Change request จากคอมมิวนิตี้ </p>
+<div class="crflow">
+<div><b>1</b>คอมมิวนิตี้ขอฟีเจอร์ auto-compound ใน Farm ระหว่างที่ทีมกำลังทำ Stake</div>
+<div><b>2</b>ประเมินกับ smart contract dev: ต้องแก้ contract เดิมและ audit ใหม่ ใช้เวลานาน</div>
+<div><b>3</b>เสนอทางเลือก: ทำเป็น vault แยก (mMEOW) แทนการแก้ Farm ที่มีเงินผู้ใช้อยู่</div>
+<div><b>4</b>Founder อนุมัติ และฉันจัดเข้า roadmap เฟสถัดไป</div>
+<div style="background: #F4FFC2"><b>5</b>ประกาศ roadmap ให้คอมมิวนิตี้ ทีมและผู้ใช้เห็นตรงกัน</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบและเปิดใช้</h3><span class="own own-me">ทำเอง</span></div>
+<p class="body" style="font-size: 14px">ทุกครั้งก่อนขึ้น mainnet ฉันใช้ checklist นี้ตัดสินว่าพร้อมปล่อยหรือไม่ (go / no-go)</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Mainnet release checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">{{ckDone}} / {{ckTotal}}</span></div>
+<div class="prog" aria-hidden="true"><div style="width: {{ckPct}}"></div></div>
+<div class="chk"><sc-for list="{{cks}}" as="c" hint-placeholder-count="6"><button type="button" class="ck" aria-pressed="{{c.on}}" onClick="{{c.toggle}}"><span class="bx2" aria-hidden="true">{{c.mark}}</span><span>{{c.t}}<small>{{c.d}}</small></span></button></sc-for></div>
+<sc-if value="{{ckAll}}" hint-placeholder-val="{{false}}"><p style="margin: 0; font-weight: 600; color: #26327F">พร้อมขึ้น mainnet 🐾</p></sc-if>
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลัง release: ฟัง วัด และวางเฟสถัดไป</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">48 ชั่วโมงแรก</p><p class="body" style="font-size: 14px">เฝ้าดู TVL ธุรกรรมที่ล้มเหลว และคำถามในกลุ่ม Telegram หลังเปิดทุกฟีเจอร์</p></div>
+<div class="card"><p class="lbl">Feedback → backlog</p><p class="body" style="font-size: 14px">ผู้ใช้สับสนเรื่อง debt ratio ฉันจึงเพิ่ม tooltip และแถบสีบอกระดับความเสี่ยงในรอบถัดไป</p></div>
+<div class="card"><p class="lbl">Retrospective</p><p class="body" style="font-size: 14px">ทีมตกลงให้เผื่อเวลา audit ไว้ใน roadmap ตั้งแต่ต้น แทนการรอจนพัฒนาเสร็จ</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">Auto-compound ใน mMEOW · dashboard สรุปกำไรขาดทุน · แจ้งเตือนเมื่อใกล้ถูก liquidate · รองรับหลายเชน</p></div>
+</section>
+
+<!-- process -->
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">ในโปรเจกต์นี้ฉันทำ UX ควบคู่กับงาน PO การออกแบบ UI จึงเป็นแค่ 1 ใน 6 ช่วงของงาน กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+<sc-for list="{{phases}}" as="ph" hint-placeholder-count="6">
+<button type="button" class="ptab" role="tab" aria-selected="{{ph.sel}}" onClick="{{ph.pick}}"><span class="pn">{{ph.num}}</span><span class="pt">{{ph.name}}</span></button>
+</sc-for>
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">{{cur.num}} · {{cur.name}}</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">{{cur.goal}}</p>
+<ul><sc-for list="{{cur.acts}}" as="a" hint-placeholder-count="4"><li>{{a}}</li></sc-for></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">{{cur.with}}</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><sc-for list="{{cur.outs}}" as="o" hint-placeholder-count="3"><span class="pchip pc-d">{{o}}</span></sc-for></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><sc-for list="{{cur.po}}" as="o" hint-placeholder-count="2"><span class="pchip pc-p">{{o}}</span></sc-for></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" onClick="{{prev}}" aria-disabled="{{noPrev}}">← ก่อนหน้า</button><button type="button" class="pnav" onClick="{{next}}" aria-disabled="{{noNext}}">ถัดไป →</button></div>
+</div>
+<sc-if value="{{cur.isFlow}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">User flow · เปิด position แบบใช้ leverage</p><div class="pvscroll"><svg viewBox="0 0 1220 290" width="100%" style="min-width:820px;display:block;font-family:'IBM Plex Sans Thai',sans-serif" role="img" aria-label="User flow การเปิด position แบบใช้ leverage แยกกรณี leverage สูงและธุรกรรมไม่สำเร็จ"><defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5A6380"/></marker></defs><rect x="10" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="70.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">เชื่อม wallet</text><path d="M130 63H158" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="160" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="220.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">เลือก pool</text><path d="M280 63H308" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="310" y="40" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="375.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">ฝาก + ตั้ง leverage</text><path d="M440 63H476" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><path d="M540 19L602 63L540 107L478 63Z" fill="#FFE3D6" stroke="#CC4116" stroke-width="1.6"/><text x="540" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="#A33410">leverage สูง?</text><path d="M540 107V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="548" y="150" font-size="12" font-weight="600" fill="#CC4116">ใช่</text><rect x="470" y="180" width="140" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="540.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">แสดงคำเตือน</text><path d="M610 203H638" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="640" y="180" width="150" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="715.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">ยอมรับความเสี่ยง</text><path d="M715 180V88" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><path d="M602 63H636" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="608" y="54" font-size="12" font-weight="600" fill="#CC4116">ไม่</text><rect x="640" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="700.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">สรุป position</text><path d="M760 63H788" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="790" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="850.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">ยืนยันใน wallet</text><path d="M910 63H938" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="940" y="40" width="110" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="995.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">รอบล็อกเชน</text><path d="M1050 63H1082" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><path d="M1146 19L1208 63L1146 107L1084 63Z" fill="#FFE3D6" stroke="#CC4116" stroke-width="1.6"/><text x="1146" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="#A33410">สำเร็จ?</text><path d="M1146 107V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="1154" y="150" font-size="12" font-weight="600" fill="#CC4116">ใช่</text><rect x="1080" y="180" width="130" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="1145.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">My Positions</text><path d="M1100 96L1000 178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="1020" y="130" font-size="12" font-weight="600" fill="#CC4116">ไม่</text><rect x="830" y="180" width="160" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="910.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">แจ้งเหตุผล + ลองใหม่</text><path d="M880 180V88" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="640" y="252" width="16" height="12" rx="3" fill="#E3EBFF" stroke="#2457E6"/><text x="664" y="263" font-size="12" fill="#36405E">ขั้นที่ผู้ใช้ต้องยืนยันหรือรอผลจากบล็อกเชน</text></svg></div></div></sc-if><sc-if value="{{cur.isWire}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">จาก wireframe สู่ UI</p><div class="wfgrid"><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl" style="color:#5A6380">Wireframe</p><div class="wf" style="aspect-ratio:1100/536;flex-direction:row;gap:8px"><div style="flex:0 0 16%;display:flex;flex-direction:column;gap:6px"><div class="bx" style="height:24px;border-radius:50%;width:24px"></div><div class="bx" style="height:12px;background:#C4CCDB"></div><div class="bx" style="height:12px"></div><div class="bx" style="height:12px"></div><div class="bx" style="height:12px"></div></div><div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between"><div style="display:flex;flex-direction:column;gap:4px;width:40%"><div class="ln" style="width:90%;height:9px"></div><div class="ln" style="width:70%"></div></div><div class="bx" style="width:30%;height:26px"></div></div><div class="bx" style="height:22px"></div><div style="display:flex;gap:8px;align-items:center;border-top:1.5px solid #E3E8F2;padding:6px 0"><div class="bx" style="width:22px;height:22px;border-radius:50%"></div><div style="flex:1.2;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:70%"></div><div class="ln" style="width:45%"></div></div><div style="flex:.8;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:60%"></div><div class="ln" style="width:60%;background:#C4CCDB"></div></div><div style="flex:1.6;display:flex;flex-direction:column;gap:3px"><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div></div><div style="flex:.9;display:flex;flex-direction:column;gap:4px;align-items:center"><div style="display:flex;gap:3px"><div class="bx" style="width:12px;height:12px;border-radius:50%"></div><div class="bx" style="width:30px;height:12px"></div><div class="bx" style="width:12px;height:12px;border-radius:50%"></div></div><div style="width:70%;height:10px;border-radius:6px;background:#C4CCDB"></div></div></div><div style="display:flex;gap:8px;align-items:center;border-top:1.5px solid #E3E8F2;padding:6px 0"><div class="bx" style="width:22px;height:22px;border-radius:50%"></div><div style="flex:1.2;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:70%"></div><div class="ln" style="width:45%"></div></div><div style="flex:.8;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:60%"></div><div class="ln" style="width:60%;background:#C4CCDB"></div></div><div style="flex:1.6;display:flex;flex-direction:column;gap:3px"><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div></div><div style="flex:.9;display:flex;flex-direction:column;gap:4px;align-items:center"><div style="display:flex;gap:3px"><div class="bx" style="width:12px;height:12px;border-radius:50%"></div><div class="bx" style="width:30px;height:12px"></div><div class="bx" style="width:12px;height:12px;border-radius:50%"></div></div><div style="width:70%;height:10px;border-radius:6px;background:#C4CCDB"></div></div></div><div style="display:flex;gap:8px;align-items:center;border-top:1.5px solid #E3E8F2;padding:6px 0"><div class="bx" style="width:22px;height:22px;border-radius:50%"></div><div style="flex:1.2;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:70%"></div><div class="ln" style="width:45%"></div></div><div style="flex:.8;display:flex;flex-direction:column;gap:4px"><div class="ln" style="width:60%"></div><div class="ln" style="width:60%;background:#C4CCDB"></div></div><div style="flex:1.6;display:flex;flex-direction:column;gap:3px"><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div><div class="ln" style="width:90%;height:5px"></div></div><div style="flex:.9;display:flex;flex-direction:column;gap:4px;align-items:center"><div style="display:flex;gap:3px"><div class="bx" style="width:12px;height:12px;border-radius:50%"></div><div class="bx" style="width:30px;height:12px"></div><div class="bx" style="width:12px;height:12px;border-radius:50%"></div></div><div style="width:70%;height:10px;border-radius:6px;background:#C4CCDB"></div></div></div></div></div></div><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl">UI จริง</p><div class="shot"><img src="assets/8f3aa77874f48c86b735bf2e831f686e.png" alt="หน้า Farm เวอร์ชันจริง"></div></div></div><p class="body" style="font-size:14px">วางโครงตารางให้ทุก pool อ่านจากซ้ายไปขวาเหมือนกัน คือชื่อ pool → APY → ที่มาของผลตอบแทน → ปรับ leverage และกด Farm ผู้ใช้จึงเทียบ pool ได้ทันที</p></div></sc-if><sc-if value="{{cur.isSpec}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">Note สำหรับ Dev</p><div class="shot"><img src="assets/8f3aa77874f48c86b735bf2e831f686e.png" alt="หน้า Farm พร้อมจุดอธิบายสำหรับ Dev"><span class="rl" style="left:87.5%;top:41%;width:10%;height:10%"></span><span class="rl" style="left:57%;top:41.5%;width:24%;height:9.5%"></span><span class="pin" style="left:82.5%;top:44%">1</span><span class="pin" style="left:56%;top:46%">2</span><span class="pin" style="left:36.5%;top:45%">3</span><span class="pin" style="left:29.5%;top:18%">4</span><span class="pin" style="left:97.5%;top:48%">5</span></div><ul class="legend"><li><b>1</b><span>ปุ่ม − / + ปรับ leverage ทีละ 0.5 เพดานสูงสุด 3x ปุ่มหายไปเมื่อถึงขอบ</span></li><li><b>2</b><span>APR แยก 4 ส่วน ตัวเลขดึงจาก smart contract ทุกครั้งที่เปลี่ยน leverage</span></li><li><b>3</b><span>ขีดฆ่า APY ที่ 1x และแสดง APY ใหม่ ให้เห็นผลของ leverage ทันที</span></li><li><b>4</b><span>แยก Active / Liquidated positions ผู้ใช้ย้อนดูได้ว่า position ไหนถูก liquidate</span></li><li><b>5</b><span>ปุ่ม Farm มี state: ปกติ · รอ wallet · รอบล็อกเชน · สำเร็จ</span></li><li><b>!</b><span>ทดสอบตัวเลขทุก pool บน testnet ก่อนขึ้น mainnet</span></li></ul></div></sc-if>
+</div>
+</section>
+
+<!-- 4 -->
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ทำให้ DeFi อ่านง่ายและปลอดภัย</h2>
+<div class="g2">
+<div class="card"><p class="lbl">บอกที่มาของผลตอบแทน</p><p class="body" style="font-size: 14px">APR แยกเป็น Yield Farming, Trading Fees, MEOW Rewards และ Borrowing Interest ผู้ใช้รู้ว่าเงินมาจากไหนและเสียอะไรไปบ้าง</p></div>
+<div class="card"><p class="lbl">เห็นผลของ leverage ทันที</p><p class="body" style="font-size: 14px">ขีดฆ่า APY ที่ 1x และแสดงตัวเลขใหม่ข้างกัน ทุกครั้งที่กด − / +</p></div>
+<div class="card"><p class="lbl">ความเสี่ยงต้องมองเห็น</p><p class="body" style="font-size: 14px">จำกัดเพดาน 3x แสดงระดับหนี้ และแยกแท็บ Liquidated Positions ให้ย้อนดูได้</p></div>
+<div class="card"><p class="lbl">แบรนด์ที่เป็นมิตร</p><p class="body" style="font-size: 14px">มาสคอตแมวและสีม่วงอ่อนลดความน่ากลัวของโลกคริปโต ตรงกับคำโปรย “make your yield easier”</p></div>
+</div>
+</section>
+
+<!-- 5 -->
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากการเป็น PO ครั้งแรก</h2>
+<div class="g3">
+<div class="card"><p class="lbl">ปล่อยครบทุกเฟส</p><p class="body" style="font-size: 14px">Lend, Farm, Stake และ mMEOW vault ขึ้น mainnet ตาม roadmap ภายใน 14 เดือน</p></div>
+<div class="card"><p class="lbl">ทุก release ผ่าน testnet</p><p class="body" style="font-size: 14px">ใช้ checklist เดียวกันทุกครั้ง ไม่ปล่อยฟีเจอร์ที่ยังไม่ผ่าน UAT และ audit</p></div>
+<div class="card"><p class="lbl">คอมมิวนิตี้มีส่วนร่วม</p><p class="body" style="font-size: 14px">ไอเดียจากผู้ใช้กลายเป็นฟีเจอร์จริง เช่น mMEOW vault</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">เป็น designer ช่วยให้เป็น PO ได้ดีขึ้น</p><p class="body" style="font-size: 14px">การเข้าใจผู้ใช้ลึก ๆ ทำให้ตัดสินใจเรื่อง scope ได้เร็ว และอธิบายเหตุผลให้ทีมเห็นภาพผ่าน prototype</p></div>
+<div class="card"><p class="body" style="font-weight: 600">“ปลอดภัย” ต้องมาก่อน “เร็ว”</p><p class="body" style="font-size: 14px">ในโปรดักต์ที่เกี่ยวกับเงิน การเลื่อน release เพื่อทดสอบให้ครบ คุ้มกว่าการเสียความเชื่อใจของผู้ใช้</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy2.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 4 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">U-NEXT · ระบบมหาวิทยาลัย</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+
+</div>
+</div>
+</template>
+<div id="root"></div>
+<script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":10800}}'>
+class Component extends DCLogic {
+componentDidMount() {
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+var last = null;
+var sel = '.card, .g3 > div, .g4 > div';
+function reset(el) { if (!el) { return; } el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); el.style.setProperty('--go', '0'); }
+this._pm = function (e) {
+var el = e.target && e.target.closest ? e.target.closest(sel) : null;
+if (el !== last) { reset(last); last = el; }
+if (!el || e.pointerType === 'touch') { return; }
+var r = el.getBoundingClientRect();
+var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+el.style.setProperty('--rx', ((0.5 - y) * 8).toFixed(2) + 'deg');
+el.style.setProperty('--ry', ((x - 0.5) * 10).toFixed(2) + 'deg');
+el.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
+el.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
+el.style.setProperty('--go', '1');
+};
+this._pl = function () { reset(last); last = null; };
+document.addEventListener('pointermove', this._pm);
+document.documentElement.addEventListener('pointerleave', this._pl);
+}
+componentWillUnmount() {
+if (this._pm) { document.removeEventListener('pointermove', this._pm); }
+if (this._pl) { document.documentElement.removeEventListener('pointerleave', this._pl); }
+}
+renderVals() {
+var self = this;
+var s = this.state || {};
+var cur = typeof s.opt === 'number' ? s.opt : 2;
+var data = [ { "name": "Leverage 1x", "short": "23.81%", "total": "23.81", "unit": "% APR", "totLabel": "Total APR (โดยประมาณ)", "rows": [ { "k": "Yield Farming", "v": "21.81%" }, { "k": "Trading Fees Interest", "v": "2.00%" }, { "k": "MEOW Rewards", "v": "0.00%" }, { "k": "Borrowing Interest", "v": "−0.00%", "color": "#FF8A5C" } ], "note": "ความเสี่ยงถูก liquidate: ไม่มี เพราะไม่ได้ยืมเงิน" }, { "name": "Leverage 1.5x", "short": "36.22%", "total": "36.22", "unit": "% APR", "totLabel": "Total APR (โดยประมาณ)", "rows": [ { "k": "Yield Farming", "v": "32.72%" }, { "k": "Trading Fees Interest", "v": "3.00%" }, { "k": "MEOW Rewards", "v": "2.50%" }, { "k": "Borrowing Interest", "v": "−2.00%", "color": "#FF8A5C" } ], "note": "ความเสี่ยงถูก liquidate: ต่ำ" }, { "name": "Leverage 2x", "short": "48.62%", "total": "48.62", "unit": "% APR", "totLabel": "Total APR (โดยประมาณ)", "rows": [ { "k": "Yield Farming", "v": "43.62%" }, { "k": "Trading Fees Interest", "v": "4.00%" }, { "k": "MEOW Rewards", "v": "5.00%" }, { "k": "Borrowing Interest", "v": "−4.00%", "color": "#FF8A5C" } ], "note": "ความเสี่ยงถูก liquidate: ปานกลาง ระบบแสดงระดับหนี้ (debt ratio) ให้เห็นตลอด" }, { "name": "Leverage 3x", "short": "73.43%", "total": "73.43", "unit": "% APR", "totLabel": "Total APR (โดยประมาณ)", "rows": [ { "k": "Yield Farming", "v": "65.43%" }, { "k": "Trading Fees Interest", "v": "6.00%" }, { "k": "MEOW Rewards", "v": "10.00%" }, { "k": "Borrowing Interest", "v": "−8.00%", "color": "#FF8A5C" } ], "note": "ความเสี่ยงถูก liquidate: สูง ระบบแสดงคำเตือนและให้ยืนยันก่อนเปิด position" } ];
+var opts = data.map(function (d, i) {
+return { name: d.name, short: d.short, pressed: i === cur ? 'true' : 'false', pick: function () { self.setState({ opt: i }); } };
+});
+var d = data[cur];
+var rows = d.rows.map(function (r) { return { k: r.k, v: r.v, color: r.color || '#C9D1E6' }; });
+var P = [ { "name": "ทำความเข้าใจโจทย์", "goal": "เข้าใจกลไก DeFi ให้ลึกพอจะอธิบายให้ผู้ใช้เข้าใจง่าย", "acts": [ "ศึกษา protocol leveraged farming บนเชนอื่นว่าผู้ใช้ติดตรงไหน", "คุยกับ smart contract dev ให้เข้าใจที่มาของ APR และเงื่อนไขการ liquidate", "อ่านคำถามซ้ำ ๆ ในกลุ่ม Telegram และ Twitter", "ลองใช้แพลตฟอร์มคู่แข่งเองตั้งแต่ฝากจนถอน" ], "with": "Founder · Smart contract Dev · Community", "outs": [ "สรุปกลไกแบบภาษาคน", "Pain point จากคอมมิวนิตี้" ], "po": [ "Market research", "Customer insight" ] }, { "name": "กำหนดปัญหาและเป้าหมาย", "goal": "ตกลงกับ founder ว่าเวอร์ชันแรกต้องแก้ปัญหาอะไร และวัดผลอย่างไร", "acts": [ "สรุปผู้ใช้ 3 กลุ่ม: yield farmer, lender และผู้ถือ MEOW", "วาด user journey การเปิด position ตั้งแต่เชื่อม wallet", "เขียน problem statement และตั้งตัวชี้วัด เช่น TVL และอัตราธุรกรรมล้มเหลว", "จัดลำดับฟีเจอร์เป็น roadmap ทีละเฟส" ], "with": "Founder", "outs": [ "User journey", "Roadmap", "ตัวชี้วัด" ], "po": [ "Product roadmap", "Goal setting" ] }, { "name": "วาง flow และโครงหน้า", "goal": "ทำให้ขั้นตอนข้ามหลาย protocol กลายเป็นหน้าเดียวที่เข้าใจง่าย", "acts": [ "วาด user flow การเปิด position รวมกรณี leverage สูงและธุรกรรมล้มเหลว", "จัดเมนูเป็น Farm, Lend, Stake และ mMEOW", "ทำ wireframe ตาราง pool ที่เทียบกันได้ในแถวเดียว", "เช็กกับ smart contract dev ว่าตัวเลขไหนดึงได้แบบ real-time" ], "with": "Smart contract Dev · Frontend Dev", "outs": [ "User flow", "Wireframe" ], "po": [ "Requirement", "ประเมินข้อจำกัดเทคนิค" ] }, { "name": "ออกแบบ UI และ prototype", "goal": "ทำให้เรื่องเงินที่ซับซ้อนดูเป็นมิตรด้วยแบรนด์แมว", "acts": [ "ออกแบบ UI สีม่วงอ่อนและมาสคอตแมวให้ดูเป็นมิตร", "ทำ component ตัวเลข APR, ปุ่มปรับ leverage และการ์ด position", "ทำ prototype ให้ founder และทีมลองกดก่อนพัฒนา", "เตรียมภาพและข้อความให้ทีม marketing ใช้ประกาศฟีเจอร์" ], "with": "Founder · Marketing", "outs": [ "UI ทุกหน้า", "Prototype", "ภาพประกาศ" ], "po": [ "Stakeholder alignment" ] }, { "name": "ทดสอบและปรับปรุง", "goal": "ให้ผู้ใช้จริงลองบน testnet ก่อนมีเงินจริงเข้ามาเกี่ยว", "acts": [ "ชวนผู้ใช้จากคอมมิวนิตี้ทดลองบน testnet", "จดจุดที่ผู้ใช้สับสน เช่น ศัพท์ debt ratio และ liquidation", "ปรับคำอธิบายและเพิ่ม tooltip ตรงศัพท์ DeFi" ], "with": "Community · Frontend Dev", "outs": [ "ผลทดสอบ", "UI ฉบับปรับปรุง" ], "po": [ "Validation", "ตัดสินใจจากข้อมูล" ] }, { "name": "ส่งต่อและดูแลจนขึ้นระบบ", "goal": "ให้ตัวเลขบนหน้าจอถูกต้อง 100% เพราะเป็นเงินของผู้ใช้", "acts": [ "เขียน spec ระบุที่มาของตัวเลขทุกช่องและทุก state ของปุ่ม", "ทำ UAT บน testnet ตรวจ APR, TVL และยอดใน position", "อนุมัติ release หลังผ่าน audit", "ติดตามผลและตอบคำถามคอมมิวนิตี้หลังปล่อย" ], "with": "Frontend Dev · Smart contract Dev · Auditor", "outs": [ "Spec", "ผล UAT", "Release note" ], "po": [ "UAT", "Acceptance criteria", "Release" ] } ];
+var CK = [ { "t": "UAT บน testnet ครบทุก pool", "d": "ทดลองฝาก ยืม ปรับ leverage และถอน ในทุกระดับ leverage" }, { "t": "ตัวเลข APR, TVL และยอด position ตรงกับ contract", "d": "เทียบหน้าจอกับค่าที่อ่านจาก smart contract โดยตรง" }, { "t": "ผ่าน audit / ตรวจความปลอดภัย", "d": "แก้ประเด็นสำคัญทั้งหมดก่อนปล่อย" }, { "t": "เตรียมบทความ Medium และคู่มือ", "d": "อธิบายฟีเจอร์ใหม่และความเสี่ยงเป็นภาษาที่เข้าใจง่าย" }, { "t": "แจ้งคอมมิวนิตี้ล่วงหน้า", "d": "ประกาศวันเวลาใน Telegram และ Twitter" }, { "t": "ทีมพร้อมเฝ้าระบบช่วงเปิดตัว", "d": "ดู TVL และธุรกรรมที่ล้มเหลวใน 48 ชั่วโมงแรก" } ];
+var ck = Array.isArray(s.ck) ? s.ck : [true, true, true, false, false, false];
+var cks = CK.map(function (c, i) { return { t: c.t, d: c.d, on: ck[i] ? 'true' : 'false', mark: ck[i] ? '✓' : '', toggle: function () { var n = ck.slice(); n[i] = !n[i]; self.setState({ ck: n }); } }; });
+var ckDone = ck.filter(Boolean).length;
+var pi = typeof s.ph === 'number' ? s.ph : 0;
+var phases = P.map(function (x, i) { return { num: '0' + (i + 1), name: x.name, sel: i === pi ? 'true' : 'false', pick: function () { self.setState({ ph: i }); } }; });
+var cp = Object.assign({ num: '0' + (pi + 1), isFlow: pi === 2, isWire: pi === 3, isSpec: pi === 5 }, P[pi]);
+return {
+phases: phases, cur: cp,
+cks: cks, ckDone: ckDone, ckTotal: CK.length, ckPct: Math.round(ckDone / CK.length * 100) + '%', ckAll: ckDone === CK.length,
+noPrev: pi === 0 ? 'true' : 'false', noNext: pi === P.length - 1 ? 'true' : 'false',
+prev: function () { if (pi > 0) { self.setState({ ph: pi - 1 }); } },
+next: function () { if (pi < P.length - 1) { self.setState({ ph: pi + 1 }); } },
+opts: opts,
+sel: { name: d.name, unit: d.unit || 'บาท', rows: rows, total: d.total, totLabel: d.totLabel, hasNote: !!d.note, note: d.note || '' }
+};
+}
+}
+</script>
+<script src="dc.js"></script>
+</body>
+</html>

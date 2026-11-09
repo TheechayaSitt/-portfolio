@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theechaya S. · Portfolio</title>
+<meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<meta property="og:title" content="Theechaya S. · Portfolio">
+<meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232457E6'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='%23fff'%3ET.%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&amp;family=Outfit:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2457E6}
+a{color:#CC4116}a:hover{color:#A33410}
+button{font-family:inherit}
+.grid-bg{background-color:#2457E6;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(115deg,rgba(255,255,255,0) 55%,rgba(255,255,255,.08) 70%,rgba(255,255,255,0) 85%);background-size:64px 64px,64px 64px,100% 100%}
+.navlink{text-decoration:none;font-size:14px;padding:10px 12px;border-radius:999px;color:#1C2440;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;transition:background .2s,color .2s,translate .2s}
+.navlink:hover{background:#E3EBFF;color:#2457E6;translate:0 -2px}
+.sec{background:#F7F9FD;border-radius:28px;padding:clamp(28px,5vw,56px) clamp(16px,4vw,56px);display:flex;flex-direction:column;gap:28px}
+.h2{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:clamp(24px,3.2vw,36px);line-height:1.4;color:#1C2440}
+.h2 em{font-style:normal;color:#2457E6 !important}
+.hand{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#2457E6}
+.cards{display:flex;justify-content:center;align-items:flex-end;gap:14px}
+.card{flex:0 0 auto;box-shadow:0 10px 24px rgba(28,36,64,.18);transition:translate .35s cubic-bezier(.2,.8,.2,1.2),scale .35s,box-shadow .35s;position:relative}
+.card:hover{translate:0 -22px;scale:1.06;box-shadow:0 22px 40px rgba(28,36,64,.28);z-index:2}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.span2{grid-column:span 2}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.detail{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:16px}
+.proj{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px}
+.pov{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.exp{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px}
+.btn-cta{display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;background:#FFC9B5;color:#36405E;font-weight:600;font-size:18px;border-radius:16px;min-height:64px;transition:background .2s,color .2s}
+.btn-cta:hover{background:#FFB59A;color:#1C2440}
+.btn-cta svg,.btn svg{transition:translate .25s}
+.btn-cta:hover svg,.btn:hover svg{translate:6px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;padding:12px 22px;min-height:48px;box-sizing:border-box;font-size:15px;font-weight:600;transition:translate .2s,box-shadow .2s,background .2s}
+.btn:hover{translate:0 -3px;box-shadow:0 10px 20px rgba(28,36,64,.18)}
+/* motion */
+@keyframes twinkle{0%,100%{scale:1;rotate:0deg;opacity:1}50%{scale:.6;rotate:45deg;opacity:.55}}
+@keyframes sway{0%,100%{rotate:-4deg}50%{rotate:5deg}}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@keyframes marquee{to{translate:-50% 0}}
+@keyframes rise{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+@keyframes fadein{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+section#top > svg{transform-origin:center;opacity:.9;animation:twinkle 3.2s ease-in-out infinite}
+section#top > svg.shape{opacity:1;animation:drift 7s ease-in-out infinite}
+section#top > svg.shape.s2{animation-duration:9s;animation-delay:-3s}
+section#top > svg.shape.s3{animation-duration:8s;animation-delay:-5s}
+@keyframes drift{0%,100%{translate:0 0;rotate:0deg}33%{translate:14px -18px;rotate:12deg}66%{translate:-10px 10px;rotate:-8deg}}
+section#top > svg:nth-of-type(2){animation-delay:.8s}
+section#top > svg:nth-of-type(3){animation-delay:1.6s}
+section#top > svg:nth-of-type(4){animation-delay:2.4s}
+h1 svg{transform-origin:50% 100%;transition:rotate .4s}
+h1:hover svg{rotate:8deg}
+nav a:first-child{transition:rotate .3s,scale .3s}
+nav a:first-child:hover{rotate:-10deg;scale:1.1}
+.track{animation:marquee 30s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.lift{transition:translate .3s ease,box-shadow .3s ease}
+.lift:hover{translate:0 -6px;box-shadow:0 16px 30px rgba(28,36,64,.14)}
+.pill{transition:scale .25s,rotate .25s;cursor:default}
+.pill:hover{scale:1.12;rotate:-4deg}
+.tool{display:flex;align-items:center;gap:8px;background:#FFFFFF;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:500;transition:translate .2s,box-shadow .2s}
+.tool img{flex:0 0 auto;width:20px;height:20px;transition:rotate .3s,scale .3s}
+.tool:hover{translate:0 -3px;box-shadow:0 8px 16px rgba(0,0,0,.15)}
+.tool:hover img{rotate:-10deg;scale:1.2}
+.cert{background:#FFFFFF;border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;transition:translate .2s,box-shadow .2s}
+.cert:hover{translate:0 -3px;box-shadow:0 8px 16px rgba(28,36,64,.12)}
+.cert .logo{flex:0 0 44px;height:44px;border-radius:10px;background:#EEF2FA;display:flex;align-items:center;justify-content:center;transition:rotate .3s}
+.cert:hover .logo{rotate:-8deg}
+html{scroll-behavior:smooth}
+section,footer{scroll-margin-top:90px}
+.progress{position:fixed;top:0;left:0;right:0;height:4px;background:#DFFF1A;transform-origin:0 50%;scale:0 1;z-index:50}
+@keyframes grow{to{scale:1 1}}
+@keyframes showtop{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,62,158,.5)}100%{box-shadow:0 0 0 10px rgba(47,62,158,0)}}
+@supports (animation-timeline: scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}.totop{animation:showtop linear both;animation-timeline:scroll(root);animation-range:300px 600px}}
+.totop{position:fixed;right:20px;bottom:20px;z-index:30;width:52px;height:52px;border-radius:50%;background:#1C2440;color:#F7F9FD;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(28,36,64,.3);transition:background .2s,translate .2s}
+.totop:hover{background:#CC4116;color:#FFFFFF;translate:0 -3px}
+section#top p{text-wrap:balance}
+.sel{position:relative;display:inline-block;padding:.06em .22em .12em;border:3px solid transparent}
+.sel::before{content:'';position:absolute;inset:-3px;border:3px solid #DFFF1A;animation:drawframe 1s cubic-bezier(.6,0,.2,1) .2s both}
+@keyframes drawframe{from{clip-path:inset(0 100% 100% 0)}60%{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes popin{from{transform:scale(0)}to{transform:scale(1)}}
+.hd{animation:popin .35s cubic-bezier(.2,.8,.2,1.5) both}
+.tl{animation-delay:1s}.tr{animation-delay:1.08s}.br{animation-delay:1.16s}.bl{animation-delay:1.24s}
+@keyframes cursorin{from{transform:translate(70px,40px);opacity:0}to{transform:none;opacity:1}}
+.ctag{animation:cursorin .8s cubic-bezier(.2,.8,.2,1) 1.4s both}
+.typeline{margin:0;min-height:1.6em;font-family:Outfit,'IBM Plex Sans Thai',sans-serif;font-size:clamp(18px,2.4vw,26px);font-weight:500;color:#FFFFFF}
+.typed{color:#DFFF1A;font-weight:600}
+.caret{display:inline-block;width:3px;height:1em;margin-left:3px;vertical-align:-.12em;background:#DFFF1A;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.toolbar{display:inline-flex;align-items:center;gap:4px;background:#1E1F24;border-radius:14px;padding:6px;margin-top:30px;box-shadow:0 14px 34px rgba(10,16,40,.35)}
+.tb{position:relative;width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#E8EEFF;transition:background .2s,color .2s}
+.tb:hover{background:#34363D;color:#FFFFFF}
+.tb.on{background:#2457E6;color:#FFFFFF}
+.tb::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 10px);left:50%;translate:-50% 4px;opacity:0;background:#1E1F24;color:#FFFFFF;font-size:12px;font-weight:500;padding:6px 9px;border-radius:7px;white-space:nowrap;pointer-events:none;transition:opacity .2s,translate .2s}
+.tb:hover::after,.tb:focus-visible::after{opacity:1;translate:-50% 0}
+.tbsep{width:1px;height:24px;background:#3A3C44;margin:0 4px}
+.h2 em{background:linear-gradient(#DFFF1A,#DFFF1A) no-repeat 0 88%/100% .3em}
+@supports (animation-timeline: view()){.h2 em{animation:hl linear both;animation-timeline:view();animation-range:entry 30% cover 40%}}
+@keyframes hl{from{background-size:0 .3em}to{background-size:100% .3em}}
+footer h2 a{background:linear-gradient(#DFFF1A,#DFFF1A) no-repeat 0 100%/0 3px;transition:background-size .35s}
+footer h2 a:hover{background-size:100% 3px}
+.pill{cursor:default}
+.pill:hover{background:#DFFF1A !important;color:#1C2440 !important}
+.tag{transition:translate .2s}
+.pcard:hover .tag{translate:0 -2px}
+.hd{position:absolute;width:14px;height:14px;background:#DFFF1A}
+.tl{top:-9px;left:-9px}.tr{top:-9px;right:-9px}.bl{bottom:-9px;left:-9px}.br{bottom:-9px;right:-9px}
+.ctag{position:absolute;right:-6px;bottom:-46px;display:flex;align-items:flex-start;gap:2px;letter-spacing:0;font-family:'IBM Plex Sans Thai',sans-serif;font-size:14px;font-weight:600;line-height:1;transition:translate .4s cubic-bezier(.2,.8,.2,1.2)}
+.ctag > span{background:#CC4116;color:#FFFFFF;border-radius:6px;padding:7px 10px;margin-top:12px}
+h1:hover .ctag{translate:-24px -6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ch{display:inline-block;animation:chin .55s cubic-bezier(.2,.8,.2,1.3) calc(.25s + var(--i) * 55ms) both}
+@keyframes chin{from{transform:translateY(.5em) rotate(8deg);opacity:0}to{transform:none;opacity:1}}
+h1:hover .ch{animation:wave .6s ease calc(var(--i) * 40ms) 1 both}
+@keyframes wave{0%,100%{translate:0 0}45%{translate:0 -.14em}}
+.ctag > span{animation:bob 3s ease-in-out 2.4s infinite}
+@keyframes bob{50%{translate:0 -5px}}
+.btn{position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);translate:-130% 0;transition:translate .7s ease;pointer-events:none}
+.btn:hover::before{translate:130% 0}
+.tb:hover svg{animation:tbb .45s ease}
+@keyframes tbb{40%{translate:0 -4px;scale:1.12}}
+.navlink{position:relative}
+.navlink::after{content:'';position:absolute;left:12px;right:12px;bottom:8px;height:2px;border-radius:2px;background:#2457E6;scale:0 1;transition:scale .25s}
+.navlink:hover::after{scale:1 1}
+@keyframes cardin{from{opacity:0;translate:0 80px;rotate:3deg;scale:.94}to{opacity:1;translate:0 0;rotate:0deg;scale:1}}
+@keyframes popup{from{opacity:0;transform:translateY(40px) scale(.94)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+.pcard{animation:cardin linear backwards;animation-timeline:view();animation-range:entry 0% entry 45%}
+.pcard:nth-child(3n+2){animation-range:entry 8% entry 55%}
+.pcard:nth-child(3n){animation-range:entry 16% entry 65%}
+.stats > div,.bento > div,.steps > button,.exp > div > div{animation:popup linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+.stats > div:nth-child(2),.bento > div:nth-child(2),.steps > button:nth-child(2){animation-range:entry 6% entry 46%}
+.stats > div:nth-child(3),.bento > div:nth-child(3),.steps > button:nth-child(3){animation-range:entry 12% entry 52%}
+.stats > div:nth-child(4),.bento > div:nth-child(4),.steps > button:nth-child(4){animation-range:entry 18% entry 58%}
+.steps > button:nth-child(5){animation-range:entry 24% entry 64%}
+}
+.avail{display:inline-flex;align-items:center;gap:8px;background:#DFFF1A;color:#1C2440;transform:rotate(-2deg);box-shadow:0 8px 20px rgba(10,20,70,.25);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;margin:0 0 6px}
+.avail .dot{width:8px;height:8px;border-radius:50%;background:#2F3E9E;animation:pulse 1.6s ease-out infinite}
+.navcta{text-decoration:none;font-size:14px;font-weight:600;padding:10px 16px;border-radius:10px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;margin-left:4px;transition:translate .2s,box-shadow .2s}
+.navcta:hover{translate:0 -2px;box-shadow:0 6px 14px rgba(28,36,64,.18)}
+.tag{background:#FFE3D6;color:#A33410;border-radius:6px;padding:3px 8px;font-size:12px;font-weight:500}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+#work{background:transparent;padding-left:0;padding-right:0}
+#work .h2{color:#FFFFFF}
+#work .h2 em{color:#DFFF1A !important;background:none;animation:none}
+#work .hand{color:#DFFF1A}
+#work .lead{color:#E8EEFF !important}
+.pcard{position:relative;display:flex;flex-direction:column;background:#FFFFFF;border-radius:24px;overflow:hidden;text-decoration:none;color:#1C2440;box-shadow:0 18px 40px rgba(10,20,70,.28);outline:3px solid transparent;outline-offset:6px;transition:translate .3s ease,box-shadow .3s ease,outline-color .2s}
+.pcard:hover{box-shadow:0 30px 60px rgba(10,20,70,.42);outline-color:#DFFF1A;color:#1C2440}
+.laptop{position:relative;z-index:1;width:88%;max-width:340px;transition:transform .2s ease-out}
+.lscreen{background:#0B0F1E;border-radius:12px 12px 0 0;padding:7px 7px 5px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 16px 34px rgba(0,0,0,.45)}
+.lscreen img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top left;border-radius:3px;background:#FFFFFF}
+.lbase{height:10px;margin:0 -9%;background:linear-gradient(#E3E8F2,#AEB7CC);border-radius:0 0 12px 12px}
+.pcover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .2s ease-out}
+.pnum,.pbadge{z-index:2}
+.glare{position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:24px;transition:opacity .25s}
+.pcard:hover .pnum{translate:6px 0;color:#FFFFFF}
+.pnum{transition:translate .3s,color .3s}
+.pbadge{animation:wig 2.6s ease-in-out infinite}
+@keyframes wig{0%,70%,100%{rotate:0deg}78%{rotate:-6deg}86%{rotate:5deg}94%{rotate:-2deg}}
+.pcard:hover .tag{background:#DFFF1A;color:#1C2440}
+.tag{transition:translate .25s,background .25s,color .25s}
+.pcard .tag:nth-child(2){transition-delay:.05s}.pcard .tag:nth-child(3){transition-delay:.1s}.pcard .tag:nth-child(4){transition-delay:.15s}
+.lift{transition:translate .3s ease,box-shadow .3s ease,rotate .3s ease}
+.lift:hover{rotate:-.6deg}
+.stats > div:hover p:first-child{color:#CC4116 !important}
+.stats p:first-child{transition:color .25s}
+.skillbox:hover .pill{translate:0 -4px}
+.pill{transition:translate .25s,background .2s,color .2s}
+.skillbox .pill:nth-child(2n){transition-delay:.04s}.skillbox .pill:nth-child(3n){transition-delay:.08s}
+.pimg{position:relative;height:230px;display:flex;align-items:flex-end;justify-content:center;padding-top:28px;box-sizing:border-box;overflow:hidden}
+.pnum{position:absolute;top:14px;left:18px;font-family:Outfit,sans-serif;font-weight:600;font-size:40px;line-height:1;letter-spacing:-.03em;color:#1C2440;opacity:.9}
+.pbadge{position:absolute;top:18px;right:16px;background:#DFFF1A;color:#1C2440;font-size:12px;font-weight:600;border-radius:999px;padding:6px 10px}
+.pimg > div{transition:translate .4s cubic-bezier(.2,.8,.2,1.2)}
+.pcard:hover .pimg > div{translate:0 -10px}
+.pbody{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pmore{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#FFFFFF;background:#1C2440;border-radius:999px;padding:11px 18px;transition:background .2s}
+.pcard:hover .pmore{background:#CC4116}
+.pmore svg{transition:translate .25s}
+.pcard:hover .pmore svg{translate:6px 0}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.pgrid{grid-template-columns:minmax(0,1fr)}}
+.wlink{transition:translate .2s,box-shadow .2s}
+.wlink:hover{translate:4px 0;box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.phones > div{transition:translate .45s cubic-bezier(.2,.8,.2,1.2)}
+.phones:hover > div{translate:0 -16px}
+.phones:hover > div:nth-child(2){translate:0 -28px}
+.stepbtn{transition:translate .2s,box-shadow .2s,background .25s,color .25s;cursor:pointer}
+.stepbtn:hover{translate:0 -4px;box-shadow:0 10px 20px rgba(28,36,64,.12)}
+.chip{transition:background .2s,color .2s,translate .2s;cursor:pointer}
+.chip:hover{translate:0 -2px}
+.fade{animation:fadein .4s ease both}
+.chev{transition:rotate .3s}
+.jobbtn{cursor:pointer;transition:background .2s}
+.jobbtn:hover{background:#FFF1EA}
+footer a,footer button{transition:background .2s,color .2s,translate .2s}
+footer a:hover,footer button:hover{background:#FFF5EE !important;color:#CC4116 !important;translate:0 -3px}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
+}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){
+.bento,.proj,.pov,.detail,.exp{grid-template-columns:minmax(0,1fr)}
+.span2{grid-column:auto}
+.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards{gap:6px;transform:scale(.88);transform-origin:bottom center}
+.mainnav{flex-wrap:nowrap !important;justify-content:flex-start !important;overflow-x:auto;max-width:100%;scrollbar-width:none;padding:4px !important}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav a{flex:0 0 auto}
+.navlink{padding:10px 9px;font-size:13px}
+.navcta{padding:10px 12px;font-size:13px}
+section#top > svg{display:none}
+.roles{letter-spacing:.08em !important;font-size:11px !important;line-height:1.7}
+.folder{margin-top:20px !important;height:300px !important}
+.totop{right:12px;bottom:12px;width:44px;height:44px}
+.stats p:first-child{font-size:38px !important}
+section#top{padding-top:44px !important}
+.hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* responsive v2 */
+@media (max-width:480px){.mainnav > a:first-child{display:none !important}.navlink{padding:10px 7px !important;font-size:12.5px !important}.navcta{position:sticky;right:0;margin-left:2px;box-shadow:-12px 0 10px #FFFFFF}}
+/* present v1 */
+.clients{display:flex;justify-content:center;margin-top:22px;max-width:1000px}
+.clrow{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px}
+.clients .clbl{font-size:15px;font-weight:600;color:#FFFFFF;padding:0 6px;text-shadow:0 1px 6px rgba(10,20,70,.35)}
+.clients .cl{display:inline-flex;align-items:center;justify-content:center;height:44px;box-sizing:border-box;background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.66));-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.75);border-radius:999px;padding:5px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 6px 18px rgba(10,20,70,.18);transition:translate .2s,background .2s}
+.clients .cl:hover{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.82))}
+.clients .cl:hover{translate:0 -3px}
+.clients .clogo{flex:0 0 auto;width:72px;height:34px;display:flex;align-items:center;justify-content:center}
+.clients .clogo img{max-width:72px;max-height:34px;width:auto;height:auto;object-fit:contain}
+.clients .cname{font-size:13px;font-weight:600;color:#1C2440;white-space:nowrap}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pf{background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px;transition:translate .25s,box-shadow .25s,border-color .2s}
+.pf:hover{translate:0 -4px;box-shadow:0 14px 28px rgba(28,36,64,.12);border-color:#2457E6}
+.pfn{font-family:Outfit,sans-serif;font-weight:600;font-size:22px;color:#CC4116}
+.pft{margin:0;font-size:17px;font-weight:600;line-height:1.4;color:#1C2440}
+.pfd{margin:0;font-size:14px;line-height:1.65;color:#4A5370;flex:1}
+.pfl{display:flex;gap:8px;flex-wrap:wrap}
+.pfl a{font-size:13px;font-weight:600;color:#2457E6;text-decoration:none;background:#E3EBFF;border-radius:999px;padding:8px 12px;min-height:36px;box-sizing:border-box;display:inline-flex;align-items:center;transition:background .2s,color .2s}
+.pfl a{gap:8px;padding:5px 14px 5px 5px !important;min-height:40px !important}
+.plg{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 8px;border-radius:999px;background:#FFFFFF;box-shadow:0 0 0 1px #DCE4F2}
+.plg img{height:22px;width:auto;max-width:60px;object-fit:contain;display:block}
+.pfl a:hover{background:#2457E6;color:#FFFFFF}
+.dfil{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 4px}
+.dbtn{font:inherit;font-size:14px;font-weight:600;cursor:pointer;border:1.5px solid #D3DDEE;background:#FFFFFF;color:#1C2440;border-radius:999px;padding:9px 14px;min-height:44px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s,border-color .2s}
+.dbtn:hover{border-color:#2457E6}
+.dbtn[aria-pressed="true"]{background:#1C2440;border-color:#1C2440;color:#FFFFFF}
+.dcnt{font-family:Outfit,sans-serif;font-size:12px;background:#EEF2FA;color:#36405E;border-radius:999px;padding:1px 7px}
+.dbtn[aria-pressed="true"] .dcnt{background:#DFFF1A;color:#1C2440}
+@media (max-width:1000px){.proof{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.proof{grid-template-columns:minmax(0,1fr)}.dfil{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.dbtn{flex:0 0 auto}}
+/* stats v2 */
+.stats2{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#FFFFFF;border-radius:22px;box-shadow:0 14px 34px rgba(10,20,70,.18);overflow:hidden}
+.stats2 .st{display:flex;flex-direction:column;gap:4px;padding:20px 24px;text-decoration:none;color:#1C2440;position:relative;transition:background .2s}
+.stats2 .st + .st::before{content:'';position:absolute;left:0;top:20px;bottom:20px;width:1px;background:#DCE4F2}
+.stats2 .st:hover{background:#F3F6FD}
+.stats2 .stn{display:flex;align-items:baseline;font-family:Outfit,sans-serif;font-weight:600;font-size:clamp(32px,4vw,40px);line-height:1.1;color:#2457E6;letter-spacing:-.02em}
+.stats2 .stp{color:#CC4116}
+.stats2 .stu{font-family:'IBM Plex Sans Thai',sans-serif;font-size:16px;font-weight:600;color:#1C2440;margin-left:8px;letter-spacing:0}
+.stats2 .stl{font-size:13px;line-height:1.5;color:#5A6380}
+@media (max-width:820px){.stats2{grid-template-columns:repeat(2,minmax(0,1fr))}.stats2 .st:nth-child(3)::before{display:none}.stats2 .st:nth-child(n+3){border-top:1px solid #DCE4F2}}
+@media (max-width:380px){.stats2 .st{padding:16px}}
+/* interaction system v1 — one hover language for the whole site */
+:root{--ix-ease:cubic-bezier(.2,.8,.2,1);--ix-ring:#DFFF1A;--ix-shadow:0 18px 36px rgba(10,20,70,.18);--ix-tint:#EEF3FF}
+/* 1 · Cards: lift + shadow + lime ring */
+.pcard,.pf,.lift,.jobcard,.stepbtn,.card,.g3 > div,.g4 > div,.opt,.ptab,.nextcard,.ppanel,.tldr2 > div,.mcol,.shcol,.gantt,.receipt,.shot{transition:translate .3s var(--ix-ease),box-shadow .3s var(--ix-ease),outline-color .2s,background .2s,transform .15s ease-out !important;outline:2px solid transparent;outline-offset:3px}
+.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.stepbtn:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:0 -6px !important;rotate:none !important;scale:none !important;box-shadow:var(--ix-shadow) !important;outline-color:var(--ix-ring) !important}
+.pcard:active,.pf:active,.stepbtn:active,.opt:active,.ptab:active,.nextcard:active,.jobcard:active{scale:.985 !important}
+/* 2 · Chips & pills: small lift + lime tint */
+.cl,.pill,.tool,.cert,.tag,.chip,.pfl a,.dbtn,.team span,.sticky,.badge,.pchip,.life a,.toc a{transition:translate .2s var(--ix-ease),background .2s,color .2s,box-shadow .2s,border-color .2s !important}
+.pill:hover,.tool:hover,.cert:hover,.chip:hover,.pfl a:hover,.dbtn:hover,.team span:hover,.sticky:hover,.life a:hover{translate:0 -3px !important;rotate:none !important;scale:none !important;box-shadow:0 8px 16px rgba(10,20,70,.14) !important}
+.cl:hover{translate:0 -3px !important}
+.pill:hover,.tag:hover,.chip:hover,.team span:hover,.sticky:hover,.pchip:hover{background:var(--ix-ring) !important;color:#1C2440 !important}
+.tool:hover img,.cert:hover .logo{rotate:none !important;scale:1.08 !important}
+/* 3 · Buttons: lift + press */
+.btn,.navcta,.backbtn,.pnav,.pmore,footer a,footer button,.totop{transition:translate .2s var(--ix-ease),box-shadow .2s,background .2s,color .2s,scale .1s !important}
+.btn:hover,.navcta:hover,.backbtn:hover,.pnav:hover,footer a:hover,footer button:hover,.totop:hover{translate:0 -2px !important;box-shadow:0 10px 20px rgba(10,20,70,.2) !important}
+.btn:active,.navcta:active,.backbtn:active,.pnav:active,footer a:active,footer button:active,.dbtn:active,.ck:active{scale:.97 !important}
+/* 4 · Rows inside a group: tint only, no lift */
+.stats2 .st:hover,.jobbtn:hover,.shrow:hover,.ck:hover,.navlink:hover,.toc a:hover{translate:none !important;background:var(--ix-tint) !important}
+/* Focus: same lime ring for keyboard users */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ix-ring) !important;outline-offset:3px !important}
+@media (hover:none){.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:none !important;outline-color:transparent !important}}
+@media (prefers-reduced-motion:reduce){*{translate:none !important}}
+/* stats interaction v1 */
+.stats2 .st::after{content:'';position:absolute;left:24px;right:24px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:#2457E6;scale:0 1;transform-origin:0 50%;transition:scale .35s var(--ix-ease,ease)}
+.stats2 .st::after{display:none}
+.stats2 .stn{transition:color .25s,translate .3s var(--ix-ease,ease)}
+.stats2 .st:hover .stn{color:#CC4116;translate:0 -2px}
+.stats2 .st:hover .stp{color:#2457E6}
+.stats2 .sta{font-size:12px;font-weight:600;color:#2457E6;opacity:0;translate:-6px 0;transition:opacity .25s,translate .3s var(--ix-ease,ease);margin-top:2px}
+.stats2 .st:hover .sta,.stats2 .st:focus-visible .sta{opacity:1;translate:0 0}
+.stats2 .st:active{scale:.98}
+.stats2 .st{border-radius:18px;outline:3px solid transparent;outline-offset:-5px;transition:background .2s,outline-color .2s,scale .1s !important}
+.stats2 .st:hover,.stats2 .st:focus-visible{outline-color:#DFFF1A !important;outline-offset:-5px !important}
+/* stats tiles v3 */
+.stats2{background:transparent !important;box-shadow:none !important;overflow:visible !important;gap:14px;border-radius:0}
+.stats2 .st{background:linear-gradient(135deg,#E6EEFF 0%,#EEF3FF 55%,#F4FBD2 100%) !important;border:1px solid rgba(255,255,255,.9);border-radius:22px !important;padding:20px 22px !important;box-shadow:0 10px 26px rgba(10,20,70,.16);outline:2px solid transparent !important;outline-offset:3px !important;transition:translate .3s var(--ix-ease),box-shadow .3s var(--ix-ease),outline-color .2s,scale .1s !important}
+.stats2 .st + .st::before{display:none !important}
+.stats2 .stl{color:#2E3754 !important;font-size:14px !important;font-weight:500}
+.stats2 .st:nth-child(n+3){border-top:1px solid rgba(255,255,255,.9) !important}
+.stats2 .st:hover,.stats2 .st:focus-visible{translate:0 -6px !important;box-shadow:var(--ix-shadow) !important;outline-color:var(--ix-ring) !important}
+.stats2 .st:active{scale:.985}
+@media (max-width:820px){.stats2{gap:10px}}
+@media (hover:none){.stats2 .sta{opacity:1;translate:0 0}}
+</style>
+
+</head>
+<body>
+<template id="tpl">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<a class="totop" href="#top" aria-label="กลับขึ้นด้านบน"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4M5 11l7-7 7 7"></path></svg></a>
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+
+<!-- NAV -->
+<nav class="mainnav" aria-label="เมนูหลัก" style="position: sticky; top: 16px; z-index: 10; align-self: center; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; background: #FFFFFF; border-radius: 14px; padding: 4px 8px 4px 4px; box-shadow: 0 6px 20px rgba(28,36,64,.12)">
+<a href="#top" aria-label="หน้าแรก" style="width: 36px; height: 36px; border-radius: 9px; background: #2457E6; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; font-family: Outfit, sans-serif; font-weight: 600; font-size: 18px; margin: 4px">T.</a>
+<a class="navlink" href="#work">ผลงาน</a>
+<a class="navlink" href="#writing">บทความ</a>
+<a class="navlink" href="#about">เกี่ยวกับฉัน</a>
+<a class="navlink" href="#experience">ประสบการณ์</a>
+<a class="navlink" href="#process">วิธีทำงาน</a>
+<a class="navcta" href="#contact" style="background: {{accent}}; color: #FFFFFF">ติดต่อ</a>
+</nav>
+
+<!-- HERO -->
+<section id="top" style="position: relative; background: transparent; border-radius: 28px; padding: 72px 24px 64px; overflow: hidden">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" style="position: absolute; top: 120px; left: 22%; color: #DFFF1A"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="currentColor"></path></svg>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" style="position: absolute; top: 210px; left: 15%; color: #DFFF1A"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="currentColor"></path></svg>
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="position: absolute; top: 90px; right: 18%; color: #DFFF1A"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="currentColor"></path></svg>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" style="position: absolute; top: 150px; right: 12%; color: #DFFF1A"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" fill="currentColor"></path></svg>
+
+<svg class="shape" aria-hidden="true" width="64" height="64" viewBox="0 0 64 64" style="position: absolute; top: 300px; left: 8%"><circle cx="32" cy="32" r="24" fill="none" stroke="#DFFF1A" stroke-width="6"></circle></svg>
+<svg class="shape s2" aria-hidden="true" width="44" height="44" viewBox="0 0 44 44" style="position: absolute; top: 380px; right: 9%"><rect x="6" y="6" width="32" height="32" rx="6" fill="#FF7A4D"></rect></svg>
+<svg class="shape s3" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" style="position: absolute; top: 470px; left: 16%"><path d="M20 4V36M4 20H36" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"></path></svg>
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<p class="avail"><span class="dot"></span>พร้อมเริ่มงานใหม่ · กรุงเทพฯ</p>
+<h1 style="margin: 10px 0 30px; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: clamp(44px, 8vw, 88px); line-height: 1.05; color: #FFFFFF; letter-spacing: -0.035em; display: flex; align-items: center; justify-content: center; gap: 0.18em; flex-wrap: wrap"><span class="sel"><span class="sr">Theechaya S.</span><span aria-hidden="true"><span class="ch" style="--i: 0">T</span><span class="ch" style="--i: 1">h</span><span class="ch" style="--i: 2">e</span><span class="ch" style="--i: 3">e</span><span class="ch" style="--i: 4">c</span><span class="ch" style="--i: 5">h</span><span class="ch" style="--i: 6">a</span><span class="ch" style="--i: 7">y</span><span class="ch" style="--i: 8">a</span><span class="ch" style="--i: 9; width: 0.3em"></span><span class="ch" style="--i: 10">S</span><span class="ch" style="--i: 11">.</span></span><span class="hd tl" aria-hidden="true"></span><span class="hd tr" aria-hidden="true"></span><span class="hd bl" aria-hidden="true"></span><span class="hd br" aria-hidden="true"></span><span class="ctag" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 2L21 10L12.5 12.5L10 21Z" fill="#FF6A3D"></path></svg><span>ทิวลิป</span></span></span><svg role="img" aria-label="ดอกทิวลิป" viewBox="0 0 40 56" style="width: 0.55em; height: 0.77em"><path d="M20 30V54" stroke="#2F3E9E" stroke-width="3" stroke-linecap="round" fill="none"></path><path d="M20 46C14 38 8 38 4 40C8 46 14 48 20 48Z" fill="#7889E8"></path><path d="M20 42C26 34 32 34 36 36C32 42 26 44 20 44Z" fill="#2F3E9E"></path><path d="M8 6L14 12L20 2L26 12L32 6V20C32 27 27 32 20 32C13 32 8 27 8 20Z" fill="#E8798B"></path><path d="M20 2L26 12L23 30C21.5 31 18.5 31 17 30L14 12Z" fill="#D9566E"></path></svg></h1>
+<p class="typeline" aria-label="Product Owner, Product Management, Project Management, UX/UI Designer"><span aria-hidden="true" style="color: #DCE6FF">I am a</span> <span aria-hidden="true" class="typed">{{typed}}</span><span aria-hidden="true" class="caret"></span></p>
+<p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #E8EEFF; max-width: 640px">UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner<br>จากปัญหาธุรกิจ สู่ระบบที่ทีมส่งมอบได้จริง</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 6px">
+<a class="btn" href="#work" style="background: {{accent}}; color: #FFFFFF">ดูผลงาน <svg aria-hidden="true" width="20" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></a>
+</div>
+<div class="clients" aria-label="องค์กรที่เคยร่วมงาน"><div class="clrow"><span class="clbl">เคยออกแบบให้</span><div class="cl"><span class="clogo"><img src="assets/a4a6e205634d1905216f6f5115d55ca5.png" alt="ธ.ก.ส." title="ธ.ก.ส."></span></div><div class="cl"><span class="clogo"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt="AIS" title="AIS"></span></div><div class="cl"><span class="clogo"><img src="assets/3f915dc4318cb528b207bf45016be4d7.png" alt="ไทยออยล์" title="ไทยออยล์"></span></div><div class="cl"><span class="clogo"><img src="assets/820b0c09f4cc61cd5bbd06358ef708ff.png" alt="TIPCO Asphalt" title="TIPCO Asphalt"></span></div><div class="cl"><span class="clogo"><img src="assets/ba08faa6d1dd36bf4f28fca179c56d4d.png" alt="กรมวิทยาศาสตร์การแพทย์" title="กรมวิทยาศาสตร์การแพทย์"></span></div><div class="cl"><span class="clogo"><img src="assets/bfd600a88bafa1e879a1be23771f4e22.png" alt="ม.หอการค้าไทย" title="ม.หอการค้าไทย"></span></div><div class="cl"><span class="clogo"><img src="assets/e4f0942e302f661835dca28c4f8c0027.png" alt="ม.เกษตรศาสตร์" title="ม.เกษตรศาสตร์"></span></div><div class="cl"><span class="clogo"><img src="assets/2944a329b86aa42897717e43d0c37cc7.png" alt="NIDA" title="NIDA"></span></div></div></div>
+</div>
+
+</section>
+
+<!-- STATS -->
+<div class="stats2" role="list">
+<sc-for list="{{stats}}" as="h" hint-placeholder-count="4">
+<a class="st" role="listitem" href="{{h.href}}">
+<span class="stn">{{h.value}}<span class="stp">{{h.plus}}</span><span class="stu">{{h.unit}}</span></span>
+<span class="stl">{{h.label}}</span>
+<span class="sta" aria-hidden="true">{{h.cta}} →</span>
+</a>
+</sc-for>
+</div>
+
+
+<!-- PROOF -->
+<section id="proof" class="sec reveal">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 760px">
+<p class="hand">ดูความสามารถแบบเร็ว</p>
+<h2 class="h2" style="line-height: 1.4">ทักษะที่ฉัน <em style="color: #1C2440">พิสูจน์ได้ด้วยงานจริง</em></h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A5370">มีเวลาไม่มาก? เลือกทักษะที่สนใจ แล้วกดไปดูโปรเจกต์ที่เป็นหลักฐานได้เลย</p>
+</div>
+<div class="proof">
+<div class="pf"><span class="pfn">01</span><p class="pft">ดูแลโปรดักต์แบบ Product Owner</p><p class="pfd">วาง roadmap จัดลำดับ backlog เขียน requirement และตัดสินใจ release ของแพลตฟอร์ม DeFi</p><div class="pfl"><a href="CaseStudy.html"><span class="plg"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt=""></span>Meow Finance →</a></div></div>
+<div class="pf"><span class="pfn">02</span><p class="pft">จัดลำดับงานให้ทันเวลา</p><p class="pfd">วาง pattern กลางแล้วโฟกัสหน้าที่ยาก จนออกแบบ 200+ หน้าจอเสร็จใน 2 เดือน</p><div class="pfl"><a href="CaseStudy7.html"><span class="plg"><img src="assets/ba08faa6d1dd36bf4f28fca179c56d4d.png" alt=""></span>Newborn Connect →</a><a href="CaseStudy10.html"><span class="plg"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt=""></span>G-Core MVP →</a></div></div>
+<div class="pf"><span class="pfn">03</span><p class="pft">รับ feedback และตัดสินใจอย่างมีเหตุผล</p><p class="pfd">ปรับหน้าแรกของ portal ธนาคาร 5 รอบ โดยแยกปัญหาจริงออกจากความชอบ จนผ่านอนุมัติ</p><div class="pfl"><a href="CaseStudy9.html"><span class="plg"><img src="assets/a4a6e205634d1905216f6f5115d55ca5.png" alt=""></span>ธ.ก.ส. D-HUB →</a></div></div>
+<div class="pf"><span class="pfn">04</span><p class="pft">ทำเรื่องซับซ้อนให้ทั้งทีมเห็นตรงกัน</p><p class="pfd">สรุปเงื่อนไข 8 ช่องทางชำระเงินเป็น matrix เดียวที่ BA, Dev และ QA ใช้ร่วมกัน</p><div class="pfl"><a href="CaseStudy4.html"><span class="plg"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt=""></span>AIS mPAY ONE →</a><a href="CaseStudy11.html"><span class="plg"><img src="assets/820b0c09f4cc61cd5bbd06358ef708ff.png" alt=""></span>TIPCO →</a></div></div>
+<div class="pf"><span class="pfn">05</span><p class="pft">ออกแบบระบบใหญ่ที่มีหลายบทบาท</p><p class="pfd">ทุกบทบาทเห็นเฉพาะงานของตัวเอง ทั้งระบบงบประมาณองค์กร และระบบมหาวิทยาลัยของนักศึกษา อาจารย์ เจ้าหน้าที่</p><div class="pfl"><a href="CaseStudy5.html"><span class="plg"><img src="assets/3f915dc4318cb528b207bf45016be4d7.png" alt=""></span>Thaioil BMS →</a><a href="CaseStudy2.html"><span class="plg"><img src="assets/bfd600a88bafa1e879a1be23771f4e22.png" alt=""><img src="assets/e4f0942e302f661835dca28c4f8c0027.png" alt=""><img src="assets/2944a329b86aa42897717e43d0c37cc7.png" alt=""></span>U-NEXT →</a></div></div>
+<div class="pf"><span class="pfn">06</span><p class="pft">เข้าใจการเงินและความปลอดภัย</p><p class="pfd">ระบบชำระเงิน การคืนเงิน และระบบตามมาตรฐาน PCI DSS ที่ต้องถูกทุกบาทและตรวจสอบได้</p><div class="pfl"><a href="CaseStudy3.html"><span class="plg"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt=""></span>AIS PCI →</a><a href="CaseStudy4.html"><span class="plg"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt=""></span>AIS mPAY ONE →</a></div></div>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="sec reveal">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 680px">
+<p class="hand">ผลงานคัดสรร</p>
+<h2 class="h2" style="line-height: 1.4">ผลงาน UX/UI <em style="color: #1C2440">ที่คิดไกลกว่าหน้าจอ</em></h2>
+<p class="lead" style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A5370">ทุกโปรเจกต์เริ่มจากเข้าใจปัญหาธุรกิจและผู้ใช้ ออกแบบร่วมกับ BA, Dev และ QA จนระบบส่งมอบได้จริง</p>
+</div>
+</div>
+
+<div class="dfil" role="group" aria-label="กรองตามอุตสาหกรรม">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="5"><button type="button" class="dbtn" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}">{{f.label}} <span class="dcnt">{{f.count}}</span></button></sc-for>
+</div>
+<div class="pgrid">
+<sc-for list="{{projects}}" as="p" hint-placeholder-count="3">
+<a class="pcard" href="{{p.href}}" onMouseMove="{{p.onMove}}" onMouseLeave="{{p.onLeave}}" style="transform: {{p.tf}}; transition: transform .18s ease-out, box-shadow .3s ease, outline-color .2s">
+<span class="glare" aria-hidden="true" style="background: {{p.glare}}; opacity: {{p.glareOp}}"></span>
+<div class="pimg" style="background: {{p.bg}}">
+<span class="pnum" aria-hidden="true" style="color: {{p.numColor}}">{{p.num}}</span>
+<sc-if value="{{p.hasImg}}" hint-placeholder-val="{{false}}"><img class="pcover" src="{{p.img}}" alt="{{p.imgAlt}}" style="transform: {{p.imgShift}}"></sc-if>
+<sc-if value="{{p.hasLaptop}}" hint-placeholder-val="{{false}}"><div class="laptop" style="transform: {{p.phoneShift}}"><div class="lscreen"><img src="{{p.laptop}}" alt="{{p.imgAlt}}"></div><div class="lbase"></div></div></sc-if>
+
+<sc-if value="{{p.noImg}}" hint-placeholder-val="{{true}}">
+<div style="width: 150px; height: 190px; background: #151B33; border-radius: 26px 26px 0 0; padding: 7px 7px 0; box-sizing: border-box; transform: {{p.phoneShift}}; transition: transform .2s ease-out"><div style="width: 100%; height: 100%; background: #FFFFFF; border-radius: 20px 20px 0 0; padding: 14px 11px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 7px; text-align: left">
+<span style="font-size: 9px; color: #5A6380">{{p.mockStep}}</span>
+<div style="height: 4px; border-radius: 2px; background: #DCE4F2"><div style="width: {{p.mockProgress}}; height: 100%; border-radius: 2px; background: {{p.mockAccent}}"></div></div>
+<span style="font-size: 12px; font-weight: 600; color: #1C2440; line-height: 1.3">{{p.mockTitle}}</span>
+<span style="background: #EEF2FA; border-radius: 7px; padding: 7px; font-size: 9px; color: #36405E">{{p.mockRow1}}</span>
+<span style="background: #EEF2FA; border-radius: 7px; padding: 7px; font-size: 9px; color: #36405E">{{p.mockRow2}}</span>
+<span style="height: 24px; border-radius: 7px; background: {{p.mockAccent}}; color: #FFFFFF; font-size: 9px; font-weight: 600; display: flex; align-items: center; justify-content: center">{{p.mockCta}}</span>
+</div></div>
+</sc-if>
+</div>
+<div class="pbody">
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><sc-if value="{{p.hasLogo}}" hint-placeholder-val="{{false}}"><img src="{{p.logo}}" alt="" style="width: 24px; height: 24px; border-radius: 50%"></sc-if><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">{{p.year}}</span> · {{p.role}}</p>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">{{p.title}}</h3>
+<p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">{{p.problem}}</p>
+<div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
+<span style="font-family: Outfit, sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: #2457E6; white-space: nowrap">{{p.stat1}}<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0; margin-left: 4px">{{p.unit}}</span></span>
+<span style="font-size: 13px; color: #4A5370; line-height: 1.4">{{p.label1}}</span>
+</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<sc-for list="{{p.tagsShort}}" as="tg" hint-placeholder-count="3">
+<span class="tag">{{tg}}</span>
+</sc-for>
+<sc-if value="{{p.hasMore}}" hint-placeholder-val="{{true}}"><span class="tag" style="background: #EEF1F7; color: #4A5370">{{p.more}}</span></sc-if>
+</div>
+<span class="pmore">{{p.cta}} <span style="font-weight: 500; opacity: .7">{{p.read}}</span><svg aria-hidden="true" width="22" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="sec reveal">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 680px">
+<p class="hand">แบ่งปันความรู้</p>
+<h2 class="h2" style="line-height: 1.4">บทความ UX/UI <em style="color: #1C2440">ที่ฉันเขียนให้ borntoDev</em></h2>
+<p class="lead" style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A5370">6 บทความบน borntoDev Digital Academy ตั้งแต่หลักการออกแบบ ไปจนถึงบทบาทของ UX/UI ในธุรกิจและการพัฒนาผลิตภัณฑ์</p>
+</div>
+<a class="btn" href="https://www.borntodev.com/author/theechaya/" target="_blank" rel="noopener" style="background: #FFFFFF; color: #1C2440; border: 1.5px solid #D3DDEE">ดูบทความทั้งหมด ↗</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px">
+<a class="lift" href="https://www.borntodev.com/2023/12/20/%e0%b9%80%e0%b8%ab%e0%b8%95%e0%b8%b8%e0%b8%9c%e0%b8%a5%e0%b8%97%e0%b8%b5%e0%b9%88-ux-ui-%e0%b8%a1%e0%b8%b5%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%aa%e0%b8%b3%e0%b8%84%e0%b8%b1%e0%b8%8d/" target="_blank" rel="noopener" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; text-decoration: none; color: #1C2440; display: flex; flex-direction: column; box-shadow: 0 10px 24px rgba(10,20,70,.12)"><img src="assets/0733e55ee7438d7ad08b23915c15cf9b.jpg" alt="" style="width: 100%; aspect-ratio: 568/326; object-fit: cover; display: block"><div style="padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: #CC4116">Business · Product</p><p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.45">เหตุผลที่ UX/UI มีความสำคัญในธุรกิจและการพัฒนาผลิตภัณฑ์</p><p style="margin: auto 0 0; font-size: 13px; color: #5A6380">borntoDev · ธ.ค. 2023 · อ่านบทความ ↗</p></div></a><a class="lift" href="https://www.borntodev.com/2023/12/24/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a7%e0%b8%b4%e0%b9%80%e0%b8%84%e0%b8%a3%e0%b8%b2%e0%b8%b0%e0%b8%ab%e0%b9%8c%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%b9%e0%b8%a5-ux-ui-%e0%b8%9b%e0%b8%a3%e0%b8%b0/" target="_blank" rel="noopener" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; text-decoration: none; color: #1C2440; display: flex; flex-direction: column; box-shadow: 0 10px 24px rgba(10,20,70,.12)"><img src="assets/c21500e4b9937c4a3142ee5bb995de61.jpg" alt="" style="width: 100%; aspect-ratio: 568/326; object-fit: cover; display: block"><div style="padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: #CC4116">Data · Business</p><p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.45">การวิเคราะห์ข้อมูล UX/UI: ประโยชน์และเครื่องมือที่ต้องมี</p><p style="margin: auto 0 0; font-size: 13px; color: #5A6380">borntoDev · ธ.ค. 2023 · อ่านบทความ ↗</p></div></a><a class="lift" href="https://www.borntodev.com/2023/12/22/5-%e0%b9%80%e0%b8%97%e0%b8%84%e0%b8%99%e0%b8%b4%e0%b8%84-ux-ui-%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%97%e0%b8%b8%e0%b8%81-startup-%e0%b8%84%e0%b8%a7%e0%b8%a3%e0%b8%a3%e0%b8%b9%e0%b9%89/" target="_blank" rel="noopener" style="background: #FFFFFF; border-radius: 20px; overflow: hidden; text-decoration: none; color: #1C2440; display: flex; flex-direction: column; box-shadow: 0 10px 24px rgba(10,20,70,.12)"><img src="assets/f0ccc932e5b867494c2f05b6a47e5572.jpg" alt="" style="width: 100%; aspect-ratio: 568/326; object-fit: cover; display: block"><div style="padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: #CC4116">Startup · UX/UI</p><p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.45">5 เทคนิค UX/UI ที่ทุก Startup ควรรู้</p><p style="margin: auto 0 0; font-size: 13px; color: #5A6380">borntoDev · ธ.ค. 2023 · อ่านบทความ ↗</p></div></a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec reveal">
+<h2 class="h2" style="max-width: 760px">ทั้งดูแลโปรดักต์ <em style="color: #1C2440">และออกแบบประสบการณ์</em> นี่คือทักษะ เครื่องมือ และทีมที่ฉันทำงานด้วย</h2>
+<div class="bento">
+<div class="span2 lift skillbox" style="background: #2457E6; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 240px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; margin-bottom: 28px">
+<sc-for list="{{skills}}" as="s" hint-placeholder-count="8">
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">{{s.label}}</span>
+</sc-for>
+</div>
+<div style="max-width: 320px">
+<h3 style="margin: 0 0 6px; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600; color: #FFFFFF">Product + Design</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #E8EEFF">5 ปีในสายดิจิทัลโปรดักต์ ทั้งในตำแหน่ง Product Owner และ UX/UI Designer เข้าใจทั้งผู้ใช้ ธุรกิจ และการส่งมอบงานกับทีม</p>
+</div>
+</div>
+
+<div class="lift" style="background: #1C2440; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
+<h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600; color: #FFFFFF">เครื่องมือ</h3>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<span class="tool"><img src="assets/97f663bd264dad9c25c6369ef43bfad5.svg" alt="">Jira</span>
+<span class="tool"><img src="assets/33f8c954e030521d2a0f638a12872a32.svg" alt="">Confluence</span>
+<span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma</span>
+<span class="tool"><img src="assets/48c92eabc451137ead9e59808fb78c10.svg" alt="">draw.io</span>
+<span class="tool"><img src="assets/79c1cc66702cb684621119102a123201.svg" alt="">Miro</span>
+<span class="tool"><img src="assets/3ec966d85b12ea07b89fe77eb243f2a1.svg" alt="">Mixpanel</span>
+<span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma AI</span>
+<span class="tool"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="flex: 0 0 auto"><path d="M12 2C12.8 8 16 11.2 22 12C16 12.8 12.8 16 12 22C11.2 16 8 12.8 2 12C8 11.2 11.2 8 12 2Z" fill="#D97757"></path></svg>Claude Design</span>
+</div>
+</div>
+
+<div class="lift" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ใบรับรอง</h3>
+<div class="cert">
+<span class="logo" style="flex: 0 0 68px; background: #FFFFFF; border: 1px solid #DCE4F2"><img src="assets/d960d7fb067dacae1badbd1cb875d8ca.png" alt="TUXSA" style="width: 56px; height: auto"></span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-weight: 600; font-size: 14px">Design Thinking for Business</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380">การคิดเชิงออกแบบทางธุรกิจ · TUXSA</p>
+</div>
+</div>
+<div class="cert">
+<span class="logo" style="flex: 0 0 68px; background: #FFFFFF; border: 1px solid #DCE4F2"><img src="assets/d960d7fb067dacae1badbd1cb875d8ca.png" alt="TUXSA" style="width: 56px; height: auto"></span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-weight: 600; font-size: 14px">Business Analytics</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380">การวิเคราะห์ข้อมูลทางธุรกิจ · TUXSA</p>
+</div>
+</div>
+<div class="cert">
+<span class="logo"><img src="assets/014ea8754701f7215e122fbf46fe806f.svg" alt="" style="width: 24px; height: 24px"></span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-weight: 600; font-size: 14px">Google UX Design Certificate</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 5px">ผ่าน <img src="assets/82e24779a626ef8d8c76c668569a0664.svg" alt="" style="width: 12px; height: 12px"> Coursera · 2022</p>
+</div>
+</div>
+<p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #A33410">นอกเวลางาน</p>
+<div class="cert">
+<span class="logo" style="background: #FFFFFF; border: 1px solid #DCE4F2"><img src="assets/b7ab88a07b79edeffaa8ce991ba05456.png" alt="Topstep Funded Trader" style="width: 38px; height: 38px; object-fit: contain"></span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-weight: 600; font-size: 14px">Funded Trader · Topstep</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380">ผ่าน Trading Combine · ต.ค. 2026 · ฝึกบริหารความเสี่ยงและวินัยในการตัดสินใจ</p>
+<a href="https://trm-topstep-assets.s3.amazonaws.com/certificatepdfs/0932691d-8413-40be-b4a7-94aaccb8d375.pdf" target="_blank" rel="noopener" style="margin-top: 4px; font-size: 13px; font-weight: 600; color: #2457E6; text-decoration: none">ตรวจสอบใบจริง ↗</a>
+</div>
+</div>
+</div>
+
+<div class="lift span2" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ทีมที่ทำงานด้วย</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ประสานงานข้ามทีมตั้งแต่ออกแบบจนถึงหลัง release</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Developer</span>
+<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Tester / QA</span>
+<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">IT / Core system</span>
+<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Call center</span>
+<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">App support</span>
+<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Compliance</span>
+<span style="background: #FFE3D6; color: #7A2A10; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Business / Marketing</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="sec reveal">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p class="hand">เส้นทางการทำงาน</p>
+<h2 class="h2">ประสบการณ์ <em style="color: #1C2440">และการศึกษา</em></h2>
+<p style="margin: 0; font-size: 14px; color: #5A6380">กดที่แต่ละตำแหน่งเพื่อดูรายละเอียด</p>
+</div>
+<div class="exp">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{jobs}}" as="j" hint-placeholder-count="2">
+<div class="jobcard" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-left: 5px solid #2457E6; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 24px rgba(28,36,64,.10)">
+<button type="button" class="jobbtn" onClick="{{j.toggle}}" aria-expanded="{{j.expanded}}" style="width: 100%; background: transparent; border: 0; padding: 20px 22px; display: flex; align-items: center; gap: 16px; text-align: left; color: #1C2440; min-height: 44px">
+<sc-if value="{{j.hasLogo}}" hint-placeholder-val="{{false}}"><img src="{{j.logo}}" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 4px 10px rgba(28,36,64,.18)"></sc-if><sc-if value="{{j.noLogo}}" hint-placeholder-val="{{true}}"><span style="flex: 0 0 auto; width: 12px; height: 12px; border-radius: 50%; background: {{j.dot}}"></span></sc-if>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; color: #5A6380">{{j.period}}</span>
+<span style="font-size: 18px; font-weight: 600">{{j.role}}</span>
+<span style="font-size: 14px; color: #4A5370">{{j.org}}</span>
+</span>
+<svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="rotate: {{j.rot}}"><path d="M5 8L10 13L15 8"></path></svg>
+</button>
+<sc-if value="{{j.open}}" hint-placeholder-val="{{true}}">
+<ul class="fade" style="margin: 0; padding: 0 22px 20px 50px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6; color: #36405E">
+<sc-for list="{{j.bullets}}" as="b" hint-placeholder-count="3">
+<li>{{b}}</li>
+</sc-for>
+</ul>
+</sc-if>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="lift" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 18px; padding: 22px; color: #1C2440; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #C23E14">การศึกษา</p>
+<p style="margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5">ปริญญาโท · M.B.A. Business Innovation</p>
+<p style="margin: 0 0 14px; font-size: 14px; color: #4A5370; display: flex; align-items: center; gap: 10px; flex-wrap: wrap"><span style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1px #DCE4F2"><img src="assets/9aa03efea71fbd111c77a8ad379348ca.png" alt="" style="width: 44px; height: 44px; border-radius: 50%"></span>มหาวิทยาลัยธรรมศาสตร์ <span style="background: #DFFF1A; color: #1C2440; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600">กำลังศึกษา</span></p>
+<p style="margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5">ปริญญาตรี · Decorative Arts (มัณฑนศิลป์)</p>
+<p style="margin: 0; font-size: 14px; color: #4A5370; display: flex; align-items: center; gap: 10px"><span style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1px #DCE4F2"><img src="assets/aef5994ab809fc970915ea42b91d77b6.png" alt="" style="width: 34px; height: 34px; border-radius: 50%"></span>มหาวิทยาลัยศิลปากร · สำเร็จการศึกษา 2019</p>
+</div>
+<div class="lift" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #C23E14">ภาษา</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.7">ไทย · ภาษาแม่<br>English · ใช้ทำงานได้ดี (TOEIC 850)</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="sec reveal">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+<p class="hand">วิธีคิดแบบ PO</p>
+<h2 class="h2">วิธีทำงานแบบ <em style="color: #1C2440">Product Owner</em> ด้วยหัวใจของนักออกแบบ</h2>
+<p style="margin: 0; font-size: 14px; color: #5A6380">กดแต่ละขั้นเพื่อดูสิ่งที่ส่งมอบและตัวอย่างจากงานจริง</p>
+</div>
+<div class="steps" role="tablist" aria-label="ขั้นตอนการทำงาน">
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="5">
+<button type="button" role="tab" class="stepbtn" aria-selected="{{st.selected}}" onClick="{{st.pick}}" style="border: 1.5px solid {{st.border}}; background: {{st.bg}}; color: {{st.fg}}; border-radius: 18px; padding: 18px; text-align: left; display: flex; flex-direction: column; gap: 6px; min-height: 44px">
+<span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 30px; color: {{st.numColor}}">{{st.num}}</span>
+<span style="font-size: 17px; font-weight: 600">{{st.title}}</span>
+</button>
+</sc-for>
+</div>
+<div class="detail fade" role="tabpanel">
+<div style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 20px; font-weight: 600; line-height: 1.5">{{cur.desc}}</p>
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #C23E14">สิ่งที่ส่งมอบ</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{cur.outputs}}" as="o" hint-placeholder-count="3">
+<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2F3E9E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 4px"><path d="M3 9.5L7 13L15 5"></path></svg>{{o}}</div>
+</sc-for>
+</div>
+<p style="margin: 6px 0 0; font-size: 13px; color: #5A6380">เครื่องมือ: {{cur.tools}}</p>
+</div>
+<div style="background: #1C2440; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: 20px; color: #FF8A5C">ตัวอย่างจากงานจริง</p>
+<p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 500; font-size: 18px; line-height: 1.65; color: #F7F9FD">“{{cur.example}}”</p>
+</div>
+</div>
+<div style="background: #F3FFC4; border: 1px solid #E2FF6B; border-radius: 20px; padding: clamp(22px, 4vw, 36px); display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: .06em; color: #3D5200">มุมมองของฉัน</p>
+<p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: clamp(19px, 2.2vw, 24px); line-height: 1.5; color: #1C2440">“นักออกแบบเห็นปัญหาจากมุมของลูกค้า ส่วน PO ต้องเปลี่ยนปัญหานั้นให้เป็นสิ่งที่ทีมส่งมอบได้ตรงเวลาและวัดผลได้ ฉันอยากทำทั้งสองอย่างให้ดีในคนเดียว”</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact" class="reveal" style="background: {{accent}}; border-radius: 28px; padding: clamp(32px, 5vw, 56px) 24px; text-align: center; color: #FFF5EE; display: flex; flex-direction: column; gap: 16px; align-items: center">
+<p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: 26px">มาคุยกันเถอะ</p>
+<p style="margin: 0; font-size: 15px">เปิดรับโอกาสงาน Product Owner · Product Management · Project Management · UX/UI Designer</p>
+<h2 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(18px, 5.4vw, 48px); overflow-wrap: anywhere"><a href="mailto:Thewtheechaya@gmail.com" style="color: #FFF5EE; text-decoration: none">Thewtheechaya@gmail.com</a></h2>
+<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center">
+<button type="button" onClick="{{copyEmail}}" style="color: #CC4116; background: #FFF5EE; border: 1px solid #FFF5EE; border-radius: 999px; padding: 10px 20px; font-size: 14px; font-weight: 600; min-height: 44px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg>{{copyLabel}}</button>
+<a href="https://www.linkedin.com/in/theechaya/" target="_blank" rel="noopener" style="color: #FFF5EE; border: 1px solid rgba(255,245,238,.5); border-radius: 999px; padding: 10px 20px; text-decoration: none; font-size: 14px; font-weight: 600; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"></path></svg>LinkedIn</a>
+</div>
+</footer>
+
+</div>
+</div>
+</template>
+<div id="root"></div>
+<script type="text/x-dc" id="dcsrc" data-props='{"accent":{"editor":"color","default":"#CC4116","options":["#CC4116","#2F3E9E","#FF6A3D","#3E5C8A"]},"$preview":{"width":1280,"height":4600}}'>
+class Component extends DCLogic {
+componentDidMount() {
+var self = this;
+var start = Date.now();
+this.setState({ t: 0 });
+this._iv = setInterval(function () {
+var t = Math.min(1, (Date.now() - start) / 1400);
+self.setState({ t: t });
+if (t >= 1) { clearInterval(self._iv); }
+}, 40);
+var words = ['Product Owner', 'Product Management', 'Project Management', 'UX/UI Designer'];
+var wi = 0, ci = words[0].length, del = false, hold = 22;
+this._tv = setInterval(function () {
+if (hold > 0) { hold--; return; }
+var w = words[wi];
+if (!del) { ci++; if (ci >= w.length) { ci = w.length; del = true; hold = 26; } }
+else { ci--; if (ci <= 0) { ci = 0; del = false; wi = (wi + 1) % words.length; hold = 4; } }
+self.setState({ typed: words[wi].slice(0, ci) });
+}, 75);
+}
+componentWillUnmount() { clearInterval(this._iv); clearInterval(this._tv); }
+renderVals() {
+var self = this;
+var s = this.state || {};
+var accent = this.props.accent ?? '#CC4116';
+var t = s.t == null ? 1 : s.t;
+var e = 1 - Math.pow(1 - t, 3);
+var step = s.step == null ? 0 : s.step;
+var filter = s.filter || 'all'; if (['all','fin','ent','edu','health'].indexOf(filter) < 0) { filter = 'all'; }
+var openJob = s.openJob === undefined ? 0 : s.openJob;
+
+var statsData = [
+{ n: 5, plus: '+', unit: 'ปี', label: 'ประสบการณ์ในสายดิจิทัลโปรดักต์', href: '#experience', cta: 'ดูประสบการณ์' },
+{ n: 1, plus: '+', unit: 'ปี', label: 'ในตำแหน่ง Product Owner', href: 'CaseStudy.html', cta: 'ดูงาน PO' },
+{ n: 9, plus: '', unit: 'โปรเจกต์', label: 'จากลูกค้าองค์กร กดอ่านเบื้องหลังได้ทุกงาน', href: '#work', cta: 'ดูผลงาน' },
+{ n: 5, plus: '', unit: 'อุตสาหกรรม', label: 'การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข', href: '#work', cta: 'กรองตามอุตสาหกรรม' }
+];
+var stats = statsData.map(function (x) { return { value: Math.round(x.n * e), plus: x.plus, unit: x.unit, label: x.label, href: x.href, cta: x.cta }; });
+
+var words = ['Product Roadmap','Customer Journey','Business Flow','User Story','MVP','UAT','Agile / Scrum','Release Planning','Stakeholder Management','UX/UI Design'];
+var marquee = words.concat(words);
+
+var tilts = ['rotate(-8deg)','rotate(6deg)','rotate(-3deg)','rotate(9deg)','rotate(-6deg)','rotate(4deg)','rotate(-2deg)','rotate(7deg)'];
+var labels = ['Product Roadmap','Customer Journey','Business Flow','Feature Spec','Agile / Scrum','MVP & UAT','Stakeholder Management','UX/UI Design'];
+var skills = labels.map(function (l, i) { return { label: l, tilt: tilts[i % tilts.length] }; });
+
+var jobsData = [
+{ period: 'มี.ค. 2022 – ปัจจุบัน · 4 ปี 8 เดือน', role: 'UX/UI Designer', org: 'G-ABLE Group · Full-time · Remote', dot: accent, logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', bullets: [
+'ออกแบบ UX/UI ระบบมหาวิทยาลัยของ U-NEXT ที่ขายให้ 3 สถาบัน (UTCC, KU, NIDA) ทั้งระบบรับสมัครพร้อม Back Office ระบบตัดเกรดของอาจารย์ และ Student Portal', 'เป็น UX/UI Designer คนเดียวในทีม ทำงานร่วมกับ PM, BA, SA และ Dev แบบ Agile', 'ออกแบบ UX/UI ของ AIS PCI Web Portal ระบบหลังบ้านกว่า 20 หน้าจอ ให้เป็นไปตามมาตรฐาน PCI DSS ฉบับใหม่', 'ออกแบบ UX/UI ของ AIS mPAY ONE ระบบหลังบ้านแพลตฟอร์มรับชำระเงิน รองรับ 8 ช่องทางชำระ', 'ออกแบบ UX/UI ระบบบริหารงบประมาณ (Budget Management System) ทั้งระบบของไทยออยล์ ต่อเนื่อง 1 ปี', 'ออกแบบ UX/UI ระบบ Newborn Connect ของกรมวิทยาศาสตร์การแพทย์ 6 โมดูล กว่า 200 หน้าจอ ภายใน 2 เดือน', 'ออกแบบ UX/UI ของ D-HUB portal ข้อมูลภายในของ ธ.ก.ส. รวม Chat AI และปรับหน้าแรก 5 รอบตาม feedback', 'ออกแบบ UX/UI ด้วย Figma AI ระบบติดตามคำสั่งซื้อของ TIPCO Asphalt 5 เมนู ตั้งแต่ติดตาม order การขนส่ง ขอเอกสาร จนถึงสิทธิ์ผู้ใช้', 'ออกแบบ UX/UI และใช้ Claude Design สร้าง prototype ของ G-Core Portal ระบบบริหาร GPU สำหรับมหาวิทยาลัย 7 บทบาท แบ่งส่งมอบเป็น MVP 0–5'] },
+{ period: 'ม.ค. 2021 – ก.พ. 2022 · 1 ปี 2 เดือน', role: 'UX Strategies, Product Owner', org: 'Testament Technology · Full-time · Hybrid', dot: '#2F3E9E', logo: 'assets/1b2a8d4d68b4f563361baf2ac22283f6.png', bullets: [
+'เป็นทั้ง UX และ Product Owner ของ Meow Finance แพลตฟอร์ม DeFi บน Fantom Chain', 'วาง roadmap จัดลำดับ backlog และเขียน requirement ให้ทีม frontend และ smart contract', 'ทำ UAT บน testnet และตัดสินใจ release ขึ้น mainnet ร่วมกับทีม'] }
+];
+var jobs = jobsData.map(function (j, i) {
+var open = openJob === i;
+return { period: j.period, role: j.role, org: j.org, dot: j.dot, logo: j.logo || '', hasLogo: !!j.logo, noLogo: !j.logo, bullets: j.bullets, open: open,
+expanded: open ? 'true' : 'false', rot: open ? '180deg' : '0deg',
+toggle: function () { self.setState({ openJob: open ? -1 : i }); } };
+});
+
+var stepsData = [
+{ title: 'Discover', desc: 'เข้าใจผู้ใช้ งาน และกติกาของธุรกิจ ก่อนคิดคำตอบ',
+outputs: ['สรุป pain point จาก workshop และผู้ใช้จริง', 'Benchmark ระบบที่ใกล้เคียง', 'Problem statement ที่ทีมเห็นตรงกัน'],
+tools: 'Miro · Google Sheets · Workshop', example: 'Newborn Connect: เรียนรู้งานห้องปฏิบัติการกับนักวิทยาศาสตร์การแพทย์ ก่อนออกแบบหน้า Punch Cutting และรับรองผล' },
+{ title: 'Define', desc: 'สรุปเรื่องซับซ้อนให้เป็นภาพเดียว ที่ทุกทีมใช้ตัดสินใจร่วมกัน',
+outputs: ['เป้าหมายและตัวชี้วัด', 'User flow และ business flow', 'Matrix หรือ role map ที่ทุกทีมใช้ร่วมกัน'],
+tools: 'Figma · FigJam · draw.io', example: 'AIS mPAY ONE: สรุปว่าแต่ละช่องทางชำระเงินต้องตั้งค่าอะไรเป็น matrix เดียว ใช้กำหนดขอบเขตงานทั้งทีม' },
+{ title: 'Prioritize', desc: 'จัดลำดับงานและขอบเขต ให้ส่งมอบได้ทันเวลา',
+outputs: ['ลำดับงานแบบ MoSCoW', 'Pattern กลางที่ใช้ซ้ำได้', 'แผนส่งงานตาม sprint'],
+tools: 'Jira · Confluence', example: 'Newborn Connect: วาง pattern กลางให้หน้าตั้งค่า 40+ หน้า แล้วโฟกัสหน้าที่ยาก จนส่งงาน 200+ หน้าใน 2 เดือน' },
+{ title: 'Deliver', desc: 'ส่งต่องานให้ Dev ทำได้ตรงแบบ และดูแลจนถึง UAT',
+outputs: ['UI และ prototype ใน Figma', 'Note ทุก state และเงื่อนไขของปุ่ม', 'Design QA และร่วมตรวจ UAT'],
+tools: 'Figma · Jira', example: 'Thaioil BMS: ส่งมอบทีละโมดูลต่อเนื่อง 1 ปี บน pattern กลางชุดเดียว ทุก role ใช้ระบบเดียวกัน' },
+{ title: 'Iterate', desc: 'ฟัง feedback แล้วปรับอย่างมีเหตุผล ไม่ใช่ปรับตามความชอบ',
+outputs: ['สรุป feedback แต่ละรอบเป็นข้อที่ต้องแก้', 'เหตุผลของการเปลี่ยนแต่ละครั้ง', 'Backlog รอบถัดไป'],
+tools: 'Figma · Confluence', example: 'ธ.ก.ส. D-HUB: ปรับหน้าแรก 5 รอบ แยกประกาศออกจากข่าว และเพิ่มภาพที่สื่อถึง AI จนธนาคารอนุมัติ' }
+];
+var steps = stepsData.map(function (x, i) {
+var on = i === step;
+return { num: '0' + (i + 1), title: x.title, selected: on ? 'true' : 'false',
+bg: on ? '#2457E6' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1C2440', border: on ? '#2457E6' : '#DCE4F2', numColor: on ? '#DFFF1A' : '#2457E6',
+pick: function () { self.setState({ step: i }); } };
+});
+var cur = stepsData[step];
+
+var filterData = [{ id: 'all', label: 'ทั้งหมด' }, { id: 'fin', label: 'การเงินและธนาคาร' }, { id: 'ent', label: 'องค์กรและพลังงาน' }, { id: 'edu', label: 'การศึกษา' }, { id: 'health', label: 'สาธารณสุข' }];
+
+var all = [
+{ domain: 'fin', type: 'po', href: 'CaseStudy.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Product Owner', 'UX Strategy', 'DeFi / Web3'], year: 'Testament', role: '2021 · UX + Product Owner', title: 'Meow Finance · แพลตฟอร์ม DeFi', laptop: 'assets/8f3aa77874f48c86b735bf2e831f686e.png', logo: 'assets/1b2a8d4d68b4f563361baf2ac22283f6.png', imgAlt: 'หน้า Farm ของ Meow Finance บนจอคอมพิวเตอร์', stat1: '14', unit: 'เดือน', label1: 'ดูแลทั้งงาน UX และ Product Owner ตั้งแต่ต้นจนจบ', stat2: '', label2: '', problem: 'แพลตฟอร์ม leveraged yield farming และ lending บน Fantom Chain ที่ต้องทำเรื่องซับซ้อนให้ใช้ง่ายและปลอดภัย', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', dark: true, mockStep: 'ขั้นที่ 2 / 4', mockProgress: '50%', mockAccent: '#CC4116', mockTitle: 'ถ่ายรูปบัตรประชาชน', mockRow1: 'วางบนพื้นเรียบ', mockRow2: 'อยู่ในที่ที่แสงพอ', mockCta: 'ถ่ายรูป' },
+{ domain: 'edu', type: 'po', href: 'CaseStudy2.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Design system', 'Multi-role UX', 'Product thinking', 'Prioritization', 'Cross-team'], year: 'U-NEXT', role: '2022 · UTCC · KU · NIDA', logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', title: 'U-NEXT · ระบบมหาวิทยาลัย', laptop: 'assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg', imgAlt: 'หน้าเลือกรูปแบบการชำระเงิน ระบบรับสมัคร UTCC', dark: true, stat1: '3', unit: 'มหาวิทยาลัย', label1: 'ระบบเดียว ครบทุกบทบาท นักศึกษา อาจารย์ เจ้าหน้าที่', stat2: '', label2: '', problem: 'ระบบมหาวิทยาลัยทั้งระบบ ใช้ร่วมกันทั้งนักศึกษา อาจารย์ และเจ้าหน้าที่ ตั้งแต่รับสมัคร Back Office ตัดเกรด จนถึง Student Portal ขายให้ UTCC, KU และ NIDA', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: 'ศูนย์ช่วยเหลือ', mockProgress: '100%', mockAccent: '#2457E6', mockTitle: 'มีอะไรให้ช่วยไหม?', mockRow1: 'ลืม PIN', mockRow2: 'บัตรถูกล็อก', mockCta: 'ตั้ง PIN ใหม่' },
+{ domain: 'fin', type: 'ux', href: 'CaseStudy3.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Requirement analysis', 'Agile', 'Security UX', 'Cross-team'], year: 'AIS', role: '2024 · UX/UI Designer', logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', title: 'AIS · PCI Web Portal', laptop: 'assets/0a7516d5caff3365fb6558bff26abbb5.jpg', imgAlt: 'หน้า Query Payment by Credit Card ของ AIS PCI Web Portal', dark: true, stat1: '20+', unit: 'หน้าจอ', label1: 'ออกแบบครบทุกเมนูใน 4 กลุ่ม', stat2: '', label2: '', problem: 'ระบบหลังบ้านของ AIS สำหรับจัดการผู้ใช้ สิทธิ์ key และข้อมูลบัตร ให้เป็นไปตามมาตรฐาน PCI DSS ฉบับใหม่', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'fin', type: 'ux', href: 'CaseStudy4.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Scope definition', 'Agile', 'Fintech UX', 'Cross-team'], year: 'AIS', role: '2023 · UX/UI Designer', logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', title: 'AIS · mPAY ONE', laptop: 'assets/8a5105c5f6572df3e9fe4d0edc5f87d8.jpg', imgAlt: 'หน้า Transaction Inquiry ของ AIS mPAY ONE', dark: true, stat1: '8', unit: 'ช่องทาง', label1: 'ชำระเงิน ตั้งค่าได้ในฟอร์มเดียว', stat2: '', label2: '', problem: 'ระบบหลังบ้านของแพลตฟอร์มรับชำระเงิน AIS สำหรับดูแลร้านค้า ตั้งค่าช่องทางชำระ ติดตามธุรกรรม และคืนเงิน', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'ent', type: 'ux', href: 'CaseStudy5.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Role-based UX', 'Agile', 'Enterprise', 'Cross-team'], year: 'Thaioil', role: '2025 · UX/UI Designer', logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', title: 'Thaioil · Budget Management System', laptop: 'assets/8b174653078d36e0061e78f3677b4d16.jpg', imgAlt: 'หน้า Waiting List Notification ของระบบงบประมาณไทยออยล์', dark: true, stat1: '1', unit: 'ปี', label1: 'ออกแบบทั้งระบบ ทุกโมดูลงบประมาณ', stat2: '', label2: '', problem: 'ระบบบริหารงบประมาณทั้งระบบของไทยออยล์ ตั้งแต่ขอ โอน อนุมัติงบ OPEX, CAPEX, Contingency และ RMA จนสร้าง WBS', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'health', type: 'ux', href: 'CaseStudy7.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['HealthTech', 'Prioritization', 'Design system', 'Cross-team'], year: 'DMSc', role: '2025 · UX/UI Designer', title: 'Newborn Connect · ระบบคัดกรองทารกแรกเกิด', laptop: 'assets/e21909bec90e7e3cf627caa94614fb9c.jpg', imgAlt: 'หน้าเข้าสู่ระบบของ Newborn Connect', dark: true, stat1: '200+', unit: 'หน้าจอ', label1: '6 โมดูล ออกแบบเสร็จใน 2 เดือน', stat2: '', label2: '', problem: 'ระบบบันทึกและติดตามการตรวจคัดกรองโรคในทารกแรกเกิดของกรมวิทยาศาสตร์การแพทย์ ตั้งแต่รับตัวอย่างเลือดจนรายงานผล', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'fin', type: 'ux', href: 'CaseStudy9.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Iteration', 'AI UX', 'Data portal', 'Stakeholder'], year: 'BAAC', role: '2025 · UX/UI Designer', title: 'ธ.ก.ส. · D-HUB ศูนย์รวมข้อมูล', laptop: 'assets/412e04687691ebde764873eba95429ab.jpg', imgAlt: 'หน้าแรกของ D-HUB', dark: true, stat1: '5', unit: 'รอบ', label1: 'ปรับหน้าแรกตาม feedback จนผ่านอนุมัติ', stat2: '', label2: '', problem: 'Portal ข้อมูลภายในของ ธ.ก.ส. รวมชุดข้อมูล แดชบอร์ด Chat AI และข่าว ให้พนักงานหาข้อมูลได้เอง', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'ent', type: 'ux', href: 'CaseStudy11.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['Status design', 'Figma AI', 'Role-based UX', 'Enterprise'], year: 'TIPCO', role: '2026 · UX/UI Designer', title: 'TIPCO · ระบบติดตามคำสั่งซื้อ', laptop: 'assets/15fbcd696da667b4b98ea1c704c46ca6.jpg', imgAlt: 'หน้า Order Management ของ TIPCO', dark: true, stat1: '5', unit: 'เมนู', label1: 'สถานะ 2 ชั้น หา order ที่ต้องตามได้ในคลิกเดียว', stat2: '', label2: '', problem: 'ระบบภายในของ TIPCO Asphalt ติดตามคำสั่งซื้อยางมะตอย การขนส่ง การขอเอกสารให้ลูกค้า และสิทธิ์ผู้ใช้ตามบทบาท', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' },
+{ domain: 'edu', type: 'ux', href: 'CaseStudy10.html', cta: 'อ่าน Case Study', read: '· 5 นาที', tags: ['B2B product', 'Claude Design', 'MVP planning', 'Multi-role UX'], year: 'G-Core', role: '2026 · UX/UI Designer', title: 'G-Core Portal · ระบบบริหาร GPU', laptop: 'assets/619e4b1366591aeb059d4db33b87938f.jpg', imgAlt: 'หน้า Performance & Utilization ของ G-Core Portal', dark: true, stat1: '7', unit: 'บทบาท', label1: 'จอง ใช้งาน คิดเงิน GPU ในระบบเดียว แบ่งส่งมอบเป็น MVP', stat2: '', label2: '', problem: 'Product สำหรับมหาวิทยาลัยที่ซื้อ NVIDIA GPU มาแล้ว ใช้บริหารการจอง การใช้งาน และค่าบริการ GPU ตั้งแต่ Booking จนส่งเข้า ERP/SAP', decision: '', process: '', bg: 'radial-gradient(120% 90% at 50% 110%, #34449A 0%, #1C2440 65%)', mockStep: '', mockProgress: '0%', mockAccent: '#2457E6', mockTitle: '', mockRow1: '', mockRow2: '', mockCta: '' }
+];
+var filters = filterData.map(function (f) {
+var on = f.id === filter;
+return { label: f.label, count: f.id === 'all' ? all.length : all.filter(function (p) { return p.domain === f.id; }).length, pressed: on ? 'true' : 'false', bg: on ? '#1C2440' : '#FFFFFF', fg: on ? '#F7F9FD' : '#1C2440', border: on ? '#1C2440' : '#D3DDEE',
+pick: function () { self.setState({ filter: f.id }); } };
+});
+var projects = all.map(function (p, i) { if (filter !== 'all' && p.domain !== filter) { return null; }
+var extra = p.tags.length - 3;
+var tl = s.tilt && s.tilt.i === i ? s.tilt : null;
+var tf = tl ? 'perspective(900px) rotateX(' + ((0.5 - tl.y) * 10).toFixed(2) + 'deg) rotateY(' + ((tl.x - 0.5) * 12).toFixed(2) + 'deg) translateY(-10px)' : 'none';
+return Object.assign({}, p, { unit: p.unit || '', logo: p.logo || '', hasLogo: !!p.logo, hasImg: !!p.img, hasLaptop: !!p.laptop, numColor: p.dark ? '#FFFFFF' : '#1C2440', noImg: !p.img && !p.laptop, imgShift: tl ? 'scale(1.08) translate(' + ((tl.x - 0.5) * -10).toFixed(1) + 'px, ' + ((tl.y - 0.5) * -8).toFixed(1) + 'px)' : 'scale(1)', tagsShort: p.tags.slice(0, 3), hasMore: extra > 0, more: '+' + extra, num: (i < 9 ? '0' : '') + (i + 1), featured: i === 0,
+tf: tf,
+glare: tl ? 'radial-gradient(circle at ' + (tl.x * 100).toFixed(1) + '% ' + (tl.y * 100).toFixed(1) + '%, rgba(255,255,255,.38), rgba(255,255,255,0) 55%)' : 'none',
+glareOp: tl ? 1 : 0,
+phoneShift: tl ? 'translate(' + ((tl.x - 0.5) * -18).toFixed(1) + 'px, ' + (-10 + (tl.y - 0.5) * -10).toFixed(1) + 'px)' : 'none',
+onMove: function (ev) { var r = ev.currentTarget.getBoundingClientRect(); self.setState({ tilt: { i: i, x: (ev.clientX - r.left) / r.width, y: (ev.clientY - r.top) / r.height } }); },
+onLeave: function () { self.setState({ tilt: null }); } });
+}).filter(Boolean);
+
+var copied = !!s.copied;
+var typed = s.typed == null ? 'Product Owner' : s.typed;
+return {
+accent: accent, stats: stats, marquee: marquee, skills: skills, jobs: jobs, steps: steps, cur: cur,
+filters: filters, projects: projects,
+copyLabel: copied ? 'คัดลอกแล้ว' : 'คัดลอกอีเมล',
+typed: typed,
+copyEmail: function () {
+try { navigator.clipboard.writeText('Thewtheechaya@gmail.com'); } catch (err) {}
+self.setState({ copied: true });
+setTimeout(function () { self.setState({ copied: false }); }, 2000);
+}
+};
+}
+}
+</script>
+<script src="dc.js"></script>
+</body>
+</html>

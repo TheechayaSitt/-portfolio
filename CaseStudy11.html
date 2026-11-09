@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIPCO Order Management · Theechaya S.</title>
+<meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<meta property="og:title" content="TIPCO Order Management · Theechaya S.">
+<meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232457E6'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='%23fff'%3ET.%3C/text%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&amp;family=Outfit:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2457E6}
+a{color:#CC4116}a:hover{color:#A33410}
+button{font-family:inherit}
+.grid-bg{background-color:#2457E6;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(115deg,rgba(255,255,255,0) 55%,rgba(255,255,255,.08) 70%,rgba(255,255,255,0) 85%);background-size:64px 64px,64px 64px,100% 100%}
+.sec{background:#F7F9FD;border-radius:28px;padding:clamp(24px,5vw,56px) clamp(16px,4vw,56px);display:flex;flex-direction:column;gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:translate .3s ease,box-shadow .3s ease}
+.card:hover{translate:0 -6px;box-shadow:0 16px 30px rgba(28,36,64,.14)}
+.kicker{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#2457E6}
+.h2{margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:clamp(26px,3.2vw,38px);line-height:1.3;color:#1C2440}
+.lbl{margin:0;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.body{margin:0;font-size:15px;line-height:1.75;color:#36405E}
+.scroll{overflow-x:auto;background:#FFFFFF;border:1px solid #DCE4F2;border-radius:18px;padding:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+.tbl th{text-align:left;font-weight:600;color:#5A6380;padding:12px;border-bottom:2px solid #D3DDEE;vertical-align:top}
+.tbl td{padding:12px;border-bottom:1px solid #DCE4F2;color:#1C2440;vertical-align:top;line-height:1.6}
+.tbl tbody tr{transition:background .2s}
+.tbl tbody tr:hover{background:#FFE3D6}
+.bar{transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.tog{cursor:pointer;transition:background .2s,color .2s}
+.stepbox{transition:translate .3s}
+.stepbox:hover{translate:0 -4px}
+.back svg{transition:translate .25s}
+.back:hover svg{translate:-6px 0}
+.next svg{transition:translate .25s}
+.next:hover svg{translate:8px 0}
+@keyframes fadein{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes rise{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+.fade{animation:fadein .4s ease both}
+@supports (animation-timeline: view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+html{scroll-behavior:smooth}
+section,header{scroll-margin-top:96px}
+.progress{position:fixed;top:0;left:0;right:0;height:4px;background:#DFFF1A;transform-origin:0 50%;scale:0 1;z-index:50}
+@keyframes grow{to{scale:1 1}}
+@supports (animation-timeline: scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+.topbar{position:sticky;top:12px;z-index:20;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:16px;padding:6px;box-shadow:0 6px 20px rgba(28,36,64,.12)}
+.toc{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.toc a{flex:0 0 auto;text-decoration:none;color:#36405E;font-size:13px;padding:10px 12px;border-radius:999px;min-height:40px;box-sizing:border-box;display:inline-flex;align-items:center;transition:background .2s,color .2s}
+.toc a:hover{background:#E3EBFF;color:#2457E6}
+.backbtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:#1C2440;color:#F7F9FD;border-radius:12px;padding:10px 14px;min-height:44px;box-sizing:border-box;font-size:13px;font-weight:600}
+.backbtn:hover{color:#F7F9FD;background:#36405E}
+.tldr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nextcard{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;text-decoration:none;border-radius:28px;padding:clamp(24px,4vw,44px);transition:translate .3s,box-shadow .3s}
+.nextcard:hover{translate:0 -6px;box-shadow:0 20px 40px rgba(28,36,64,.2)}
+.nextcard .arrow{transition:translate .3s}
+.nextcard:hover .arrow{translate:10px 0}
+.krow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px;font-family:'IBM Plex Sans Thai',sans-serif}
+.b-ux{background:#E3EBFF;color:#26327F}
+.b-po{background:#FFE3D6;color:#A33410}
+@media (max-width:720px){.tldr{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+/* polish v2 */
+body{counter-reset:csec}
+section.sec{position:relative;overflow:hidden;background:#EAF0FF;counter-increment:csec;box-shadow:0 20px 50px rgba(10,20,70,.18)}
+section.sec::after{content:counter(csec, decimal-leading-zero);position:absolute;top:-14px;right:22px;font-family:Outfit,sans-serif;font-size:clamp(90px,14vw,160px);font-weight:600;line-height:1;letter-spacing:-.04em;color:rgba(36,87,230,.1);pointer-events:none}
+section.sec > *{position:relative;z-index:1}
+header.sec{box-shadow:0 20px 50px rgba(10,20,70,.18)}
+.kicker{display:inline-block;background:#1C2440;color:#DFFF1A !important;padding:7px 14px;border-radius:999px}
+.h2{width:fit-content;max-width:100%;background:linear-gradient(#DFFF1A,#DFFF1A) no-repeat 0 92%/100% .28em}
+.card{border:0 !important;border-top:4px solid #2457E6 !important;box-shadow:0 8px 22px rgba(28,36,64,.08);outline:2px solid transparent;outline-offset:4px;transition:translate .3s ease,box-shadow .3s ease,rotate .3s ease,outline-color .2s !important}
+.card:nth-child(3n+2){border-top-color:#FF7A4D !important}
+.card:nth-child(3n){border-top-color:#1C2440 !important}
+.card:hover{translate:0 -6px;rotate:-.6deg;box-shadow:0 18px 34px rgba(28,36,64,.18);outline-color:#DFFF1A}
+.todo{animation:pulseb 2.4s ease-in-out infinite}
+@keyframes pulseb{50%{border-color:#2457E6;background:#E8F0FF}}
+@keyframes popc{from{opacity:0;translate:0 40px;scale:.95}}
+@keyframes hl2{from{background-size:0 .28em}to{background-size:100% .28em}}
+@supports (animation-timeline: view()){
+.card{animation:popc linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+.card:nth-child(2){animation-range:entry 6% entry 46%}
+.card:nth-child(3){animation-range:entry 12% entry 52%}
+.card:nth-child(4){animation-range:entry 18% entry 58%}
+.h2{animation:hl2 linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+}
+@media (prefers-reduced-motion:reduce){.card,.h2,.todo{animation:none !important}}
+/* tilt v1 */
+.card,.g3 > div,.g4 > div{position:relative;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out,translate .3s ease,box-shadow .3s ease,outline-color .2s !important}
+.card::after,.g3 > div::after,.g4 > div::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.5),rgba(255,255,255,0) 60%);opacity:var(--go,0);transition:opacity .25s}
+.card:hover,.g3 > div:hover,.g4 > div:hover{rotate:none;translate:0 -6px;box-shadow:0 18px 34px rgba(28,36,64,.2);outline:2px solid #DFFF1A;outline-offset:4px}
+.card .lbl{transition:letter-spacing .3s ease,color .3s}
+.card:hover .lbl{letter-spacing:.2em}
+section.sec::after{transition:translate .6s ease,color .6s}
+section.sec:hover::after{translate:-14px 8px;color:rgba(36,87,230,.18)}
+section.sec:hover .kicker{animation:wig2 .6s ease}
+@keyframes wig2{30%{rotate:-4deg}60%{rotate:3deg}}
+.krow .badge{transition:translate .2s}
+section.sec:hover .krow .badge{translate:0 -3px}
+@media (prefers-reduced-motion:reduce){section.sec:hover .kicker{animation:none}}
+/* utcc v1 */
+.todo{border:2px dashed #A9C4FF;background:#F3F7FF;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.todo p{margin:0;font-size:14px;line-height:1.7;color:#4A5370}
+.todo .tt{font-weight:600;color:#26327F}
+.stage{background:radial-gradient(110% 90% at 50% 115%, #34449A 0%, #1C2440 65%);border-radius:20px;padding:clamp(24px,5vw,56px) clamp(16px,6vw,80px) 0;display:flex;justify-content:center;overflow:hidden}
+.laptop{width:100%;max-width:820px;transition:translate .5s ease}
+.stage:hover .laptop{translate:0 -8px}
+.lscreen{background:#0B0F1E;border-radius:18px 18px 0 0;padding:14px 14px 10px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.5)}
+.lscreen img{display:block;width:100%;height:auto;border-radius:4px;background:#FFFFFF}
+.lbase{height:18px;margin:0 -7%;background:linear-gradient(#E3E8F2,#AEB7CC);border-radius:0 0 18px 18px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:st}
+.steps > div{background:#FFFFFF;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px;box-shadow:0 6px 16px rgba(28,36,64,.06)}
+.steps .n{font-family:Outfit,sans-serif;font-weight:600;font-size:22px;color:#CC4116}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border-radius:16px;padding:16px;border:2px solid #DCE4F2;transition:border-color .2s,translate .25s,box-shadow .25s}
+.opt:hover{translate:0 -4px;box-shadow:0 12px 24px rgba(28,36,64,.12)}
+.opt:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.opt[aria-pressed="true"]{border-color:#2457E6;box-shadow:0 0 0 4px rgba(36,87,230,.15)}
+.opt .price{font-family:Outfit,sans-serif;font-weight:600;font-size:24px;color:#26327F}
+.receipt{background:#1C2440;color:#F7F9FD;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.receipt .row{display:flex;justify-content:space-between;gap:12px;font-size:15px;color:#C9D1E6}
+.receipt .tot{border-top:1px dashed rgba(255,255,255,.3);padding-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.team{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.team span{background:#FFFFFF;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 6px 16px rgba(28,36,64,.08);transition:translate .25s}
+.team span:hover{translate:0 -4px}
+.team .me{background:#DFFF1A;color:#1C2440}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* process v1 */
+.ptabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.ptab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;border:2px solid transparent;transition:translate .25s,background .2s,border-color .2s,box-shadow .25s}
+.ptab:hover{translate:0 -4px;box-shadow:0 10px 20px rgba(28,36,64,.12)}
+.ptab:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ptab[aria-selected="true"]{background:#2457E6;color:#FFFFFF;box-shadow:0 10px 24px rgba(36,87,230,.35)}
+.ptab .pn{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116}
+.ptab[aria-selected="true"] .pn{color:#DFFF1A}
+.ptab .pt{font-size:13px;font-weight:600;line-height:1.35}
+.ppanel{background:#FFFFFF;border-radius:20px;padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;box-shadow:0 10px 26px rgba(28,36,64,.08)}
+.ppanel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.ppanel li{display:flex;gap:10px;font-size:15px;line-height:1.6;color:#36405E}
+.ppanel li::before{content:'';flex:0 0 8px;height:8px;margin-top:9px;border-radius:50%;background:#FF7A4D}
+.pchip{display:inline-block;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;margin:0 6px 8px 0}
+.pc-d{background:#E3EBFF;color:#26327F}
+.pc-p{background:#FFE3D6;color:#A33410}
+.pnav{all:unset;cursor:pointer;box-sizing:border-box;min-height:44px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;background:#1C2440;color:#FFFFFF;transition:background .2s}
+.pnav:hover{background:#36405E}
+.pnav:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.pnav[aria-disabled="true"]{opacity:.35;cursor:default}
+.pvis{grid-column:1/-1;display:flex;flex-direction:column;gap:12px;border-top:1.5px dashed #D3DDEE;padding-top:20px}
+.pvtag{align-self:flex-start;background:#FFF4C2;color:#6B5A00;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.pvscroll{overflow-x:auto;background:#F7F9FD;border-radius:14px;padding:12px}
+.wfgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wf{background:#FFFFFF;border:1.5px solid #D3DDEE;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;aspect-ratio:1400/1079;box-sizing:border-box}
+.wf .bx{background:#EEF1F7;border-radius:6px}
+.wf .ln{height:7px;background:#DCE1EB;border-radius:4px}
+.shot{position:relative;border-radius:12px;overflow:hidden;border:1.5px solid #D3DDEE}
+.shot img{display:block;width:100%;height:auto}
+.pin{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#CC4116;color:#FFFFFF;font-family:Outfit,sans-serif;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(204,65,22,.25);animation:pinp 2s ease-in-out infinite}
+@keyframes pinp{50%{box-shadow:0 0 0 8px rgba(204,65,22,.08)}}
+.rl{position:absolute;border:1.5px dashed #CC4116;border-radius:6px;pointer-events:none}
+.legend{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.legend li{font-size:13px;line-height:1.55;color:#36405E;display:flex;gap:8px}
+.legend li::before{display:none}
+.legend b{flex:0 0 22px;height:22px;border-radius:50%;background:#CC4116;color:#FFF;font-family:Outfit,sans-serif;font-size:12px;display:flex;align-items:center;justify-content:center}
+@media (max-width:720px){.wfgrid,.legend{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.pin{animation:none}}
+@media (max-width:900px){.ptabs{grid-template-columns:repeat(3,minmax(0,1fr))}.ppanel{grid-template-columns:minmax(0,1fr)}}
+/* po view v1 */
+.mosc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mcol{border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mcol h3{margin:0;font-family:Outfit,'IBM Plex Sans Thai',sans-serif;font-size:18px;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.mcol h3 small{font-family:'IBM Plex Sans Thai',sans-serif;font-size:12px;font-weight:500;opacity:.8}
+.sticky{background:#FFFFFF;border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;color:#1C2440;box-shadow:0 4px 10px rgba(28,36,64,.08);transition:translate .2s,rotate .2s,box-shadow .2s}
+.sticky:hover{translate:0 -3px;rotate:-1.2deg;box-shadow:0 10px 18px rgba(28,36,64,.16)}
+.funnel{display:flex;flex-direction:column;gap:10px}
+.frow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:12px;align-items:center;font-size:14px}
+.ftrack{background:#DCE4F2;border-radius:8px;height:30px;overflow:hidden}
+.ffill{height:100%;border-radius:8px;background:linear-gradient(90deg,#2457E6,#5B83F0);display:flex;align-items:center;padding-left:10px;box-sizing:border-box;color:#FFF;font-size:12px;font-weight:600;transform-origin:0 50%}
+@keyframes fgrow{from{scale:0 1}}
+@supports (animation-timeline: view()){.ffill{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.dec{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:stretch}
+.dec .vs{align-self:center;font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#5A6380}
+/* po view v2 */
+.life{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative}
+.life a{display:flex;flex-direction:column;gap:2px;text-decoration:none;background:#FFFFFF;border-radius:14px;padding:12px;min-height:44px;box-sizing:border-box;color:#1C2440;box-shadow:0 6px 14px rgba(28,36,64,.07);transition:translate .25s,background .2s,color .2s}
+.life a:hover{translate:0 -4px;background:#1C2440;color:#FFFFFF}
+.life a:hover .ln2{color:#DFFF1A}
+.life .ln2{font-family:Outfit,sans-serif;font-weight:600;font-size:20px;color:#CC4116;transition:color .2s}
+.life .lt{font-size:13px;font-weight:600;line-height:1.35}
+.life .le{font-size:11px;color:#5A6380;letter-spacing:.04em}
+.life a:hover .le{color:#C9D1E6}
+.phead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;scroll-margin-top:110px}
+.phead .pnum{width:38px;height:38px;border-radius:12px;background:#1C2440;color:#DFFF1A;font-family:Outfit,sans-serif;font-weight:600;display:flex;align-items:center;justify-content:center}
+.phead h3{margin:0;font-size:clamp(19px,2.2vw,23px);font-weight:600;color:#1C2440}
+.own{font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px}
+.own-me{background:#DFFF1A;color:#1C2440}
+.own-co{background:#FFFFFF;color:#36405E;border:1.5px solid #C3D0EA}
+.subl{margin:6px 0 0;font-size:13px;font-weight:600;color:#5A6380}
+.shmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.shcol{background:#FFFFFF;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 20px rgba(28,36,64,.07)}
+.shrow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:10px;align-items:start;padding:10px;border-radius:12px;background:#F3F6FC;transition:background .2s,translate .2s}
+.shrow:hover{background:#E3EBFF;translate:4px 0}
+.shrow b{font-size:14px}
+.shrow span{font-size:13px;line-height:1.55;color:#36405E}
+.lv{display:inline-block;margin-top:4px;font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px}
+.lv-h{background:#FFE3D6;color:#A33410}.lv-m{background:#E3EBFF;color:#26327F}
+.gantt{background:#FFFFFF;border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(28,36,64,.07);overflow-x:auto}
+.gg{display:grid;grid-template-columns:150px repeat(8,minmax(56px,1fr));gap:6px 4px;min-width:720px;align-items:center}
+.gg .gh{font-family:Outfit,sans-serif;font-size:12px;font-weight:600;color:#5A6380;text-align:center}
+.gg .gl{grid-column:1;font-size:13px;font-weight:600}
+.gbar{height:24px;border-radius:7px;transform-origin:0 50%;font-size:11px;font-weight:600;display:flex;align-items:center;padding-left:8px;white-space:nowrap;overflow:hidden}
+@supports (animation-timeline: view()){.gbar{animation:fgrow linear both;animation-timeline:view();animation-range:entry 10% cover 35%}}
+.gms{justify-self:center;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:#A33410;text-align:center;line-height:1.3}
+.gms i{width:14px;height:14px;background:#CC4116;rotate:45deg;border-radius:2px}
+.crflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.crflow > div{background:#FFFFFF;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5;color:#36405E;position:relative;box-shadow:0 6px 14px rgba(28,36,64,.06)}
+.crflow b{font-family:Outfit,sans-serif;color:#CC4116;font-size:16px}
+.chk{display:flex;flex-direction:column;gap:8px}
+.ck{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border-radius:14px;padding:12px 14px;min-height:44px;font-size:14px;line-height:1.55;color:#1C2440;box-shadow:0 4px 12px rgba(28,36,64,.06);transition:background .2s,translate .2s}
+.ck:hover{translate:4px 0}
+.ck:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.ck .bx2{flex:0 0 22px;height:22px;border-radius:7px;border:2px solid #9AA6BF;display:flex;align-items:center;justify-content:center;color:#1C2440;font-size:14px;font-weight:700;transition:background .2s,border-color .2s}
+.ck[aria-pressed="true"]{background:#F4FFC2}
+.ck[aria-pressed="true"] .bx2{background:#DFFF1A;border-color:#1C2440}
+.ck small{display:block;color:#5A6380;font-size:12px}
+.prog{height:8px;border-radius:4px;background:#DCE4F2;overflow:hidden}
+.prog > div{height:100%;background:#2457E6;border-radius:4px;transition:width .4s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:900px){.life{grid-template-columns:repeat(3,minmax(0,1fr))}.crflow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.shmap{grid-template-columns:minmax(0,1fr)}.shrow{grid-template-columns:minmax(0,1fr)}.crflow{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.mosc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.mosc,.dec{grid-template-columns:minmax(0,1fr)}.dec .vs{justify-self:center}.frow{grid-template-columns:minmax(0,1fr)}}
+/* responsive v2 */
+@media (max-width:720px){.gantt::before,.pvscroll::before{content:'เลื่อนซ้าย–ขวาเพื่อดูทั้งหมด →';display:block;position:sticky;left:0;font-size:12px;font-weight:600;color:#5A6380;margin-bottom:10px}}
+@media (max-width:520px){section.sec::after{font-size:72px;top:-4px;right:14px}.sec{border-radius:22px}.receipt .tot span:last-child{font-size:26px !important}}
+@media (min-width:1600px){.grid-bg > div{max-width:1180px !important}}
+/* tldr v1 */
+.tldr2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tldr2 > div{background:#FFFFFF;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 16px rgba(28,36,64,.07)}
+.tldr2 > div:last-child{background:#1C2440}
+.tldr2 b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#2457E6}
+.tldr2 > div:last-child b{color:#DFFF1A}
+.tldr2 p{margin:0;font-size:15px;line-height:1.65;color:#1C2440}
+.tldr2 > div:last-child p{color:#FFFFFF}
+@media (max-width:720px){.tldr2{grid-template-columns:minmax(0,1fr)}}
+/* interaction system v1 — one hover language for the whole site */
+:root{--ix-ease:cubic-bezier(.2,.8,.2,1);--ix-ring:#DFFF1A;--ix-shadow:0 18px 36px rgba(10,20,70,.18);--ix-tint:#EEF3FF}
+/* 1 · Cards: lift + shadow + lime ring */
+.pcard,.pf,.lift,.jobcard,.stepbtn,.card,.g3 > div,.g4 > div,.opt,.ptab,.nextcard,.ppanel,.tldr2 > div,.mcol,.shcol,.gantt,.receipt,.shot{transition:translate .3s var(--ix-ease),box-shadow .3s var(--ix-ease),outline-color .2s,background .2s,transform .15s ease-out !important;outline:2px solid transparent;outline-offset:3px}
+.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.stepbtn:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:0 -6px !important;rotate:none !important;scale:none !important;box-shadow:var(--ix-shadow) !important;outline-color:var(--ix-ring) !important}
+.pcard:active,.pf:active,.stepbtn:active,.opt:active,.ptab:active,.nextcard:active,.jobcard:active{scale:.985 !important}
+/* 2 · Chips & pills: small lift + lime tint */
+.cl,.pill,.tool,.cert,.tag,.chip,.pfl a,.dbtn,.team span,.sticky,.badge,.pchip,.life a,.toc a{transition:translate .2s var(--ix-ease),background .2s,color .2s,box-shadow .2s,border-color .2s !important}
+.pill:hover,.tool:hover,.cert:hover,.chip:hover,.pfl a:hover,.dbtn:hover,.team span:hover,.sticky:hover,.life a:hover{translate:0 -3px !important;rotate:none !important;scale:none !important;box-shadow:0 8px 16px rgba(10,20,70,.14) !important}
+.cl:hover{translate:0 -3px !important}
+.pill:hover,.tag:hover,.chip:hover,.team span:hover,.sticky:hover,.pchip:hover{background:var(--ix-ring) !important;color:#1C2440 !important}
+.tool:hover img,.cert:hover .logo{rotate:none !important;scale:1.08 !important}
+/* 3 · Buttons: lift + press */
+.btn,.navcta,.backbtn,.pnav,.pmore,footer a,footer button,.totop{transition:translate .2s var(--ix-ease),box-shadow .2s,background .2s,color .2s,scale .1s !important}
+.btn:hover,.navcta:hover,.backbtn:hover,.pnav:hover,footer a:hover,footer button:hover,.totop:hover{translate:0 -2px !important;box-shadow:0 10px 20px rgba(10,20,70,.2) !important}
+.btn:active,.navcta:active,.backbtn:active,.pnav:active,footer a:active,footer button:active,.dbtn:active,.ck:active{scale:.97 !important}
+/* 4 · Rows inside a group: tint only, no lift */
+.stats2 .st:hover,.jobbtn:hover,.shrow:hover,.ck:hover,.navlink:hover,.toc a:hover{translate:none !important;background:var(--ix-tint) !important}
+/* Focus: same lime ring for keyboard users */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ix-ring) !important;outline-offset:3px !important}
+@media (hover:none){.pcard:hover,.pf:hover,.lift:hover,.jobcard:hover,.card:hover,.g3 > div:hover,.g4 > div:hover,.opt:hover,.ptab:hover,.nextcard:hover,.tldr2 > div:hover,.mcol:hover,.shcol:hover,.receipt:hover{translate:none !important;outline-color:transparent !important}}
+@media (prefers-reduced-motion:reduce){*{translate:none !important}}
+/* ais viewer */
+.mgrp{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.viewer{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.viewer .shot{background:#FFFFFF;box-shadow:0 14px 30px rgba(28,36,64,.14)}
+.viewer .shot img{aspect-ratio:1400/996;object-fit:cover;object-position:top}
+@media (max-width:900px){.mgrp{grid-template-columns:repeat(3,minmax(0,1fr))}.viewer{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.mgrp{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* mpay gallery */
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gal figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.gal .shot img{aspect-ratio:4/3;object-fit:cover;object-position:top;background:#FFF}
+.gal figcaption{font-size:13px;font-weight:600;color:#36405E}
+@media (max-width:720px){.gal{grid-template-columns:minmax(0,1fr)}}
+.mgrp{grid-template-columns:repeat(4,minmax(0,1fr))}
+.viewer .shot img,.gal .shot img{aspect-ratio:1880/806;object-fit:cover;object-position:top left}
+.gal.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.mgrp{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.gal.two{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+</head>
+<body>
+<template id="tpl">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+<!-- HERO -->
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · Order Management · 2026</p><span class="badge b-ux">งาน UX/UI</span><span class="badge b-po">Role-based</span><span class="badge b-ux">ทำด้วย Figma AI</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">TIPCO · ระบบติดตามคำสั่งซื้อ</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">ระบบภายในของ TIPCO Asphalt สำหรับติดตามคำสั่งซื้อผลิตภัณฑ์ยางมะตอย ตั้งแต่รับ order จนส่งถึงลูกค้า ขอเอกสารให้ลูกค้า และจัดการสิทธิ์ผู้ใช้ ฉันออกแบบ UX/UI ทั้งระบบในนาม G-ABLE โดยใช้ Figma AI ช่วยสร้างหน้าจอ</p>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/15fbcd696da667b4b98ea1c704c46ca6.jpg" alt="หน้า Order Management ของ TIPCO" style="object-position:top left"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX/UI Designer</p></div>
+<div class="card"><p class="lbl">ลูกค้า</p><p class="body">TIPCO Asphalt</p></div>
+<div class="card"><p class="lbl">ประเภท</p><p class="body">ระบบภายในองค์กร · B2B</p></div>
+<div class="card"><p class="lbl">ขอบเขต</p><p class="body">5 เมนูหลัก</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>order ยางมะตอยมีหลายรายการและหลายสถานะ ทีมหา order ที่ต้องตามไม่เจอ</p></div><div><b>สิ่งที่ฉันทำ</b><p>ออกแบบ UX ทั้งระบบ 5 เมนูด้วย Figma AI แยกสถานะ 2 ชั้น และทำ quick filter พร้อมจำนวน</p></div><div><b>ผลลัพธ์</b><p>ทีมขาย ปฏิบัติการ และขนส่งเห็นสถานะเดียวกัน หา order ที่ต้องตามได้ในคลิกเดียว</p></div></div></div>
+</header>
+
+<!-- 1 -->
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · ระบบนี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">รู้ทันทีว่า order ไหนต้องตามก่อน</h2>
+<p class="body">TIPCO ส่งยางมะตอยหลายประเภทให้ลูกค้าทั่วประเทศ ทีมขาย ฝ่ายปฏิบัติการ และฝ่ายขนส่งต้องเห็นสถานะ order เดียวกัน ระบบนี้รวมการติดตาม order การขนส่ง และการขอเอกสารไว้ในที่เดียว</p>
+<div class="steps">
+<div><span class="n">Order</span><span class="body" style="font-size: 14px; font-weight: 600">ติดตามทุกคำสั่งซื้อ</span></div>
+<div><span class="n">Delivery</span><span class="body" style="font-size: 14px; font-weight: 600">ติดตามการขนส่ง</span></div>
+<div><span class="n">Document</span><span class="body" style="font-size: 14px; font-weight: 600">ขอ E-Statement และ Aging Report</span></div>
+<div><span class="n">Settings</span><span class="body" style="font-size: 14px; font-weight: 600">จัดการผู้ใช้และสิทธิ์</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองกดดูหน้าจอจริงของแต่ละเมนู</p>
+<div class="mgrp" role="group" aria-label="กลุ่มเมนู">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="4">
+<button type="button" class="opt" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">{{o.name}}</span>
+<span class="price" style="font-size: 18px">{{o.short}}</span>
+</button>
+</sc-for>
+</div>
+<div class="viewer fade">
+<div class="shot"><img src="{{sel.img}}" alt="{{sel.alt}}"></div>
+<div class="receipt">
+<p class="lbl" style="color: #DFFF1A">{{sel.name}}</p>
+<sc-for list="{{sel.rows}}" as="r" hint-placeholder-count="4">
+<div class="row" style="color: {{r.color}}; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">{{r.k}}</span><span style="text-align: right">{{r.v}}</span></div>
+</sc-for>
+<sc-if value="{{sel.hasNote}}" hint-placeholder-val="true"><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #DFFF1A">{{sel.note}}</p></sc-if>
+</div>
+</div>
+</section>
+
+<!-- 2 -->
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ระบบเดียวที่ทีมขาย ปฏิบัติการ และขนส่งใช้ร่วมกัน</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>PM</span><span>BA</span><span class="me">UX/UI Designer · ฉัน</span><span>SA</span><span>Dev</span><span>ทีม TIPCO</span></div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงาน</p><p class="body" style="color: #FFFFFF; font-weight: 600">เก็บ requirement กับ TIPCO → สรุปสถานะ order และบทบาทผู้ใช้ → wireframe → ใช้ Figma AI สร้าง UI → ตรวจและปรับ UX → review กับลูกค้า → ส่งต่อ Dev</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">ออกแบบทั้งระบบด้วย Figma AI</p><p class="body" style="font-size: 14px">ใช้ Figma AI สร้างหน้าจอตั้งแต่ login, order, การขนส่ง, เอกสาร จนถึงการจัดการสิทธิ์ แล้วฉันตรวจและปรับ UX ทุกหน้า</p></div>
+<div class="card"><p class="lbl">สถานะหลายชั้น</p><p class="body" style="font-size: 14px">แยกสถานะของรายการสินค้ากับสถานะของ order ให้ไม่ปนกัน</p></div>
+<div class="card"><p class="lbl">หลายทีม หลายสิทธิ์</p><p class="body" style="font-size: 14px">Sales, Operations และ Logistics เห็นเมนูตามบทบาท</p></div>
+</div>
+</section>
+
+<!-- 3 -->
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">order เยอะ สถานะเยอะ แต่ต้องตามให้ทัน</h2>
+<p class="body">แต่ละ order มีหลายรายการสินค้า และแต่ละรายการมีสถานะของตัวเอง ตั้งแต่รอ หยิบสินค้า ส่งเข้าระบบ จนจัดส่ง ถ้าเห็นทุกอย่างปนกันในตารางเดียว ทีมจะหา order ที่ล่าช้าหรือพักไว้ไม่เจอ</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“ทีมขายและฝ่ายขนส่งต้องรู้ว่า order ไหนล่าช้าหรือติดปัญหา ก่อนลูกค้าโทรมาถาม”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">ทีมขาย</p><p class="body" style="font-size: 14px">ตอบลูกค้าได้ทันทีว่า order อยู่ตรงไหน และขอเอกสารให้ลูกค้าได้</p></div>
+<div class="card"><p class="lbl">Operations · Logistics</p><p class="body" style="font-size: 14px">เห็น order ที่ต้องหยิบ ส่ง หรือแก้ปัญหาก่อน</p></div>
+<div class="card"><p class="lbl">Admin</p><p class="body" style="font-size: 14px">กำหนดผู้ใช้ กลุ่ม แผนก และเมนูที่แต่ละคนเห็น</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">หา order ที่ต้องตามได้ในคลิกเดียว · ลดการถามสถานะซ้ำ · ขอเอกสารได้เอง</p></div>
+<div class="card"><p class="lbl">ขอบเขต</p><p class="body" style="font-size: 14px">5 เมนูหลัก ทุกเมนูใช้ pattern เดียวกัน</p></div>
+</div>
+</section>
+
+<!-- po view -->
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">มองแบบ product: ใครใช้ ใช้ทำอะไร และอะไรต้องมาก่อน</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็น UX/UI Designer ทำงานกับ PM, BA และทีม TIPCO ส่วนนี้แยกให้ชัดว่าเรื่องไหนฉัน <span class="own own-me">ทำเอง</span> และเรื่องไหนฉัน <span class="own own-co">มีส่วนร่วม</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และแต่ละคนต้องการอะไร</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ผู้ใช้หลายกลุ่มใช้ข้อมูล order ชุดเดียวกัน แต่สิ่งที่ต้องทำต่างกัน</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ฝั่ง TIPCO (ลูกค้า)</p>
+<div class="shrow"><div><b>ทีมขาย</b><br><span class="lv lv-h">ผู้ใช้หลัก</span></div><span>ติดตาม order และขอเอกสารให้ลูกค้า</span></div>
+<div class="shrow"><div><b>Operations · Logistics</b><br><span class="lv lv-h">ผู้ใช้หลัก</span></div><span>จัดการการหยิบและจัดส่ง</span></div>
+<div class="shrow"><div><b>Admin</b><br><span class="lv lv-m">ดูแลระบบ</span></div><span>จัดการผู้ใช้และสิทธิ์</span></div>
+<div class="shrow"><div><b>ลูกค้าของ TIPCO</b><br><span class="lv lv-m">ได้รับผล</span></div><span>ได้รับเอกสารทางอีเมล</span></div>
+</div>
+<div class="shcol"><p class="lbl">ฝั่งทีมพัฒนา</p>
+<div class="shrow"><div><b>PM</b></div><span>วางแผนและคุยกับ TIPCO</span></div>
+<div class="shrow"><div><b>BA · SA</b></div><span>สรุปสถานะ order และการเชื่อมระบบ</span></div>
+<div class="shrow"><div><b>Dev</b></div><span>พัฒนาระบบ</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX/UI</b></div><span>ออกแบบทุกหน้าและวางระบบสถานะให้อ่านง่าย</span></div>
+</div>
+</div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ตามงานได้เร็วขึ้น</p><p class="body" style="font-size: 14px">กด quick filter ครั้งเดียว เห็นเฉพาะ order ที่ล่าช้าหรือพักไว้</p></div>
+<div class="card"><p class="lbl">ตอบลูกค้าได้ทันที</p><p class="body" style="font-size: 14px">ทีมขายเห็นสถานะเดียวกับฝ่ายขนส่ง</p></div>
+<div class="card"><p class="lbl">ขอเอกสารได้เอง</p><p class="body" style="font-size: 14px">E-Statement และ Aging Report ส่งเข้าอีเมลลูกค้า</p></div>
+</div><p class="subl">ตัวชี้วัดที่ควรติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">สัดส่วน order ตามสถานะ จากข้อมูลตัวอย่างในหน้าจอ <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่าง ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>Order ทั้งหมด</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>กำลังขนส่ง</span><div class="ftrack"><div class="ffill" style="width: 25%">25%</div></div></div>
+<div class="frow"><span>ล่าช้า</span><div class="ftrack"><div class="ffill" style="width: 17%">17%</div></div></div>
+<div class="frow"><span>พักไว้</span><div class="ftrack"><div class="ffill" style="width: 17%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">17%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> เวลาที่ order อยู่ในสถานะล่าช้า · จำนวนครั้งที่ขอเอกสาร · จำนวนคำถามสถานะจากลูกค้า</p>
+</div>
+<div class="phead" id="po3"><span class="pnum">03</span><h3>จัดลำดับเมนูตามงานที่ใช้บ่อยที่สุด</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="subl">ลำดับการออกแบบ </p>
+<div class="gantt"><div class="gg" style="grid-template-columns: 150px repeat(4, minmax(56px, 1fr))">
+<span></span><span class="gh">ช่วง 1</span><span class="gh">ช่วง 2</span><span class="gh">ช่วง 3</span><span class="gh">ช่วง 4</span>
+<span class="gl">Login + โครงเมนู</span><div class="gbar" style="grid-column: 2 / span 1; background: #1C2440; color: #FFFFFF">Azure AD</div>
+<span class="gl">Order Management</span><div class="gbar" style="grid-column: 2 / span 2; background: #2457E6; color: #FFFFFF">หน้าหลัก</div>
+<span class="gl">Delivery Tracking</span><div class="gbar" style="grid-column: 3 / span 2; background: #A9C4FF; color: #1C2440">ขนส่ง</div>
+<span class="gl">Request Document</span><div class="gbar" style="grid-column: 4 / span 1; background: #FF7A4D; color: #1C2440">เอกสาร</div>
+<span class="gl">Settings &amp; User</span><div class="gbar" style="grid-column: 5 / span 1; background: #DFFF1A; color: #1C2440">สิทธิ์</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 3"><i></i>Review หน้าหลัก</span><span class="gms" style="grid-column: 5"><i></i>ส่งต่อ Dev</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมี</small></h3><div class="sticky">ติดตาม order + quick filter</div><div class="sticky">Login Azure AD</div><div class="sticky">สิทธิ์ตามบทบาท</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">Delivery Tracking</div><div class="sticky">Notifications</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">ขอเอกสารเอง</div><div class="sticky">Export รายงาน</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">แอปมือถือ</div></div>
+</div><p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">สถานะเยอะจนสับสน</p><p class="body" style="font-size: 14px">แยก Line status กับ Order status และใช้สีชุดเดียวกันทุกหน้า</p></div>
+<div class="card"><p class="lbl">เลือกลูกค้าผิดบริษัท</p><p class="body" style="font-size: 14px">บังคับเลือกบริษัทในเครือก่อน แล้วกรองรายชื่อลูกค้าให้</p></div>
+<div class="card"><p class="lbl">ข้อมูลเยอะในตารางเดียว</p><p class="body" style="font-size: 14px">ใช้ตัวกรอง quick filter และแถบสีบอกความด่วน</p></div>
+</div>
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างออกแบบ: ตัดสินใจเรื่องสถานะ</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">User story ตัวอย่าง </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่าง</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>พนักงานขาย</b> ฉันต้องการ <b>เห็น order ที่ล่าช้าทั้งหมดในคลิกเดียว</b> เพื่อ <b>แจ้งลูกค้าได้ก่อนลูกค้าโทรมาถาม</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> มี order ที่สถานะ Delayed 2 รายการ <b style="color: #DFFF1A">When</b> กด Quick filter “Delayed” <b style="color: #DFFF1A">Then</b> ตารางแสดงเฉพาะ 2 order นั้น พร้อมลูกค้า สถานที่ และเวลาส่ง</p></div><p class="subl">Trade-off: สถานะเดียว หรือแยก 2 ชั้น <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">ใช้สถานะเดียวต่อ order</p><p class="body" style="font-size: 14px">ตารางดูง่าย แต่ถ้ารายการสินค้าใน order เดียวกันอยู่คนละขั้น ทีมจะไม่รู้ว่าติดที่รายการไหน</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">แยก Line status กับ Order status</p><p class="body" style="font-size: 14px">เห็นทั้งภาพรวมของ order และรายการที่ติดปัญหา ใช้สีชุดเดียวกันจึงยังอ่านง่าย</p></div>
+</div><p class="subl">จากคำถามของผู้ใช้สู่หน้าจอ </p>
+<div class="crflow">
+<div><b>1</b>ทีมขายถามว่า “order ไหนต้องตามวันนี้”</div>
+<div><b>2</b>สรุปสถานะทั้งหมดที่เป็นไปได้กับ BA</div>
+<div><b>3</b>ฉันออกแบบ quick filter พร้อมจำนวน</div>
+<div><b>4</b>ใช้สีสถานะชุดเดียวทั้งระบบ</div>
+<div style="background: #F4FFC2"><b>5</b>review กับ TIPCO แล้วปรับ</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบงานออกแบบ</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ก่อนส่งต่อ Dev ฉันใช้ checklist นี้</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Handoff checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">{{ckDone}} / {{ckTotal}}</span></div>
+<div class="prog" aria-hidden="true"><div style="width: {{ckPct}}"></div></div>
+<div class="chk"><sc-for list="{{cks}}" as="c" hint-placeholder-count="6"><button type="button" class="ck" aria-pressed="{{c.on}}" onClick="{{c.toggle}}"><span class="bx2" aria-hidden="true">{{c.mark}}</span><span>{{c.t}}<small>{{c.d}}</small></span></button></sc-for></div>
+<sc-if value="{{ckAll}}" hint-placeholder-val="{{false}}"><p style="margin: 0; font-weight: 600; color: #26327F">พร้อมส่งต่อ Dev 🚀</p></sc-if>
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลังส่งมอบ: ฟังและปรับต่อ</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ตาม feedback ผู้ใช้</p><p class="body" style="font-size: 14px">ทีมขายและ Logistics ใช้จริงแล้วยังหา order ได้เร็วไหม</p></div>
+<div class="card"><p class="lbl">ปรับตัวกรอง</p><p class="body" style="font-size: 14px">เพิ่มหรือลดตัวกรองตามที่ใช้จริง</p></div>
+<div class="card"><p class="lbl">ต่อยอด</p><p class="body" style="font-size: 14px">Pattern ตารางและสถานะใช้ซ้ำกับระบบอื่นขององค์กรได้</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">Export รายงาน · แจ้งเตือนเมื่อ order ล่าช้า · มุมมองบนมือถือสำหรับฝ่ายขนส่ง</p></div>
+</section>
+
+<!-- process -->
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">ก่อนวาดหน้าจอ ต้องเข้าใจก่อนว่า order หนึ่งผ่านสถานะอะไรบ้าง และใครต้องทำอะไรในแต่ละช่วง กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+<sc-for list="{{phases}}" as="ph" hint-placeholder-count="6">
+<button type="button" class="ptab" role="tab" aria-selected="{{ph.sel}}" onClick="{{ph.pick}}"><span class="pn">{{ph.num}}</span><span class="pt">{{ph.name}}</span></button>
+</sc-for>
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">{{cur.num}} · {{cur.name}}</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">{{cur.goal}}</p>
+<ul><sc-for list="{{cur.acts}}" as="a" hint-placeholder-count="4"><li>{{a}}</li></sc-for></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">{{cur.with}}</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><sc-for list="{{cur.outs}}" as="o" hint-placeholder-count="3"><span class="pchip pc-d">{{o}}</span></sc-for></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><sc-for list="{{cur.po}}" as="o" hint-placeholder-count="2"><span class="pchip pc-p">{{o}}</span></sc-for></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" onClick="{{prev}}" aria-disabled="{{noPrev}}">← ก่อนหน้า</button><button type="button" class="pnav" onClick="{{next}}" aria-disabled="{{noNext}}">ถัดไป →</button></div>
+</div>
+<sc-if value="{{cur.isFlow}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">สถานะของ order ตั้งแต่รับจนปิดงาน</p><div class="pvscroll"><svg viewBox="0 0 1220 290" width="100%" style="min-width:820px;display:block;font-family:'IBM Plex Sans Thai',sans-serif" role="img" aria-label="สถานะของคำสั่งซื้อตั้งแต่รับ order จนปิดงาน"><defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5A6380"/></marker></defs><rect x="10" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="70.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">รับ Order</text><path d="M130 63H158" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="160" y="40" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="225.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">Awaiting</text><path d="M290 63H318" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="320" y="40" width="120" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="380.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">Pick</text><path d="M440 63H476" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><path d="M540 19L602 63L540 107L478 63Z" fill="#FFE3D6" stroke="#CC4116" stroke-width="1.6"/><text x="540" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="#A33410">พร้อมส่ง?</text><path d="M540 107V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="548" y="150" font-size="12" font-weight="600" fill="#CC4116">ไม่</text><rect x="470" y="180" width="140" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="540.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">On Hold</text><path d="M610 203H638" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="640" y="180" width="150" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="715.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">แก้ไข / แจ้งลูกค้า</text><path d="M700 180V88" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><path d="M602 63H636" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><text x="608" y="54" font-size="12" font-weight="600" fill="#CC4116">พร้อม</text><rect x="640" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="700.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">Interface</text><path d="M760 63H788" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="790" y="40" width="120" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="850.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">Shipped</text><path d="M910 63H938" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="940" y="40" width="110" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="995.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">In Transit</text><path d="M1050 63H1082" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="1084" y="40" width="126" height="46" rx="10" fill="#E3EBFF" stroke="#2457E6" stroke-width="1.6"/><text x="1147.0" y="68" text-anchor="middle" font-size="14" fill="#1C2440">Closed</text><path d="M995 86V178" fill="none" stroke="#5A6380" stroke-width="1.6" marker-end="url(#ah2)"/><rect x="920" y="180" width="150" height="46" rx="10" fill="#FFFFFF" stroke="#1C2440" stroke-width="1.6"/><text x="995.0" y="208" text-anchor="middle" font-size="14" fill="#1C2440">Delayed → แจ้งเตือน</text><rect x="640" y="252" width="16" height="12" rx="3" fill="#E3EBFF" stroke="#2457E6"/><text x="664" y="263" font-size="12" fill="#36405E">สถานะที่ผู้ใช้ติดตามได้ในหน้าเดียว</text></svg></div></div></sc-if><sc-if value="{{cur.isWire}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">จาก wireframe สู่ UI</p><div class="wfgrid"><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl" style="color:#5A6380">Wireframe</p><div class="wf" style="aspect-ratio:1880/806;padding:0;overflow:hidden;gap:0;flex-direction:row"><div style="width:18%;background:#C4CCDB;display:flex;flex-direction:column;gap:8px;padding:10px"><div class="ln" style="width:80%;height:9px;background:#9AA6BF"></div><div class="ln" style="width:80%;height:9px;background:#9AA6BF"></div><div class="ln" style="width:80%;height:9px;background:#9AA6BF"></div><div class="ln" style="width:80%;height:9px;background:#9AA6BF"></div><div class="ln" style="width:80%;height:9px;background:#9AA6BF"></div></div><div style="flex:1;display:flex;flex-direction:column;gap:6px;padding:10px;background:#EEF1F7"><div style="display:flex;gap:5px;background:#FFF;border-radius:6px;padding:6px"><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div><div style="flex:1;height:10px;border-radius:4px;background:#DCE1EB"></div></div><div style="display:flex;gap:5px"><div style="width:12%;height:12px;border-radius:6px;background:#C4CCDB"></div><div style="width:12%;height:12px;border-radius:6px;background:#C4CCDB"></div><div style="width:12%;height:12px;border-radius:6px;background:#C4CCDB"></div><div style="width:12%;height:12px;border-radius:6px;background:#C4CCDB"></div><div style="width:12%;height:12px;border-radius:6px;background:#C4CCDB"></div></div><div style="display:flex;gap:6px;align-items:center;background:#FFF;border-radius:4px;padding:5px 6px;border-left:3px solid #9AA6BF"><div class="ln" style="width:14%"></div><div class="ln" style="width:18%"></div><div style="width:10%;height:9px;border-radius:5px;background:#DCE1EB"></div><div class="ln" style="width:20%"></div><div style="margin-left:auto;width:11%;height:9px;border-radius:5px;background:#C4CCDB"></div></div><div style="display:flex;gap:6px;align-items:center;background:#FFF;border-radius:4px;padding:5px 6px;border-left:3px solid #C4CCDB"><div class="ln" style="width:14%"></div><div class="ln" style="width:18%"></div><div style="width:10%;height:9px;border-radius:5px;background:#DCE1EB"></div><div class="ln" style="width:20%"></div><div style="margin-left:auto;width:11%;height:9px;border-radius:5px;background:#C4CCDB"></div></div><div style="display:flex;gap:6px;align-items:center;background:#FFF;border-radius:4px;padding:5px 6px;border-left:3px solid #5A6380"><div class="ln" style="width:14%"></div><div class="ln" style="width:18%"></div><div style="width:10%;height:9px;border-radius:5px;background:#DCE1EB"></div><div class="ln" style="width:20%"></div><div style="margin-left:auto;width:11%;height:9px;border-radius:5px;background:#C4CCDB"></div></div><div style="display:flex;gap:6px;align-items:center;background:#FFF;border-radius:4px;padding:5px 6px;border-left:3px solid #9AA6BF"><div class="ln" style="width:14%"></div><div class="ln" style="width:18%"></div><div style="width:10%;height:9px;border-radius:5px;background:#DCE1EB"></div><div class="ln" style="width:20%"></div><div style="margin-left:auto;width:11%;height:9px;border-radius:5px;background:#C4CCDB"></div></div><div style="display:flex;gap:6px;align-items:center;background:#FFF;border-radius:4px;padding:5px 6px;border-left:3px solid #5A6380"><div class="ln" style="width:14%"></div><div class="ln" style="width:18%"></div><div style="width:10%;height:9px;border-radius:5px;background:#DCE1EB"></div><div class="ln" style="width:20%"></div><div style="margin-left:auto;width:11%;height:9px;border-radius:5px;background:#C4CCDB"></div></div></div></div></div><div style="display:flex;flex-direction:column;gap:8px"><p class="lbl">UI จริง</p><div class="shot"><img src="assets/15fbcd696da667b4b98ea1c704c46ca6.jpg" alt="หน้า Order Management ของ TIPCO"></div></div></div><p class="body" style="font-size:14px">โครงหน้าเริ่มจากคำถามเดียว “วันนี้มี order ไหนที่ต้องตามก่อน” จึงวางตัวกรองด่วนไว้เหนือตาราง และให้แถบสีซ้ายของแต่ละแถวบอกความด่วนโดยไม่ต้องอ่าน</p></div></sc-if><sc-if value="{{cur.isSpec}}" hint-placeholder-val="{{false}}"><div class="pvis"><span class="pvtag">ภาพตัวอย่าง · วาดขึ้นเพื่ออธิบายขั้นตอน</span><p class="lbl">Note สำหรับ Dev · หน้า Order Management</p><div class="shot" style="max-width:760px;align-self:center"><img src="assets/15fbcd696da667b4b98ea1c704c46ca6.jpg" alt="หน้า Order Management พร้อมจุดอธิบายสำหรับ Dev"><span class="pin" style="left:30%;top:12%">1</span><span class="pin" style="left:40%;top:24%">2</span><span class="pin" style="left:20.5%;top:51%">3</span><span class="pin" style="left:52%;top:51%">4</span><span class="pin" style="left:91%;top:51%">5</span><span class="pin" style="left:17%;top:71%">6</span></div><ul class="legend"><li><b>1</b><span>ค้นหาและกรองได้ 6 แบบ: Order No, Product, Customer, Location, Status และช่วงวันที่</span></li><li><b>2</b><span>Quick filter บอกจำนวนในแต่ละสถานะ กดครั้งเดียวเห็นเฉพาะ order ที่ต้องตาม</span></li><li><b>3</b><span>แถบสีซ้ายของแถว: เขียว = ปกติ · ส้ม = รอ / ล่าช้า · แดง = พักไว้</span></li><li><b>4</b><span>Line status แยกจาก Order status เพราะ 1 order มีได้หลายรายการสินค้า</span></li><li><b>5</b><span>สถานะ order ใช้สีชุดเดียวกับ quick filter ทุกหน้า</span></li><li><b>6</b><span>Notifications บอกจำนวนเรื่องใหม่ที่เมนูด้านซ้าย</span></li></ul></div></sc-if>
+</div>
+</section>
+
+<!-- 4 -->
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ทุกเมนูใช้ pattern เดียวกัน เรียนรู้ครั้งเดียวใช้ได้ทั้งระบบ</h2>
+<div class="gal two">
+<figure><div class="shot"><img src="assets/8ac6b6d61e0fc12ea4e8daf6ebd17477.jpg" alt="หน้า Request Document"></div><figcaption>Request Document · เลือกบริษัทในเครือก่อน แล้วรายชื่อลูกค้าถูกกรองให้</figcaption></figure>
+<figure><div class="shot"><img src="assets/57fb23214d18d1f61d1679b76c80294c.jpg" alt="หน้า Settings & User"></div><figcaption>Settings &amp; User · กลุ่ม บทบาท และสถานะ ใช้ป้ายสีแบบเดียวกับหน้า order</figcaption></figure>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">สีบอกความด่วน</p><p class="body" style="font-size: 14px">แถบสีซ้ายของแถวและป้ายสถานะ ใช้สีชุดเดียวกันทั้งระบบ</p></div>
+<div class="card"><p class="lbl">ป้องกันการเลือกผิด</p><p class="body" style="font-size: 14px">ช่องที่ต้องเลือกตามลำดับ บอกไว้ใต้ช่องว่าต้องเลือกอะไรก่อน</p></div>
+<div class="card"><p class="lbl">ทางหลักชัดเจน</p><p class="body" style="font-size: 14px">Login ด้วย Azure AD เด่นที่สุด ทางสำรองอยู่ด้านล่าง</p></div>
+<div class="card"><p class="lbl">เมนูคงที่</p><p class="body" style="font-size: 14px">Sidebar เดียวกันทุกหน้า และย่อได้เมื่อต้องการพื้นที่ตาราง</p></div>
+</div>
+</section>
+
+<!-- 5 -->
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากโปรเจกต์นี้</h2>
+<div class="g3">
+<div class="card"><p class="lbl">5 เมนูหลัก</p><p class="body" style="font-size: 14px">Order, Delivery, Document, Settings และ Notifications</p></div>
+<div class="card"><p class="lbl">สถานะ 2 ชั้น</p><p class="body" style="font-size: 14px">ระดับรายการสินค้าและระดับ order อ่านได้ในตารางเดียว</p></div>
+<div class="card"><p class="lbl">หลายทีม</p><p class="body" style="font-size: 14px">Sales, Operations และ Logistics ใช้ระบบเดียวกัน</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">Figma AI ช่วยให้เร็ว แต่ต้องเริ่มจาก flow</p><p class="body" style="font-size: 14px">AI สร้างหน้าจอได้เร็ว แต่ถ้ายังไม่ได้เขียน flow สถานะให้ครบ หน้าจอจะไม่ตรงกับงานจริง ฉันจึงกำหนด flow และสีสถานะเองก่อน</p></div>
+<div class="card"><p class="body" style="font-weight: 600">ตารางที่ดีตอบคำถามเดียวให้เร็ว</p><p class="body" style="font-size: 14px">ผู้ใช้ไม่ได้อยากอ่านทุกแถว แต่อยากรู้ว่าต้องตามแถวไหนก่อน</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy10.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 5 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">G-Core Portal · ระบบบริหาร GPU</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+
+</div>
+</div>
+</template>
+<div id="root"></div>
+<script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":11000}}'>
+class Component extends DCLogic {
+componentDidMount() {
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+var last = null;
+var sel = '.card, .g3 > div, .g4 > div';
+function reset(el) { if (!el) { return; } el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); el.style.setProperty('--go', '0'); }
+this._pm = function (e) {
+var el = e.target && e.target.closest ? e.target.closest(sel) : null;
+if (el !== last) { reset(last); last = el; }
+if (!el || e.pointerType === 'touch') { return; }
+var r = el.getBoundingClientRect();
+var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+el.style.setProperty('--rx', ((0.5 - y) * 8).toFixed(2) + 'deg');
+el.style.setProperty('--ry', ((x - 0.5) * 10).toFixed(2) + 'deg');
+el.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
+el.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
+el.style.setProperty('--go', '1');
+};
+this._pl = function () { reset(last); last = null; };
+document.addEventListener('pointermove', this._pm);
+document.documentElement.addEventListener('pointerleave', this._pl);
+}
+componentWillUnmount() {
+if (this._pm) { document.removeEventListener('pointermove', this._pm); }
+if (this._pl) { document.documentElement.removeEventListener('pointerleave', this._pl); }
+}
+renderVals() {
+var self = this;
+var s = this.state || {};
+var cur = typeof s.opt === 'number' ? s.opt : 1;
+var data = [ { "name": "เข้าสู่ระบบ", "short": "Login", "img": "assets/b18e2e7a8c7979325faec8549c61be70.jpg", "alt": "หน้าเข้าสู่ระบบ TIPCO", "total": "", "totLabel": "", "rows": [ { "k": "ทางหลัก", "v": "Microsoft Azure AD สำหรับพนักงาน" }, { "k": "ทางสำรอง", "v": "Email + Password" }, { "k": "ลืมรหัสผ่าน", "v": "ลิงก์อยู่ใกล้ช่องรหัส" } ], "note": "ปุ่ม Azure AD เด่นที่สุด เพราะพนักงานส่วนใหญ่ใช้ทางนี้" }, { "name": "Order Management", "short": "คำสั่งซื้อ", "img": "assets/15fbcd696da667b4b98ea1c704c46ca6.jpg", "alt": "หน้า Order Management", "total": "", "totLabel": "", "rows": [ { "k": "ตัวกรอง", "v": "6 แบบ รวมช่วงวันที่" }, { "k": "Quick filter", "v": "Delayed · On Hold · In Transit · Closed" }, { "k": "ตาราง", "v": "แถบสีบอกความด่วน · เรียงได้ทุกคอลัมน์" } ], "note": "Line status กับ Order status แยกกัน เพราะ 1 order มีหลายรายการ" }, { "name": "Request Document", "short": "ขอเอกสาร", "img": "assets/8ac6b6d61e0fc12ea4e8daf6ebd17477.jpg", "alt": "หน้า Request Document", "total": "", "totLabel": "", "rows": [ { "k": "บริษัทในเครือ", "v": "เลือกก่อน เพื่อกรองรายชื่อลูกค้า" }, { "k": "ลูกค้า", "v": "บอกว่าต้องเลือกบริษัทก่อน" }, { "k": "เอกสาร", "v": "E-Statement · Aging Report" } ], "note": "ส่งเข้าอีเมลที่ลงทะเบียนไว้ ไม่ต้องพิมพ์อีเมลเอง" }, { "name": "Settings & User", "short": "สิทธิ์", "img": "assets/57fb23214d18d1f61d1679b76c80294c.jpg", "alt": "หน้า Settings & User", "total": "", "totLabel": "", "rows": [ { "k": "แท็บ", "v": "Users · Menus · Departments · Groups" }, { "k": "ผู้ใช้", "v": "กลุ่ม · บทบาท · สถานะ" }, { "k": "บทบาท", "v": "Manager · Admin · Editor" } ], "note": "Admin กำหนดได้เองว่าใครเห็นเมนูไหน" } ];
+var opts = data.map(function (d, i) {
+return { name: d.name, short: d.short, pressed: i === cur ? 'true' : 'false', pick: function () { self.setState({ opt: i }); } };
+});
+var d = data[cur];
+var rows = d.rows.map(function (r) { return { k: r.k, v: r.v, color: r.color || '#C9D1E6' }; });
+var P = [ { "name": "ทำความเข้าใจโจทย์", "goal": "เข้าใจว่า order ของ TIPCO เดินทางอย่างไร", "acts": [ "คุยกับ BA และทีม TIPCO", "ไล่ดูสถานะทั้งหมดของ order และรายการสินค้า", "ดูว่าแต่ละทีมใช้ข้อมูลอะไร" ], "with": "BA · TIPCO", "outs": [ "รายการสถานะ", "Pain point" ], "po": [ "Requirement analysis" ] }, { "name": "กำหนดปัญหาและเป้าหมาย", "goal": "ตกลงว่าเป้าหมายคือหา order ที่ต้องตามได้เร็ว", "acts": [ "สรุปกลุ่มผู้ใช้", "จัดลำดับเมนูตามความถี่ที่ใช้", "กำหนดขอบเขต 5 เมนู" ], "with": "PM · BA", "outs": [ "Problem statement", "ขอบเขตงาน" ], "po": [ "Prioritization" ] }, { "name": "วาง flow และโครงหน้า", "goal": "ให้สถานะอ่านง่าย", "acts": [ "วาด flow สถานะของ order", "แยก Line status กับ Order status", "วางโครงหน้าตารางและตัวกรอง" ], "with": "BA · SA", "outs": [ "Status flow", "Wireframe" ], "po": [ "Business flow" ] }, { "name": "ออกแบบ UI ด้วย Figma AI", "goal": "ทุกเมนูใช้ pattern เดียวกัน และทำได้เร็ว", "acts": [ "กำหนดโครงหน้า สถานะ และเนื้อหา แล้วใช้ Figma AI สร้างหน้าจอ", "ตรวจและปรับ UX ทุกหน้า เช่น สีสถานะ ลำดับตัวกรอง และคำอธิบายช่องกรอก", "คุมธีมเขียวตามแบรนด์ TIPCO ให้เหมือนกันทุกหน้า" ], "with": "PM · TIPCO", "outs": [ "UI ทุกหน้า", "Component" ], "po": [ "AI prototyping · Figma AI", "Presentation" ] }, { "name": "ทดสอบและปรับปรุง", "goal": "ตรวจว่าผู้ใช้หา order ที่ต้องตามเจอ", "acts": [ "review กับทีม TIPCO", "ปรับตัวกรองและคำอธิบายช่องกรอก" ], "with": "TIPCO · PM", "outs": [ "สรุป feedback" ], "po": [ "Validation" ] }, { "name": "ส่งต่อและดูแลจนขึ้นระบบ", "goal": "ให้ Dev ทำได้ตรงแบบ", "acts": [ "เขียน note เงื่อนไขตัวกรองและสถานะ", "เตรียมทุก state", "Walkthrough กับ Dev" ], "with": "Dev", "outs": [ "Design spec" ], "po": [ "Acceptance criteria" ] } ];
+var CK = [ { "t": "ครบทุกสถานะ", "d": "Awaiting, Pick, Interface, Shipped, Cancelled และสถานะ order" }, { "t": "สีสถานะชุดเดียว", "d": "ใช้เหมือนกันทั้ง quick filter, ตาราง และแถบสี" }, { "t": "ครบทุก state", "d": "ไม่มีข้อมูล, ยังไม่เลือกบริษัท, ไม่มีสิทธิ์" }, { "t": "สิทธิ์ตามบทบาท", "d": "ตรวจกับ BA ว่าแต่ละกลุ่มเห็นเมนูไหน" }, { "t": "Note สำหรับ Dev", "d": "เงื่อนไขตัวกรองและการเรียงข้อมูล" }, { "t": "Walkthrough กับ Dev", "d": "ก่อนเริ่มพัฒนา" } ];
+var ck = Array.isArray(s.ck) ? s.ck : [true, true, true, false, false, false];
+var cks = CK.map(function (c, i) { return { t: c.t, d: c.d, on: ck[i] ? 'true' : 'false', mark: ck[i] ? '✓' : '', toggle: function () { var n = ck.slice(); n[i] = !n[i]; self.setState({ ck: n }); } }; });
+var ckDone = ck.filter(Boolean).length;
+var pi = typeof s.ph === 'number' ? s.ph : 0;
+var phases = P.map(function (x, i) { return { num: '0' + (i + 1), name: x.name, sel: i === pi ? 'true' : 'false', pick: function () { self.setState({ ph: i }); } }; });
+var cp = Object.assign({ num: '0' + (pi + 1), isFlow: pi === 2, isWire: pi === 3, isSpec: pi === 5 }, P[pi]);
+return {
+phases: phases, cur: cp,
+cks: cks, ckDone: ckDone, ckTotal: CK.length, ckPct: Math.round(ckDone / CK.length * 100) + '%', ckAll: ckDone === CK.length,
+noPrev: pi === 0 ? 'true' : 'false', noNext: pi === P.length - 1 ? 'true' : 'false',
+prev: function () { if (pi > 0) { self.setState({ ph: pi - 1 }); } },
+next: function () { if (pi < P.length - 1) { self.setState({ ph: pi + 1 }); } },
+opts: opts,
+sel: { name: d.name, img: d.img || '', alt: d.alt || '', unit: d.unit || 'บาท', rows: rows, total: d.total, totLabel: d.totLabel, hasNote: !!d.note, note: d.note || '' }
+};
+}
+}
+</script>
+<script src="dc.js"></script>
+</body>
+</html>
