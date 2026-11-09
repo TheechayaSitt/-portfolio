@@ -413,7 +413,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .dkbig b{font-size:44px;font-weight:600;color:#DFFF1A;line-height:1;font-variant-numeric:tabular-nums;text-shadow:0 0 24px rgba(223,255,26,.45)}
 .dkbig span{font-size:14px;color:#E8EEFF}
 .dklink,.dkbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;font:600 15px Outfit,'IBM Plex Sans Thai',sans-serif;text-decoration:none;cursor:pointer;background:#FFFFFF;color:#1C2440;border:1.5px solid #FFFFFF;transition:translate .2s,background .2s,box-shadow .2s,border-color .2s,scale .1s}
-.dklink:hover,.dkbtn:hover{translate:0 -3px;background:#DFFF1A;border-color:#DFFF1A;box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.dkbtn:hover{translate:0 -3px;background:#DFFF1A;border-color:#DFFF1A;box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.dklink:hover{translate:0 -3px;box-shadow:0 0 0 3px #DFFF1A,0 10px 20px rgba(0,0,0,.25)}
 .dkbtn.pri{background:#CC4116;color:#FFFFFF;border-color:#CC4116}
 .dkbtn.pri:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
 .dkbtn.ghost{background:transparent;color:#FFFFFF;border-color:rgba(255,255,255,.5)}
@@ -461,9 +462,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .btn:hover,.navcta:hover,.btn-cta:hover,.totop:hover,.backbtn:hover,.pnav:hover,.dbtn:hover,.wlink:hover,footer a:hover,footer button:hover,.pfl a:hover,.toc a:hover,.life a:hover,.navlink:hover{background:#DFFF1A !important;color:#1C2440 !important;border-color:#DFFF1A !important}
 .life a:hover .ln2,.life a:hover .le{color:#1C2440 !important}
 .navlink::after{background:#1C2440 !important}
-.pcard:hover .pmore{background:#DFFF1A !important;color:#1C2440 !important}
+.pcard:hover .pmore{background:#1C2440 !important;color:#FFFFFF !important;translate:0 -3px;box-shadow:0 0 0 3px #DFFF1A,0 10px 20px rgba(10,20,70,.25) !important}
 .pf:hover{border-color:#DFFF1A !important}
-.jobbtn:hover,.shrow:hover,.tbl tbody tr:hover,.stats2 .st:hover{background-color:var(--ix-tint) !important}
+.shrow:hover,.tbl tbody tr:hover,.stats2 .st:hover{background-color:var(--ix-tint) !important}
+.jobcard:hover{translate:0 -4px !important;outline:3px solid #DFFF1A !important;outline-offset:2px !important;box-shadow:var(--ix-shadow) !important}
+.jobbtn:hover{background:transparent !important}
 .stats2 .st:hover{background-image:none !important}
 p a:hover,li a:hover,.cert a:hover{background:#DFFF1A;color:#1C2440 !important;border-radius:4px;box-shadow:0 0 0 3px #DFFF1A}
 section.sec:hover::after{color:rgba(223,255,26,.35) !important}
