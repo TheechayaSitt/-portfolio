@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TIPCO Order Management · Theechaya S.</title>
+<link rel="canonical" href="https://thewtheechaya.github.io/-portfolio/CaseStudy11.html">
 <meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
 <meta property="og:title" content="TIPCO Order Management · Theechaya S.">
 <meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
@@ -561,7 +562,306 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div>
 </div>
 </template>
-<div id="root"></div>
+<div id="root">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · Order Management · 2026</p><span class="badge b-ux">งาน UX/UI</span><span class="badge b-po">Role-based</span><span class="badge b-ux">ทำด้วย Figma AI</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">TIPCO · ระบบติดตามคำสั่งซื้อ</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">ระบบภายในของ TIPCO Asphalt สำหรับติดตามคำสั่งซื้อผลิตภัณฑ์ยางมะตอย ตั้งแต่รับ order จนส่งถึงลูกค้า ขอเอกสารให้ลูกค้า และจัดการสิทธิ์ผู้ใช้ ฉันออกแบบ UX/UI ทั้งระบบในนาม G-ABLE โดยใช้ Figma AI ช่วยสร้างหน้าจอ</p>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/15fbcd696da667b4b98ea1c704c46ca6.jpg" alt="หน้า Order Management ของ TIPCO" style="object-position:top left"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX/UI Designer</p></div>
+<div class="card"><p class="lbl">ลูกค้า</p><p class="body">TIPCO Asphalt</p></div>
+<div class="card"><p class="lbl">ประเภท</p><p class="body">ระบบภายในองค์กร · B2B</p></div>
+<div class="card"><p class="lbl">ขอบเขต</p><p class="body">5 เมนูหลัก</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>order ยางมะตอยมีหลายรายการและหลายสถานะ ทีมหา order ที่ต้องตามไม่เจอ</p></div><div><b>สิ่งที่ฉันทำ</b><p>ออกแบบ UX ทั้งระบบ 5 เมนูด้วย Figma AI แยกสถานะ 2 ชั้น และทำ quick filter พร้อมจำนวน</p></div><div><b>ผลลัพธ์</b><p>ทีมขาย ปฏิบัติการ และขนส่งเห็นสถานะเดียวกัน หา order ที่ต้องตามได้ในคลิกเดียว</p></div></div></div>
+</header>
+
+
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · ระบบนี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">รู้ทันทีว่า order ไหนต้องตามก่อน</h2>
+<p class="body">TIPCO ส่งยางมะตอยหลายประเภทให้ลูกค้าทั่วประเทศ ทีมขาย ฝ่ายปฏิบัติการ และฝ่ายขนส่งต้องเห็นสถานะ order เดียวกัน ระบบนี้รวมการติดตาม order การขนส่ง และการขอเอกสารไว้ในที่เดียว</p>
+<div class="steps">
+<div><span class="n">Order</span><span class="body" style="font-size: 14px; font-weight: 600">ติดตามทุกคำสั่งซื้อ</span></div>
+<div><span class="n">Delivery</span><span class="body" style="font-size: 14px; font-weight: 600">ติดตามการขนส่ง</span></div>
+<div><span class="n">Document</span><span class="body" style="font-size: 14px; font-weight: 600">ขอ E-Statement และ Aging Report</span></div>
+<div><span class="n">Settings</span><span class="body" style="font-size: 14px; font-weight: 600">จัดการผู้ใช้และสิทธิ์</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองกดดูหน้าจอจริงของแต่ละเมนู</p>
+<div class="mgrp" role="group" aria-label="กลุ่มเมนู">
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">เข้าสู่ระบบ</span>
+<span class="price" style="font-size: 18px">Login</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="true">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Order Management</span>
+<span class="price" style="font-size: 18px">คำสั่งซื้อ</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Request Document</span>
+<span class="price" style="font-size: 18px">ขอเอกสาร</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Settings &amp; User</span>
+<span class="price" style="font-size: 18px">สิทธิ์</span>
+</button>
+
+</div>
+<div class="viewer fade">
+<div class="shot"><img src="assets/15fbcd696da667b4b98ea1c704c46ca6.jpg" alt="หน้า Order Management"></div>
+<div class="receipt">
+<p class="lbl" style="color: #DFFF1A">Order Management</p>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">ตัวกรอง</span><span style="text-align: right">6 แบบ รวมช่วงวันที่</span></div>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">Quick filter</span><span style="text-align: right">Delayed · On Hold · In Transit · Closed</span></div>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">ตาราง</span><span style="text-align: right">แถบสีบอกความด่วน · เรียงได้ทุกคอลัมน์</span></div>
+
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #DFFF1A">Line status กับ Order status แยกกัน เพราะ 1 order มีหลายรายการ</p>
+</div>
+</div>
+</section>
+
+
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ระบบเดียวที่ทีมขาย ปฏิบัติการ และขนส่งใช้ร่วมกัน</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>PM</span><span>BA</span><span class="me">UX/UI Designer · ฉัน</span><span>SA</span><span>Dev</span><span>ทีม TIPCO</span></div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงาน</p><p class="body" style="color: #FFFFFF; font-weight: 600">เก็บ requirement กับ TIPCO → สรุปสถานะ order และบทบาทผู้ใช้ → wireframe → ใช้ Figma AI สร้าง UI → ตรวจและปรับ UX → review กับลูกค้า → ส่งต่อ Dev</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">ออกแบบทั้งระบบด้วย Figma AI</p><p class="body" style="font-size: 14px">ใช้ Figma AI สร้างหน้าจอตั้งแต่ login, order, การขนส่ง, เอกสาร จนถึงการจัดการสิทธิ์ แล้วฉันตรวจและปรับ UX ทุกหน้า</p></div>
+<div class="card"><p class="lbl">สถานะหลายชั้น</p><p class="body" style="font-size: 14px">แยกสถานะของรายการสินค้ากับสถานะของ order ให้ไม่ปนกัน</p></div>
+<div class="card"><p class="lbl">หลายทีม หลายสิทธิ์</p><p class="body" style="font-size: 14px">Sales, Operations และ Logistics เห็นเมนูตามบทบาท</p></div>
+</div>
+</section>
+
+
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">order เยอะ สถานะเยอะ แต่ต้องตามให้ทัน</h2>
+<p class="body">แต่ละ order มีหลายรายการสินค้า และแต่ละรายการมีสถานะของตัวเอง ตั้งแต่รอ หยิบสินค้า ส่งเข้าระบบ จนจัดส่ง ถ้าเห็นทุกอย่างปนกันในตารางเดียว ทีมจะหา order ที่ล่าช้าหรือพักไว้ไม่เจอ</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“ทีมขายและฝ่ายขนส่งต้องรู้ว่า order ไหนล่าช้าหรือติดปัญหา ก่อนลูกค้าโทรมาถาม”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">ทีมขาย</p><p class="body" style="font-size: 14px">ตอบลูกค้าได้ทันทีว่า order อยู่ตรงไหน และขอเอกสารให้ลูกค้าได้</p></div>
+<div class="card"><p class="lbl">Operations · Logistics</p><p class="body" style="font-size: 14px">เห็น order ที่ต้องหยิบ ส่ง หรือแก้ปัญหาก่อน</p></div>
+<div class="card"><p class="lbl">Admin</p><p class="body" style="font-size: 14px">กำหนดผู้ใช้ กลุ่ม แผนก และเมนูที่แต่ละคนเห็น</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">หา order ที่ต้องตามได้ในคลิกเดียว · ลดการถามสถานะซ้ำ · ขอเอกสารได้เอง</p></div>
+<div class="card"><p class="lbl">ขอบเขต</p><p class="body" style="font-size: 14px">5 เมนูหลัก ทุกเมนูใช้ pattern เดียวกัน</p></div>
+</div>
+</section>
+
+
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">มองแบบ product: ใครใช้ ใช้ทำอะไร และอะไรต้องมาก่อน</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็น UX/UI Designer ทำงานกับ PM, BA และทีม TIPCO ส่วนนี้แยกให้ชัดว่าเรื่องไหนฉัน <span class="own own-me">ทำเอง</span> และเรื่องไหนฉัน <span class="own own-co">มีส่วนร่วม</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และแต่ละคนต้องการอะไร</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ผู้ใช้หลายกลุ่มใช้ข้อมูล order ชุดเดียวกัน แต่สิ่งที่ต้องทำต่างกัน</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ฝั่ง TIPCO (ลูกค้า)</p>
+<div class="shrow"><div><b>ทีมขาย</b><br><span class="lv lv-h">ผู้ใช้หลัก</span></div><span>ติดตาม order และขอเอกสารให้ลูกค้า</span></div>
+<div class="shrow"><div><b>Operations · Logistics</b><br><span class="lv lv-h">ผู้ใช้หลัก</span></div><span>จัดการการหยิบและจัดส่ง</span></div>
+<div class="shrow"><div><b>Admin</b><br><span class="lv lv-m">ดูแลระบบ</span></div><span>จัดการผู้ใช้และสิทธิ์</span></div>
+<div class="shrow"><div><b>ลูกค้าของ TIPCO</b><br><span class="lv lv-m">ได้รับผล</span></div><span>ได้รับเอกสารทางอีเมล</span></div>
+</div>
+<div class="shcol"><p class="lbl">ฝั่งทีมพัฒนา</p>
+<div class="shrow"><div><b>PM</b></div><span>วางแผนและคุยกับ TIPCO</span></div>
+<div class="shrow"><div><b>BA · SA</b></div><span>สรุปสถานะ order และการเชื่อมระบบ</span></div>
+<div class="shrow"><div><b>Dev</b></div><span>พัฒนาระบบ</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX/UI</b></div><span>ออกแบบทุกหน้าและวางระบบสถานะให้อ่านง่าย</span></div>
+</div>
+</div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ตามงานได้เร็วขึ้น</p><p class="body" style="font-size: 14px">กด quick filter ครั้งเดียว เห็นเฉพาะ order ที่ล่าช้าหรือพักไว้</p></div>
+<div class="card"><p class="lbl">ตอบลูกค้าได้ทันที</p><p class="body" style="font-size: 14px">ทีมขายเห็นสถานะเดียวกับฝ่ายขนส่ง</p></div>
+<div class="card"><p class="lbl">ขอเอกสารได้เอง</p><p class="body" style="font-size: 14px">E-Statement และ Aging Report ส่งเข้าอีเมลลูกค้า</p></div>
+</div><p class="subl">ตัวชี้วัดที่ควรติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">สัดส่วน order ตามสถานะ จากข้อมูลตัวอย่างในหน้าจอ <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่าง ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>Order ทั้งหมด</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>กำลังขนส่ง</span><div class="ftrack"><div class="ffill" style="width: 25%">25%</div></div></div>
+<div class="frow"><span>ล่าช้า</span><div class="ftrack"><div class="ffill" style="width: 17%">17%</div></div></div>
+<div class="frow"><span>พักไว้</span><div class="ftrack"><div class="ffill" style="width: 17%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">17%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> เวลาที่ order อยู่ในสถานะล่าช้า · จำนวนครั้งที่ขอเอกสาร · จำนวนคำถามสถานะจากลูกค้า</p>
+</div>
+<div class="phead" id="po3"><span class="pnum">03</span><h3>จัดลำดับเมนูตามงานที่ใช้บ่อยที่สุด</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="subl">ลำดับการออกแบบ </p>
+<div class="gantt"><div class="gg" style="grid-template-columns: 150px repeat(4, minmax(56px, 1fr))">
+<span></span><span class="gh">ช่วง 1</span><span class="gh">ช่วง 2</span><span class="gh">ช่วง 3</span><span class="gh">ช่วง 4</span>
+<span class="gl">Login + โครงเมนู</span><div class="gbar" style="grid-column: 2 / span 1; background: #1C2440; color: #FFFFFF">Azure AD</div>
+<span class="gl">Order Management</span><div class="gbar" style="grid-column: 2 / span 2; background: #2457E6; color: #FFFFFF">หน้าหลัก</div>
+<span class="gl">Delivery Tracking</span><div class="gbar" style="grid-column: 3 / span 2; background: #A9C4FF; color: #1C2440">ขนส่ง</div>
+<span class="gl">Request Document</span><div class="gbar" style="grid-column: 4 / span 1; background: #FF7A4D; color: #1C2440">เอกสาร</div>
+<span class="gl">Settings &amp; User</span><div class="gbar" style="grid-column: 5 / span 1; background: #DFFF1A; color: #1C2440">สิทธิ์</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 3"><i></i>Review หน้าหลัก</span><span class="gms" style="grid-column: 5"><i></i>ส่งต่อ Dev</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมี</small></h3><div class="sticky">ติดตาม order + quick filter</div><div class="sticky">Login Azure AD</div><div class="sticky">สิทธิ์ตามบทบาท</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">Delivery Tracking</div><div class="sticky">Notifications</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">ขอเอกสารเอง</div><div class="sticky">Export รายงาน</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">แอปมือถือ</div></div>
+</div><p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">สถานะเยอะจนสับสน</p><p class="body" style="font-size: 14px">แยก Line status กับ Order status และใช้สีชุดเดียวกันทุกหน้า</p></div>
+<div class="card"><p class="lbl">เลือกลูกค้าผิดบริษัท</p><p class="body" style="font-size: 14px">บังคับเลือกบริษัทในเครือก่อน แล้วกรองรายชื่อลูกค้าให้</p></div>
+<div class="card"><p class="lbl">ข้อมูลเยอะในตารางเดียว</p><p class="body" style="font-size: 14px">ใช้ตัวกรอง quick filter และแถบสีบอกความด่วน</p></div>
+</div>
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างออกแบบ: ตัดสินใจเรื่องสถานะ</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">User story ตัวอย่าง </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่าง</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>พนักงานขาย</b> ฉันต้องการ <b>เห็น order ที่ล่าช้าทั้งหมดในคลิกเดียว</b> เพื่อ <b>แจ้งลูกค้าได้ก่อนลูกค้าโทรมาถาม</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> มี order ที่สถานะ Delayed 2 รายการ <b style="color: #DFFF1A">When</b> กด Quick filter “Delayed” <b style="color: #DFFF1A">Then</b> ตารางแสดงเฉพาะ 2 order นั้น พร้อมลูกค้า สถานที่ และเวลาส่ง</p></div><p class="subl">Trade-off: สถานะเดียว หรือแยก 2 ชั้น <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">ใช้สถานะเดียวต่อ order</p><p class="body" style="font-size: 14px">ตารางดูง่าย แต่ถ้ารายการสินค้าใน order เดียวกันอยู่คนละขั้น ทีมจะไม่รู้ว่าติดที่รายการไหน</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">แยก Line status กับ Order status</p><p class="body" style="font-size: 14px">เห็นทั้งภาพรวมของ order และรายการที่ติดปัญหา ใช้สีชุดเดียวกันจึงยังอ่านง่าย</p></div>
+</div><p class="subl">จากคำถามของผู้ใช้สู่หน้าจอ </p>
+<div class="crflow">
+<div><b>1</b>ทีมขายถามว่า “order ไหนต้องตามวันนี้”</div>
+<div><b>2</b>สรุปสถานะทั้งหมดที่เป็นไปได้กับ BA</div>
+<div><b>3</b>ฉันออกแบบ quick filter พร้อมจำนวน</div>
+<div><b>4</b>ใช้สีสถานะชุดเดียวทั้งระบบ</div>
+<div style="background: #F4FFC2"><b>5</b>review กับ TIPCO แล้วปรับ</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบงานออกแบบ</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ก่อนส่งต่อ Dev ฉันใช้ checklist นี้</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Handoff checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">3 / 6</span></div>
+<div class="prog" aria-hidden="true"><div style="width: 50%"></div></div>
+<div class="chk"><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ครบทุกสถานะ<small>Awaiting, Pick, Interface, Shipped, Cancelled และสถานะ order</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>สีสถานะชุดเดียว<small>ใช้เหมือนกันทั้ง quick filter, ตาราง และแถบสี</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ครบทุก state<small>ไม่มีข้อมูล, ยังไม่เลือกบริษัท, ไม่มีสิทธิ์</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>สิทธิ์ตามบทบาท<small>ตรวจกับ BA ว่าแต่ละกลุ่มเห็นเมนูไหน</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>Note สำหรับ Dev<small>เงื่อนไขตัวกรองและการเรียงข้อมูล</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>Walkthrough กับ Dev<small>ก่อนเริ่มพัฒนา</small></span></button></div>
+
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลังส่งมอบ: ฟังและปรับต่อ</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ตาม feedback ผู้ใช้</p><p class="body" style="font-size: 14px">ทีมขายและ Logistics ใช้จริงแล้วยังหา order ได้เร็วไหม</p></div>
+<div class="card"><p class="lbl">ปรับตัวกรอง</p><p class="body" style="font-size: 14px">เพิ่มหรือลดตัวกรองตามที่ใช้จริง</p></div>
+<div class="card"><p class="lbl">ต่อยอด</p><p class="body" style="font-size: 14px">Pattern ตารางและสถานะใช้ซ้ำกับระบบอื่นขององค์กรได้</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">Export รายงาน · แจ้งเตือนเมื่อ order ล่าช้า · มุมมองบนมือถือสำหรับฝ่ายขนส่ง</p></div>
+</section>
+
+
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">ก่อนวาดหน้าจอ ต้องเข้าใจก่อนว่า order หนึ่งผ่านสถานะอะไรบ้าง และใครต้องทำอะไรในแต่ละช่วง กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+
+<button type="button" class="ptab" role="tab" aria-selected="true"><span class="pn">01</span><span class="pt">ทำความเข้าใจโจทย์</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">02</span><span class="pt">กำหนดปัญหาและเป้าหมาย</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">03</span><span class="pt">วาง flow และโครงหน้า</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">04</span><span class="pt">ออกแบบ UI ด้วย Figma AI</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">05</span><span class="pt">ทดสอบและปรับปรุง</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">06</span><span class="pt">ส่งต่อและดูแลจนขึ้นระบบ</span></button>
+
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">01 · ทำความเข้าใจโจทย์</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">เข้าใจว่า order ของ TIPCO เดินทางอย่างไร</p>
+<ul><li>คุยกับ BA และทีม TIPCO</li><li>ไล่ดูสถานะทั้งหมดของ order และรายการสินค้า</li><li>ดูว่าแต่ละทีมใช้ข้อมูลอะไร</li></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">BA · TIPCO</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><span class="pchip pc-d">รายการสถานะ</span><span class="pchip pc-d">Pain point</span></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><span class="pchip pc-p">Requirement analysis</span></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" aria-disabled="true">← ก่อนหน้า</button><button type="button" class="pnav" aria-disabled="false">ถัดไป →</button></div>
+</div>
+
+</div>
+</section>
+
+
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ทุกเมนูใช้ pattern เดียวกัน เรียนรู้ครั้งเดียวใช้ได้ทั้งระบบ</h2>
+<div class="gal two">
+<figure><div class="shot"><img src="assets/8ac6b6d61e0fc12ea4e8daf6ebd17477.jpg" alt="หน้า Request Document"></div><figcaption>Request Document · เลือกบริษัทในเครือก่อน แล้วรายชื่อลูกค้าถูกกรองให้</figcaption></figure>
+<figure><div class="shot"><img src="assets/57fb23214d18d1f61d1679b76c80294c.jpg" alt="หน้า Settings &amp; User"></div><figcaption>Settings &amp; User · กลุ่ม บทบาท และสถานะ ใช้ป้ายสีแบบเดียวกับหน้า order</figcaption></figure>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">สีบอกความด่วน</p><p class="body" style="font-size: 14px">แถบสีซ้ายของแถวและป้ายสถานะ ใช้สีชุดเดียวกันทั้งระบบ</p></div>
+<div class="card"><p class="lbl">ป้องกันการเลือกผิด</p><p class="body" style="font-size: 14px">ช่องที่ต้องเลือกตามลำดับ บอกไว้ใต้ช่องว่าต้องเลือกอะไรก่อน</p></div>
+<div class="card"><p class="lbl">ทางหลักชัดเจน</p><p class="body" style="font-size: 14px">Login ด้วย Azure AD เด่นที่สุด ทางสำรองอยู่ด้านล่าง</p></div>
+<div class="card"><p class="lbl">เมนูคงที่</p><p class="body" style="font-size: 14px">Sidebar เดียวกันทุกหน้า และย่อได้เมื่อต้องการพื้นที่ตาราง</p></div>
+</div>
+</section>
+
+
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากโปรเจกต์นี้</h2>
+<div class="g3">
+<div class="card"><p class="lbl">5 เมนูหลัก</p><p class="body" style="font-size: 14px">Order, Delivery, Document, Settings และ Notifications</p></div>
+<div class="card"><p class="lbl">สถานะ 2 ชั้น</p><p class="body" style="font-size: 14px">ระดับรายการสินค้าและระดับ order อ่านได้ในตารางเดียว</p></div>
+<div class="card"><p class="lbl">หลายทีม</p><p class="body" style="font-size: 14px">Sales, Operations และ Logistics ใช้ระบบเดียวกัน</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">Figma AI ช่วยให้เร็ว แต่ต้องเริ่มจาก flow</p><p class="body" style="font-size: 14px">AI สร้างหน้าจอได้เร็ว แต่ถ้ายังไม่ได้เขียน flow สถานะให้ครบ หน้าจอจะไม่ตรงกับงานจริง ฉันจึงกำหนด flow และสีสถานะเองก่อน</p></div>
+<div class="card"><p class="body" style="font-weight: 600">ตารางที่ดีตอบคำถามเดียวให้เร็ว</p><p class="body" style="font-size: 14px">ผู้ใช้ไม่ได้อยากอ่านทุกแถว แต่อยากรู้ว่าต้องตามแถวไหนก่อน</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy10.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 5 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">G-Core Portal · ระบบบริหาร GPU</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+
+</div>
+</div>
+</div>
 <script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":11000}}'>
 class Component extends DCLogic {
 componentDidMount() {

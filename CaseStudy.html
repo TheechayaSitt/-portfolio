@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meow Finance · Theechaya S.</title>
+<link rel="canonical" href="https://thewtheechaya.github.io/-portfolio/CaseStudy.html">
 <meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
 <meta property="og:title" content="Meow Finance · Theechaya S.">
 <meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
@@ -537,7 +538,302 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div>
 </div>
 </template>
-<div id="root"></div>
+<div id="root">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · DeFi / Web3 · 2021 – 2022</p><span class="badge b-ux">งาน UX</span><span class="badge b-po">Product Owner</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">Meow Finance</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">แพลตฟอร์ม DeFi (การเงินแบบกระจายศูนย์) ที่ฉันดูแลทั้งงานออกแบบประสบการณ์และงาน Product Owner ระหว่างทำงานที่ <span style="display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; font-weight: 600; color: #1C2440"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 26px; height: 26px; border-radius: 50%">Testament Technology</span></p>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/8f3aa77874f48c86b735bf2e831f686e.png" alt="หน้า Farm ของ Meow Finance: รายการ pool พร้อม APY, ที่มาของผลตอบแทน และปุ่มปรับ leverage"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX + Product Owner</p></div>
+<div class="card"><p class="lbl">บริษัท</p><p class="body"><span style="display: flex; align-items: center; gap: 10px"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 36px; height: 36px; border-radius: 50%; flex: 0 0 auto">Testament Technology</span></p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body">ม.ค. 2021 – ก.พ. 2022</p></div>
+<div class="card"><p class="lbl">ทีมที่ทำงานร่วม</p><p class="body">Frontend · Smart contract · Marketing · Community</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>แพลตฟอร์ม DeFi ที่ผลตอบแทนสูงแต่ใช้ยากและเสี่ยง ผู้ใช้ไม่รู้ว่าผลตอบแทนมาจากไหน</p></div><div><b>สิ่งที่ฉันทำ</b><p>เป็นทั้ง UX และ Product Owner วาง roadmap จัดลำดับ backlog เขียน requirement และออกแบบให้เห็นที่มาของ APR และความเสี่ยง</p></div><div><b>ผลลัพธ์</b><p>ปล่อยครบ 4 ฟีเจอร์หลัก (Lend, Farm, Stake, mMEOW) ภายใน 14 เดือน ทุก release ผ่าน UAT บน testnet</p></div></div></div>
+</header>
+
+
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · โปรดักต์นี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">“Make your yield easier, make your yield safu”</h2>
+<p class="body">Meow Finance เป็นแพลตฟอร์ม DeFi บน Fantom Chain สำหรับเทรด long/short ด้วย leveraged yield farming และ lending โดยใช้แบรนด์แมวที่เป็นมิตร ทำให้เรื่องซับซ้อนดูเข้าถึงง่ายขึ้น มี 4 เมนูหลัก</p>
+<div class="steps">
+<div><span class="n">Farm</span><span class="body" style="font-size: 14px; font-weight: 600">เลือก pool และปรับ leverage</span></div>
+<div><span class="n">Lend</span><span class="body" style="font-size: 14px; font-weight: 600">ฝากเหรียญรับดอกเบี้ย</span></div>
+<div><span class="n">Stake</span><span class="body" style="font-size: 14px; font-weight: 600">stake เหรียญรับรางวัล</span></div>
+<div><span class="n">mMEOW</span><span class="body" style="font-size: 14px; font-weight: 600">vault เพิ่มจำนวน MEOW</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองปรับ leverage ดูว่า APR เปลี่ยนอย่างไร (ตัวเลขสมมุติเพื่ออธิบาย)</p>
+<div class="g4" role="group" aria-label="ระดับ leverage">
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Leverage 1x</span>
+<span class="price">23.81%</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Leverage 1.5x</span>
+<span class="price">36.22%</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="true">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Leverage 2x</span>
+<span class="price">48.62%</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Leverage 3x</span>
+<span class="price">73.43%</span>
+</button>
+
+</div>
+<div class="receipt fade">
+<p class="lbl" style="color: #DFFF1A">Leverage 2x</p>
+
+<div class="row" style="color: #C9D1E6"><span>Yield Farming</span><span>43.62%</span></div>
+
+<div class="row" style="color: #C9D1E6"><span>Trading Fees Interest</span><span>4.00%</span></div>
+
+<div class="row" style="color: #C9D1E6"><span>MEOW Rewards</span><span>5.00%</span></div>
+
+<div class="row" style="color: #FF8A5C"><span>Borrowing Interest</span><span>−4.00%</span></div>
+
+<div class="tot"><span style="font-size: 14px; color: #C9D1E6">Total APR (โดยประมาณ)</span><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 32px; color: #FFFFFF">48.62 <span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 16px">% APR</span></span></div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #FF8A5C">ความเสี่ยงถูก liquidate: ปานกลาง ระบบแสดงระดับหนี้ (debt ratio) ให้เห็นตลอด</p>
+</div>
+</section>
+
+
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ทีมเล็ก ที่ฉันต้องเป็นทั้ง designer และ PO</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>Founder</span><span>Frontend Dev</span><span class="me">UX + PO · ฉัน</span><span>Smart contract Dev</span><span>Marketing · Community</span></div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงานในแต่ละ sprint (2 สัปดาห์)</p><p class="body" style="color: #FFFFFF; font-weight: 600">Sprint planning → ออกแบบ → พัฒนา → UAT บน testnet → audit / ตรวจความปลอดภัย → ขึ้น mainnet → ฟัง feedback จากคอมมิวนิตี้</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">ทีมประมาณ 8 คน</p><p class="body" style="font-size: 14px">Founder 1 · Frontend Dev 2 · Smart contract Dev 2 · Marketing / Community 2 และฉันที่ดูแลทั้ง UX และ Product Owner</p></div>
+<div class="card"><p class="lbl">สองหมวกในคนเดียว</p><p class="body" style="font-size: 14px">ออกแบบหน้าจอเอง และเป็นคนเขียน requirement จัดลำดับ backlog และตัดสินใจว่าอะไรขึ้นระบบเมื่อไร</p></div>
+<div class="card"><p class="lbl">คอมมิวนิตี้คือผู้ใช้</p><p class="body" style="font-size: 14px">ผู้ใช้คุยกับทีมตรงผ่าน Telegram และ Twitter ทุก release จึงได้ feedback กลับมาเร็วมาก</p></div>
+</div>
+</section>
+
+
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">DeFi ให้ผลตอบแทนสูง แต่ใช้ยากและเสี่ยง</h2>
+<p class="body">การทำ leveraged yield farming ปกติต้องทำหลายขั้นตอนข้ามหลาย protocol ทั้งแลกเหรียญ เพิ่มสภาพคล่อง ยืมเงิน และ stake ผู้ใช้ไม่รู้ว่าผลตอบแทนมาจากไหน และมองไม่เห็นความเสี่ยงที่จะถูก liquidate จนเกิดขึ้นจริง</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“นักลงทุนต้องการเพิ่มผลตอบแทนด้วย leverage ในไม่กี่คลิก แต่ไม่เข้าใจว่าผลตอบแทนมาจากไหนและเสี่ยงแค่ไหน จึงไม่กล้าใช้ หรือใช้แล้วเสียเงินโดยไม่รู้ตัว”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">Yield farmer</p><p class="body" style="font-size: 14px">นักลงทุนคริปโตที่มีประสบการณ์ ต้องการผลตอบแทนสูงสุดและเทียบ pool ได้เร็ว</p></div>
+<div class="card"><p class="lbl">Lender</p><p class="body" style="font-size: 14px">ผู้ถือเหรียญที่อยากได้ดอกเบี้ยแบบไม่ซับซ้อน และไม่อยากรับความเสี่ยงสูง</p></div>
+<div class="card"><p class="lbl">ผู้ถือ MEOW</p><p class="body" style="font-size: 14px">คอมมิวนิตี้ที่ถือเหรียญของแพลตฟอร์ม ต้องการ stake และติดตาม roadmap</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">เปิด position ที่ใช้ leverage ได้ในหน้าเดียว · ผู้ใช้เห็นที่มาของผลตอบแทนและความเสี่ยงก่อนยืนยัน · เพิ่มมูลค่าเงินที่ฝากในระบบ (TVL)</p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body" style="font-size: 14px">14 เดือน ทยอยปล่อยฟีเจอร์ Lend, Farm, Stake และ mMEOW vault ทีละเฟส</p></div>
+</div>
+</section>
+
+
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">ดูแลโปรดักต์ทั้งวงจร ตั้งแต่ roadmap จนถึงหลัง release</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็นทั้ง UX และ Product Owner จึงรับผิดชอบเกือบทุกช่วงเอง ส่วนไหนที่ทีมอื่นเป็นเจ้าของหลักจะติดป้าย <span class="own own-co">มีส่วนร่วม</span> ส่วนที่ฉันดูแลเองติดป้าย <span class="own own-me">ทำเอง</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และต้องดูแลแต่ละคนอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<p class="body" style="font-size: 14px">โปรดักต์ DeFi มีผู้เกี่ยวข้องทั้งในทีมและในคอมมิวนิตี้ ซึ่งคาดหวังต่างกันมาก</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ภายในบริษัท</p>
+<div class="shrow"><div><b>Founder</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>กำหนดทิศทางและ tokenomics อนุมัติ roadmap</span></div>
+<div class="shrow"><div><b>Smart contract Dev</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>กำหนดว่าอะไรทำได้จริงบนเชน และความปลอดภัยของเงินผู้ใช้</span></div>
+<div class="shrow"><div><b>Frontend Dev</b><br><span class="lv lv-m">ทำงานทุกวัน</span></div><span>นำ design และ requirement ไปพัฒนา</span></div>
+<div class="shrow"><div><b>Marketing · Community</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>สื่อสาร release และส่ง feedback จากผู้ใช้กลับมา</span></div>
+</div>
+<div class="shcol"><p class="lbl">ภายนอก</p>
+<div class="shrow"><div><b>ผู้ใช้ในคอมมิวนิตี้</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>คุยตรงผ่าน Telegram และ Twitter คาดหวังผลตอบแทนและความปลอดภัย</span></div>
+<div class="shrow"><div><b>Auditor</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>ตรวจ smart contract ก่อนเปิดฟีเจอร์ใหม่</span></div>
+<div class="shrow"><div><b>DEX พาร์ตเนอร์บน Fantom</b><br><span class="lv lv-m">แจ้งความคืบหน้า</span></div><span>แหล่งสภาพคล่องของแต่ละ pool เช่น SpookySwap</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX + PO</b></div><span>รวมทุกเสียงมาเป็น roadmap และ backlog เดียว</span></div>
+</div>
+</div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">TVL คือรายได้</p><p class="body" style="font-size: 14px">ยิ่งมีเงินฝากในระบบมาก protocol ยิ่งมีรายได้จากค่าธรรมเนียมและดอกเบี้ย</p></div>
+<div class="card"><p class="lbl">ความเชื่อใจคือทุกอย่าง</p><p class="body" style="font-size: 14px">ในโลก DeFi ผู้ใช้ย้ายเงินออกได้ในคลิกเดียว ถ้าไม่เข้าใจหรือไม่มั่นใจก็จะไม่อยู่</p></div>
+<div class="card"><p class="lbl">เปิดประตูให้มือใหม่</p><p class="body" style="font-size: 14px">ถ้าทำให้ leverage เข้าใจง่าย ก็ขยายฐานผู้ใช้ออกจากกลุ่มนักลงทุนสายลึกได้</p></div>
+</div><p class="subl">ตัวชี้วัดที่ตั้งไว้ติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">ตั้ง funnel ดูว่าผู้ใช้หลุดที่ขั้นไหนของการเปิด position <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่าง ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>เชื่อม wallet</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>เลือก pool</span><div class="ftrack"><div class="ffill" style="width: 72%">72%</div></div></div>
+<div class="frow"><span>ตั้ง leverage</span><div class="ftrack"><div class="ffill" style="width: 55%">55%</div></div></div>
+<div class="frow"><span>เปิด position สำเร็จ</span><div class="ftrack"><div class="ffill" style="width: 41%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">41%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> TVL รายสัปดาห์ · อัตราธุรกรรมที่ล้มเหลว · จำนวน position ที่ถูก liquidate · คำถามซ้ำในคอมมิวนิตี้</p>
+</div>
+<div class="phead" id="po3"><span class="pnum">03</span><h3>วาง roadmap และจัดลำดับ</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">Roadmap 14 เดือน (แบ่งช่วงละ 2 เดือน) </p>
+<div class="gantt"><div class="gg" style="grid-template-columns: 150px repeat(7, minmax(56px, 1fr))">
+<span></span><span class="gh">ม.ค.</span><span class="gh">มี.ค.</span><span class="gh">พ.ค.</span><span class="gh">ก.ค.</span><span class="gh">ก.ย.</span><span class="gh">พ.ย.</span><span class="gh">ม.ค.</span>
+<span class="gl">Research &amp; roadmap</span><div class="gbar" style="grid-column: 2 / span 1; background: #A9C4FF; color: #1C2440">research</div>
+<span class="gl">Lend + Farm (v1)</span><div class="gbar" style="grid-column: 2 / span 3; background: #2457E6; color: #FFFFFF">leverage สูงสุด 3x</div>
+<span class="gl">Stake</span><div class="gbar" style="grid-column: 4 / span 2; background: #1C2440; color: #FFFFFF">MEOW staking</div>
+<span class="gl">mMEOW vault</span><div class="gbar" style="grid-column: 6 / span 2; background: #FF7A4D; color: #1C2440">auto-compound</div>
+<span class="gl">ปรับตาม feedback</span><div class="gbar" style="grid-column: 4 / span 5; background: #DFFF1A; color: #1C2440">ทุก sprint</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 3"><i></i>Mainnet v1</span><span class="gms" style="grid-column: 5"><i></i>เปิด Stake</span><span class="gms" style="grid-column: 6"><i></i>Change request</span><span class="gms" style="grid-column: 7"><i></i>เปิด mMEOW</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมี</small></h3><div class="sticky">Lend และ Farm</div><div class="sticky">แสดง APR แยก 4 ส่วน</div><div class="sticky">คำเตือนก่อนถูก liquidate</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">หน้า My Positions</div><div class="sticky">Stake MEOW</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">mMEOW vault</div><div class="sticky">ธีมสีกลางคืน</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">รองรับหลายเชน</div><div class="sticky">leverage เกิน 3x</div></div>
+</div><p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">Smart contract bug</p><p class="body" style="font-size: 14px">ทุกฟีเจอร์ต้องผ่าน UAT บน testnet และ audit ก่อนขึ้น mainnet ไม่มีข้อยกเว้น</p></div>
+<div class="card"><p class="lbl">ราคาเหรียญผันผวน</p><p class="body" style="font-size: 14px">จำกัด leverage สูงสุด 3x และแสดงระดับหนี้ (debt ratio) พร้อมคำเตือนก่อนถูก liquidate</p></div>
+<div class="card"><p class="lbl">ผู้ใช้ส่งธุรกรรมผิด</p><p class="body" style="font-size: 14px">มีหน้าสรุป position ก่อนยืนยันใน wallet และบอกสถานะทุกขั้นระหว่างรอบล็อกเชน</p></div>
+</div>
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างพัฒนา: ตัดสินใจและรับมือการเปลี่ยนแปลง</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">User story ที่ฉันเขียนให้ทีม </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่าง</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>นักลงทุน</b> ฉันต้องการ <b>เห็นว่า APR มาจากอะไรบ้างก่อนเปิด position</b> เพื่อ <b>ประเมินผลตอบแทนเทียบกับความเสี่ยงได้เอง</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> ผู้ใช้เลือก pool แล้ว <b style="color: #DFFF1A">When</b> ปรับ leverage <b style="color: #DFFF1A">Then</b> ระบบแสดง Yield Farming, Trading Fees, MEOW Rewards และ Borrowing Interest แยกกัน พร้อม APR รวมใหม่ทันที</p></div><p class="subl">Trade-off: ควรให้ leverage สูงสุดเท่าไร <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">เปิด leverage สูงถึง 6x เหมือนคู่แข่ง</p><p class="body" style="font-size: 14px">ดึงนักลงทุนสายเสี่ยงได้เร็วและ TVL โตเร็ว แต่ผู้ใช้ถูก liquidate ง่ายเมื่อตลาดผันผวน และเสียความเชื่อใจในระยะยาว</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">จำกัดที่ 3x ในช่วงแรก พร้อมคำเตือนที่ชัด</p><p class="body" style="font-size: 14px">ตรงกับคำโปรย “make your yield safu” ลดความเสี่ยงของผู้ใช้ใหม่ และค่อยขยายเพดานเมื่อระบบและสภาพคล่องพร้อม</p></div>
+</div><p class="subl">Change request จากคอมมิวนิตี้ </p>
+<div class="crflow">
+<div><b>1</b>คอมมิวนิตี้ขอฟีเจอร์ auto-compound ใน Farm ระหว่างที่ทีมกำลังทำ Stake</div>
+<div><b>2</b>ประเมินกับ smart contract dev: ต้องแก้ contract เดิมและ audit ใหม่ ใช้เวลานาน</div>
+<div><b>3</b>เสนอทางเลือก: ทำเป็น vault แยก (mMEOW) แทนการแก้ Farm ที่มีเงินผู้ใช้อยู่</div>
+<div><b>4</b>Founder อนุมัติ และฉันจัดเข้า roadmap เฟสถัดไป</div>
+<div style="background: #F4FFC2"><b>5</b>ประกาศ roadmap ให้คอมมิวนิตี้ ทีมและผู้ใช้เห็นตรงกัน</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบและเปิดใช้</h3><span class="own own-me">ทำเอง</span></div>
+<p class="body" style="font-size: 14px">ทุกครั้งก่อนขึ้น mainnet ฉันใช้ checklist นี้ตัดสินว่าพร้อมปล่อยหรือไม่ (go / no-go)</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Mainnet release checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">3 / 6</span></div>
+<div class="prog" aria-hidden="true"><div style="width: 50%"></div></div>
+<div class="chk"><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>UAT บน testnet ครบทุก pool<small>ทดลองฝาก ยืม ปรับ leverage และถอน ในทุกระดับ leverage</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ตัวเลข APR, TVL และยอด position ตรงกับ contract<small>เทียบหน้าจอกับค่าที่อ่านจาก smart contract โดยตรง</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ผ่าน audit / ตรวจความปลอดภัย<small>แก้ประเด็นสำคัญทั้งหมดก่อนปล่อย</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>เตรียมบทความ Medium และคู่มือ<small>อธิบายฟีเจอร์ใหม่และความเสี่ยงเป็นภาษาที่เข้าใจง่าย</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>แจ้งคอมมิวนิตี้ล่วงหน้า<small>ประกาศวันเวลาใน Telegram และ Twitter</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>ทีมพร้อมเฝ้าระบบช่วงเปิดตัว<small>ดู TVL และธุรกรรมที่ล้มเหลวใน 48 ชั่วโมงแรก</small></span></button></div>
+
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลัง release: ฟัง วัด และวางเฟสถัดไป</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">48 ชั่วโมงแรก</p><p class="body" style="font-size: 14px">เฝ้าดู TVL ธุรกรรมที่ล้มเหลว และคำถามในกลุ่ม Telegram หลังเปิดทุกฟีเจอร์</p></div>
+<div class="card"><p class="lbl">Feedback → backlog</p><p class="body" style="font-size: 14px">ผู้ใช้สับสนเรื่อง debt ratio ฉันจึงเพิ่ม tooltip และแถบสีบอกระดับความเสี่ยงในรอบถัดไป</p></div>
+<div class="card"><p class="lbl">Retrospective</p><p class="body" style="font-size: 14px">ทีมตกลงให้เผื่อเวลา audit ไว้ใน roadmap ตั้งแต่ต้น แทนการรอจนพัฒนาเสร็จ</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">Auto-compound ใน mMEOW · dashboard สรุปกำไรขาดทุน · แจ้งเตือนเมื่อใกล้ถูก liquidate · รองรับหลายเชน</p></div>
+</section>
+
+
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">ในโปรเจกต์นี้ฉันทำ UX ควบคู่กับงาน PO การออกแบบ UI จึงเป็นแค่ 1 ใน 6 ช่วงของงาน กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+
+<button type="button" class="ptab" role="tab" aria-selected="true"><span class="pn">01</span><span class="pt">ทำความเข้าใจโจทย์</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">02</span><span class="pt">กำหนดปัญหาและเป้าหมาย</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">03</span><span class="pt">วาง flow และโครงหน้า</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">04</span><span class="pt">ออกแบบ UI และ prototype</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">05</span><span class="pt">ทดสอบและปรับปรุง</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">06</span><span class="pt">ส่งต่อและดูแลจนขึ้นระบบ</span></button>
+
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">01 · ทำความเข้าใจโจทย์</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">เข้าใจกลไก DeFi ให้ลึกพอจะอธิบายให้ผู้ใช้เข้าใจง่าย</p>
+<ul><li>ศึกษา protocol leveraged farming บนเชนอื่นว่าผู้ใช้ติดตรงไหน</li><li>คุยกับ smart contract dev ให้เข้าใจที่มาของ APR และเงื่อนไขการ liquidate</li><li>อ่านคำถามซ้ำ ๆ ในกลุ่ม Telegram และ Twitter</li><li>ลองใช้แพลตฟอร์มคู่แข่งเองตั้งแต่ฝากจนถอน</li></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">Founder · Smart contract Dev · Community</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><span class="pchip pc-d">สรุปกลไกแบบภาษาคน</span><span class="pchip pc-d">Pain point จากคอมมิวนิตี้</span></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><span class="pchip pc-p">Market research</span><span class="pchip pc-p">Customer insight</span></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" aria-disabled="true">← ก่อนหน้า</button><button type="button" class="pnav" aria-disabled="false">ถัดไป →</button></div>
+</div>
+
+</div>
+</section>
+
+
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">ทำให้ DeFi อ่านง่ายและปลอดภัย</h2>
+<div class="g2">
+<div class="card"><p class="lbl">บอกที่มาของผลตอบแทน</p><p class="body" style="font-size: 14px">APR แยกเป็น Yield Farming, Trading Fees, MEOW Rewards และ Borrowing Interest ผู้ใช้รู้ว่าเงินมาจากไหนและเสียอะไรไปบ้าง</p></div>
+<div class="card"><p class="lbl">เห็นผลของ leverage ทันที</p><p class="body" style="font-size: 14px">ขีดฆ่า APY ที่ 1x และแสดงตัวเลขใหม่ข้างกัน ทุกครั้งที่กด − / +</p></div>
+<div class="card"><p class="lbl">ความเสี่ยงต้องมองเห็น</p><p class="body" style="font-size: 14px">จำกัดเพดาน 3x แสดงระดับหนี้ และแยกแท็บ Liquidated Positions ให้ย้อนดูได้</p></div>
+<div class="card"><p class="lbl">แบรนด์ที่เป็นมิตร</p><p class="body" style="font-size: 14px">มาสคอตแมวและสีม่วงอ่อนลดความน่ากลัวของโลกคริปโต ตรงกับคำโปรย “make your yield easier”</p></div>
+</div>
+</section>
+
+
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากการเป็น PO ครั้งแรก</h2>
+<div class="g3">
+<div class="card"><p class="lbl">ปล่อยครบทุกเฟส</p><p class="body" style="font-size: 14px">Lend, Farm, Stake และ mMEOW vault ขึ้น mainnet ตาม roadmap ภายใน 14 เดือน</p></div>
+<div class="card"><p class="lbl">ทุก release ผ่าน testnet</p><p class="body" style="font-size: 14px">ใช้ checklist เดียวกันทุกครั้ง ไม่ปล่อยฟีเจอร์ที่ยังไม่ผ่าน UAT และ audit</p></div>
+<div class="card"><p class="lbl">คอมมิวนิตี้มีส่วนร่วม</p><p class="body" style="font-size: 14px">ไอเดียจากผู้ใช้กลายเป็นฟีเจอร์จริง เช่น mMEOW vault</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">เป็น designer ช่วยให้เป็น PO ได้ดีขึ้น</p><p class="body" style="font-size: 14px">การเข้าใจผู้ใช้ลึก ๆ ทำให้ตัดสินใจเรื่อง scope ได้เร็ว และอธิบายเหตุผลให้ทีมเห็นภาพผ่าน prototype</p></div>
+<div class="card"><p class="body" style="font-weight: 600">“ปลอดภัย” ต้องมาก่อน “เร็ว”</p><p class="body" style="font-size: 14px">ในโปรดักต์ที่เกี่ยวกับเงิน การเลื่อน release เพื่อทดสอบให้ครบ คุ้มกว่าการเสียความเชื่อใจของผู้ใช้</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy2.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 4 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">U-NEXT · ระบบมหาวิทยาลัย</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+
+</div>
+</div>
+</div>
 <script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":10800}}'>
 class Component extends DCLogic {
 componentDidMount() {

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Newborn Connect · Theechaya S.</title>
+<link rel="canonical" href="https://thewtheechaya.github.io/-portfolio/CaseStudy7.html">
 <meta name="description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
 <meta property="og:title" content="Newborn Connect · Theechaya S.">
 <meta property="og:description" content="Theechaya S. — UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner: ผลงานและ case study">
@@ -561,7 +562,317 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div>
 </div>
 </template>
-<div id="root"></div>
+<div id="root">
+
+<div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
+<div class="progress" aria-hidden="true"></div>
+<div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<nav class="topbar" aria-label="หัวข้อใน case study">
+<a class="backbtn" href="index.html"><svg aria-hidden="true" width="16" height="10" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M25 7H2M8 1L2 7L8 13"></path></svg>พอร์ต</a>
+<div class="toc"><a href="#s0">ภาพรวม</a><a href="#s1">ระบบ</a><a href="#s2">ทีม</a><a href="#s3">โจทย์</a><a href="#spo">มุมมอง PO</a><a href="#sp">Process</a><a href="#s4">การออกแบบ</a><a href="#s5">ผลลัพธ์</a></div>
+</nav>
+
+
+<header id="s0" class="sec" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="krow"><p class="kicker">Case Study · HealthTech · 2025</p><span class="badge b-ux">งาน UX/UI</span><span class="badge b-po">ทำงานแบบ Agile</span></div>
+<h1 style="margin: 0; font-family: Outfit, 'IBM Plex Sans Thai', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.15; color: #1C2440">Newborn Connect (N-Connect)</h1>
+<p class="body" style="font-size: 17px; max-width: 760px">ระบบบันทึกและติดตามการตรวจคัดกรองโรคในทารกแรกเกิดของกรมวิทยาศาสตร์การแพทย์ ครอบคลุมตั้งแต่โรงพยาบาลส่งตัวอย่างเลือด ห้องปฏิบัติการตรวจวิเคราะห์ รับรองผล ติดตามผลผิดปกติ จนถึงคลังตัวอย่างและรายงาน ฉันออกแบบ UX/UI ทั้งระบบภายในประมาณ 2 เดือน</p>
+</div>
+<div class="stage">
+<div class="laptop">
+<div class="lscreen"><img src="assets/e21909bec90e7e3cf627caa94614fb9c.jpg" alt="หน้าเข้าสู่ระบบ N-CONNECT ของ Newborn Connect"></div>
+<div class="lbase"></div>
+</div>
+</div>
+<div class="g4">
+<div class="card"><p class="lbl">บทบาท</p><p class="body" style="font-weight: 600">UX/UI Designer</p></div>
+<div class="card"><p class="lbl">ลูกค้า</p><p class="body">กรมวิทยาศาสตร์การแพทย์</p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body">ประมาณ 2 เดือน</p></div>
+<div class="card"><p class="lbl">ขอบเขต</p><p class="body">6 โมดูล · 200+ หน้าจอ</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px" data-tldr="1"><p class="lbl">สรุปใน 30 วินาที</p><div class="tldr2"><div><b>โจทย์</b><p>ตัวอย่างเลือดทารกนับพันผ่านหลายขั้นและหลายมือ ผิดคนหรือหลุดการติดตามไม่ได้</p></div><div><b>สิ่งที่ฉันทำ</b><p>เรียนรู้งานแล็บจากผู้ใช้จริง วาง pattern กลาง แล้วโฟกัสหน้าที่ยาก เช่น ผังหลุมและการรับรองผล</p></div><div><b>ผลลัพธ์</b><p>ออกแบบ 6 โมดูล กว่า 200 หน้าจอ เสร็จภายใน 2 เดือน ส่งงานให้ Dev ทีละโมดูล</p></div></div></div>
+</header>
+
+
+<section id="s1" class="sec reveal">
+<div class="krow"><p class="kicker">01 · ระบบนี้ทำอะไร</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">เลือดหยดเดียวของทารก เดินทางผ่าน 6 โมดูล</h2>
+<p class="body">ทารกแรกเกิดทุกคนได้รับการเจาะเลือดบนกระดาษซับเลือดเพื่อคัดกรองโรค เช่น ภาวะพร่องไทรอยด์ (TSH) และโรคพันธุกรรมเมตาบอลิก (IEM) ระบบนี้ดูแลตัวอย่างตั้งแต่ถึงศูนย์จนออกผล แบ่งงานตามขั้นของห้องปฏิบัติการ</p>
+<div class="steps">
+<div><span class="n">Pre</span><span class="body" style="font-size: 14px; font-weight: 600">รับและลงทะเบียนตัวอย่าง</span></div>
+<div><span class="n">Analytic</span><span class="body" style="font-size: 14px; font-weight: 600">เจาะ ตรวจ และรับรองผล</span></div>
+<div><span class="n">Post</span><span class="body" style="font-size: 14px; font-weight: 600">ติดตามผลผิดปกติ</span></div>
+<div><span class="n">Bank</span><span class="body" style="font-size: 14px; font-weight: 600">คลังตัวอย่างและรายงาน</span></div>
+</div>
+<p class="lbl" style="margin-top: 8px">ลองกดดูหน้าจอจริงของแต่ละโมดูล ตามลำดับงานในห้องปฏิบัติการ</p>
+<div class="mgrp" role="group" aria-label="กลุ่มเมนู">
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Setup</span>
+<span class="price" style="font-size: 18px">ตั้งค่าระบบ</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Pre-Analytic</span>
+<span class="price" style="font-size: 18px">ก่อนตรวจ</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="true">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Analytic</span>
+<span class="price" style="font-size: 18px">ตรวจวิเคราะห์</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Post-Analytic</span>
+<span class="price" style="font-size: 18px">หลังตรวจ</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Report</span>
+<span class="price" style="font-size: 18px">15 รายงาน</span>
+</button>
+
+<button type="button" class="opt" aria-pressed="false">
+<span style="font-size: 14px; font-weight: 600; line-height: 1.45">Blood Bank</span>
+<span class="price" style="font-size: 18px">คลังตัวอย่าง</span>
+</button>
+
+</div>
+<div class="viewer fade">
+<div class="shot"><img src="assets/3f035164b3b414bd572362a23835e37a.jpg" alt="หน้า Punch Cutting"></div>
+<div class="receipt">
+<p class="lbl" style="color: #DFFF1A">Analytic</p>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">Punching</span><span style="text-align: right">วางตัวอย่างลงผังหลุม TSH / IEM</span></div>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">นำเข้าผล</span><span style="text-align: right">นำเข้าผลจากเครื่องหรือกรอกเอง</span></div>
+
+<div class="row" style="color: #C9D1E6; border-bottom: 1px dashed rgba(255,255,255,.15); padding-bottom: 8px"><span style="color: #FFFFFF; font-weight: 600">รับรองผล</span><span style="text-align: right">ตรวจ QC แล้วอนุมัติผล</span></div>
+
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #DFFF1A">โมดูลที่ซับซ้อนที่สุด เป็นงานละเอียดของนักวิทยาศาสตร์การแพทย์</p>
+</div>
+</div>
+</section>
+
+
+<section id="s2" class="sec reveal">
+<div class="krow"><p class="kicker">02 · ทีมและวิธีทำงาน</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ระบบใหญ่ เวลาสั้น ต้องทำงานเป็นระบบ</h2>
+<div class="team" aria-label="ทีมในโปรเจกต์"><span>PM</span><span>BA</span><span class="me">UX/UI Designer · ฉัน</span><span>SA</span><span>Dev</span><span>QA</span></div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">จังหวะการทำงาน (2 เดือน)</p><p class="body" style="color: #FFFFFF; font-weight: 600">ไล่ flow ห้องปฏิบัติการกับ BA → วาง pattern กลาง → ออกแบบทีละโมดูล → รีวิวกับผู้ใช้ → ติดสถานะ Ready for dev ใน Figma ทีละหน้า → ส่งต่อ Dev</p></div>
+<div class="g3">
+<div class="card"><p class="lbl">6 โมดูล 200+ หน้าจอ</p><p class="body" style="font-size: 14px">Setup, Pre-Analytic, Analytic, Post-Analytic, Report และ Blood Bank</p></div>
+<div class="card"><p class="lbl">ส่งงานแบบ Ready for dev</p><p class="body" style="font-size: 14px">ติดสถานะใน Figma ทีละหน้า Dev เริ่มงานโมดูลที่พร้อมได้ก่อน ไม่ต้องรอครบทั้งระบบ</p></div>
+<div class="card"><p class="lbl">เรียนรู้งานแล็บ</p><p class="body" style="font-size: 14px">ต้องเข้าใจขั้นตอนของนักวิทยาศาสตร์การแพทย์ เช่น การเจาะตัวอย่างลงผังหลุมและการตรวจ QC</p></div>
+</div>
+</section>
+
+
+<section id="s3" class="sec reveal">
+<div class="krow"><p class="kicker">03 · โจทย์และเป้าหมาย</p><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">ทุกตัวอย่างคือทารกหนึ่งคน ผิดพลาดไม่ได้</h2>
+<p class="body">ตัวอย่างเลือดจากโรงพยาบาลทั่วประเทศส่งเข้าศูนย์ทุกวัน แต่ละตัวอย่างผ่านหลายขั้นและหลายคน ถ้าข้อมูลผิดคนหรือผลผิดปกติหลุดการติดตาม ทารกอาจไม่ได้รับการรักษาทันเวลา</p>
+<div style="background: #1C2440; border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="lbl" style="color: #FF8A5C">Problem statement</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.2vw, 24px); line-height: 1.55; color: #F7F9FD">“เจ้าหน้าที่ห้องปฏิบัติการต้องติดตามตัวอย่างนับพันตั้งแต่รับเข้าจนออกผล ให้ถูกคนและทันเวลา แต่ขั้นตอนมีหลายส่วนและข้อมูลต้องส่งต่อกันหลายมือ”</p>
+</div>
+<div class="g3">
+<div class="card"><p class="lbl">เจ้าหน้าที่โรงพยาบาล</p><p class="body" style="font-size: 14px">ส่งข้อมูลทารกและตัวอย่าง รับผล และแจ้งผลการตรวจยืนยัน</p></div>
+<div class="card"><p class="lbl">นักวิทยาศาสตร์การแพทย์</p><p class="body" style="font-size: 14px">เจาะตัวอย่าง ตรวจวิเคราะห์ ตรวจ QC และรับรองผล</p></div>
+<div class="card"><p class="lbl">เจ้าหน้าที่ติดตามผล</p><p class="body" style="font-size: 14px">ติดตามทารกที่ผลผิดปกติจนได้รับการตรวจยืนยัน</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">เป้าหมาย</p><p class="body" style="font-size: 14px">ติดตามตัวอย่างได้ทุกขั้น · ลดความผิดพลาดของข้อมูลและผล · ทารกที่ผลผิดปกติไม่หลุดการติดตาม</p></div>
+<div class="card"><p class="lbl">ระยะเวลา</p><p class="body" style="font-size: 14px">ประมาณ 2 เดือน ส่งงานออกแบบทีละโมดูล</p></div>
+</div>
+</section>
+
+
+<section id="spo" class="sec reveal">
+<div class="krow"><p class="kicker">04 · มุมมอง PO / PM</p><span class="badge b-po">ทักษะ PO</span><span class="badge b-po">ทักษะ PM</span></div>
+<h2 class="h2">ออกแบบระบบที่ชีวิตทารกขึ้นอยู่กับความถูกต้อง ภายใน 2 เดือน</h2>
+<p class="body">ในโปรเจกต์นี้ฉันเป็น UX/UI Designer และทำงานใกล้ชิดกับ PM และ BA ส่วนนี้แยกให้ชัดว่าเรื่องไหนฉัน <span class="own own-me">ทำเอง</span> และเรื่องไหนฉัน <span class="own own-co">มีส่วนร่วม</span></p>
+<nav class="life" aria-label="วงจรการทำงาน PO/PM">
+<a href="#po1"><span class="ln2">01</span><span class="lt">เข้าใจปัญหา</span><span class="le">Discovery</span></a>
+<a href="#po2"><span class="ln2">02</span><span class="lt">ตั้งเป้าและคุณค่า</span><span class="le">Define</span></a>
+<a href="#po3"><span class="ln2">03</span><span class="lt">วางแผน</span><span class="le">Plan</span></a>
+<a href="#po4"><span class="ln2">04</span><span class="lt">ระหว่างพัฒนา</span><span class="le">Execute</span></a>
+<a href="#po5"><span class="ln2">05</span><span class="lt">ส่งมอบและเปิดใช้</span><span class="le">Launch</span></a>
+<a href="#po6"><span class="ln2">06</span><span class="lt">วัดผลและปรับปรุง</span><span class="le">Iterate</span></a>
+</nav>
+
+<div class="phead" id="po1"><span class="pnum">01</span><h3>ใครเกี่ยวข้อง และต้องดูแลแต่ละคนอย่างไร</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<p class="body" style="font-size: 14px">ระบบสาธารณสุขระดับประเทศ มีผู้ใช้ทั้งในศูนย์และโรงพยาบาลทั่วประเทศ</p>
+<div class="shmap">
+<div class="shcol"><p class="lbl">ฝั่งกรมวิทยาศาสตร์การแพทย์</p>
+<div class="shrow"><div><b>ศูนย์ตรวจคัดกรอง</b><br><span class="lv lv-h">ดูแลใกล้ชิด</span></div><span>เจ้าของระบบ กำหนดขั้นตอนห้องปฏิบัติการและตรวจรับงาน</span></div>
+<div class="shrow"><div><b>นักวิทยาศาสตร์การแพทย์</b><br><span class="lv lv-h">ผู้ใช้งานหลัก</span></div><span>ใช้ระบบทุกวันในงานตรวจวิเคราะห์</span></div>
+<div class="shrow"><div><b>โรงพยาบาลทั่วประเทศ</b><br><span class="lv lv-m">ผู้ใช้งานจริง</span></div><span>ส่งตัวอย่างและรับผล</span></div>
+<div class="shrow"><div><b>ทีมติดตามผู้ป่วย</b><br><span class="lv lv-m">ผู้ใช้งานจริง</span></div><span>ติดตามทารกที่ผลผิดปกติ</span></div>
+</div>
+<div class="shcol"><p class="lbl">ฝั่งทีมพัฒนา</p>
+<div class="shrow"><div><b>PM</b></div><span>วางแผนให้ทันใน 2 เดือน</span></div>
+<div class="shrow"><div><b>BA · SA</b></div><span>สรุปขั้นตอนห้องปฏิบัติการและออกแบบระบบหลังบ้าน</span></div>
+<div class="shrow"><div><b>Dev · QA</b></div><span>เริ่มพัฒนาจากโมดูลที่ Ready for dev</span></div>
+<div class="shrow" style="background: #F4FFC2"><div><b>ฉัน · UX/UI</b></div><span>แปลงงานแล็บที่ซับซ้อนเป็นหน้าจอที่ทำงานได้ถูกและเร็ว</span></div>
+</div>
+</div>
+
+<div class="phead" id="po2"><span class="pnum">02</span><h3>ทำไปเพื่ออะไร และวัดผลอย่างไร</h3><span class="own own-me">ทำเอง</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ทารกได้รับการรักษาทันเวลา</p><p class="body" style="font-size: 14px">ผลผิดปกติออกเร็วและถูกติดตามจนตรวจยืนยัน</p></div>
+<div class="card"><p class="lbl">ลดความผิดพลาดในแล็บ</p><p class="body" style="font-size: 14px">ผังหลุม การ match QC และสถานะทุกขั้น ช่วยให้ข้อมูลไม่สลับกัน</p></div>
+<div class="card"><p class="lbl">ข้อมูลระดับประเทศ</p><p class="body" style="font-size: 14px">รายงานตามเขตสุขภาพและไตรมาส ใช้วางแผนด้านสาธารณสุข</p></div>
+</div><p class="subl">ตัวชี้วัดที่เสนอให้ทีมติดตาม </p>
+<div class="card" style="gap: 14px">
+<p class="body" style="font-size: 14px">ตั้ง funnel ดูว่าตัวอย่างหลุดหรือช้าที่ขั้นไหน <span style="color: #5A6380">(ตัวเลขด้านล่างเป็นภาพตัวอย่าง ไม่ใช่ผลจริง)</span></p>
+<div class="funnel">
+<div class="frow"><span>รับตัวอย่าง</span><div class="ftrack"><div class="ffill" style="width: 100%">100%</div></div></div>
+<div class="frow"><span>ผ่านคุณภาพตัวอย่าง</span><div class="ftrack"><div class="ffill" style="width: 95%">95%</div></div></div>
+<div class="frow"><span>รับรองผลแล้ว</span><div class="ftrack"><div class="ffill" style="width: 93%">93%</div></div></div>
+<div class="frow"><span>รายงานผลทัน TAT</span><div class="ftrack"><div class="ffill" style="width: 88%; background: linear-gradient(90deg,#CC4116,#FF7A4D)">88%</div></div></div>
+</div>
+<p class="body" style="font-size: 14px"><b>ติดตามเพิ่ม:</b> Turn Around Time ของแต่ละขั้น · จำนวนตัวอย่างที่ต้องตรวจซ้ำ · ทารกที่ผลผิดปกติแต่ยังไม่ได้ตรวจยืนยัน</p>
+</div>
+<div class="phead" id="po3"><span class="pnum">03</span><h3>วางแผนให้ทันใน 2 เดือน</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">แผน 8 สัปดาห์ </p>
+<div class="gantt"><div class="gg" style="grid-template-columns: 150px repeat(4, minmax(56px, 1fr))">
+<span></span><span class="gh">W1–2</span><span class="gh">W3–4</span><span class="gh">W5–6</span><span class="gh">W7–8</span>
+<span class="gl">Flow &amp; pattern กลาง</span><div class="gbar" style="grid-column: 2 / span 1; background: #A9C4FF; color: #1C2440">flow แล็บ</div>
+<span class="gl">Setup &amp; Pre-Analytic</span><div class="gbar" style="grid-column: 2 / span 2; background: #2457E6; color: #FFFFFF">Ready for dev ก่อน</div>
+<span class="gl">Analytic</span><div class="gbar" style="grid-column: 3 / span 2; background: #1C2440; color: #FFFFFF">punching · ผล · QC</div>
+<span class="gl">Post · Bank · Report</span><div class="gbar" style="grid-column: 4 / span 2; background: #FF7A4D; color: #1C2440">ติดตาม · คลัง · 15 รายงาน</div>
+<span class="gl">ส่งต่อ Dev</span><div class="gbar" style="grid-column: 3 / span 3; background: #DFFF1A; color: #1C2440">ทีละโมดูล</div>
+<span class="gl" style="color: #A33410">Milestone</span><span class="gms" style="grid-column: 2"><i></i>Pattern กลาง</span><span class="gms" style="grid-column: 3"><i></i>โมดูลแรก ready</span><span class="gms" style="grid-column: 4"><i></i>Change request</span><span class="gms" style="grid-column: 5"><i></i>ครบทุกโมดูล</span>
+</div></div>
+<p class="subl">จัดลำดับขอบเขต (MoSCoW) </p>
+<div class="mosc">
+<div class="mcol" style="background: #2457E6; color: #FFFFFF"><h3>Must <small>ต้องมี</small></h3><div class="sticky">ลงทะเบียนตัวอย่าง</div><div class="sticky">Punching และนำเข้าผล</div><div class="sticky">รับรองผลพร้อม QC</div><div class="sticky">ติดตามผลผิดปกติ</div></div>
+<div class="mcol" style="background: #A9C4FF; color: #1C2440"><h3>Should <small>ควรมี</small></h3><div class="sticky">คลังตัวอย่าง</div><div class="sticky">รายงาน 15 แบบ</div></div>
+<div class="mcol" style="background: #FFC9B5; color: #1C2440"><h3>Could <small>ถ้ามีเวลา</small></h3><div class="sticky">Dashboard ภาพรวมศูนย์</div></div>
+<div class="mcol" style="background: #1C2440; color: #FFFFFF"><h3>Won’t <small>ยังไม่ทำรอบนี้</small></h3><div class="sticky">แอปสำหรับผู้ปกครอง</div></div>
+</div><p class="subl">ความเสี่ยงและวิธีรับมือ <span class="own own-me">ทำเอง</span></p>
+<div class="g3">
+<div class="card"><p class="lbl">ข้อมูลทารกสลับคน</p><p class="body" style="font-size: 14px">ทุกหน้าแสดงเลขตัวอย่างชัดเจน และตรวจ match ก่อนรับรองผล</p></div>
+<div class="card"><p class="lbl">ผลผิดปกติหลุดการติดตาม</p><p class="body" style="font-size: 14px">มีสถานะติดตามและเมนูแจ้งผลการตรวจยืนยันแยกชัดเจน</p></div>
+<div class="card"><p class="lbl">เวลาแค่ 2 เดือน</p><p class="body" style="font-size: 14px">วาง pattern กลางก่อน และส่งงาน Ready for dev ทีละโมดูล</p></div>
+</div>
+<div class="phead" id="po4"><span class="pnum">04</span><h3>ระหว่างออกแบบ: ตัดสินใจและรับมือการเปลี่ยนแปลง</h3><span class="own own-me">ทำเอง</span></div>
+<p class="subl">User story ที่เขียนร่วมกับ BA </p>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">User story ตัวอย่าง</p>
+<p class="body" style="color: #FFFFFF; font-size: 16px">ในฐานะ <b>นักวิทยาศาสตร์การแพทย์</b> ฉันต้องการ <b>เห็นตัวอย่างที่ผล QC ไม่ match ก่อนกดอนุมัติผล</b> เพื่อ <b>ไม่ปล่อยผลที่ผิดพลาดออกไปถึงโรงพยาบาล</b></p>
+<p class="body" style="color: #C9D1E6; font-size: 14px; background: rgba(255,255,255,.06); border-radius: 10px; padding: 12px 14px"><b style="color: #DFFF1A">Given</b> นำเข้าผลจากเครื่องแล้ว <b style="color: #DFFF1A">When</b> เปิดหน้ารับรองผล <b style="color: #DFFF1A">Then</b> แถวที่ไม่ match แสดงเป็นสีแดงพร้อมป้าย UNMATCH และเลือกตรวจซ้ำได้ก่อนอนุมัติ</p></div><p class="subl">Trade-off: ทำละเอียดทุกหน้า หรือวาง pattern แล้วโฟกัสหน้ายาก <span class="own own-me">ทำเอง</span></p>
+<div class="dec">
+<div class="card"><p class="lbl" style="color: #5A6380">ทางเลือก A</p><p class="body" style="font-weight: 600">ออกแบบละเอียดทีละหน้าทั้ง 200+ หน้า</p><p class="body" style="font-size: 14px">แต่ละหน้าสวยเฉพาะตัว แต่ไม่ทันใน 2 เดือน และระบบจะไม่เป็นแบบเดียวกัน</p></div>
+<span class="vs" aria-hidden="true">vs</span>
+<div class="card" style="background: #E3EBFF"><p class="lbl">ทางเลือก B · ที่เลือก</p><p class="body" style="font-weight: 600">วาง pattern กลางให้หน้าตั้งค่าและรายงาน แล้วโฟกัสหน้าที่ซับซ้อน</p><p class="body" style="font-size: 14px">หน้าตั้งค่ากว่า 40 หน้าและรายงาน 15 แบบใช้โครงเดียวกัน เวลาที่เหลือใช้กับ punching รับรองผล และติดตามผู้ป่วย</p></div>
+</div><p class="subl">Change request ระหว่างออกแบบ </p>
+<div class="crflow">
+<div><b>1</b>ศูนย์ขอให้รองรับการเจาะตัวอย่างแบบ duplicate case</div>
+<div><b>2</b>ประเมินกับ BA: ผังหลุมและการ match ผลต้องรองรับ 2 แบบ</div>
+<div><b>3</b>ฉันเพิ่มตัวเลือก Single / Duplicate case ในหน้า Punch Cutting</div>
+<div><b>4</b>PM จัดเข้าแผนโดยไม่กระทบโมดูลอื่น</div>
+<div style="background: #F4FFC2"><b>5</b>ส่งงานครบทุกโมดูลภายใน 2 เดือน</div>
+</div>
+
+<div class="phead" id="po5"><span class="pnum">05</span><h3>ส่งมอบงานออกแบบให้ Dev</h3><span class="own own-me">ทำเอง</span></div>
+<p class="body" style="font-size: 14px">ก่อนติดสถานะ Ready for dev ในแต่ละหน้า ฉันใช้ checklist นี้</p>
+<div class="card" style="gap: 12px"><div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline"><p class="lbl">Ready for dev checklist · ลองกดติ๊กได้</p><span style="font-family: Outfit, sans-serif; font-weight: 600; color: #26327F">3 / 6</span></div>
+<div class="prog" aria-hidden="true"><div style="width: 50%"></div></div>
+<div class="chk"><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>รีวิว flow กับ BA และศูนย์แล้ว<small>ตรงกับขั้นตอนห้องปฏิบัติการจริง</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ครบทุก state<small>ว่าง, loading, error, สำเร็จ และไม่ match</small></span></button><button type="button" class="ck" aria-pressed="true"><span class="bx2" aria-hidden="true">✓</span><span>ใช้ component จากหน้า Component<small>ไม่มีชิ้นส่วนที่สร้างเฉพาะหน้าโดยไม่จำเป็น</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>ข้อความและสถานะเป็นภาษาเดียวกันทั้งระบบ<small>ชื่อสถานะตรงกับที่ BA กำหนด</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>อธิบายเงื่อนไขของปุ่มใน note<small>กดได้เมื่อไร และใครเห็น</small></span></button><button type="button" class="ck" aria-pressed="false"><span class="bx2" aria-hidden="true"></span><span>Walkthrough กับ Dev<small>ก่อนติดสถานะ Ready for dev</small></span></button></div>
+
+</div>
+
+<div class="phead" id="po6"><span class="pnum">06</span><h3>หลังส่งมอบ: ดูแลต่อและวางเฟสถัดไป</h3><span class="own own-co">มีส่วนร่วม</span></div>
+<div class="g3">
+<div class="card"><p class="lbl">ระหว่างพัฒนา</p><p class="body" style="font-size: 14px">ตอบคำถาม Dev และ QA และปรับหน้าจอเมื่อพบเงื่อนไขใหม่</p></div>
+<div class="card"><p class="lbl">Feedback → backlog</p><p class="body" style="font-size: 14px">รวบรวมความเห็นจากผู้ใช้ในศูนย์หลังได้ลองใช้</p></div>
+<div class="card"><p class="lbl">บทเรียนเรื่องเวลา</p><p class="body" style="font-size: 14px">การวาง pattern ตั้งแต่สัปดาห์แรกทำให้ส่งงาน 200+ หน้าทันเวลา</p></div>
+</div>
+<div class="card" style="background: #1C2440; border-top-color: #DFFF1A !important"><p class="lbl" style="color: #DFFF1A">Backlog เฟสถัดไป</p><p class="body" style="color: #FFFFFF; font-weight: 600">Dashboard ภาพรวมศูนย์ · แจ้งเตือนผลผิดปกติถึงโรงพยาบาล · ช่องทางแจ้งผลสำหรับผู้ปกครอง</p></div>
+</section>
+
+
+<section id="sp" class="sec reveal">
+<div class="krow"><p class="kicker">05 · กระบวนการ UX/UI</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">งานของ designer ไม่ได้มีแค่วาด UI</h2>
+<p class="body">ระบบนี้ต้องเข้าใจงานในห้องปฏิบัติการก่อนจะวาดได้ การออกแบบ UI จึงเป็นแค่ 1 ใน 6 ช่วงของงาน กดดูแต่ละช่วงได้</p>
+<div class="ptabs" role="tablist" aria-label="ขั้นตอนการทำงาน">
+
+<button type="button" class="ptab" role="tab" aria-selected="true"><span class="pn">01</span><span class="pt">ทำความเข้าใจโจทย์</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">02</span><span class="pt">กำหนดปัญหาและเป้าหมาย</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">03</span><span class="pt">วาง flow และโครงหน้า</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">04</span><span class="pt">ออกแบบ UI และ prototype</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">05</span><span class="pt">ทดสอบและปรับปรุง</span></button>
+
+<button type="button" class="ptab" role="tab" aria-selected="false"><span class="pn">06</span><span class="pt">ส่งต่อและดูแลจนขึ้นระบบ</span></button>
+
+</div>
+<div class="ppanel fade" role="tabpanel">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="lbl">01 · ทำความเข้าใจโจทย์</p>
+<p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.45; color: #1C2440">เข้าใจงานของห้องปฏิบัติการตั้งแต่รับตัวอย่างจนออกผล</p>
+<ul><li>เข้า workshop กับศูนย์ตรวจคัดกรองและ BA</li><li>ไล่เส้นทางของตัวอย่างเลือดทีละขั้น</li><li>ทำความเข้าใจศัพท์และงานแล็บ เช่น ผังหลุม, QC และ TSH / IEM</li></ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><p class="lbl" style="margin-bottom: 10px">ทำงานร่วมกับ</p><p class="body" style="font-size: 14px">BA · ศูนย์ตรวจคัดกรอง</p></div>
+<div><p class="lbl" style="margin-bottom: 10px">สิ่งที่ส่งมอบ</p><div><span class="pchip pc-d">Lab flow</span><span class="pchip pc-d">คำศัพท์ระบบ</span></div></div>
+<div><p class="lbl" style="margin-bottom: 10px; color: #CC4116">ทักษะ PO ที่ใช้</p><div><span class="pchip pc-p">Requirement analysis</span><span class="pchip pc-p">Stakeholder management</span></div></div>
+<div style="display: flex; gap: 8px; margin-top: auto"><button type="button" class="pnav" aria-disabled="true">← ก่อนหน้า</button><button type="button" class="pnav" aria-disabled="false">ถัดไป →</button></div>
+</div>
+
+</div>
+</section>
+
+
+<section id="s4" class="sec reveal">
+<div class="krow"><p class="kicker">06 · การออกแบบ</p><span class="badge b-ux">ทักษะ UX</span></div>
+<h2 class="h2">งานแล็บที่ละเอียด ทำให้ดูง่ายและผิดยาก</h2>
+<div class="gal">
+<figure><div class="shot"><img src="assets/face0ba98223a2b3d911100b93afe8df.jpg" alt="หน้า Punch Layout"></div><figcaption>Punch Layout · ตั้งผังหลุม 12 × 8 ด้วยสีและตัวย่อที่อ่านได้ทันที</figcaption></figure>
+<figure><div class="shot"><img src="assets/8c42dc6fb891b6fe5d95b60243bf634d.jpg" alt="หน้ารับรองผล IEM"></div><figcaption>รับรองผล · แถวที่ไม่ match ขึ้นสีแดง เห็นก่อนกดอนุมัติ</figcaption></figure>
+<figure><div class="shot"><img src="assets/9e11d32051f431b8811e621b23d46573.jpg" alt="หน้าคลังตัวอย่าง"></div><figcaption>คลังตัวอย่าง · กราฟวงกลมบอกความจุที่เหลือของแต่ละคลัง</figcaption></figure>
+</div>
+<div class="g2">
+<div class="card"><p class="lbl">สีมีความหมาย</p><p class="body" style="font-size: 14px">ในผังหลุมแต่ละสีบอกชนิดของหลุม ผู้ใช้ตรวจผังได้ด้วยตาก่อนเริ่มเจาะ</p></div>
+<div class="card"><p class="lbl">เตือนก่อนผิด</p><p class="body" style="font-size: 14px">ผลที่ไม่ match และตัวอย่างที่ต้องตรวจซ้ำ ถูกเน้นให้เห็นก่อนถึงขั้นอนุมัติ</p></div>
+<div class="card"><p class="lbl">โครงเดียว 200+ หน้า</p><p class="body" style="font-size: 14px">เมนู 6 โมดูล ตัวกรอง และตารางเหมือนกันทุกหน้า ผู้ใช้เรียนรู้ครั้งเดียว</p></div>
+<div class="card"><p class="lbl">รายงานแบบเดียวกัน</p><p class="body" style="font-size: 14px">15 รายงานใช้หน้าเลือกเงื่อนไขแบบเดียวกัน ต่างกันแค่ตัวกรอง</p></div>
+</div>
+</section>
+
+
+<section id="s5" class="sec reveal">
+<div class="krow"><p class="kicker">07 · ผลลัพธ์และบทเรียน</p><span class="badge b-ux">ทักษะ UX</span><span class="badge b-po">ทักษะ PO</span></div>
+<h2 class="h2">สิ่งที่ได้จากระบบสาธารณสุขระดับประเทศ</h2>
+<div class="g3">
+<div class="card"><p class="lbl">ครบ 6 โมดูล</p><p class="body" style="font-size: 14px">ออกแบบกว่า 200 หน้าจอ ตั้งแต่รับตัวอย่างจนคลังตัวอย่างและรายงาน</p></div>
+<div class="card"><p class="lbl">ภายใน 2 เดือน</p><p class="body" style="font-size: 14px">ส่งงานแบบ Ready for dev ทีละโมดูล Dev เริ่มงานได้ตั้งแต่สัปดาห์แรก ๆ</p></div>
+<div class="card"><p class="lbl">Component กลาง</p><p class="body" style="font-size: 14px">หน้า Component ใน Figma ทำให้ทั้งระบบเป็นแบบเดียวกัน</p></div>
+</div>
+<div class="g2">
+<div class="card"><p class="body" style="font-weight: 600">เข้าใจงานก่อน แล้วจึงออกแบบ</p><p class="body" style="font-size: 14px">การเรียนรู้งานแล็บจากผู้ใช้จริง ทำให้ออกแบบหน้าที่ซับซ้อนอย่าง punching ได้ถูกตั้งแต่รอบแรก ๆ</p></div>
+<div class="card"><p class="body" style="font-weight: 600">เวลาจำกัด ต้องเลือกให้เป็น</p><p class="body" style="font-size: 14px">ใช้ pattern กับหน้าทั่วไป แล้วลงแรงกับหน้าที่ความผิดพลาดมีผลต่อทารก</p></div>
+</div>
+</section>
+
+<a class="nextcard" href="CaseStudy9.html" style="background: #CC4116; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #FFE6DC">โปรเจกต์ถัดไป · อ่าน 5 นาที</span>
+<span style="font-family: 'IBM Plex Sans Thai', sans-serif; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.25">ธ.ก.ส. · D-HUB</span>
+</span>
+<span class="arrow" aria-hidden="true" style="flex: 0 0 auto; width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #CC4116; display: flex; align-items: center; justify-content: center"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></span>
+</a>
+
+
+</div>
+</div>
+</div>
 <script type="text/x-dc" id="dcsrc" data-props='{"$preview":{"width":1280,"height":12000}}'>
 class Component extends DCLogic {
 componentDidMount() {
