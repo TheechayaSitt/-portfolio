@@ -439,8 +439,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div></sc-if>
 
 <sc-if value="{{sl.isEnd}}"><div class="dkc dkcenter">
-<p class="dkk">จบสรุปแล้ว ขอบคุณที่ดูนะคะ</p>
-<h2 class="dkh dkhxl">สนใจคุยต่อไหมคะ?</h2>
+<p class="dkk">Thanks for watching</p>
+<h2 class="dkh dkhxl">Let’s talk!</h2>
 <p class="dks">Thewtheechaya@gmail.com</p>
 <div class="dkacts">
 <button type="button" class="dkbtn pri" onClick="{{copyEmail}}">{{copyLabel}}</button>
@@ -1583,18 +1583,18 @@ var deckSlides = [
 { isIntro: true },
 { isStats: true },
 { isList: true },
-{ isProj: true, kicker: 'DeFi · 2021 · UX + Product Owner', title: 'Meow Finance', img: 'assets/8f3aa77874f48c86b735bf2e831f686e.png', alt: 'หน้า Farm ของ Meow Finance', href: 'CaseStudy.html',
-problem: 'แพลตฟอร์ม yield farming และ lending บน Fantom Chain ที่ต้องทำเรื่องซับซ้อนให้ใช้ง่ายและปลอดภัย',
-did: ['วาง roadmap และจัดลำดับ backlog', 'เขียน requirement ให้ทีม frontend และ smart contract', 'ทำ UAT บน testnet ก่อน release ขึ้น mainnet'], stat: '14', statL: 'เดือน ดูแลทั้ง UX และ PO' },
 { isProj: true, kicker: 'การศึกษา · 2022 · ✓ ใช้งานจริงแล้ว', title: 'U-NEXT · ระบบมหาวิทยาลัย', img: 'assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg', alt: 'ระบบรับสมัครของ UTCC', href: 'CaseStudy2.html',
 problem: 'ระบบเดียวที่นักศึกษา อาจารย์ และเจ้าหน้าที่ใช้ร่วมกัน ตั้งแต่รับสมัครจนถึง Student Portal',
 did: ['ออกแบบครบทุกบทบาท เป็น UX/UI Designer คนเดียวในทีม', 'วาง design system ให้เปลี่ยนธีมตามแต่ละมหาวิทยาลัยได้', 'ระบบรับสมัคร UTCC เปิดใช้งานจริงแล้ว'], stat: '3', statL: 'มหาวิทยาลัย UTCC · KU · NIDA' },
 { isProj: true, kicker: 'Fintech · 2023 · AIS', title: 'AIS mPAY ONE', img: 'assets/8a5105c5f6572df3e9fe4d0edc5f87d8.jpg', alt: 'หน้า Transaction Inquiry ของ AIS mPAY ONE', href: 'CaseStudy4.html',
 problem: 'ระบบหลังบ้านของแพลตฟอร์มรับชำระเงิน ดูแลร้านค้า ตั้งค่าช่องทางชำระ ติดตามธุรกรรม และคืนเงิน',
 did: ['สรุปการตั้งค่าทุกช่องทางชำระเป็น matrix เดียว', 'ใช้ matrix กำหนดขอบเขตงานร่วมกับ BA และ Dev', 'ออกแบบให้ตั้งค่าทุกช่องทางได้ในฟอร์มเดียว'], stat: '8', statL: 'ช่องทางชำระเงิน' },
-{ isProj: true, kicker: 'B2B Product · 2026 · AI prototype', title: 'G-Core Portal', img: 'assets/619e4b1366591aeb059d4db33b87938f.jpg', alt: 'หน้า Performance ของ G-Core Portal', href: 'CaseStudy10.html',
-problem: 'Product ให้มหาวิทยาลัยที่ซื้อ NVIDIA GPU ใช้บริหารการจอง การใช้งาน และค่าบริการ GPU',
-did: ['ออกแบบ 7 บทบาทในระบบเดียว', 'ใช้ Claude Design สร้าง prototype ที่กดใช้ได้จริง', 'แบ่งส่งมอบเป็น MVP 0–5'], stat: '7', statL: 'บทบาท ในระบบเดียว' },
+{ isProj: true, kicker: 'พลังงาน · 2025 · Thaioil', title: 'Thaioil · Budget Management', img: 'assets/8b174653078d36e0061e78f3677b4d16.jpg', alt: 'หน้า Waiting List Notification ของระบบงบประมาณไทยออยล์', href: 'CaseStudy5.html',
+problem: 'ระบบบริหารงบประมาณทั้งระบบของไทยออยล์ ตั้งแต่ขอ โอน อนุมัติงบ จนสร้าง WBS',
+did: ['ออกแบบครบทุกโมดูล OPEX, CAPEX, Contingency และ RMA', 'ทุกบทบาทเห็นเฉพาะงานของตัวเองในระบบเดียว', 'ส่งมอบทีละโมดูลต่อเนื่อง บน pattern กลางชุดเดียว'], stat: '1', statL: 'ปี ออกแบบทั้งระบบ' },
+{ isProj: true, kicker: 'สาธารณสุข · 2025 · กรมวิทยาศาสตร์การแพทย์', title: 'Newborn Connect', img: 'assets/e21909bec90e7e3cf627caa94614fb9c.jpg', alt: 'หน้าเข้าสู่ระบบของ Newborn Connect', href: 'CaseStudy7.html',
+problem: 'ระบบบันทึกและติดตามการตรวจคัดกรองโรคในทารกแรกเกิด ตั้งแต่รับตัวอย่างเลือดจนรายงานผล',
+did: ['เรียนรู้งานห้องปฏิบัติการกับนักวิทยาศาสตร์การแพทย์ก่อนออกแบบ', 'วาง pattern กลางให้หน้าตั้งค่า 40+ หน้า', 'ส่งมอบครบ 6 โมดูลภายใน 2 เดือน'], stat: '200+', statL: 'หน้าจอ ใน 2 เดือน' },
 { isEnd: true }
 ];
 self._dkN = deckSlides.length;
