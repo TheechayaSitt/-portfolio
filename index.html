@@ -315,7 +315,18 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 @media (max-width:820px){.stats2{gap:10px}}
 @media (hover:none){.stats2 .sta{opacity:1;translate:0 0}}
 /* ===== Present mode ===== */
-.certgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.certgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:1000px){.certgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.span3{grid-column:1 / -1}
+.tmgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+@media (max-width:760px){.tmgrid{grid-template-columns:1fr}}
+.tmgrp{display:flex;flex-direction:column;gap:8px}
+.tmlbl{margin:0;font-size:12px;font-weight:600;letter-spacing:.06em;color:#5A6380}
+.tmrow{display:flex;flex-wrap:wrap;gap:8px}
+.tm{border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;transition:translate .2s,background .2s,color .2s}
+.tm.tmb{background:#E3EBFF;color:#26327F}
+.tm.tmo{background:#FFE3D6;color:#A33410}
+.tm:hover{translate:0 -3px;background:#DFFF1A;color:#1C2440}
 .certgrid .cert{align-items:center}
 @media (max-width:640px){.certgrid{grid-template-columns:1fr}}
 .stats2 .st{flex-direction:row !important;align-items:center !important;gap:0 !important;padding:14px 20px !important}
@@ -733,7 +744,7 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 </div></div>
 </div>
 
-<div class="lift span2" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<div class="lift span3" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ใบรับรอง</h3>
 <div class="certgrid">
 <div class="cert">
@@ -769,17 +780,14 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 </div>
 </div>
 
-<div class="lift" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<div class="lift span3" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ทีมที่ทำงานด้วย</h3>
-<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ประสานงานข้ามทีมตั้งแต่ออกแบบจนถึงหลัง release</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Developer</span>
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Tester / QA</span>
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">IT / Core system</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Call center</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">App support</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Compliance</span>
-<span style="background: #FFE3D6; color: #7A2A10; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Business / Marketing</span>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ประสานงานข้ามทีมตั้งแต่เก็บ requirement จนถึงหลัง release ใน 9 โปรเจกต์</p>
+</div>
+<div class="tmgrid">
+<div class="tmgrp"><p class="tmlbl">ทีมพัฒนาโปรดักต์ · 9 บทบาท</p><div class="tmrow"><span class="tm tmb">PM</span><span class="tm tmb">BA</span><span class="tm tmb">SA</span><span class="tm tmb">Developer</span><span class="tm tmb">Smart contract Dev</span><span class="tm tmb">Tester / QA</span><span class="tm tmb">Data team</span><span class="tm tmb">Infra / HPC</span><span class="tm tmb">IT / Core system</span></div></div>
+<div class="tmgrp"><p class="tmlbl">ฝั่งธุรกิจและผู้ใช้ · 10 กลุ่ม</p><div class="tmrow"><span class="tm tmo">Founder / ผู้บริหาร</span><span class="tm tmo">Business / Marketing</span><span class="tm tmo">Sales · Operations · Logistics</span><span class="tm tmo">ทีมงบประมาณ</span><span class="tm tmo">นักวิทยาศาสตร์การแพทย์</span><span class="tm tmo">นักวิจัย · อาจารย์</span><span class="tm tmo">Security / Compliance</span><span class="tm tmo">Call center</span><span class="tm tmo">App support</span><span class="tm tmo">Community ผู้ใช้</span></div></div>
 </div>
 </div>
 
@@ -1370,7 +1378,7 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 </div></div>
 </div>
 
-<div class="lift span2" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<div class="lift span3" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ใบรับรอง</h3>
 <div class="certgrid">
 <div class="cert">
@@ -1406,17 +1414,14 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 </div>
 </div>
 
-<div class="lift" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
+<div class="lift span3" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600">ทีมที่ทำงานด้วย</h3>
-<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ประสานงานข้ามทีมตั้งแต่ออกแบบจนถึงหลัง release</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Developer</span>
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Tester / QA</span>
-<span style="background: #E3EBFF; color: #26327F; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">IT / Core system</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Call center</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">App support</span>
-<span style="background: #FFE3D6; color: #A33410; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Compliance</span>
-<span style="background: #FFE3D6; color: #7A2A10; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500">Business / Marketing</span>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ประสานงานข้ามทีมตั้งแต่เก็บ requirement จนถึงหลัง release ใน 9 โปรเจกต์</p>
+</div>
+<div class="tmgrid">
+<div class="tmgrp"><p class="tmlbl">ทีมพัฒนาโปรดักต์ · 9 บทบาท</p><div class="tmrow"><span class="tm tmb">PM</span><span class="tm tmb">BA</span><span class="tm tmb">SA</span><span class="tm tmb">Developer</span><span class="tm tmb">Smart contract Dev</span><span class="tm tmb">Tester / QA</span><span class="tm tmb">Data team</span><span class="tm tmb">Infra / HPC</span><span class="tm tmb">IT / Core system</span></div></div>
+<div class="tmgrp"><p class="tmlbl">ฝั่งธุรกิจและผู้ใช้ · 10 กลุ่ม</p><div class="tmrow"><span class="tm tmo">Founder / ผู้บริหาร</span><span class="tm tmo">Business / Marketing</span><span class="tm tmo">Sales · Operations · Logistics</span><span class="tm tmo">ทีมงบประมาณ</span><span class="tm tmo">นักวิทยาศาสตร์การแพทย์</span><span class="tm tmo">นักวิจัย · อาจารย์</span><span class="tm tmo">Security / Compliance</span><span class="tm tmo">Call center</span><span class="tm tmo">App support</span><span class="tm tmo">Community ผู้ใช้</span></div></div>
 </div>
 </div>
 
