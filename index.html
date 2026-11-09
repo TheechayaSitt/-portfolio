@@ -326,6 +326,15 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .stats2 .stn{font-size:clamp(28px,3vw,34px) !important}
 .stats2 .stl{font-size:13px !important;line-height:1.45 !important}
 @media (max-width:560px){.stats2 .st{padding:14px !important}}
+.skg{display:flex;flex-direction:column;gap:14px;margin-bottom:26px}
+.skgrp{display:flex;flex-direction:column;gap:7px}
+.sklbl,.tlbl{margin:0;font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.sklbl{color:#DFFF1A}
+.tlbl{color:#9FB0DA}
+.skrow{display:flex;flex-wrap:wrap;gap:7px}
+.tgrp{display:flex;flex-direction:column;gap:7px}
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.tool.learn{background:transparent;color:#E8EEFF;border:1px dashed rgba(255,255,255,.35);padding:8px 10px;font-size:12.5px}
 .livebadge{display:inline-flex;align-items:center;margin-left:4px;padding:3px 9px;border-radius:999px;background:#DFFF1A;color:#1C2440;font-size:11.5px;font-weight:600;line-height:1.3;white-space:nowrap}
 @property --n{syntax:'<integer>';inherits:false;initial-value:0}
 .dkopen{background:rgba(255,255,255,.1);color:#FFFFFF;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;font-family:inherit}
@@ -686,9 +695,13 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 <h2 class="h2" style="max-width: 760px">ทั้งดูแลโปรดักต์ <em style="color: #1C2440">และออกแบบประสบการณ์</em> นี่คือทักษะ เครื่องมือ และทีมที่ฉันทำงานด้วย</h2>
 <div class="bento">
 <div class="span2 lift skillbox" style="background: #2457E6; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 240px; box-sizing: border-box">
-<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; margin-bottom: 28px">
-<sc-for list="{{skills}}" as="s" hint-placeholder-count="8">
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">{{s.label}}</span>
+<div class="skg">
+<sc-for list="{{skillGroups}}" as="g" hint-placeholder-count="3">
+<div class="skgrp"><p class="sklbl">{{g.name}}</p><div class="skrow">
+<sc-for list="{{g.items}}" as="s" hint-placeholder-count="5">
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">{{s}}</span>
+</sc-for>
+</div></div>
 </sc-for>
 </div>
 <div style="max-width: 320px">
@@ -699,14 +712,24 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 
 <div class="lift" style="background: #1C2440; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600; color: #FFFFFF">เครื่องมือ</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
-<span class="tool"><img src="assets/97f663bd264dad9c25c6369ef43bfad5.svg" alt="">Jira</span>
+<div class="tgrp"><p class="tlbl">ออกแบบ</p><div class="tgrid">
 <span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma</span>
-<span class="tool"><img src="assets/48c92eabc451137ead9e59808fb78c10.svg" alt="">draw.io</span>
-<span class="tool"><img src="assets/79c1cc66702cb684621119102a123201.svg" alt="">Miro</span>
 <span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma AI</span>
 <span class="tool"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="flex: 0 0 auto"><path d="M12 2C12.8 8 16 11.2 22 12C16 12.8 12.8 16 12 22C11.2 16 8 12.8 2 12C8 11.2 11.2 8 12 2Z" fill="#D97757"></path></svg>Claude Design</span>
-</div>
+</div></div>
+<div class="tgrp"><p class="tlbl">ทำงานกับทีม</p><div class="tgrid">
+<span class="tool"><img src="assets/97f663bd264dad9c25c6369ef43bfad5.svg" alt="">Jira</span>
+<span class="tool"><img src="assets/79c1cc66702cb684621119102a123201.svg" alt="">Miro</span>
+<span class="tool"><img src="assets/48c92eabc451137ead9e59808fb78c10.svg" alt="">draw.io</span>
+</div></div>
+<div class="tgrp"><p class="tlbl">กำลังเรียนรู้ · Data &amp; Research</p><div class="tgrid">
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9AB00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 20v-5M12 20V10M19 20V4"/></svg>Google Analytics 4</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FA8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>SQL</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FA8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 3v9l7.8 4.5"/><circle cx="12" cy="12" r="9"/></svg>Looker Studio</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 4h16v16H4zM8 4v8h4M16 20v-8h-4M4 16h4"/></svg>Maze</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 21c4 0 6.5-2.6 6.5-6.2 0-3.4-2.4-5.6-4-8.3-.6 2-1.6 3-2.8 3.4.3-2.6-.5-5.2-2.7-6.9.2 3.3-4.5 5.9-4.5 11.5C4.5 18.2 7.6 21 12 21z"/></svg>Hotjar</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8v8M9 8l6 8M15 8v8"/></svg>Notion</span>
+</div></div>
 </div>
 
 <div class="lift span2" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
@@ -1271,39 +1294,51 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 <h2 class="h2" style="max-width: 760px">ทั้งดูแลโปรดักต์ <em style="color: #1C2440">และออกแบบประสบการณ์</em> นี่คือทักษะ เครื่องมือ และทีมที่ฉันทำงานด้วย</h2>
 <div class="bento">
 <div class="span2 lift skillbox" style="background: #2457E6; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 240px; box-sizing: border-box">
-<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; margin-bottom: 28px">
+<div class="skg">
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Product Roadmap</span>
+<div class="skgrp"><p class="sklbl">Product · PO / PM</p><div class="skrow">
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">UX/UI Design</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Product Roadmap</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">User Story &amp; Backlog</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">User Story &amp; Backlog</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Prioritization (MoSCoW)</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Prioritization (MoSCoW)</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Requirement Analysis</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Feature Spec</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Customer Journey</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">MVP &amp; UAT</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Business Flow</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Business Analytics</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Feature Spec</span>
+</div></div>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Agile / Scrum</span>
+<div class="skgrp"><p class="sklbl">ทำงานกับทีมและธุรกิจ</p><div class="skrow">
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">MVP &amp; UAT</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Agile / Scrum</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Stakeholder Management</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Requirement Analysis</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Workshop Facilitation</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Business Flow</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Design System</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Stakeholder Management</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">AI Prototyping</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Workshop Facilitation</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Business Analytics</span>
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">PCI DSS / Compliance</span>
 
-<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">PCI DSS / Compliance</span>
+</div></div>
+
+<div class="skgrp"><p class="sklbl">UX/UI</p><div class="skrow">
+
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">UX/UI Design</span>
+
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Customer Journey</span>
+
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">Design System</span>
+
+<span class="pill" style="background: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; color: #36405E; box-shadow: 0 4px 10px rgba(28,36,64,.12)">AI Prototyping</span>
+
+</div></div>
 
 </div>
 <div style="max-width: 320px">
@@ -1314,14 +1349,24 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 
 <div class="lift" style="background: #1C2440; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
 <h3 style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-size: 20px; font-weight: 600; color: #FFFFFF">เครื่องมือ</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
-<span class="tool"><img src="assets/97f663bd264dad9c25c6369ef43bfad5.svg" alt="">Jira</span>
+<div class="tgrp"><p class="tlbl">ออกแบบ</p><div class="tgrid">
 <span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma</span>
-<span class="tool"><img src="assets/48c92eabc451137ead9e59808fb78c10.svg" alt="">draw.io</span>
-<span class="tool"><img src="assets/79c1cc66702cb684621119102a123201.svg" alt="">Miro</span>
 <span class="tool"><img src="assets/537ff89f4ba0a1c85ae638ff155e204f.svg" alt="">Figma AI</span>
 <span class="tool"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="flex: 0 0 auto"><path d="M12 2C12.8 8 16 11.2 22 12C16 12.8 12.8 16 12 22C11.2 16 8 12.8 2 12C8 11.2 11.2 8 12 2Z" fill="#D97757"></path></svg>Claude Design</span>
-</div>
+</div></div>
+<div class="tgrp"><p class="tlbl">ทำงานกับทีม</p><div class="tgrid">
+<span class="tool"><img src="assets/97f663bd264dad9c25c6369ef43bfad5.svg" alt="">Jira</span>
+<span class="tool"><img src="assets/79c1cc66702cb684621119102a123201.svg" alt="">Miro</span>
+<span class="tool"><img src="assets/48c92eabc451137ead9e59808fb78c10.svg" alt="">draw.io</span>
+</div></div>
+<div class="tgrp"><p class="tlbl">กำลังเรียนรู้ · Data &amp; Research</p><div class="tgrid">
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F9AB00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 20v-5M12 20V10M19 20V4"></path></svg>Google Analytics 4</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FA8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"></ellipse><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"></path></svg>SQL</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FA8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 3v9l7.8 4.5"></path><circle cx="12" cy="12" r="9"></circle></svg>Looker Studio</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 4h16v16H4zM8 4v8h4M16 20v-8h-4M4 16h4"></path></svg>Maze</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 21c4 0 6.5-2.6 6.5-6.2 0-3.4-2.4-5.6-4-8.3-.6 2-1.6 3-2.8 3.4.3-2.6-.5-5.2-2.7-6.9.2 3.3-4.5 5.9-4.5 11.5C4.5 18.2 7.6 21 12 21z"></path></svg>Hotjar</span>
+<span class="tool learn"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M9 8v8M9 8l6 8M15 8v8"></path></svg>Notion</span>
+</div></div>
 </div>
 
 <div class="lift span2" style="background: #FFE9DF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box">
@@ -1593,6 +1638,11 @@ var marquee = words.concat(words);
 var tilts = ['rotate(-8deg)','rotate(6deg)','rotate(-3deg)','rotate(9deg)','rotate(-6deg)','rotate(4deg)','rotate(-2deg)','rotate(7deg)'];
 var labels = ['Product Roadmap','UX/UI Design','User Story & Backlog','Prioritization (MoSCoW)','Requirement Analysis','Customer Journey','Business Flow','Feature Spec','Agile / Scrum','MVP & UAT','Stakeholder Management','Workshop Facilitation','Design System','AI Prototyping','Business Analytics','PCI DSS / Compliance'];
 var skills = labels.map(function (l, i) { return { label: l, tilt: tilts[i % tilts.length] }; });
+var skillGroups = [
+{ name: 'Product · PO / PM', items: ['Product Roadmap', 'User Story & Backlog', 'Prioritization (MoSCoW)', 'Feature Spec', 'MVP & UAT', 'Business Analytics'] },
+{ name: 'ทำงานกับทีมและธุรกิจ', items: ['Agile / Scrum', 'Requirement Analysis', 'Business Flow', 'Stakeholder Management', 'Workshop Facilitation', 'PCI DSS / Compliance'] },
+{ name: 'UX/UI', items: ['UX/UI Design', 'Customer Journey', 'Design System', 'AI Prototyping'] }
+];
 
 var jobsData = [
 { period: 'มี.ค. 2022 – ปัจจุบัน · 4 ปี 8 เดือน', role: 'UX/UI Designer', org: 'G-ABLE Group · Full-time · Remote', dot: accent, logo: 'assets/842c0142205d97fb74f4aba4ac7a37bc.png', bullets: [
@@ -1727,7 +1777,7 @@ segs = segs.map(function (g, i) { return { cls: g.cls, st: g.st, label: 'ไป�
 var copied = !!s.copied;
 var typed = s.typed == null ? 'Product Owner' : s.typed;
 return {
-accent: accent, stats: stats, marquee: marquee, skills: skills, jobs: jobs, steps: steps, cur: cur,
+accent: accent, stats: stats, marquee: marquee, skills: skills, skillGroups: skillGroups, jobs: jobs, steps: steps, cur: cur,
 filters: filters, projects: projects,
 copyLabel: copied ? 'คัดลอกแล้ว' : 'คัดลอกอีเมล',
 typed: typed,
