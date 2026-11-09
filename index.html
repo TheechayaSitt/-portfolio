@@ -1344,37 +1344,15 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <div style="display: flex; flex-direction: column; gap: 12px">
 
 <div class="jobcard" style="background: #FFFFFF; border: 1px solid #DCE4F2; border-left: 5px solid #2457E6; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 24px rgba(28,36,64,.10)">
-<button type="button" class="jobbtn" aria-expanded="true" style="width: 100%; background: transparent; border: 0; padding: 20px 22px; display: flex; align-items: center; gap: 16px; text-align: left; color: #1C2440; min-height: 44px">
+<button type="button" class="jobbtn" aria-expanded="false" style="width: 100%; background: transparent; border: 0; padding: 20px 22px; display: flex; align-items: center; gap: 16px; text-align: left; color: #1C2440; min-height: 44px">
 <img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 4px 10px rgba(28,36,64,.18)">
 <span style="flex: 1; display: flex; flex-direction: column; gap: 2px">
 <span style="font-size: 13px; color: #5A6380">มี.ค. 2022 – ปัจจุบัน · 4 ปี 8 เดือน</span>
 <span style="font-size: 18px; font-weight: 600">UX/UI Designer</span>
 <span style="font-size: 14px; color: #4A5370">G-ABLE Group · Full-time · Remote</span>
 </span>
-<svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="rotate: 180deg"><path d="M5 8L10 13L15 8"></path></svg>
+<svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="rotate: 0deg"><path d="M5 8L10 13L15 8"></path></svg>
 </button>
-
-<ul class="fade" style="margin: 0; padding: 0 22px 20px 50px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6; color: #36405E">
-
-<li>ออกแบบ UX/UI ระบบมหาวิทยาลัยของ U-NEXT ที่ขายให้ 3 สถาบัน (UTCC, KU, NIDA) ทั้งระบบรับสมัครพร้อม Back Office ระบบตัดเกรดของอาจารย์ และ Student Portal</li>
-
-<li>เป็น UX/UI Designer คนเดียวในทีม ทำงานร่วมกับ PM, BA, SA และ Dev แบบ Agile</li>
-
-<li>ออกแบบ UX/UI ของ AIS PCI Web Portal ระบบหลังบ้านกว่า 20 หน้าจอ ให้เป็นไปตามมาตรฐาน PCI DSS ฉบับใหม่</li>
-
-<li>ออกแบบ UX/UI ของ AIS mPAY ONE ระบบหลังบ้านแพลตฟอร์มรับชำระเงิน รองรับ 8 ช่องทางชำระ</li>
-
-<li>ออกแบบ UX/UI ระบบบริหารงบประมาณ (Budget Management System) ทั้งระบบของไทยออยล์ ต่อเนื่อง 1 ปี</li>
-
-<li>ออกแบบ UX/UI ระบบ Newborn Connect ของกรมวิทยาศาสตร์การแพทย์ 6 โมดูล กว่า 200 หน้าจอ ภายใน 2 เดือน</li>
-
-<li>ออกแบบ UX/UI ของ D-HUB portal ข้อมูลภายในของ ธ.ก.ส. รวม Chat AI และปรับหน้าแรก 5 รอบตาม feedback</li>
-
-<li>ออกแบบ UX/UI ด้วย Figma AI ระบบติดตามคำสั่งซื้อของ TIPCO Asphalt 5 เมนู ตั้งแต่ติดตาม order การขนส่ง ขอเอกสาร จนถึงสิทธิ์ผู้ใช้</li>
-
-<li>ออกแบบ UX/UI และใช้ Claude Design สร้าง prototype ของ G-Core Portal ระบบบริหาร GPU สำหรับมหาวิทยาลัย 7 บทบาท แบ่งส่งมอบเป็น MVP 0–5</li>
-
-</ul>
 
 </div>
 
@@ -1542,7 +1520,7 @@ var t = s.t == null ? 1 : s.t;
 var e = 1 - Math.pow(1 - t, 3);
 var step = s.step == null ? 0 : s.step;
 var filter = s.filter || 'all'; if (['all','fin','ent','edu','health'].indexOf(filter) < 0) { filter = 'all'; }
-var openJob = s.openJob === undefined ? 0 : s.openJob;
+var openJob = s.openJob === undefined ? -1 : s.openJob;
 
 var statsData = [
 { n: 5, plus: '+', unit: 'ปี', label: 'ประสบการณ์ในสายดิจิทัลโปรดักต์', href: '#experience', cta: 'ดูประสบการณ์' },
