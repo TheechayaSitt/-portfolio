@@ -314,6 +314,80 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .stats2 .st:active{scale:.985}
 @media (max-width:820px){.stats2{gap:10px}}
 @media (hover:none){.stats2 .sta{opacity:1;translate:0 0}}
+/* ===== Present mode ===== */
+.dkopen{background:rgba(255,255,255,.1);color:#FFFFFF;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;font-family:inherit}
+.dkopen:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
+.dkplay{display:inline-block;width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent currentColor}
+.dkpause{display:inline-block;width:10px;height:12px;border-left:3.5px solid currentColor;border-right:3.5px solid currentColor;box-sizing:border-box}
+.dkfab{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;font:600 14px Outfit,'IBM Plex Sans Thai',sans-serif;background:#1C2440;color:#FFFFFF;padding:12px 18px;min-height:46px;border-radius:999px;box-shadow:0 10px 26px rgba(28,36,64,.28);transition:translate .2s,background .2s,color .2s,box-shadow .2s}
+.dkfab:hover{translate:0 -3px;background:#DFFF1A;color:#1C2440;box-shadow:0 0 0 3px #1C2440,0 12px 28px rgba(28,36,64,.3)}
+.dkfab:focus-visible,.dkopen:focus-visible,.dkic:focus-visible,.dknb:focus-visible,.dkbtn:focus-visible,.dklink:focus-visible{outline:3px solid #DFFF1A;outline-offset:3px}
+.dk{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;color:#FFFFFF;font-family:Outfit,'IBM Plex Sans Thai',sans-serif;background-color:#1F3FB8;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),radial-gradient(120% 90% at 50% 110%,#2457E6 0%,#1C2440 70%);background-size:44px 44px,44px 44px,100% 100%;animation:dkIn .35s ease}
+@keyframes dkIn{from{opacity:0}to{opacity:1}}
+.dkbar{padding:16px clamp(16px,4vw,40px) 0}
+.dksegs{display:flex;gap:6px}
+.dkseg{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.22);overflow:hidden}
+.dkseg i{display:block;height:100%;width:0;background:#DFFF1A;border-radius:4px}
+.dkseg i.f{width:100%}
+.dkseg i.c{animation:dkFill linear forwards}
+@keyframes dkFill{from{width:0}to{width:100%}}
+.dktop{display:flex;align-items:center;gap:14px;margin-top:12px}
+.dkcount{font-size:13px;font-weight:600;color:#DFFF1A;letter-spacing:.04em}
+.dkhint{font-size:12px;color:rgba(255,255,255,.6)}
+.dkic{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:background .2s,color .2s,border-color .2s}
+.dkic:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
+.dkstage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:12px clamp(16px,4vw,40px);overflow-y:auto}
+.dkslide{width:100%;max-width:1100px;margin:auto}
+.dkslide.sa{animation:dkUpA .55s cubic-bezier(.2,.8,.2,1)}
+.dkslide.sb{animation:dkUpB .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes dkUpA{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+@keyframes dkUpB{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+.dkcenter{text-align:center;display:flex;flex-direction:column;align-items:center}
+.dkk{margin:0 0 10px;font-size:14px;font-weight:600;color:#DFFF1A;letter-spacing:.03em}
+.dkh{margin:0 0 14px;font-weight:600;font-size:clamp(26px,4vw,44px);line-height:1.2;letter-spacing:-.02em}
+.dkhxl{font-size:clamp(40px,8vw,84px);line-height:1.05;letter-spacing:-.035em}
+.dks{margin:0;font-size:clamp(16px,2vw,20px);line-height:1.7;color:#E8EEFF}
+.dkmini{margin:26px 0 10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.dklogos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:760px}
+.dklogo{display:inline-flex;align-items:center;justify-content:center;background:#FFFFFF;border-radius:12px;height:52px;padding:0 14px}
+.dklogo img{max-height:34px;max-width:96px;object-fit:contain}
+.dkstats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;margin-top:18px}
+.dkst{background:linear-gradient(135deg,#E6EEFF 0%,#EEF3FF 55%,#F4FBD2 100%);color:#1C2440;border-radius:20px;padding:24px 18px;text-align:left;display:flex;flex-direction:column;gap:8px}
+.dkst b{font-size:clamp(36px,5vw,56px);font-weight:600;line-height:1;color:#2457E6;letter-spacing:-.03em}
+.dkst small{font-size:16px;margin-left:6px;color:#1C2440}
+.dkst span{font-size:14px;line-height:1.55;color:#2E3754}
+.dklist{display:grid;gap:12px;margin-top:10px}
+.dkli{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:18px 20px}
+.dkn{flex:none;width:42px;height:42px;border-radius:50%;background:#DFFF1A;color:#1C2440;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.dkli b{display:block;font-size:clamp(17px,2vw,20px);font-weight:600;margin-bottom:4px}
+.dkli p{margin:0;font-size:15px;line-height:1.65;color:#E8EEFF}
+.dkproj{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(20px,4vw,48px);align-items:center}
+.dkimg{border-radius:18px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.dkimg img{display:block;width:100%;height:auto;max-height:56vh;object-fit:contain}
+.dkp{margin:0;font-size:16px;line-height:1.7;color:#E8EEFF}
+.dktxt .dkmini{margin-top:18px}
+.dkul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.dkul li{position:relative;padding-left:22px;font-size:15px;line-height:1.6}
+.dkul li::before{content:'';position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:#DFFF1A}
+.dkfoot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px}
+.dkbig{display:flex;align-items:baseline;gap:10px}
+.dkbig b{font-size:40px;font-weight:600;color:#DFFF1A;line-height:1}
+.dkbig span{font-size:14px;color:#E8EEFF}
+.dklink,.dkbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;font:600 15px Outfit,'IBM Plex Sans Thai',sans-serif;text-decoration:none;cursor:pointer;background:#FFFFFF;color:#1C2440;border:1.5px solid #FFFFFF;transition:translate .2s,background .2s,box-shadow .2s,border-color .2s}
+.dklink:hover,.dkbtn:hover{translate:0 -3px;background:#DFFF1A;border-color:#DFFF1A;box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.dkbtn.pri{background:#CC4116;color:#FFFFFF;border-color:#CC4116}
+.dkbtn.pri:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
+.dkbtn.ghost{background:transparent;color:#FFFFFF;border-color:rgba(255,255,255,.5)}
+.dkbtn.ghost:hover{color:#1C2440}
+.dkacts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.dknav{display:flex;justify-content:flex-end;gap:10px;padding:0 clamp(16px,4vw,40px) 18px}
+.dknb{min-width:52px;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#FFFFFF;font:600 15px Outfit,'IBM Plex Sans Thai',sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.dknb:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
+.dknb.pri{background:#FFFFFF;color:#1C2440;border-color:#FFFFFF}
+.dknb.pri:hover{background:#DFFF1A;border-color:#DFFF1A}
+@media (max-width:860px){.dkproj{grid-template-columns:1fr;gap:16px}.dkimg img{max-height:24vh}.dkstats{grid-template-columns:repeat(2,1fr)}.dkhint{display:none}}
+@media (max-width:480px){.dkst{padding:16px 14px}.dkli{padding:14px;gap:12px}.dkn{width:34px;height:34px}.dkbig b{font-size:32px}.dklogo{height:44px;padding:0 10px}.dklogo img{max-height:28px;max-width:76px}.dkfab{right:14px;bottom:14px}.dkfoot{margin-top:16px}}
+@media (prefers-reduced-motion:reduce){.dk,.dkslide.sa,.dkslide.sb{animation:none}}
 </style>
 
 </head>
@@ -322,6 +396,65 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 <div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
 <div class="progress" aria-hidden="true"></div>
+<sc-if value="{{!deckOpen}}"><button type="button" class="dkfab" onClick="{{openDeck}}" aria-label="เปิดสรุปพอร์ตโฟลิโอแบบนำเสนอ"><span class="dkplay" aria-hidden="true"></span>Present</button></sc-if>
+<sc-if value="{{deckOpen}}">
+<div class="dk" role="dialog" aria-modal="true" aria-label="สรุปพอร์ตโฟลิโอ">
+<div class="dkbar">
+<div class="dksegs"><sc-for list="{{segs}}" as="g"><span class="dkseg"><i class="{{g.cls}}" style="{{g.st}}"></i></span></sc-for></div>
+<div class="dktop"><span class="dkcount">{{deckNum}}</span><span class="dkhint">← → เลื่อน · Space หยุด · Esc ปิด</span><span style="flex:1"></span><button type="button" class="dkic" onClick="{{togglePause}}" aria-label="{{pauseLabel}}"><sc-if value="{{deckPaused}}"><span class="dkplay" aria-hidden="true"></span></sc-if><sc-if value="{{!deckPaused}}"><span class="dkpause" aria-hidden="true"></span></sc-if></button><button type="button" class="dkic" onClick="{{closeDeck}}" aria-label="ปิดการนำเสนอ"><span aria-hidden="true">✕</span></button></div>
+</div>
+<div class="dkstage">
+<div class="dkslide {{slideAnim}}" aria-live="polite">
+
+<sc-if value="{{sl.isIntro}}"><div class="dkc dkcenter">
+<p class="dkk">สรุปพอร์ตโฟลิโอใน 1 นาที</p>
+<h2 class="dkh dkhxl">Theechaya S.</h2>
+<p class="dks">UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner<br>จากปัญหาธุรกิจ สู่ระบบที่ทีมส่งมอบได้จริง</p>
+<p class="dkmini">เคยออกแบบให้</p>
+<div class="dklogos"><sc-for list="{{deckLogos}}" as="lg"><span class="dklogo"><img src="{{lg.src}}" alt="{{lg.alt}}"></span></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{sl.isStats}}"><div class="dkc dkcenter">
+<p class="dkk">ภาพรวม</p>
+<h2 class="dkh">ตัวเลขที่บอกว่าทำงานจริง</h2>
+<div class="dkstats"><sc-for list="{{deckStats}}" as="x"><div class="dkst"><b>{{x.n}}<small>{{x.u}}</small></b><span>{{x.l}}</span></div></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{sl.isList}}"><div class="dkc">
+<p class="dkk">ทำไมต้องเลือกฉัน</p>
+<h2 class="dkh">3 จุดแข็งที่ใช้ได้กับงาน Product</h2>
+<div class="dklist"><sc-for list="{{deckStrengths}}" as="x"><div class="dkli"><span class="dkn">{{x.n}}</span><div><b>{{x.t}}</b><p>{{x.d}}</p></div></div></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{sl.isProj}}"><div class="dkc dkproj">
+<div class="dkimg"><img src="{{sl.img}}" alt="{{sl.alt}}"></div>
+<div class="dktxt">
+<p class="dkk">{{sl.kicker}}</p>
+<h2 class="dkh">{{sl.title}}</h2>
+<p class="dkp">{{sl.problem}}</p>
+<p class="dkmini">สิ่งที่ฉันทำ</p>
+<ul class="dkul"><sc-for list="{{sl.did}}" as="d"><li>{{d}}</li></sc-for></ul>
+<div class="dkfoot"><div class="dkbig"><b>{{sl.stat}}</b><span>{{sl.statL}}</span></div><a class="dklink" href="{{sl.href}}">อ่าน Case Study →</a></div>
+</div>
+</div></sc-if>
+
+<sc-if value="{{sl.isEnd}}"><div class="dkc dkcenter">
+<p class="dkk">จบสรุปแล้ว ขอบคุณที่ดูนะคะ</p>
+<h2 class="dkh dkhxl">สนใจคุยต่อไหมคะ?</h2>
+<p class="dks">Thewtheechaya@gmail.com</p>
+<div class="dkacts">
+<button type="button" class="dkbtn pri" onClick="{{copyEmail}}">{{copyLabel}}</button>
+<a class="dkbtn" href="https://www.linkedin.com/in/theechaya/" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a class="dkbtn" href="#work" onClick="{{closeDeck}}">ดูผลงานทั้ง 9 ชิ้น</a>
+<button type="button" class="dkbtn ghost" onClick="{{restartDeck}}">↺ ดูอีกครั้ง</button>
+</div>
+</div></sc-if>
+
+</div>
+</div>
+<div class="dknav"><button type="button" class="dknb" onClick="{{prevSlide}}" aria-label="สไลด์ก่อนหน้า">←</button><button type="button" class="dknb pri" onClick="{{nextSlide}}" aria-label="สไลด์ถัดไป">{{nextLabel}}</button></div>
+</div>
+</sc-if>
 <a class="totop" href="#top" aria-label="กลับขึ้นด้านบน"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4M5 11l7-7 7 7"></path></svg></a>
 <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
 
@@ -353,6 +486,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #E8EEFF; max-width: 640px">UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner<br>จากปัญหาธุรกิจ สู่ระบบที่ทีมส่งมอบได้จริง</p>
 <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 6px">
 <a class="btn" href="#work" style="background: {{accent}}; color: #FFFFFF">ดูผลงาน <svg aria-hidden="true" width="20" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></a>
+<button type="button" class="btn dkopen" onClick="{{openDeck}}" aria-label="เปิดสรุปพอร์ตโฟลิโอแบบนำเสนอ ประมาณ 1 นาที"><span class="dkplay" aria-hidden="true"></span>ดูสรุป 1 นาที</button>
 </div>
 <div class="clients" aria-label="องค์กรที่เคยร่วมงาน"><div class="clrow"><span class="clbl">เคยออกแบบให้</span><div class="cl"><span class="clogo"><img src="assets/a4a6e205634d1905216f6f5115d55ca5.png" alt="ธ.ก.ส." title="ธ.ก.ส."></span></div><div class="cl"><span class="clogo"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt="AIS" title="AIS"></span></div><div class="cl"><span class="clogo"><img src="assets/3f915dc4318cb528b207bf45016be4d7.png" alt="ไทยออยล์" title="ไทยออยล์"></span></div><div class="cl"><span class="clogo"><img src="assets/820b0c09f4cc61cd5bbd06358ef708ff.png" alt="TIPCO Asphalt" title="TIPCO Asphalt"></span></div><div class="cl"><span class="clogo"><img src="assets/ba08faa6d1dd36bf4f28fca179c56d4d.png" alt="กรมวิทยาศาสตร์การแพทย์" title="กรมวิทยาศาสตร์การแพทย์"></span></div><div class="cl"><span class="clogo"><img src="assets/bfd600a88bafa1e879a1be23771f4e22.png" alt="ม.หอการค้าไทย" title="ม.หอการค้าไทย"></span></div><div class="cl"><span class="clogo"><img src="assets/e4f0942e302f661835dca28c4f8c0027.png" alt="ม.เกษตรศาสตร์" title="ม.เกษตรศาสตร์"></span></div><div class="cl"><span class="clogo"><img src="assets/2944a329b86aa42897717e43d0c37cc7.png" alt="NIDA" title="NIDA"></span></div></div></div>
 </div>
@@ -639,6 +773,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 <div class="grid-bg" style="width: 100%; min-height: 100vh; font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; color: #1C2440; padding: 24px 16px 64px; box-sizing: border-box">
 <div class="progress" aria-hidden="true"></div>
+<button type="button" class="dkfab" aria-label="เปิดสรุปพอร์ตโฟลิโอแบบนำเสนอ"><span class="dkplay" aria-hidden="true"></span>Present</button>
+
 <a class="totop" href="#top" aria-label="กลับขึ้นด้านบน"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4M5 11l7-7 7 7"></path></svg></a>
 <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
 
@@ -670,6 +806,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #E8EEFF; max-width: 640px">UX/UI Designer ประสบการณ์ 5+ ปี ที่คิดแบบ Product Owner<br>จากปัญหาธุรกิจ สู่ระบบที่ทีมส่งมอบได้จริง</p>
 <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 6px">
 <a class="btn" href="#work" style="background: #CC4116; color: #FFFFFF">ดูผลงาน <svg aria-hidden="true" width="20" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7H24M18 1L24 7L18 13"></path></svg></a>
+<button type="button" class="btn dkopen" aria-label="เปิดสรุปพอร์ตโฟลิโอแบบนำเสนอ ประมาณ 1 นาที"><span class="dkplay" aria-hidden="true"></span>ดูสรุป 1 นาที</button>
 </div>
 <div class="clients" aria-label="องค์กรที่เคยร่วมงาน"><div class="clrow"><span class="clbl">เคยออกแบบให้</span><div class="cl"><span class="clogo"><img src="assets/a4a6e205634d1905216f6f5115d55ca5.png" alt="ธ.ก.ส." title="ธ.ก.ส."></span></div><div class="cl"><span class="clogo"><img src="assets/496e26a09f33b3114e7474a31f4b6caa.png" alt="AIS" title="AIS"></span></div><div class="cl"><span class="clogo"><img src="assets/3f915dc4318cb528b207bf45016be4d7.png" alt="ไทยออยล์" title="ไทยออยล์"></span></div><div class="cl"><span class="clogo"><img src="assets/820b0c09f4cc61cd5bbd06358ef708ff.png" alt="TIPCO Asphalt" title="TIPCO Asphalt"></span></div><div class="cl"><span class="clogo"><img src="assets/ba08faa6d1dd36bf4f28fca179c56d4d.png" alt="กรมวิทยาศาสตร์การแพทย์" title="กรมวิทยาศาสตร์การแพทย์"></span></div><div class="cl"><span class="clogo"><img src="assets/bfd600a88bafa1e879a1be23771f4e22.png" alt="ม.หอการค้าไทย" title="ม.หอการค้าไทย"></span></div><div class="cl"><span class="clogo"><img src="assets/e4f0942e302f661835dca28c4f8c0027.png" alt="ม.เกษตรศาสตร์" title="ม.เกษตรศาสตร์"></span></div><div class="cl"><span class="clogo"><img src="assets/2944a329b86aa42897717e43d0c37cc7.png" alt="NIDA" title="NIDA"></span></div></div></div>
 </div>
@@ -1284,6 +1421,23 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 class Component extends DCLogic {
 componentDidMount() {
 var self = this;
+this._dk = setInterval(function () {
+var st = self.state || {};
+if (!st.deck || st.deckPaused) { return; }
+self._dkEl = (self._dkEl || 0) + 100;
+if (self._dkEl >= self._dkDur(st.slide || 0)) {
+if ((st.slide || 0) < self._dkN - 1) { self._dkGo((st.slide || 0) + 1); } else { self.setState({ deckPaused: true }); }
+}
+}, 100);
+this._dkKey = function (ev) {
+var st = self.state || {};
+if (!st.deck) { return; }
+if (ev.key === 'ArrowRight' || ev.key === 'PageDown') { ev.preventDefault(); self._dkGo((st.slide || 0) + 1); }
+else if (ev.key === 'ArrowLeft' || ev.key === 'PageUp') { ev.preventDefault(); self._dkGo((st.slide || 0) - 1); }
+else if (ev.key === 'Escape') { self._dkClose(); }
+else if (ev.key === ' ' || ev.key === 'Spacebar') { ev.preventDefault(); self.setState({ deckPaused: !st.deckPaused }); }
+};
+document.addEventListener('keydown', this._dkKey);
 var start = Date.now();
 this.setState({ t: 0 });
 this._iv = setInterval(function () {
@@ -1301,7 +1455,19 @@ else { ci--; if (ci <= 0) { ci = 0; del = false; wi = (wi + 1) % words.length; h
 self.setState({ typed: words[wi].slice(0, ci) });
 }, 75);
 }
-componentWillUnmount() { clearInterval(this._iv); clearInterval(this._tv); }
+componentWillUnmount() { clearInterval(this._iv); clearInterval(this._tv); clearInterval(this._dk); document.removeEventListener('keydown', this._dkKey); }
+_dkDur(i) { return i === 0 ? 5000 : (i === 1 || i === this._dkN - 1 ? 5500 : 7500); }
+_dkGo(i) {
+var n = this._dkN || 8;
+if (i < 0) { i = 0; }
+if (i > n - 1) { return; }
+this._dkEl = 0;
+this.setState({ slide: i, deckPaused: false, dkFlip: !(this.state || {}).dkFlip });
+}
+_dkClose() {
+try { document.body.style.overflow = ''; } catch (err) {}
+this.setState({ deck: false });
+}
 renderVals() {
 var self = this;
 var s = this.state || {};
@@ -1396,6 +1562,52 @@ onMove: function (ev) { var r = ev.currentTarget.getBoundingClientRect(); self.s
 onLeave: function () { self.setState({ tilt: null }); } });
 }).filter(Boolean);
 
+var deckLogos = [
+{ src: 'assets/a4a6e205634d1905216f6f5115d55ca5.png', alt: 'ธ.ก.ส.' }, { src: 'assets/496e26a09f33b3114e7474a31f4b6caa.png', alt: 'AIS' },
+{ src: 'assets/3f915dc4318cb528b207bf45016be4d7.png', alt: 'ไทยออยล์' }, { src: 'assets/820b0c09f4cc61cd5bbd06358ef708ff.png', alt: 'TIPCO Asphalt' },
+{ src: 'assets/ba08faa6d1dd36bf4f28fca179c56d4d.png', alt: 'กรมวิทยาศาสตร์การแพทย์' }, { src: 'assets/bfd600a88bafa1e879a1be23771f4e22.png', alt: 'ม.หอการค้าไทย' },
+{ src: 'assets/e4f0942e302f661835dca28c4f8c0027.png', alt: 'ม.เกษตรศาสตร์' }, { src: 'assets/2944a329b86aa42897717e43d0c37cc7.png', alt: 'NIDA' }
+];
+var deckStats = [
+{ n: '5+', u: 'ปี', l: 'ประสบการณ์ในสายดิจิทัลโปรดักต์' },
+{ n: '1+', u: 'ปี', l: 'ในตำแหน่ง Product Owner' },
+{ n: '9', u: 'โปรเจกต์', l: 'จากลูกค้าองค์กร มี Case Study ทุกงาน' },
+{ n: '5', u: 'อุตสาหกรรม', l: 'การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข' }
+];
+var deckStrengths = [
+{ n: '1', t: 'คิดแบบ Product Owner', d: 'เคยเป็น PO ของ Meow Finance วาง roadmap จัดลำดับ backlog และตัดสินใจ release ร่วมกับทีม' },
+{ n: '2', t: 'ทำเรื่องซับซ้อนให้เป็นภาพเดียว', d: 'สรุป 8 ช่องทางชำระเงินของ AIS mPAY ONE เป็น matrix เดียว ที่ทั้งทีมใช้กำหนดขอบเขตงาน' },
+{ n: '3', t: 'ส่งมอบเร็ว ด้วย pattern และ AI', d: 'ส่งงาน Newborn Connect 200+ หน้าจอใน 2 เดือน และใช้ Figma AI กับ Claude Design ทำ prototype' }
+];
+var deckSlides = [
+{ isIntro: true },
+{ isStats: true },
+{ isList: true },
+{ isProj: true, kicker: 'DeFi · 2021 · UX + Product Owner', title: 'Meow Finance', img: 'assets/8f3aa77874f48c86b735bf2e831f686e.png', alt: 'หน้า Farm ของ Meow Finance', href: 'CaseStudy.html',
+problem: 'แพลตฟอร์ม yield farming และ lending บน Fantom Chain ที่ต้องทำเรื่องซับซ้อนให้ใช้ง่ายและปลอดภัย',
+did: ['วาง roadmap และจัดลำดับ backlog', 'เขียน requirement ให้ทีม frontend และ smart contract', 'ทำ UAT บน testnet ก่อน release ขึ้น mainnet'], stat: '14', statL: 'เดือน ดูแลทั้ง UX และ PO' },
+{ isProj: true, kicker: 'การศึกษา · 2022 · ✓ ใช้งานจริงแล้ว', title: 'U-NEXT · ระบบมหาวิทยาลัย', img: 'assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg', alt: 'ระบบรับสมัครของ UTCC', href: 'CaseStudy2.html',
+problem: 'ระบบเดียวที่นักศึกษา อาจารย์ และเจ้าหน้าที่ใช้ร่วมกัน ตั้งแต่รับสมัครจนถึง Student Portal',
+did: ['ออกแบบครบทุกบทบาท เป็น UX/UI Designer คนเดียวในทีม', 'วาง design system ให้เปลี่ยนธีมตามแต่ละมหาวิทยาลัยได้', 'ระบบรับสมัคร UTCC เปิดใช้งานจริงแล้ว'], stat: '3', statL: 'มหาวิทยาลัย UTCC · KU · NIDA' },
+{ isProj: true, kicker: 'Fintech · 2023 · AIS', title: 'AIS mPAY ONE', img: 'assets/8a5105c5f6572df3e9fe4d0edc5f87d8.jpg', alt: 'หน้า Transaction Inquiry ของ AIS mPAY ONE', href: 'CaseStudy4.html',
+problem: 'ระบบหลังบ้านของแพลตฟอร์มรับชำระเงิน ดูแลร้านค้า ตั้งค่าช่องทางชำระ ติดตามธุรกรรม และคืนเงิน',
+did: ['สรุปการตั้งค่าทุกช่องทางชำระเป็น matrix เดียว', 'ใช้ matrix กำหนดขอบเขตงานร่วมกับ BA และ Dev', 'ออกแบบให้ตั้งค่าทุกช่องทางได้ในฟอร์มเดียว'], stat: '8', statL: 'ช่องทางชำระเงิน' },
+{ isProj: true, kicker: 'B2B Product · 2026 · AI prototype', title: 'G-Core Portal', img: 'assets/619e4b1366591aeb059d4db33b87938f.jpg', alt: 'หน้า Performance ของ G-Core Portal', href: 'CaseStudy10.html',
+problem: 'Product ให้มหาวิทยาลัยที่ซื้อ NVIDIA GPU ใช้บริหารการจอง การใช้งาน และค่าบริการ GPU',
+did: ['ออกแบบ 7 บทบาทในระบบเดียว', 'ใช้ Claude Design สร้าง prototype ที่กดใช้ได้จริง', 'แบ่งส่งมอบเป็น MVP 0–5'], stat: '7', statL: 'บทบาท ในระบบเดียว' },
+{ isEnd: true }
+];
+self._dkN = deckSlides.length;
+var deckOpen = !!s.deck;
+var slideI = Math.max(0, Math.min(deckSlides.length - 1, s.slide || 0));
+var deckPaused = !!s.deckPaused;
+var segs = deckSlides.map(function (x, i) {
+if (i < slideI) { return { cls: 'f', st: '' }; }
+if (i > slideI) { return { cls: '', st: '' }; }
+return { cls: 'c', st: 'animation-duration:' + self._dkDur(i) + 'ms;animation-play-state:' + (deckPaused ? 'paused' : 'running') };
+});
+var sl = Object.assign({ isIntro: false, isStats: false, isList: false, isProj: false, isEnd: false, did: [] }, deckSlides[slideI]);
+
 var copied = !!s.copied;
 var typed = s.typed == null ? 'Product Owner' : s.typed;
 return {
@@ -1403,6 +1615,17 @@ accent: accent, stats: stats, marquee: marquee, skills: skills, jobs: jobs, step
 filters: filters, projects: projects,
 copyLabel: copied ? 'คัดลอกแล้ว' : 'คัดลอกอีเมล',
 typed: typed,
+deckOpen: deckOpen, deckPaused: deckPaused, segs: segs, sl: sl, deckLogos: deckLogos, deckStats: deckStats, deckStrengths: deckStrengths,
+deckNum: (slideI + 1) + ' / ' + deckSlides.length,
+slideAnim: s.dkFlip ? 'sb' : 'sa',
+pauseLabel: deckPaused ? 'เล่นต่อ' : 'หยุดชั่วคราว',
+nextLabel: slideI === deckSlides.length - 1 ? '✓' : 'ถัดไป →',
+openDeck: function () { self._dkEl = 0; try { document.body.style.overflow = 'hidden'; } catch (err) {} self.setState({ deck: true, slide: 0, deckPaused: false }); },
+closeDeck: function () { self._dkClose(); },
+nextSlide: function () { if (slideI === deckSlides.length - 1) { self._dkClose(); } else { self._dkGo(slideI + 1); } },
+prevSlide: function () { self._dkGo(slideI - 1); },
+restartDeck: function () { self._dkGo(0); },
+togglePause: function () { self.setState({ deckPaused: !deckPaused }); },
 copyEmail: function () {
 try { navigator.clipboard.writeText('Thewtheechaya@gmail.com'); } catch (err) {}
 self.setState({ copied: true });
