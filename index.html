@@ -318,6 +318,14 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .certgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .certgrid .cert{align-items:center}
 @media (max-width:640px){.certgrid{grid-template-columns:1fr}}
+.stats2 .st{flex-direction:row !important;align-items:center !important;gap:14px !important;padding:16px 18px !important}
+.stats2 .sti{flex:none;width:50px;height:50px;border-radius:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(10,20,70,.16);transition:rotate .3s var(--ix-ease,ease),scale .3s var(--ix-ease,ease)}
+.stats2 .sti img{width:26px;height:26px;display:block}
+.stats2 .st:hover .sti{rotate:-8deg;scale:1.08}
+.stats2 .stx{display:flex;flex-direction:column;gap:2px;min-width:0}
+.stats2 .stn{font-size:clamp(28px,3vw,34px) !important}
+.stats2 .stl{font-size:13px !important;line-height:1.45 !important}
+@media (max-width:560px){.stats2 .st{flex-direction:column !important;align-items:flex-start !important;gap:10px !important;padding:14px !important}.stats2 .sti{width:40px;height:40px;border-radius:12px}.stats2 .sti img{width:22px;height:22px}}
 .livebadge{display:inline-flex;align-items:center;margin-left:4px;padding:3px 9px;border-radius:999px;background:#DFFF1A;color:#1C2440;font-size:11.5px;font-weight:600;line-height:1.3;white-space:nowrap}
 @property --n{syntax:'<integer>';inherits:false;initial-value:0}
 .dkopen{background:rgba(255,255,255,.1);color:#FFFFFF;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;font-family:inherit}
@@ -562,10 +570,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <!-- STATS -->
 <div class="stats2" role="list">
 <sc-for list="{{stats}}" as="h" hint-placeholder-count="4">
-<a class="st" role="listitem" href="{{h.href}}">
+<a class="st" role="listitem" href="{{h.href}}" title="{{h.cta}}">
+<span class="sti" style="background: {{h.ibg}}" aria-hidden="true"><img src="{{h.icon}}" alt=""></span>
+<span class="stx">
 <span class="stn">{{h.value}}<span class="stp">{{h.plus}}</span><span class="stu">{{h.unit}}</span></span>
 <span class="stl">{{h.label}}</span>
-<span class="sta" aria-hidden="true">{{h.cta}} →</span>
+</span>
 </a>
 </sc-for>
 </div>
@@ -882,28 +892,36 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 <div class="stats2" role="list">
 
-<a class="st" role="listitem" href="#experience">
+<a class="st" role="listitem" href="#experience" title="ดูประสบการณ์">
+<span class="sti" style="background: #2457E6" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%227%22%20width%3D%2218%22%20height%3D%2213%22%20rx%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M8.5%207V5.5a2%202%200%200%201%202-2h3a2%202%200%200%201%202%202V7M3%2013h18%22%2F%3E%3C%2Fsvg%3E" alt=""></span>
+<span class="stx">
 <span class="stn">5<span class="stp">+</span><span class="stu">ปี</span></span>
-<span class="stl">ประสบการณ์ในสายดิจิทัลโปรดักต์</span>
-<span class="sta" aria-hidden="true">ดูประสบการณ์ →</span>
+<span class="stl">ประสบการณ์ด้าน Digital Product</span>
+</span>
 </a>
 
-<a class="st" role="listitem" href="CaseStudy.html">
+<a class="st" role="listitem" href="CaseStudy.html" title="ดูงาน PO">
+<span class="sti" style="background: #CC4116" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.5%2021V3.5%22%2F%3E%3Cpath%20d%3D%22M5.5%204h12l-2.5%204.5%202.5%204.5h-12%22%2F%3E%3C%2Fsvg%3E" alt=""></span>
+<span class="stx">
 <span class="stn">1<span class="stp">+</span><span class="stu">ปี</span></span>
 <span class="stl">ในตำแหน่ง Product Owner</span>
-<span class="sta" aria-hidden="true">ดูงาน PO →</span>
+</span>
 </a>
 
-<a class="st" role="listitem" href="#work">
+<a class="st" role="listitem" href="#work" title="ดูผลงาน">
+<span class="sti" style="background: #1C2440" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23DFFF1A%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203%203%207.5l9%204.5%209-4.5L12%203z%22%2F%3E%3Cpath%20d%3D%22M3%2012l9%204.5%209-4.5%22%2F%3E%3Cpath%20d%3D%22M3%2016.5%2012%2021l9-4.5%22%2F%3E%3C%2Fsvg%3E" alt=""></span>
+<span class="stx">
 <span class="stn">9<span class="stp"></span><span class="stu">โปรเจกต์</span></span>
 <span class="stl">จากลูกค้าองค์กร 7 งานใช้งานจริงแล้ว</span>
-<span class="sta" aria-hidden="true">ดูผลงาน →</span>
+</span>
 </a>
 
-<a class="st" role="listitem" href="#work">
+<a class="st" role="listitem" href="#work" title="กรองตามอุตสาหกรรม">
+<span class="sti" style="background: #DFFF1A" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231C2440%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2021h18M5%2021V8.5l6-4V21M11%2021V10h8v11%22%2F%3E%3Cpath%20d%3D%22M14%2013.5h2M14%2017h2M7.5%2011h1M7.5%2014h1M7.5%2017h1%22%2F%3E%3C%2Fsvg%3E" alt=""></span>
+<span class="stx">
 <span class="stn">5<span class="stp"></span><span class="stu">อุตสาหกรรม</span></span>
 <span class="stl">การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข</span>
-<span class="sta" aria-hidden="true">กรองตามอุตสาหกรรม →</span>
+</span>
 </a>
 
 </div>
@@ -1523,12 +1541,19 @@ var filter = s.filter || 'all'; if (['all','fin','ent','edu','health'].indexOf(f
 var openJob = s.openJob === undefined ? -1 : s.openJob;
 
 var statsData = [
-{ n: 5, plus: '+', unit: 'ปี', label: 'ประสบการณ์ในสายดิจิทัลโปรดักต์', href: '#experience', cta: 'ดูประสบการณ์' },
+{ n: 5, plus: '+', unit: 'ปี', label: 'ประสบการณ์ด้าน Digital Product', href: '#experience', cta: 'ดูประสบการณ์' },
 { n: 1, plus: '+', unit: 'ปี', label: 'ในตำแหน่ง Product Owner', href: 'CaseStudy.html', cta: 'ดูงาน PO' },
 { n: 9, plus: '', unit: 'โปรเจกต์', label: 'จากลูกค้าองค์กร 7 งานใช้งานจริงแล้ว', href: '#work', cta: 'ดูผลงาน' },
 { n: 5, plus: '', unit: 'อุตสาหกรรม', label: 'การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข', href: '#work', cta: 'กรองตามอุตสาหกรรม' }
 ];
-var stats = statsData.map(function (x) { return { value: Math.round(x.n * e), plus: x.plus, unit: x.unit, label: x.label, href: x.href, cta: x.cta }; });
+var statIcons = [
+['#2457E6', '#FFFFFF', '<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7M3 13h18"/>'],
+['#CC4116', '#FFFFFF', '<path d="M5.5 21V3.5"/><path d="M5.5 4h12l-2.5 4.5 2.5 4.5h-12"/>'],
+['#1C2440', '#DFFF1A', '<path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5 12 21l9-4.5"/>'],
+['#DFFF1A', '#1C2440', '<path d="M3 21h18M5 21V8.5l6-4V21M11 21V10h8v11"/><path d="M14 13.5h2M14 17h2M7.5 11h1M7.5 14h1M7.5 17h1"/>']
+];
+var stats = statsData.map(function (x, i) { var ic = statIcons[i]; return { value: Math.round(x.n * e), plus: x.plus, unit: x.unit, label: x.label, href: x.href, cta: x.cta, ibg: ic[0],
+icon: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="' + ic[1] + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ic[2] + '</svg>') }; });
 
 var words = ['Product Roadmap','Customer Journey','Business Flow','User Story','MVP','UAT','Agile / Scrum','Release Planning','Stakeholder Management','UX/UI Design'];
 var marquee = words.concat(words);
