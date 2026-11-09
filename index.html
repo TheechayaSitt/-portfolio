@@ -315,6 +315,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 @media (max-width:820px){.stats2{gap:10px}}
 @media (hover:none){.stats2 .sta{opacity:1;translate:0 0}}
 /* ===== Present mode ===== */
+.livebadge{display:inline-flex;align-items:center;margin-left:4px;padding:3px 9px;border-radius:999px;background:#DFFF1A;color:#1C2440;font-size:11.5px;font-weight:600;line-height:1.3;white-space:nowrap}
 @property --n{syntax:'<integer>';inherits:false;initial-value:0}
 .dkopen{background:rgba(255,255,255,.1);color:#FFFFFF;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;font-family:inherit}
 .dkopen:hover{background:#DFFF1A;color:#1C2440;border-color:#DFFF1A}
@@ -618,7 +619,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </sc-if>
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><sc-if value="{{p.hasLogo}}" hint-placeholder-val="{{false}}"><img src="{{p.logo}}" alt="" style="width: 24px; height: 24px; border-radius: 50%"></sc-if><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">{{p.year}}</span> · {{p.role}}</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><sc-if value="{{p.hasLogo}}" hint-placeholder-val="{{false}}"><img src="{{p.logo}}" alt="" style="width: 24px; height: 24px; border-radius: 50%"></sc-if><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">{{p.year}}</span> · {{p.role}}<sc-if value="{{p.live}}" hint-placeholder-val="{{true}}"><span class="livebadge">✓ ใช้งานจริง</span></sc-if></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">{{p.title}}</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">{{p.problem}}</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -708,7 +709,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div>
 <p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #A33410">นอกเวลางาน</p>
 <div class="cert">
-<span class="logo" style="background: #FFFFFF; border: 1px solid #DCE4F2"><img src="assets/b7ab88a07b79edeffaa8ce991ba05456.png" alt="Topstep Funded Trader" style="width: 38px; height: 38px; object-fit: contain"></span>
+<span class="logo" style="background: #000000; overflow: hidden"><img src="assets/76b36990e5758d35b9c36c8d1b4902a9.png" alt="Topstep" style="width: 44px; height: 44px; object-fit: cover"></span>
 <div style="display: flex; flex-direction: column; gap: 2px">
 <p style="margin: 0; font-weight: 600; font-size: 14px">Funded Trader · Topstep</p>
 <p style="margin: 0; font-size: 12px; color: #5A6380">ผ่าน Trading Combine · ต.ค. 2026 · ฝึกบริหารความเสี่ยงและวินัยในการตัดสินใจ</p>
@@ -892,7 +893,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 <a class="st" role="listitem" href="#work">
 <span class="stn">9<span class="stp"></span><span class="stu">โปรเจกต์</span></span>
-<span class="stl">จากลูกค้าองค์กร กดอ่านเบื้องหลังได้ทุกงาน</span>
+<span class="stl">จากลูกค้าองค์กร 7 งานใช้งานจริงแล้ว</span>
 <span class="sta" aria-hidden="true">ดูผลงาน →</span>
 </a>
 
@@ -947,7 +948,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">Testament</span> · 2021 · UX + Product Owner</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/1b2a8d4d68b4f563361baf2ac22283f6.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">Testament</span> · 2021 · UX + Product Owner<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">Meow Finance · แพลตฟอร์ม DeFi</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">แพลตฟอร์ม leveraged yield farming และ lending บน Fantom Chain ที่ต้องทำเรื่องซับซ้อนให้ใช้ง่ายและปลอดภัย</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -978,7 +979,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">U-NEXT</span> · 2022 · UTCC · KU · NIDA</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">U-NEXT</span> · 2022 · UTCC · KU · NIDA<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">U-NEXT · ระบบมหาวิทยาลัย</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ระบบมหาวิทยาลัยทั้งระบบ ใช้ร่วมกันทั้งนักศึกษา อาจารย์ และเจ้าหน้าที่ ตั้งแต่รับสมัคร Back Office ตัดเกรด จนถึง Student Portal ขายให้ UTCC, KU และ NIDA</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1009,7 +1010,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">AIS</span> · 2024 · UX/UI Designer</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">AIS</span> · 2024 · UX/UI Designer<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">AIS · PCI Web Portal</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ระบบหลังบ้านของ AIS สำหรับจัดการผู้ใช้ สิทธิ์ key และข้อมูลบัตร ให้เป็นไปตามมาตรฐาน PCI DSS ฉบับใหม่</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1040,7 +1041,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">AIS</span> · 2023 · UX/UI Designer</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">AIS</span> · 2023 · UX/UI Designer<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">AIS · mPAY ONE</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ระบบหลังบ้านของแพลตฟอร์มรับชำระเงิน AIS สำหรับดูแลร้านค้า ตั้งค่าช่องทางชำระ ติดตามธุรกรรม และคืนเงิน</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1071,7 +1072,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">Thaioil</span> · 2025 · UX/UI Designer</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><img src="assets/842c0142205d97fb74f4aba4ac7a37bc.png" alt="" style="width: 24px; height: 24px; border-radius: 50%"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">Thaioil</span> · 2025 · UX/UI Designer<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">Thaioil · Budget Management System</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ระบบบริหารงบประมาณทั้งระบบของไทยออยล์ ตั้งแต่ขอ โอน อนุมัติงบ OPEX, CAPEX, Contingency และ RMA จนสร้าง WBS</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1102,7 +1103,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">DMSc</span> · 2025 · UX/UI Designer</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">DMSc</span> · 2025 · UX/UI Designer<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">Newborn Connect · ระบบคัดกรองทารกแรกเกิด</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">ระบบบันทึกและติดตามการตรวจคัดกรองโรคในทารกแรกเกิดของกรมวิทยาศาสตร์การแพทย์ ตั้งแต่รับตัวอย่างเลือดจนรายงานผล</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1133,7 +1134,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 
 </div>
 <div class="pbody">
-<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">BAAC</span> · 2025 · UX/UI Designer</p>
+<p style="margin: 0; font-size: 12px; color: #5A6380; display: flex; align-items: center; gap: 6px; flex-wrap: wrap"><span style="font-family: Outfit, sans-serif; font-weight: 600; font-size: 14px">BAAC</span> · 2025 · UX/UI Designer<span class="livebadge">✓ ใช้งานจริง</span></p>
 <h3 style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; color: #1C2440">ธ.ก.ส. · D-HUB ศูนย์รวมข้อมูล</h3>
 <p class="clamp2" style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5370">Portal ข้อมูลภายในของ ธ.ก.ส. รวมชุดข้อมูล แดชบอร์ด Chat AI และข่าว ให้พนักงานหาข้อมูลได้เอง</p>
 <div style="display: flex; align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid #DCE4F2; border-bottom: 1px solid #DCE4F2">
@@ -1303,7 +1304,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 </div>
 <p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #A33410">นอกเวลางาน</p>
 <div class="cert">
-<span class="logo" style="background: #FFFFFF; border: 1px solid #DCE4F2"><img src="assets/b7ab88a07b79edeffaa8ce991ba05456.png" alt="Topstep Funded Trader" style="width: 38px; height: 38px; object-fit: contain"></span>
+<span class="logo" style="background: #000000; overflow: hidden"><img src="assets/76b36990e5758d35b9c36c8d1b4902a9.png" alt="Topstep" style="width: 44px; height: 44px; object-fit: cover"></span>
 <div style="display: flex; flex-direction: column; gap: 2px">
 <p style="margin: 0; font-weight: 600; font-size: 14px">Funded Trader · Topstep</p>
 <p style="margin: 0; font-size: 12px; color: #5A6380">ผ่าน Trading Combine · ต.ค. 2026 · ฝึกบริหารความเสี่ยงและวินัยในการตัดสินใจ</p>
@@ -1543,7 +1544,7 @@ var openJob = s.openJob === undefined ? 0 : s.openJob;
 var statsData = [
 { n: 5, plus: '+', unit: 'ปี', label: 'ประสบการณ์ในสายดิจิทัลโปรดักต์', href: '#experience', cta: 'ดูประสบการณ์' },
 { n: 1, plus: '+', unit: 'ปี', label: 'ในตำแหน่ง Product Owner', href: 'CaseStudy.html', cta: 'ดูงาน PO' },
-{ n: 9, plus: '', unit: 'โปรเจกต์', label: 'จากลูกค้าองค์กร กดอ่านเบื้องหลังได้ทุกงาน', href: '#work', cta: 'ดูผลงาน' },
+{ n: 9, plus: '', unit: 'โปรเจกต์', label: 'จากลูกค้าองค์กร 7 งานใช้งานจริงแล้ว', href: '#work', cta: 'ดูผลงาน' },
 { n: 5, plus: '', unit: 'อุตสาหกรรม', label: 'การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข', href: '#work', cta: 'กรองตามอุตสาหกรรม' }
 ];
 var stats = statsData.map(function (x) { return { value: Math.round(x.n * e), plus: x.plus, unit: x.unit, label: x.label, href: x.href, cta: x.cta }; });
@@ -1615,7 +1616,7 @@ var projects = all.map(function (p, i) { if (filter !== 'all' && p.domain !== fi
 var extra = p.tags.length - 3;
 var tl = s.tilt && s.tilt.i === i ? s.tilt : null;
 var tf = tl ? 'perspective(900px) rotateX(' + ((0.5 - tl.y) * 10).toFixed(2) + 'deg) rotateY(' + ((tl.x - 0.5) * 12).toFixed(2) + 'deg) translateY(-10px)' : 'none';
-return Object.assign({}, p, { unit: p.unit || '', logo: p.logo || '', hasLogo: !!p.logo, hasImg: !!p.img, hasLaptop: !!p.laptop, numColor: p.dark ? '#FFFFFF' : '#1C2440', noImg: !p.img && !p.laptop, imgShift: tl ? 'scale(1.08) translate(' + ((tl.x - 0.5) * -10).toFixed(1) + 'px, ' + ((tl.y - 0.5) * -8).toFixed(1) + 'px)' : 'scale(1)', tagsShort: p.tags.slice(0, 3), hasMore: extra > 0, more: '+' + extra, num: (i < 9 ? '0' : '') + (i + 1), featured: i === 0,
+return Object.assign({}, p, { unit: p.unit || '', logo: p.logo || '', hasLogo: !!p.logo, live: p.href !== 'CaseStudy10.html' && p.href !== 'CaseStudy11.html', hasImg: !!p.img, hasLaptop: !!p.laptop, numColor: p.dark ? '#FFFFFF' : '#1C2440', noImg: !p.img && !p.laptop, imgShift: tl ? 'scale(1.08) translate(' + ((tl.x - 0.5) * -10).toFixed(1) + 'px, ' + ((tl.y - 0.5) * -8).toFixed(1) + 'px)' : 'scale(1)', tagsShort: p.tags.slice(0, 3), hasMore: extra > 0, more: '+' + extra, num: (i < 9 ? '0' : '') + (i + 1), featured: i === 0,
 tf: tf,
 glare: tl ? 'radial-gradient(circle at ' + (tl.x * 100).toFixed(1) + '% ' + (tl.y * 100).toFixed(1) + '%, rgba(255,255,255,.38), rgba(255,255,255,0) 55%)' : 'none',
 glareOp: tl ? 1 : 0,
@@ -1633,7 +1634,7 @@ var deckLogos = [
 var deckStats = [
 { n: '5+', u: 'ปี', l: 'ประสบการณ์ในสายดิจิทัลโปรดักต์' },
 { n: '1+', u: 'ปี', l: 'ในตำแหน่ง Product Owner' },
-{ n: '9', u: 'โปรเจกต์', l: 'จากลูกค้าองค์กร มี Case Study ทุกงาน' },
+{ n: '9', u: 'โปรเจกต์', l: 'จากลูกค้าองค์กร 7 งานใช้งานจริงแล้ว' },
 { n: '5', u: 'อุตสาหกรรม', l: 'การเงิน โทรคมนาคม พลังงาน การศึกษา สาธารณสุข' }
 ];
 var deckStrengths = [
@@ -1648,13 +1649,13 @@ var deckSlides = [
 { isProj: true, kicker: 'การศึกษา · 2022 · ✓ ใช้งานจริงแล้ว', title: 'U-NEXT · ระบบมหาวิทยาลัย', img: 'assets/c8efbab87f98a01b6ee3ad6af55793ea.jpg', alt: 'ระบบรับสมัครของ UTCC', href: 'CaseStudy2.html',
 problem: 'ระบบเดียวที่นักศึกษา อาจารย์ และเจ้าหน้าที่ใช้ร่วมกัน ตั้งแต่รับสมัครจนถึง Student Portal',
 did: ['ออกแบบครบทุกบทบาท เป็น UX/UI Designer คนเดียวในทีม', 'วาง design system ให้เปลี่ยนธีมตามแต่ละมหาวิทยาลัยได้', 'ระบบรับสมัคร UTCC เปิดใช้งานจริงแล้ว'], stat: '3', statL: 'มหาวิทยาลัย UTCC · KU · NIDA' },
-{ isProj: true, kicker: 'Fintech · 2023 · AIS', title: 'AIS mPAY ONE', img: 'assets/8a5105c5f6572df3e9fe4d0edc5f87d8.jpg', alt: 'หน้า Transaction Inquiry ของ AIS mPAY ONE', href: 'CaseStudy4.html',
+{ isProj: true, kicker: 'Fintech · 2023 · ✓ ใช้งานจริงแล้ว', title: 'AIS mPAY ONE', img: 'assets/8a5105c5f6572df3e9fe4d0edc5f87d8.jpg', alt: 'หน้า Transaction Inquiry ของ AIS mPAY ONE', href: 'CaseStudy4.html',
 problem: 'ระบบหลังบ้านของแพลตฟอร์มรับชำระเงิน ดูแลร้านค้า ตั้งค่าช่องทางชำระ ติดตามธุรกรรม และคืนเงิน',
 did: ['สรุปการตั้งค่าทุกช่องทางชำระเป็น matrix เดียว', 'ใช้ matrix กำหนดขอบเขตงานร่วมกับ BA และ Dev', 'ออกแบบให้ตั้งค่าทุกช่องทางได้ในฟอร์มเดียว'], stat: '8', statL: 'ช่องทางชำระเงิน' },
-{ isProj: true, kicker: 'พลังงาน · 2025 · Thaioil', title: 'Thaioil · Budget Management', img: 'assets/8b174653078d36e0061e78f3677b4d16.jpg', alt: 'หน้า Waiting List Notification ของระบบงบประมาณไทยออยล์', href: 'CaseStudy5.html',
+{ isProj: true, kicker: 'พลังงาน · 2025 · ✓ ใช้งานจริงแล้ว', title: 'Thaioil · Budget Management', img: 'assets/8b174653078d36e0061e78f3677b4d16.jpg', alt: 'หน้า Waiting List Notification ของระบบงบประมาณไทยออยล์', href: 'CaseStudy5.html',
 problem: 'ระบบบริหารงบประมาณทั้งระบบของไทยออยล์ ตั้งแต่ขอ โอน อนุมัติงบ จนสร้าง WBS',
 did: ['ออกแบบครบทุกโมดูล OPEX, CAPEX, Contingency และ RMA', 'ทุกบทบาทเห็นเฉพาะงานของตัวเองในระบบเดียว', 'ส่งมอบทีละโมดูลต่อเนื่อง บน pattern กลางชุดเดียว'], stat: '1', statL: 'ปี ออกแบบทั้งระบบ' },
-{ isProj: true, kicker: 'สาธารณสุข · 2025 · กรมวิทยาศาสตร์การแพทย์', title: 'Newborn Connect', img: 'assets/e21909bec90e7e3cf627caa94614fb9c.jpg', alt: 'หน้าเข้าสู่ระบบของ Newborn Connect', href: 'CaseStudy7.html',
+{ isProj: true, kicker: 'สาธารณสุข · 2025 · ✓ ใช้งานจริงแล้ว', title: 'Newborn Connect', img: 'assets/e21909bec90e7e3cf627caa94614fb9c.jpg', alt: 'หน้าเข้าสู่ระบบของ Newborn Connect', href: 'CaseStudy7.html',
 problem: 'ระบบบันทึกและติดตามการตรวจคัดกรองโรคในทารกแรกเกิด ตั้งแต่รับตัวอย่างเลือดจนรายงานผล',
 did: ['เรียนรู้งานห้องปฏิบัติการกับนักวิทยาศาสตร์การแพทย์ก่อนออกแบบ', 'วาง pattern กลางให้หน้าตั้งค่า 40+ หน้า', 'ส่งมอบครบ 6 โมดูลภายใน 2 เดือน'], stat: '200+', statL: 'หน้าจอ ใน 2 เดือน' },
 { isEnd: true, title: 'Let’s talk!', hx: ' dkhxl' }
