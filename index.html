@@ -1526,14 +1526,14 @@ section.sec:hover::after{color:rgba(223,255,26,.35) !important}
 <p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #C23E14">สิ่งที่ส่งมอบ</p>
 <div style="display: flex; flex-direction: column; gap: 8px">
 
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2F3E9E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 4px"><path d="M3 9.5L7 13L15 5"></path></svg>สรุป pain point จาก workshop และผู้ใช้จริง</div>
+<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2F3E9E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 4px"><path d="M3 9.5L7 13L15 5"></path></svg>User research กับผู้ใช้จริง และสรุป pain point จาก workshop</div>
 
 <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2F3E9E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 4px"><path d="M3 9.5L7 13L15 5"></path></svg>Benchmark ระบบที่ใกล้เคียง</div>
 
 <div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2F3E9E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 4px"><path d="M3 9.5L7 13L15 5"></path></svg>Problem statement ที่ทีมเห็นตรงกัน</div>
 
 </div>
-<p style="margin: 6px 0 0; font-size: 13px; color: #5A6380">เครื่องมือ: Miro · Google Sheets · Workshop</p>
+<p style="margin: 6px 0 0; font-size: 13px; color: #5A6380">เครื่องมือ: Miro · Google Sheets · Interview · Workshop</p>
 </div>
 <div style="background: #1C2440; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px">
 <p style="margin: 0; font-family: 'IBM Plex Sans Thai', sans-serif; font-weight: 600; font-size: 20px; color: #FF8A5C">ตัวอย่างจากงานจริง</p>
@@ -1669,8 +1669,8 @@ toggle: function () { self.setState({ openJob: open ? -1 : i }); } };
 
 var stepsData = [
 { title: 'Discover', desc: 'เข้าใจผู้ใช้ งาน และกติกาของธุรกิจ ก่อนคิดคำตอบ',
-outputs: ['สรุป pain point จาก workshop และผู้ใช้จริง', 'Benchmark ระบบที่ใกล้เคียง', 'Problem statement ที่ทีมเห็นตรงกัน'],
-tools: 'Miro · Google Sheets · Workshop', example: 'Newborn Connect: เรียนรู้งานห้องปฏิบัติการกับนักวิทยาศาสตร์การแพทย์ ก่อนออกแบบหน้า Punch Cutting และรับรองผล' },
+outputs: ['User research กับผู้ใช้จริง และสรุป pain point จาก workshop', 'Benchmark ระบบที่ใกล้เคียง', 'Problem statement ที่ทีมเห็นตรงกัน'],
+tools: 'Miro · Google Sheets · Interview · Workshop', example: 'Newborn Connect: เรียนรู้งานห้องปฏิบัติการกับนักวิทยาศาสตร์การแพทย์ ก่อนออกแบบหน้า Punch Cutting และรับรองผล' },
 { title: 'Define', desc: 'สรุปเรื่องซับซ้อนให้เป็นภาพเดียว ที่ทุกทีมใช้ตัดสินใจร่วมกัน',
 outputs: ['เป้าหมายและตัวชี้วัด', 'User flow และ business flow', 'Matrix หรือ role map ที่ทุกทีมใช้ร่วมกัน'],
 tools: 'Figma · FigJam · draw.io', example: 'AIS mPAY ONE: สรุปว่าแต่ละช่องทางชำระเงินต้องตั้งค่าอะไรเป็น matrix เดียว ใช้กำหนดขอบเขตงานทั้งทีม' },
@@ -1681,7 +1681,7 @@ tools: 'Jira · Figma', example: 'Newborn Connect: วาง pattern กลา�
 outputs: ['UI และ prototype ใน Figma', 'Note ทุก state และเงื่อนไขของปุ่ม', 'Design QA และร่วมตรวจ UAT'],
 tools: 'Figma · Jira', example: 'Thaioil BMS: ส่งมอบทีละโมดูลต่อเนื่อง 1 ปี บน pattern กลางชุดเดียว ทุก role ใช้ระบบเดียวกัน' },
 { title: 'Iterate', desc: 'ฟัง feedback แล้วปรับอย่างมีเหตุผล ไม่ใช่ปรับตามความชอบ',
-outputs: ['สรุป feedback แต่ละรอบเป็นข้อที่ต้องแก้', 'เหตุผลของการเปลี่ยนแต่ละครั้ง', 'Backlog รอบถัดไป'],
+outputs: ['Usability test กับผู้ใช้ แล้วสรุป feedback เป็นข้อที่ต้องแก้', 'เหตุผลของการเปลี่ยนแต่ละครั้ง', 'Backlog รอบถัดไป'],
 tools: 'Figma · FigJam', example: 'ธ.ก.ส. D-HUB: ปรับหน้าแรก 5 รอบ แยกประกาศออกจากข่าว และเพิ่มภาพที่สื่อถึง AI จนธนาคารอนุมัติ' }
 ];
 var steps = stepsData.map(function (x, i) {
