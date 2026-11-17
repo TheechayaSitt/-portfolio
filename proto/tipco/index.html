@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TIPCO Order Tracking · Prototype · Theechaya S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1C2440;--lime:#DFFF1A;--blue:#2457E6;--mute:#5A6380;--bg:#EEF2FB}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:"IBM Plex Sans Thai",system-ui,sans-serif;color:var(--navy)}
+.bar{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap;box-shadow:0 6px 18px rgba(10,20,60,.25)}
+.bar a.x{color:#fff;text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.1)}
+.bar a.x:hover{background:var(--lime);color:var(--navy)}
+.bar .tt{display:flex;flex-direction:column;min-width:0;flex:1}
+.bar .tt small{color:#AEB8DA;font-size:12px}
+.bar .tt b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .ctl{display:flex;gap:6px;align-items:center}
+.bar button{font:inherit;font-size:13px;font-weight:600;border:0;border-radius:10px;padding:8px 12px;background:rgba(255,255,255,.1);color:#fff;cursor:pointer}
+.bar button:hover:not(:disabled){background:var(--lime);color:var(--navy)}
+.bar button:disabled{opacity:.35;cursor:default}
+.bar button[aria-pressed="true"]{background:var(--lime);color:var(--navy)}
+.bar .sn{font-variant-numeric:tabular-nums;color:var(--lime);font-weight:700;font-size:13px;padding:0 4px}
+.hintw{max-width:1320px;margin:14px auto 0;padding:0 16px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mute)}
+.hintw i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(223,255,26,.35)}
+.wrap{max-width:1320px;margin:10px auto 0;padding:0 16px 150px}
+#stage{position:relative;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(10,20,70,.18);opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s}
+#stage.in{opacity:1;transform:none}
+#scr{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+#spots{position:absolute;inset:0}
+.hs{position:absolute;border:0;padding:0;background:transparent;border-radius:8px;cursor:pointer}
+.hs:hover,.hs:focus-visible{background:rgba(223,255,26,.28);outline:2px solid #B8D400;outline-offset:0}
+.hs.fl{animation:fl 1.1s ease-out}
+.hs.main.fl{animation:fl 1.1s ease-out,pz 1.6s 1.1s ease-in-out 2}
+@keyframes fl{0%{background:rgba(223,255,26,.0);outline:2px solid rgba(184,212,0,0)}25%{background:rgba(223,255,26,.45);outline:2px solid #B8D400}100%{background:rgba(223,255,26,0);outline:2px solid rgba(184,212,0,0)}}
+@keyframes pz{50%{box-shadow:0 0 0 6px rgba(223,255,26,.55)}}
+body.showall .hs{background:rgba(223,255,26,.25);outline:2px dashed #9DB500}
+.strip{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(28,36,64,.96);backdrop-filter:blur(8px);display:flex;gap:10px;overflow-x:auto;padding:10px 16px;scrollbar-width:thin}
+.th{flex:none;width:150px;border:2px solid transparent;border-radius:10px;background:rgba(255,255,255,.06);padding:6px;color:#fff;font:inherit;text-align:left;cursor:pointer;position:relative}
+.th img{display:block;width:100%;height:78px;object-fit:cover;object-position:top;border-radius:6px;background:#fff}
+.th .tl{display:block;font-size:12px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#D6DCF5}
+.th .tn{position:absolute;top:10px;left:10px;background:var(--navy);color:var(--lime);font-size:11px;font-weight:700;border-radius:6px;padding:1px 6px}
+.th.on{border-color:var(--lime)}
+.th:hover{border-color:rgba(223,255,26,.5)}
+.note{max-width:1320px;margin:14px auto 0;padding:0 16px;font-size:12.5px;color:var(--mute)}
+#langsw{top:auto!important;bottom:118px!important;right:16px!important;left:auto!important}
+@media (max-width:640px){.bar .tt small{display:none}.bar button span.l{display:none}.th{width:110px}.th img{height:58px}}
+@media (prefers-reduced-motion:reduce){#stage,.hs{transition:none;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="x" href="../../CaseStudy11.html">← กลับไปที่ Case Study</a>
+  <div class="tt"><small>Prototype · TIPCO Order Tracking</small><b id="stitle"></b></div>
+  <div class="ctl"><span class="sn" id="stepn"></span>
+    <button type="button" id="back">↶ <span class="l">ย้อนกลับ</span></button>
+    <button type="button" id="restart">⟲ <span class="l">เริ่มใหม่</span></button>
+    <button type="button" id="toggle" aria-pressed="false">◎ <span class="l">แสดงจุดที่กดได้</span></button>
+  </div>
+</div>
+<div class="hintw"><i></i><span id="hint"></span></div>
+<div class="wrap"><div id="stage"><img id="scr" alt=""><div id="spots"></div></div></div>
+<p class="note">ต้นแบบนี้สร้างจากหน้าจอที่ออกแบบจริง กดบริเวณที่มีกรอบสีเขียวเพื่อไปหน้าถัดไป ข้อมูลในหน้าจอเป็นข้อมูลตัวอย่าง</p>
+<nav class="strip" id="strip" aria-label="Screens in this flow"></nav>
+<script>window.PROTO={"W": 1880, "start": "login", "order": ["login", "order", "reqdoc", "settings"], "screens": {"login": {"src": "login.jpg", "thumb": "login_t.jpg", "h": 805, "w": 1881, "title": "เข้าสู่ระบบ", "hint": "ปุ่ม Azure AD เด่นที่สุดเพราะพนักงานส่วนใหญ่เข้าแบบนี้ กดเพื่อเข้าสู่ระบบ", "spots": [{"x": 712, "y": 220, "w": 465, "h": 56, "to": "order", "main": true, "label": "Login with Microsoft Azure AD"}, {"x": 712, "y": 702, "w": 465, "h": 60, "to": "order", "label": "Login"}], "nav": false}, "order": {"src": "order.jpg", "thumb": "order_t.jpg", "h": 804, "w": 1867, "title": "Order Management", "hint": "Quick filter บอกจำนวนแต่ละสถานะ แถบสีซ้ายบอกความเร่งด่วน ลองเปิด Request Document ที่เมนูซ้าย", "spots": [{"x": 10, "y": 372, "w": 265, "h": 50, "to": "reqdoc", "label": "Request Document", "main": true}, {"x": 10, "y": 445, "w": 265, "h": 50, "to": "settings", "label": "Settings", "main": false}, {"x": 505, "y": 175, "w": 140, "h": 40, "to": "order", "label": "Delayed"}], "nav": true}, "reqdoc": {"src": "reqdoc.jpg", "thumb": "reqdoc_t.jpg", "h": 810, "w": 1885, "title": "Request Document", "hint": "เลือกบริษัทในเครือก่อน รายชื่อลูกค้าจะถูกกรองให้ แล้วเอกสารส่งเข้าอีเมลที่ลงทะเบียนไว้ ลองเปิด Settings", "spots": [{"x": 10, "y": 444, "w": 265, "h": 50, "to": "settings", "label": "Settings", "main": true}, {"x": 10, "y": 228, "w": 265, "h": 50, "to": "order", "label": "Order Management", "main": false}], "nav": true}, "settings": {"src": "settings.jpg", "thumb": "settings_t.jpg", "h": 816, "w": 1891, "title": "Settings & User", "hint": "แอดมินกำหนดผู้ใช้ กลุ่ม และสิทธิ์เมนูได้เอง กด Order Management เพื่อกลับ", "spots": [{"x": 10, "y": 226, "w": 265, "h": 50, "to": "order", "label": "Order Management", "main": true}, {"x": 10, "y": 372, "w": 265, "h": 50, "to": "reqdoc", "label": "Request Document", "main": false}], "nav": true}}, "nav": []};</script>
+<script src="../viewer.js"></script>
+<script src="../../i18n.js"></script>
+</body>
+</html>
